@@ -1,0 +1,5 @@
+✔ [3044/3046] Built ErdosProblems.Erdos182.Foundations (1.7s)
+✔ [3045/3046] Built ErdosProblems.Erdos182.Elementary (4.5s)
+ℹ [3046/3046] Built ErdosProblems.Erdos1021 (19s)
+info: ErdosProblems/Erdos1021.lean:2366:0: 'Erdos1021.erdos_1021' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3046 jobs).
