@@ -1,0 +1,44 @@
+def SL003FC.Erdos316.SL003.targetProp : Prop :=
+∀ (n : ℕ),
+  (2 : ℕ) ≤ n →
+    ∃ A,
+      A.Nonempty ∧
+        (0 : ℕ) ∉ A ∧
+          (1 : ℕ) ∉ A ∧
+            ∑ k ∈ A, (1 : ℚ) / ↑k < ↑n ∧
+              ∀ (P : Finpartition A), P.parts.card ≤ n → ∃ p ∈ P.parts, (1 : ℚ) ≤ ∑ n ∈ p, (1 : ℚ) / ↑n
+Erdos316.erdos_316.variants.generalized : ∀ (n : ℕ),
+  (2 : ℕ) ≤ n →
+    ∃ A,
+      A.Nonempty ∧
+        (0 : ℕ) ∉ A ∧
+          (1 : ℕ) ∉ A ∧
+            ∑ k ∈ A, (1 : ℚ) / ↑k < ↑n ∧
+              ∀ (P : Finpartition A), P.parts.card ≤ n → ∃ p ∈ P.parts, (1 : ℚ) ≤ ∑ n ∈ p, (1 : ℚ) / ↑n
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `Erdos316.erdos_316.variants.A.Nonempty`
+Z_explore.lean:6:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos316.A.Nonempty`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `A.Nonempty`
+structure Finpartition.{u_1} {α : Type u_1} [Lattice α] [OrderBot α] (a : α) : Type u_1
+number of parameters: 4
+fields:
+  Finpartition.parts : Finset α
+  Finpartition.supIndep : self.parts.SupIndep id
+  Finpartition.sup_parts : self.parts.sup id = a
+  Finpartition.bot_notMem : ⊥ ∉ self.parts
+constructor:
+  Finpartition.mk.{u_1} {α : Type u_1} [Lattice α] [OrderBot α] {a : α} (parts : Finset α)
+    (supIndep : parts.SupIndep id) (sup_parts : parts.sup id = a) (bot_notMem : ⊥ ∉ parts) : Finpartition a
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos316.Finpartition`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `Erdos316.erdos_316.variants.Finpartition`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos316.P.parts`
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `Erdos316.erdos_316.variants.P.parts`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `P.parts`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `P.parts.card`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos316.P.parts.card`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `Erdos316.erdos_316.variants.P.parts.card`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `Erdos316.erdos_316.variants.hn`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos316.hn`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `hn`

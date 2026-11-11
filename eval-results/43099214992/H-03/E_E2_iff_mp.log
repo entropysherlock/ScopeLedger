@@ -1,0 +1,12 @@
+E_E2_iff_mp.lean:6:140: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos316.erdos_316.variants.generalized
+of type
+  ∀ (n : ℕ),
+    2 ≤ n →
+      ∃ A,
+        A.Nonempty ∧
+          0 ∉ A ∧
+            1 ∉ A ∧ ∑ k ∈ A, 1 / ↑k < ↑n ∧ ∀ (P : Finpartition A), P.parts.card ≤ n → ∃ p ∈ P.parts, 1 ≤ ∑ n ∈ p, 1 / ↑n
+E_E2_iff_mp.lean:4:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
