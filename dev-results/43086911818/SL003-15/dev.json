@@ -1,0 +1,28 @@
+{
+ "case_id": "SL003-15",
+ "cited": "borwein_sine_series",
+ "module": "BorweinSineSeries.solution",
+ "toolchain": "leanprover/lean4:v4.28.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 90
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 17
+  }
+ },
+ "files": {
+  "A00_explore.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.BorweinSineSeries.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 116,
+ "status": "ok"
+}

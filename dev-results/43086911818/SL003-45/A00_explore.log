@@ -1,0 +1,31 @@
+Erdos1195.erdos_1195 : ∀ (F : ℝ → ℝ),
+  (∀ x ∈ Set.Ici 1, 0 ≤ F x) →
+    MonotoneOn F (Set.Ici 1) →
+      Filter.Tendsto F Filter.atTop Filter.atTop →
+        (Erdos1195.HasErdos1195Witness F ↔
+          MeasureTheory.IntegrableOn (fun x => F x / x ^ 2) (Set.Ici 1) MeasureTheory.volume)
+def Erdos1195.HasErdos1195Witness : (ℝ → ℝ) → Prop :=
+fun F =>
+  ∃ S,
+    MeasurableSet S ∧
+      MeasureTheory.volume S = ⊤ ∧
+        Erdos1195.IntegerRatioFree S ∧ ∀ᶠ (x : ℝ) in Filter.atTop, F x ≤ Erdos1195.countingFunction S x
+def SL003FC.Erdos1195.IsGrowthRate : (ℝ → ℝ) → Prop :=
+fun F => (∀ x ∈ Set.Ici 1, 0 ≤ F x) ∧ MonotoneOn F (Set.Ici 1) ∧ Filter.Tendsto F Filter.atTop Filter.atTop
+def SL003FC.Erdos1195.HasSet : (ℝ → ℝ) → Prop :=
+fun F =>
+  ∃ S,
+    MeasurableSet S ∧
+      MeasureTheory.volume S = ⊤ ∧
+        SL003FC.Erdos1195.IntegerRatioFree S ∧ ∀ᶠ (x : ℝ) in Filter.atTop, F x ≤ SL003FC.Erdos1195.countingFunction S x
+def SL003FC.Erdos1195.erdos_1195.answer : Set (ℝ → ℝ) :=
+{F |
+  SL003FC.Erdos1195.IsGrowthRate F ∧ MeasureTheory.IntegrableOn (fun x => F x / x ^ 2) (Set.Ici 1) MeasureTheory.volume}
+def SL003FC.Erdos1195.countingFunction : Set ℝ → ℝ → ℝ :=
+fun S x => ENNReal.toReal (MeasureTheory.volume (S ∩ Set.Ioo 0 x))
+def SL003FC.Erdos1195.IntegerRatioFree : Set ℝ → Prop :=
+fun S => ∀ ⦃x : ℝ⦄, x ∈ S → ∀ ⦃y : ℝ⦄, y ∈ S → x ≠ y → ∀ (z : ℤ), x / y ≠ ↑z
+def Erdos1195.countingFunction : Set ℝ → ℝ → ℝ :=
+fun S x => ENNReal.toReal (MeasureTheory.volume (S ∩ Set.Ioo 0 x))
+def Erdos1195.IntegerRatioFree : Set ℝ → Prop :=
+fun S => ∀ ⦃x : ℝ⦄, x ∈ S → ∀ ⦃y : ℝ⦄, y ∈ S → x ≠ y → ∀ (z : ℤ), x / y ≠ ↑z

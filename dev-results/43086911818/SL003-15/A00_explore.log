@@ -1,0 +1,5 @@
+borwein_sine_series : PiIrrBound → Summable fun n => (2 / 3 + 1 / 3 * Real.sin ↑↑n) ^ ↑n / ↑↑n
+def PiIrrBound : Prop :=
+∃ C Q₀, 0 < C ∧ ∀ (p : ℤ) (q : ℕ), 0 < q → Q₀ ≤ q → C / ↑q ^ muPi < |Real.pi - ↑p / ↑q|
+@[reducible] def muPi : ℝ :=
+7.10321

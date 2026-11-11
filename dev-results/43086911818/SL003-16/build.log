@@ -1,0 +1,11 @@
+✔ [8706/8714] Built Util.Density (8.1s)
+✔ [8707/8714] Built ErdosProblems.Erdos697.Erdos697Probability (10s)
+✔ [8708/8714] Built ErdosProblems.Erdos697.Erdos697Bernoulli (11s)
+✔ [8709/8714] Built ErdosProblems.Erdos697.Erdos697FiniteModel (6.0s)
+✔ [8710/8714] Built ErdosProblems.Erdos696.SubsetProduct (15s)
+✔ [8711/8714] Built ErdosProblems.Erdos697.Erdos697CRTModel (5.1s)
+✔ [8712/8714] Built ErdosProblems.Erdos697.Erdos697WeightedSubset (10s)
+✔ [8713/8714] Built ErdosProblems.Erdos697.Erdos697Cover (4.1s)
+ℹ [8714/8714] Built ErdosProblems.Erdos690 (171s)
+info: ErdosProblems/Erdos690.lean:2179:0: 'Erdos690.erdos_690' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8714 jobs).

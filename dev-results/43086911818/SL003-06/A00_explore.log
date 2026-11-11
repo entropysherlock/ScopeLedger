@@ -1,0 +1,14 @@
+Erdos441.not_erdos_441 : (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧
+  ∀ (M : ℕ), ∃ N ≥ M, Finset.card (Erdos441.erdosConstruction N) < Erdos441.g N
+def Erdos441.g : ℕ → ℕ :=
+fun N => Finset.sup (Erdos441.candidates N) Finset.card
+def Erdos441.candidates : ℕ → Finset (Finset ℕ) :=
+fun N => Finset.filter (Erdos441.LcmBounded N) (Finset.powerset (Finset.Icc 1 N))
+def Erdos441.LcmBounded : ℕ → Finset ℕ → Prop :=
+fun N A => A ⊆ Finset.Icc 1 N ∧ ∀ a ∈ A, ∀ b ∈ A, Nat.lcm a b ≤ N
+def Erdos441.erdosConstruction : ℕ → Finset ℕ :=
+fun N => {a ∈ Finset.Icc 1 N | 2 * a ^ 2 ≤ N ∨ 2 ∣ a ∧ a ^ 2 ≤ 2 * N}
+def SL003FC.Erdos441.g : ℕ → ℕ :=
+fun N => sSup {k | ∃ A ⊆ Finset.Icc 1 N, (∀ a ∈ A, ∀ b ∈ A, Nat.lcm a b ≤ N) ∧ Finset.card A = k}
+def SL003FC.Erdos441.erdosConstruction : ℕ → Finset ℕ :=
+fun N => {a ∈ Finset.Icc 1 N | 2 * a ^ 2 ≤ N ∨ 2 ∣ a ∧ a ^ 2 ≤ 2 * N}

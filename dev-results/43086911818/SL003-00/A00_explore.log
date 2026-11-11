@@ -1,0 +1,29 @@
+Erdos235.erdos_235 : ∃ f,
+  Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))
+def Erdos235.gapCDF : ℕ → ℝ → ℝ :=
+fun k c =>
+  ↑(Finset.card
+        (Erdos235.internalShortGaps (Erdos235.primeProduct k)
+          (Erdos235.normalizedThreshold (Erdos235.primeProduct k) c))) /
+    ↑(Nat.totient (Erdos235.primeProduct k))
+def Erdos235.internalShortGaps : ℕ → ℕ → Finset (ℕ × ℕ) :=
+fun N T =>
+  {ab ∈ Finset.product (Finset.range N) (Finset.range N) |
+    Erdos235.IsInternalConsecutive N (Prod.fst ab) (Prod.snd ab) ∧ Prod.snd ab - Prod.fst ab ≤ T}
+def Erdos235.normalizedThreshold : ℕ → ℝ → ℕ :=
+fun N c => ⌊c * ↑N / ↑(Nat.totient N)⌋₊
+def Erdos235.primeProduct : ℕ → ℕ :=
+fun k => ∏ i ∈ Finset.range k, Erdos235.nthPrime i
+def SL003FC.Erdos235.proportion : ℕ → ℝ → ℝ :=
+fun k c => ↑(SL003FC.Erdos235.countGaps (SL003FC.Erdos235.N k) c) / ↑(Nat.totient (SL003FC.Erdos235.N k))
+def SL003FC.Erdos235.countGaps : ℕ → ℝ → ℕ :=
+fun n c =>
+  List.countP (fun g => decide (g ≤ c * ↑n / ↑(Nat.totient n))) do
+    let a ← SL003FC.Erdos235.gaps n
+    pure ↑a
+def SL003FC.Erdos235.gaps : ℕ → List ℕ :=
+fun n => List.zipWith (fun a b => b - a) (SL003FC.Erdos235.coprimeList n) (List.tail (SL003FC.Erdos235.coprimeList n))
+def SL003FC.Erdos235.coprimeList : ℕ → List ℕ :=
+fun n => Finset.sort ({a ∈ Finset.range n | Nat.Coprime n a}) fun x1 x2 => x1 ≤ x2
+def SL003FC.Erdos235.N : ℕ → ℕ :=
+fun k => primorial (Nat.nth Nat.Prime k)

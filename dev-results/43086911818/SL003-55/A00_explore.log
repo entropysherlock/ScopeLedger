@@ -1,0 +1,11 @@
+Erdos841.erdos841_lower_bound_explicit : ∀ᶠ (n : ℕ) in Filter.atTop,
+  ¬IsSquare n →
+    Erdos841.pellLowerBoundConstant *
+        (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤
+      ↑(Erdos841.t n)
+def Erdos841.t : ℕ → ℕ :=
+fun n => Nat.find ⋯
+def Erdos841.pellLowerBoundConstant : ℝ :=
+1 / (2 * Erdos841.pellBalanceConstant ^ 6)
+def SL003FC.Erdos841.t : ℕ → ℕ :=
+fun n => sInf {T | ∃ J ⊆ Finset.Icc 1 T, IsSquare (n * ∏ j ∈ J, (n + j))}

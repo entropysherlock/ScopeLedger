@@ -1,0 +1,13 @@
+@Erdos737.eventually_cycles_through_fixed_edge : ∀ {V : Type u_1} {G : SimpleGraph V},
+  Erdos594.IsUncountablyChromatic G →
+    ∃ a r,
+      SimpleGraph.Adj G a r ∧
+        ∃ N,
+          ∀ (n : ℕ),
+            N ≤ n → ∃ c, SimpleGraph.Walk.IsCycle c ∧ SimpleGraph.Walk.length c = n ∧ s(a, r) ∈ SimpleGraph.Walk.edges c
+def Erdos594.IsUncountablyChromatic.{u} : {V : Type u} → SimpleGraph V → Prop :=
+fun {V} G => IsEmpty (SimpleGraph.Coloring G ℕ)
+def SL003FC.Erdos737.CycleThroughEdgeOfLength.{u_1} : {V : Type u_1} → SimpleGraph V → Sym2 V → ℕ → Prop :=
+fun {V} G e n => ∃ v c, SimpleGraph.Walk.IsCycle c ∧ SimpleGraph.Walk.length c = n ∧ e ∈ SimpleGraph.Walk.edges c
+def SL003FC.Erdos737.ChromaticNumberAlephOne.{u_1} : {V : Type u_1} → SimpleGraph V → Prop :=
+fun {V} G => Nonempty (SimpleGraph.Coloring G ↑(Set.Iio (Ordinal.omega 1))) ∧ IsEmpty (SimpleGraph.Coloring G ℕ)

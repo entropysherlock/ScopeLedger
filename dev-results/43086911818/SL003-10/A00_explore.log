@@ -1,0 +1,17 @@
+Erdos525.erdos_525 : (∀ (τ : ℝ),
+    0 < τ → Filter.Tendsto (fun N => Erdos525.minimumTail N τ) Filter.atTop (nhds (Real.exp (-Erdos525.rate * τ)))) ∧
+  ((fun N => ↑(Finset.card (Erdos525.exceptionalFamily N))) =o[Filter.atTop] fun N => 2 ^ N) ∧
+    Filter.Tendsto (fun N => Erdos525.uniformProbability fun ε => Erdos525.HasSmallValue ε) Filter.atTop (nhds 1)
+def Erdos525.exceptionalFamily : (N : ℕ) → Finset (Erdos525.SignVector N) :=
+fun N => {ε | 1 ≤ Erdos525.minModulus ε}
+def Erdos525.minModulus : {N : ℕ} → Erdos525.SignVector N → ℝ :=
+fun {N} ε => sInf (Erdos525.modulusRange ε)
+@[reducible] def Erdos525.SignVector : ℕ → Type :=
+fun N => Fin (N + 1) → Bool
+def Erdos525.sign : Bool → ℝ :=
+fun b => if b = true then 1 else -1
+A00_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `Erdos525.signPoly`
+def SL003FC.Erdos525.exceptional : (n : ℕ) → Set (Fin (n + 1) → ℤˣ) :=
+fun n => {ε | ∀ (z : ℂ), ‖z‖ = 1 → 1 ≤ ‖SL003FC.Erdos525.eval ε z‖}
+def SL003FC.Erdos525.eval : {n : ℕ} → (Fin (n + 1) → ℤˣ) → ℂ → ℂ :=
+fun {n} ε z => ∑ j, ↑↑(ε j) * z ^ ↑j

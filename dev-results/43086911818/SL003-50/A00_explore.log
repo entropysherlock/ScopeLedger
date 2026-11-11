@@ -1,0 +1,12 @@
+LeanGallery.NumberTheory.Erdos482.Statement.statement_erdos_482_verbatim : ∀ (n : ℕ),
+  1 ≤ n →
+    ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n + 1)) - 2 * ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n - 1)) =
+      ↑(⌊√2 * 2 ^ (n - 1)⌋₊ % 2)
+def LeanGallery.NumberTheory.Erdos482.a : ℕ → ℕ :=
+fun x => Nat.brecOn x LeanGallery.NumberTheory.Erdos482.a._f
+def SL003FC.Erdos482.a : ℕ → ℕ :=
+fun x => Nat.brecOn x SL003FC.Erdos482.a._f
+def Real.digits : ℝ → (b : ℕ) → [NeZero b] → ℕ → Fin b :=
+fun x b [NeZero b] i => Fin.ofNat b ⌊x * ↑b ^ (i + 1)⌋₊
+def Real.ofDigits : {b : ℕ} → (ℕ → Fin b) → ℝ :=
+fun {b} digits => ∑' (n : ℕ), Real.ofDigitsTerm digits n

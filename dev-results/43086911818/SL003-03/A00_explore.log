@@ -1,0 +1,13 @@
+Erdos581.erdos_581 : ∃ c₁ c₂,
+  0 < c₁ ∧
+    0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)
+def Erdos581.f : ℕ → ℕ :=
+fun m => Nat.findGreatest (Erdos581.Guarantees m) m
+def SL003FC.Erdos581.f : ℕ → ℕ :=
+fun m =>
+  sSup
+    {k |
+      ∀ (V : Type) [Fintype V] (G : SimpleGraph V),
+        SimpleGraph.CliqueFree G 3 →
+          Set.ncard (SimpleGraph.edgeSet G) = m →
+            ∃ H ≤ G, SimpleGraph.IsBipartite H ∧ k ≤ Set.ncard (SimpleGraph.edgeSet H)}

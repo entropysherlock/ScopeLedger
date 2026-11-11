@@ -1,0 +1,13 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_690 :",
+ "removed declaration: theorem erdos_690.variants.hasDensity (k p : ℕ) (hk : 1 ≤ k) (hp : p.P",
+ "removed declaration: theorem erdos_690.variants.cambie_unimodal (k : ℕ) (hk : 1 ≤ k) (hk' :",
+ "removed declaration: theorem erdos_690.variants.cambie_not_unimodal (k : ℕ) (hk : 4 ≤ k) (h",
+ "removed declaration: theorem erdos_690.variants.large_k :",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

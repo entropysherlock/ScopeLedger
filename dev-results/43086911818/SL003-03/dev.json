@@ -1,0 +1,28 @@
+{
+ "case_id": "SL003-03",
+ "cited": "Erdos581.erdos_581",
+ "module": "ErdosProblems.Erdos581",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 122
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 44
+  }
+ },
+ "files": {
+  "A00_explore.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 3,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos581.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 173,
+ "status": "ok"
+}

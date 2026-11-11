@@ -1,0 +1,21 @@
+Erdos690.erdos_690 : (∀ (k p : ℕ),
+    0 < k → Nat.Prime p → Set.HasDensity (Erdos690.kthPrimeFactorSet k p) ↑(Erdos690.primeFactorDensity k p)) ∧
+  (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k
+def Erdos690.kthPrimeFactorSet : ℕ → ℕ → Set ℕ :=
+fun k p => {n | Erdos690.IsKthSmallestPrimeFactor k p n}
+def Erdos690.primeFactorDensity : ℕ → ℕ → ℚ :=
+fun k p => if 0 < k ∧ Nat.Prime p then ↑(Erdos690.coeff (k - 1) p) / ↑(p * Erdos690.primeModulus p) else 0
+def Erdos690.DensityUnimodal : ℕ → Prop :=
+fun k => Erdos690.UnimodalOnPrimes (Erdos690.primeFactorDensity k)
+def SL003FC.Erdos690.kthPrimeFactorSet : ℕ → ℕ → Set ℕ :=
+fun k p => {n | 0 < n ∧ p ∈ Nat.primeFactors n ∧ Finset.card ({x ∈ Nat.primeFactors n | x < p}) = k - 1}
+def SL003FC.Erdos690.IsUnimodalOnPrimes : (ℕ → ℝ) → Prop :=
+fun f =>
+  ∃ m,
+    Nat.Prime m ∧
+      (∀ (p q : ℕ), Nat.Prime p → Nat.Prime q → p ≤ q → q ≤ m → f p ≤ f q) ∧
+        ∀ (p q : ℕ), Nat.Prime p → Nat.Prime q → m ≤ p → p ≤ q → f q ≤ f p
+def Set.HasDensity.{u_1} : {β : Type u_1} →
+  [inst : Preorder β] → [LocallyFiniteOrderBot β] → Set β → ℝ → optParam (Set β) Set.univ → Prop :=
+fun {β} [Preorder β] [LocallyFiniteOrderBot β] S α A =>
+  Filter.Tendsto (fun b => Set.partialDensity S A b) Filter.atTop (nhds α)

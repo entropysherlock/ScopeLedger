@@ -1,0 +1,28 @@
+{
+ "case_id": "SL003-50",
+ "cited": "LeanGallery.NumberTheory.Erdos482.Statement.statement_erdos_482_verbatim",
+ "module": "LeanGallery.NumberTheory.Erdos482.Statement",
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 104
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 288
+  }
+ },
+ "files": {
+  "A00_explore.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos482.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 401,
+ "status": "ok"
+}

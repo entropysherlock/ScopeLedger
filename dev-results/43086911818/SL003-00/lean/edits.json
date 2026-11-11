@@ -1,0 +1,13 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem N_zero : N 0 = 2 := by",
+ "removed declaration: theorem N_one : N 1 = 6 := by",
+ "removed declaration: theorem coprimeList_length (n : ℕ) : (coprimeList n).length = n.totien",
+ "removed declaration: theorem totient_N_pos (k : ℕ) : 0 < (N k).totient := by",
+ "removed declaration: theorem erdos_235 :",
+ "removed declaration: theorem erdos_235.variants.hooley (c : ℝ) (hc : 0 ≤ c) :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

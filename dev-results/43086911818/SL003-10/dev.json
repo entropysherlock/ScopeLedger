@@ -1,0 +1,28 @@
+{
+ "case_id": "SL003-10",
+ "cited": "Erdos525.erdos_525",
+ "module": "ErdosProblems.Erdos525",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 119
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 358
+  }
+ },
+ "files": {
+  "A00_explore.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 4,
+   "first_error": "A00_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `Erdos525.signPoly`\ndef SL003FC.Erdos525.exceptional : (n : ℕ) → Set (Fin (n + 1) → ℤˣ) :=\nfun n => {ε | ∀ (z : ℂ), ‖z‖ = 1 → 1 ≤ ‖SL003FC.Erdos525.eval ε z‖}\ndef SL003FC.Erdos525.eval : {n : ℕ} → (Fin (n + 1) → ℤˣ) → ℂ → ℂ :=\nfun {n} ε z => ∑ j, ↑↑(ε j) * z ^ ↑j"
+  }
+ },
+ "target_prop": "SL003FC.Erdos525.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 487,
+ "status": "ok"
+}

@@ -1,0 +1,53 @@
+QuantumLean.FormalConjecturesWrappers.eqSystem8_no_solution_d3_trinary_int : True ↔
+  ¬∃ W,
+      (∀ (e : MonochromaticQuantumGraph.EdgeN 8 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧
+        MonochromaticQuantumGraph.EqSystemN 8 3 W
+A00_explore.lean:7:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+structure MonochromaticQuantumGraph.EdgeN (N D : ℕ) : Type
+number of parameters: 2
+fields:
+  MonochromaticQuantumGraph.EdgeN.u : MonochromaticQuantumGraph.V N
+  MonochromaticQuantumGraph.EdgeN.v : MonochromaticQuantumGraph.V N
+  MonochromaticQuantumGraph.EdgeN.i : Fin D
+  MonochromaticQuantumGraph.EdgeN.j : Fin D
+constructor:
+  MonochromaticQuantumGraph.EdgeN.mk {N D : ℕ} (u v : MonochromaticQuantumGraph.V N) (i j : Fin D) :
+    MonochromaticQuantumGraph.EdgeN N D
+@[reducible] def MonochromaticQuantumGraph.WeightsN : ℕ → ℕ → Type → Type :=
+fun N D α => MonochromaticQuantumGraph.EdgeN N D → α
+def MonochromaticQuantumGraph.EqSystemN : {α : Type} →
+  [Semiring α] → (N D : ℕ) → MonochromaticQuantumGraph.WeightsN N D α → Prop :=
+fun {α} [Semiring α] N D W =>
+  ∀ (ι : MonochromaticQuantumGraph.V N → Fin D),
+    MonochromaticQuantumGraph.pmSumN N D W ι = if MonochromaticQuantumGraph.allEqual ι then 1 else 0
+def MonochromaticQuantumGraph.pmSumN : {α : Type} →
+  [Semiring α] → (N D : ℕ) → MonochromaticQuantumGraph.WeightsN N D α → (MonochromaticQuantumGraph.V N → Fin D) → α :=
+fun {α} [Semiring α] N D W ι => MonochromaticQuantumGraph.pmSumList W ι (MonochromaticQuantumGraph.vertices N)
+def MonochromaticQuantumGraph.allEqual : {N D : ℕ} → (MonochromaticQuantumGraph.V N → Fin D) → Prop :=
+fun {N D} ι => MonochromaticQuantumGraph.allEqualList ι (MonochromaticQuantumGraph.vertices N)
+def MonochromaticQuantumGraph.mkEdge : {N D : ℕ} →
+  MonochromaticQuantumGraph.V N → MonochromaticQuantumGraph.V N → Fin D → Fin D → MonochromaticQuantumGraph.EdgeN N D :=
+fun {N D} u v i j => { u := u, v := v, i := i, j := j }
+structure SL003FC.MonochromaticQuantumGraph.EdgeN (N D : ℕ) : Type
+number of parameters: 2
+fields:
+  SL003FC.MonochromaticQuantumGraph.EdgeN.u : SL003FC.MonochromaticQuantumGraph.V N
+  SL003FC.MonochromaticQuantumGraph.EdgeN.v : SL003FC.MonochromaticQuantumGraph.V N
+  SL003FC.MonochromaticQuantumGraph.EdgeN.i : Fin D
+  SL003FC.MonochromaticQuantumGraph.EdgeN.j : Fin D
+constructor:
+  SL003FC.MonochromaticQuantumGraph.EdgeN.mk {N D : ℕ} (u v : SL003FC.MonochromaticQuantumGraph.V N) (i j : Fin D) :
+    SL003FC.MonochromaticQuantumGraph.EdgeN N D
+def SL003FC.MonochromaticQuantumGraph.EqSystemN : {α : Type} →
+  [Semiring α] → (N D : ℕ) → SL003FC.MonochromaticQuantumGraph.WeightsN N D α → Prop :=
+fun {α} [Semiring α] N D W =>
+  ∀ (ι : SL003FC.MonochromaticQuantumGraph.V N → Fin D),
+    SL003FC.MonochromaticQuantumGraph.pmSumN N D W ι = if SL003FC.MonochromaticQuantumGraph.allEqual ι then 1 else 0
+def SL003FC.MonochromaticQuantumGraph.pmSumN : {α : Type} →
+  [Semiring α] →
+    (N D : ℕ) →
+      SL003FC.MonochromaticQuantumGraph.WeightsN N D α → (SL003FC.MonochromaticQuantumGraph.V N → Fin D) → α :=
+fun {α} [Semiring α] N D W ι =>
+  SL003FC.MonochromaticQuantumGraph.pmSumList W ι (SL003FC.MonochromaticQuantumGraph.vertices N)

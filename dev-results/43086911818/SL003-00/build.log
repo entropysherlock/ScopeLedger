@@ -1,0 +1,6 @@
+✔ [8706/8708] Built ErdosProblems.Erdos387.BrunSieve (2.5s)
+✔ [8707/8708] Built Wikipedia.GreenTao.Sieve.CongruenceAverage (4.2s)
+ℹ [8708/8708] Built ErdosProblems.Erdos235 (24s)
+info: ErdosProblems/Erdos235.lean:4272:0: 'Erdos235.erdos_235_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos235.lean:4273:0: 'Erdos235.erdos_235' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8708 jobs).

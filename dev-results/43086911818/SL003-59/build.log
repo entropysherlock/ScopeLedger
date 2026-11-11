@@ -1,0 +1,10 @@
+ℹ [8763/8763] Built LeanOeisProofs.NewFormalization.A397588 (6.0s)
+info: LeanOeisProofs/NewFormalization/A397588.lean:481:0: 'A397588.a_odd_iff_pow_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanOeisProofs/NewFormalization/A397588.lean:482:0: 'A397588.hanna_odd_iff_pow_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanOeisProofs/NewFormalization/A397588.lean:483:0: 'A397588.mk_a_satisfiesHanna' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanOeisProofs/NewFormalization/A397588.lean:484:0: 'A397588.hanna_coeff_eq_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanOeisProofs/NewFormalization/A397588.lean:485:0: 'A397588.a_three_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanOeisProofs/NewFormalization/A397588.lean:486:0: 'A397588.hanna_three_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanOeisProofs/NewFormalization/A397588.lean:487:0: 'A397588.weighted_eq_manyama' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanOeisProofs/NewFormalization/A397588.lean:488:0: 'A397588.hanna_iff_product_rule' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8763 jobs).

@@ -1,0 +1,28 @@
+{
+ "case_id": "SL003-43",
+ "cited": "QuantumLean.FormalConjecturesWrappers.eqSystem8_no_solution_d3_trinary_int",
+ "module": "QuantumLean.FormalConjecturesWrappers",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 97
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 403
+  }
+ },
+ "files": {
+  "A00_explore.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.MonochromaticQuantumGraph.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 510,
+ "status": "ok"
+}
