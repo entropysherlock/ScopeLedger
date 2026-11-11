@@ -1,0 +1,49 @@
+{
+ "case_id": "H-54",
+ "cited": "KourovkaNotebook.Solution21_149.kourovka_21_149",
+ "module": "Kourovka.Problem_21_149",
+ "toolchain": "leanprover/lean4:v4.28.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 81
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 47
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  },
+  "Bridge.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Kourovka.«21.149».SL003.targetProp",
+ "bridges": {
+  "SL004.bridge_main": {
+   "file": "Bridge.lean",
+   "kind": "bridge_main",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": false
+  }
+ },
+ "seconds_total": 153,
+ "status": "ok"
+}
