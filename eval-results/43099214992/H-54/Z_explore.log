@@ -1,0 +1,143 @@
+def SL003FC.Kourovka.«21.149».SL003.targetProp : Prop :=
+∃ K G,
+  SL003FC.Kourovka.«21.149».IsDlabGroup K G ∧
+    ∃ α,
+      (∀ (f g : ↥G), SL003FC.Kourovka.«21.149».DlabLt (α f) (α g) ↔ SL003FC.Kourovka.«21.149».DlabLt f g) ∧
+        ¬∃ u, ∀ (f : ↥G), α f = u⁻¹ * f * u
+Z_explore.lean:5:8: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `KourovkaNotebook.Solution21_149.DlabGroup`
+@[reducible] def DlabGroup : Subgroup NNRealˣ → Type :=
+fun H => ↥(Dlab.subgroup H)
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Kourovka.«21.149».DlabGroup`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `DlabLt`
+def SL003FC.Kourovka.«21.149».DlabLt : {G : Subgroup (ℝ ≃o ℝ)} → ↥G → ↥G → Prop :=
+fun {G} f g => ∃ x, ↑f x < ↑g x ∧ ∀ (y : ℝ), ↑g y < ↑f y → x < y
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `KourovkaNotebook.Solution21_149.DlabLt`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Kourovka.«21.149».IsDlabBiOrder`
+structure KourovkaNotebook.Solution21_149.IsDlabBiOrder (H : Subgroup PositiveSlopeGroup)
+  (o : LinearOrder (DlabGroup H)) : Prop
+number of parameters: 2
+parents:
+  KourovkaNotebook.Solution21_149.IsDlabBiOrder.toIsBiInvariantLinearOrder : KourovkaNotebook.Solution21_149.IsBiInvariantLinearOrder
+    (DlabGroup H) o
+fields:
+  KourovkaNotebook.Solution21_149.IsBiInvariantLinearOrder.le_mul_left : ∀ (a b c : DlabGroup H), a ≤ b → c * a ≤ c * b
+  KourovkaNotebook.Solution21_149.IsBiInvariantLinearOrder.le_mul_right : ∀ (a b c : DlabGroup H), a ≤ b → a * c ≤ b * c
+  KourovkaNotebook.Solution21_149.IsDlabBiOrder.lt_iff_firstDisagreement : ∀ (a b : DlabGroup H),
+      a < b ↔ KourovkaNotebook.Solution21_149.FirstDisagreementLt H a b
+constructor:
+  KourovkaNotebook.Solution21_149.IsDlabBiOrder.mk {H : Subgroup PositiveSlopeGroup} {o : LinearOrder (DlabGroup H)}
+    (toIsBiInvariantLinearOrder : KourovkaNotebook.Solution21_149.IsBiInvariantLinearOrder (DlabGroup H) o)
+    (lt_iff_firstDisagreement :
+      ∀ (a b : DlabGroup H), a < b ↔ KourovkaNotebook.Solution21_149.FirstDisagreementLt H a b) :
+    KourovkaNotebook.Solution21_149.IsDlabBiOrder H o
+field notation resolution order:
+  KourovkaNotebook.Solution21_149.IsDlabBiOrder, KourovkaNotebook.Solution21_149.IsBiInvariantLinearOrder
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `IsDlabBiOrder`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `KourovkaNotebook.Solution21_149.IsDlabGroup`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `IsDlabGroup`
+def SL003FC.Kourovka.«21.149».IsDlabGroup : Subgroup NNRealˣ → Subgroup (ℝ ≃o ℝ) → Prop :=
+fun H A =>
+  (∀ (f : ℝ ≃o ℝ),
+      f ∈ A ↔
+        SL003FC.Kourovka.«21.149».IsLocallyRightLinear H f ∧
+          (∀ x ∉ Set.Ioo (0 : ℝ) (1 : ℝ), f x = x) ∧
+            (∀ᶠ (x : ℝ) in nhds (0 : ℝ), f x = x) ∧ ∀ᶠ (x : ℝ) in nhds (1 : ℝ), f x = x) ∨
+    (∀ (f : ℝ ≃o ℝ),
+        f ∈ A ↔
+          SL003FC.Kourovka.«21.149».IsLocallyRightLinear H f ∧
+            (∀ x ∉ Set.Ioo (0 : ℝ) (1 : ℝ), f x = x) ∧ ∀ᶠ (x : ℝ) in nhds (0 : ℝ), f x = x) ∨
+      (∀ (f : ℝ ≃o ℝ),
+          f ∈ A ↔
+            SL003FC.Kourovka.«21.149».IsLocallyRightLinear H f ∧
+              (∀ x ∉ Set.Ioo (0 : ℝ) (1 : ℝ), f x = x) ∧ ∀ᶠ (x : ℝ) in nhds (1 : ℝ), f x = x) ∨
+        (∀ (f : ℝ ≃o ℝ),
+            f ∈ A ↔ SL003FC.Kourovka.«21.149».IsLocallyRightLinear H f ∧ ∀ x ∉ Set.Ioo (0 : ℝ) (1 : ℝ), f x = x) ∨
+          (∀ (f : ℝ ≃o ℝ),
+              f ∈ A ↔
+                SL003FC.Kourovka.«21.149».IsLocallyRightLinear H f ∧
+                  (∀ᶠ (x : ℝ) in Filter.atBot, f x = x) ∧ ∀ᶠ (x : ℝ) in Filter.atTop, f x = x) ∨
+            ∀ (f : ℝ ≃o ℝ),
+              f ∈ A ↔ SL003FC.Kourovka.«21.149».IsLocallyRightLinear H f ∧ ∀ᶠ (x : ℝ) in Filter.atBot, f x = x
+class LinearOrder.{u_2} (α : Type u_2) : Type u_2
+number of parameters: 1
+parents:
+  LinearOrder.toPartialOrder : PartialOrder α
+  LinearOrder.toMin : Min α
+  LinearOrder.toMax : Max α
+  LinearOrder.toOrd : Ord α
+fields:
+  LE.le : α → α → Prop
+  LT.lt : α → α → Prop :=
+    fun a b => a ≤ b ∧ ¬b ≤ a
+  Preorder.le_refl : ∀ (a : α), a ≤ a
+  Preorder.le_trans : ∀ (a b c : α), a ≤ b → b ≤ c → a ≤ c
+  Preorder.lt_iff_le_not_ge : ∀ (a b : α), a < b ↔ a ≤ b ∧ ¬b ≤ a := by
+    intros; rfl
+  PartialOrder.le_antisymm : ∀ (a b : α), a ≤ b → b ≤ a → a = b
+  Min.min : α → α → α :=
+    fun a b => if a ≤ b then a else b
+  Max.max : α → α → α :=
+    fun a b => if a ≤ b then b else a
+  Ord.compare : α → α → Ordering :=
+    fun a b => compareOfLessAndEq a b
+  LinearOrder.le_total : ∀ (a b : α), a ≤ b ∨ b ≤ a
+  LinearOrder.toDecidableLE : DecidableLE α
+  LinearOrder.toDecidableEq : DecidableEq α :=
+    decidableEqOfDecidableLE
+  LinearOrder.toDecidableLT : DecidableLT α :=
+    decidableLTOfDecidableLE
+  LinearOrder.min_def : ∀ (a b : α), min a b = if a ≤ b then a else b := by
+    intros; rfl
+  LinearOrder.max_def : ∀ (a b : α), max a b = if a ≤ b then b else a := by
+    intros; rfl
+  LinearOrder.compare_eq_compareOfLessAndEq : ∀ (a b : α), compare a b = compareOfLessAndEq a b := by
+    compareOfLessAndEq_rfl
+constructor:
+  LinearOrder.mk.{u_2} {α : Type u_2} [toPartialOrder : PartialOrder α] [toMin : Min α] [toMax : Max α] [toOrd : Ord α]
+    (le_total : ∀ (a b : α), a ≤ b ∨ b ≤ a) (toDecidableLE : DecidableLE α) (toDecidableEq : DecidableEq α)
+    (toDecidableLT : DecidableLT α) (min_def : ∀ (a b : α), a ⊓ b = if a ≤ b then a else b := by intros; rfl)
+    (max_def : ∀ (a b : α), a ⊔ b = if a ≤ b then b else a := by intros; rfl)
+    (compare_eq_compareOfLessAndEq : ∀ (a b : α), compare a b = compareOfLessAndEq a b := by compareOfLessAndEq_rfl) :
+    LinearOrder α
+field notation resolution order:
+  LinearOrder, PartialOrder, Min, Max, Ord, Preorder, LE, LT
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `KourovkaNotebook.Solution21_149.LinearOrder`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Kourovka.«21.149».LinearOrder`
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `KourovkaNotebook.Solution21_149.MulAut.innerSubgroup`
+def MulAut.innerSubgroup.{u_1} : (G : Type u_1) → [inst : Group G] → Subgroup (MulAut G) :=
+fun G [Group G] => MulAut.conj.range
+Z_explore.lean:23:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Kourovka.«21.149».MulAut.innerSubgroup`
+def NNReal : Type :=
+{ r // (0 : ℝ) ≤ r }
+Z_explore.lean:24:13: error: unexpected token 'ˣ'; expected command
+Z_explore.lean:25:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Kourovka.«21.149».NNReal`
+Z_explore.lean:25:39: error: unexpected token 'ˣ'; expected command
+Z_explore.lean:26:7: error(lean.unknownIdentifier): Unknown constant `KourovkaNotebook.Solution21_149.NNReal`
+Z_explore.lean:26:45: error: unexpected token 'ˣ'; expected command
+Z_explore.lean:27:7: error(lean.unknownIdentifier): Unknown constant `KourovkaNotebook.Solution21_149.PositiveSlopeGroup`
+@[reducible] def PositiveSlopeGroup : Type :=
+NNRealˣ
+Z_explore.lean:29:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Kourovka.«21.149».PositiveSlopeGroup`
+structure Subgroup.{u_3} (G : Type u_3) [Group G] : Type u_3
+number of parameters: 2
+parents:
+  Subgroup.toSubmonoid : Submonoid G
+fields:
+  Subsemigroup.carrier : Set G
+  Subsemigroup.mul_mem' : ∀ {a b : G}, a ∈ self.carrier → b ∈ self.carrier → a * b ∈ self.carrier
+  Submonoid.one_mem' : (1 : G) ∈ self.carrier
+  Subgroup.inv_mem' : ∀ {x : G}, x ∈ self.carrier → x⁻¹ ∈ self.carrier
+constructor:
+  Subgroup.mk.{u_3} {G : Type u_3} [Group G] (toSubmonoid : Submonoid G)
+    (inv_mem' : ∀ {x : G}, x ∈ toSubmonoid.carrier → x⁻¹ ∈ toSubmonoid.carrier) : Subgroup G
+field notation resolution order:
+  Subgroup, Submonoid, Subsemigroup
+Z_explore.lean:31:7: error(lean.unknownIdentifier): Unknown constant `KourovkaNotebook.Solution21_149.Subgroup`
+Z_explore.lean:32:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Kourovka.«21.149».Subgroup`
+Z_explore.lean:33:7: error(lean.unknownIdentifier): Unknown constant `KourovkaNotebook.Solution21_149.let`
+Z_explore.lean:34:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Kourovka.«21.149».let`
+Z_explore.lean:35:6: error: unexpected token 'let'; expected 'axioms', 'dependents', 'eqns', 'equations', 'opaques', 'prefix', 'sig', 'sorries', 'tactic', identifier or string literal
+Z_explore.lean:36:7: error(lean.unknownIdentifier): Unknown constant `toMulEquiv`
+Z_explore.lean:37:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Kourovka.«21.149».toMulEquiv`
+Z_explore.lean:38:7: error(lean.unknownIdentifier): Unknown constant `KourovkaNotebook.Solution21_149.toMulEquiv`

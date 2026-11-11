@@ -1,0 +1,237 @@
+{
+ "case_id": "H-54",
+ "cited": "KourovkaNotebook.Solution21_149.kourovka_21_149",
+ "module": "Kourovka.Problem_21_149",
+ "toolchain": "leanprover/lean4:v4.28.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 81
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 56
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 3,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Kourovka.«21.149».SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "X_B1_exact.lean:6:9: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "X_B2_convert_rfl.lean:6:13: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "X_B3_aesop.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "X_B3_aesop.lean:6:13: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "X_B4_exact_q.lean:6:13: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E1_twin_exact.lean:6:28: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E2_iff_mp.lean:6:107: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p0_k1.lean:6:13: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p0_k2.lean:6:13: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p0_k3.lean:6:13: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p0_k4.lean:6:13: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E4_norm_p0.lean:6:13: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p1_k1.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p1_k2.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p1_k3.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p1_k4.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E4_norm_p1.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p2_k1.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p2_k2.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p2_k3.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p2_k4.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E4_norm_p2.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p3_k1.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p3_k2.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p3_k3.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p3_k4.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E4_norm_p3.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p4_k1.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p4_k2.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p4_k3.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p4_k4.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E4_norm_p4.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p5_k1.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p5_k2.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p5_k3.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p5_k4.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E4_norm_p5.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p6_k1.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p6_k2.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p6_k3.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p6_k4.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E4_norm_p6.lean:6:14: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 280,
+ "status": "ok"
+}

@@ -1,0 +1,7 @@
+X_B4_exact_q.lean:6:13: error(lean.unknownIdentifier): Unknown identifier `KourovkaNotebook.Solution21_149.kourovka_21_149`
+X_B4_exact_q.lean:4:80: error: unsolved goals
+⊢ ∃ K G,
+    SL003FC.Kourovka.«21.149».IsDlabGroup K G ∧
+      ∃ α,
+        (∀ (f g : ↥G), SL003FC.Kourovka.«21.149».DlabLt (α f) (α g) ↔ SL003FC.Kourovka.«21.149».DlabLt f g) ∧
+          ¬∃ u, ∀ (f : ↥G), α f = u⁻¹ * f * u
