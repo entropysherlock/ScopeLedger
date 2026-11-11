@@ -1,0 +1,5 @@
+SL003Target.lean:22:35: error(lean.unknownIdentifier): Unknown identifier `length_finiteWord`
+SL003Target.lean:22:27: error: unsolved goals
+i : ℕ
+⊢ i < (finiteWord (i + 1)).length
+SL003Target.lean:37:19: error(lean.unknownIdentifier): Unknown identifier `coeff`

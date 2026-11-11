@@ -1,0 +1,9 @@
+⚠ [8026/8026] Built OeisA6697.solution (6.7s)
+warning: OeisA6697/solution.lean:39:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: OeisA6697/solution.lean:201:36: '' starts on column 36, but all commands should start at the beginning of the line.
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+Build completed successfully (8026 jobs).
