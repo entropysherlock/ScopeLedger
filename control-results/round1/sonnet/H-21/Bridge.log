@@ -1,0 +1,6 @@
+Bridge.lean:29:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:29:6: warning: Unused tactic linter: `(convert h using 4)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
