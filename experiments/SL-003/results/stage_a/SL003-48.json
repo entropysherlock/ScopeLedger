@@ -1,0 +1,23 @@
+{
+ "anchor_line": null,
+ "case_id": "SL003-48",
+ "cause": "locate",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": null,
+ "cited_file_sha256": "ad81b7d8a4cec348ab3ba0558df7304e608c3cee587ba816df967e0bde1f654d",
+ "cited_path": "src/v4.29.1/ErdosProblems/Erdos502.lean",
+ "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify",
+ "fc_path": "FormalConjectures/ErdosProblems/502.lean",
+ "locate_method": "not_located",
+ "outcome": "infrastructure_blocked",
+ "pin_method": "url_sha",
+ "pinned_commit": "1d7b3f00780b85ed0462e79a1cd5650ee9055655",
+ "ref": "1d7b3f00780b85ed0462e79a1cd5650ee9055655",
+ "repo": "plby/lean-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_502",
+ "target_statement": "(n : ℕ) (A : Set (ℝ^n)) (hA : A.Finite) (hA2 : {d : ℝ | ∃ x ∈ A, ∃ y ∈ A, x ≠ y ∧ dist x y = d}.ncard = 2) : A.ncard ≤ (n + 2).choose 2",
+ "target_statement_sha256": "8a33fddb51d68295099835afc3735e1d9f92edd53e6f3eb46aec304b8a393c35",
+ "url": "https://github.com/plby/lean-proofs/blob/1d7b3f00780b85ed0462e79a1cd5650ee9055655/src/v4.29.1/ErdosProblems/Erdos502.lean"
+}

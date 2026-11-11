@@ -1,0 +1,15 @@
+{
+ "case_id": "SL003-39",
+ "cause": "retrieval",
+ "certifies": "nothing; deterministic observations only",
+ "detail": "palomar_unreachable: URLError(OSError('Tunnel connection failed: 403 Forbidden'))",
+ "fc_path": "FormalConjectures/ErdosProblems/654.lean",
+ "outcome": "infrastructure_blocked",
+ "palomar": "palomar_unreachable: URLError(OSError('Tunnel connection failed: 403 Forbidden'))",
+ "source_kind": "palomar",
+ "stage": "A",
+ "target": "erdos_654.parts.i",
+ "target_statement": ": ¬ ∀ ε > (0 : ℝ), ∀ᶠ n : ℕ in atTop, ∀ A : Finset ℝ², #A = n → NoFourConcyclic A → ∃ x ∈ A, (1 - ε) * (n : ℝ) < (distinctDistancesFrom A x : ℝ)",
+ "target_statement_sha256": "b0e0289ce38dcb3af45e716ded50c73e1f66470c7f4a0da07c2843e2627fc633",
+ "url": "https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-02-000006"
+}

@@ -1,0 +1,23 @@
+{
+ "anchor_line": null,
+ "case_id": "SL003-18",
+ "cause": "locate",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": null,
+ "cited_file_sha256": "77cb1f6ebd1dcd67227ab699ef43e30e331f113e6babdd7bfbf48186f26ab1be",
+ "cited_path": "src/v4.29.1/ErdosProblems/Erdos519.lean",
+ "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify",
+ "fc_path": "FormalConjectures/ErdosProblems/519.lean",
+ "locate_method": "not_located",
+ "outcome": "infrastructure_blocked",
+ "pin_method": "resolved_branch_at_cutoff",
+ "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+ "ref": "main",
+ "repo": "plby/lean-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_519",
+ "target_statement": ": ∃ c : ℝ, 0 < c ∧ ∀ (n : ℕ) (hn : 0 < n) (z : Fin n → ℂ), z ⟨0, hn⟩ = 1 → ∃ k : Fin n, c < ‖powerSum z (k.val + 1)‖",
+ "target_statement_sha256": "aaba6804a0ca7b1e414440c80f0345ed3f0af1345fc2e2c5c247ba3c6233a09d",
+ "url": "https://github.com/plby/lean-proofs/blob/main/src/v4.29.1/ErdosProblems/Erdos519.lean"
+}

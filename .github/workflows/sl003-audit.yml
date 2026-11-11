@@ -42,7 +42,13 @@ jobs:
             && echo "::notice title=SL-003 sample::population and sample regenerate identically"
       - name: Stage A
         run: |
+          cp -r experiments/SL-003/results/stage_a "$RUNNER_TEMP/stage_a_committed" 2>/dev/null || true
           python experiments/SL-003/stage_a.py "$RUNNER_TEMP/fc" "$RUNNER_TEMP/work" | tee "$RUNNER_TEMP/stage_a.txt"
+          if [ -d "$RUNNER_TEMP/stage_a_committed" ]; then
+            for f in experiments/SL-003/results/stage_a/*.json; do
+              cmp -s "$f" "$RUNNER_TEMP/stage_a_committed/$(basename "$f")" || echo "::warning title=SL-003 Stage A differs from committed::$(basename "$f")"
+            done
+          fi
           echo "::notice title=SL-003 Stage A summary::$(tr -d '\n ' < experiments/SL-003/results/stage_a/summary.json)"
       - id: plan
         name: Plan Stage B
@@ -53,6 +59,10 @@ jobs:
           for f in sorted(glob.glob("experiments/SL-003/results/stage_a/SL003-*.json")):
               r = json.load(open(f))
               if r.get("outcome") != "ready_for_stage_b":
+                  continue
+              only = [l.strip() for l in open("experiments/SL-003/STAGE_B_CASES") if l.strip()] \
+                  if os.path.exists("experiments/SL-003/STAGE_B_CASES") else None
+              if only is not None and r["case_id"] not in only:
                   continue
               repo = r["repo"]
               url = f"https://gist.github.com/{repo.split(':')[1]}.git" if repo.startswith("gist:") else f"https://github.com/{repo}"

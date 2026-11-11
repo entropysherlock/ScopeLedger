@@ -1,0 +1,23 @@
+{
+ "anchor_line": null,
+ "case_id": "SL003-44",
+ "cause": "locate",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": null,
+ "cited_file_sha256": "bdb4878dfe4ef5afb84b72527b948b5c8aa3ac795df9110f2ff8a50b248aa99d",
+ "cited_path": "src/v4.29.1/ErdosProblems/Erdos93.lean",
+ "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify",
+ "fc_path": "FormalConjectures/ErdosProblems/93.lean",
+ "locate_method": "not_located",
+ "outcome": "infrastructure_blocked",
+ "pin_method": "url_sha",
+ "pinned_commit": "1d7b3f00780b85ed0462e79a1cd5650ee9055655",
+ "ref": "1d7b3f00780b85ed0462e79a1cd5650ee9055655",
+ "repo": "plby/lean-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_93",
+ "target_statement": "(A : Finset ℝ²) (hA : ConvexIndep (A : Set ℝ²)) : A.card / 2 ≤ distinctDistances A",
+ "target_statement_sha256": "6ff18f3287f5d5480637813e5bdf627b88f284813e499a6149ae30430c3cf298",
+ "url": "https://github.com/plby/lean-proofs/blob/1d7b3f00780b85ed0462e79a1cd5650ee9055655/src/v4.29.1/ErdosProblems/Erdos93.lean"
+}

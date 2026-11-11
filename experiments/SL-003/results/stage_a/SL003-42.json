@@ -1,0 +1,23 @@
+{
+ "anchor_line": null,
+ "case_id": "SL003-42",
+ "cause": "locate",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": null,
+ "cited_file_sha256": "eb7e4bc6e052ed72c7783f2e7792a41c06dd7dddc6e00c97420e7bd5f57627fd",
+ "cited_path": "src/v4.29.1/ErdosProblems/Erdos314.lean",
+ "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify",
+ "fc_path": "FormalConjectures/ErdosProblems/314.lean",
+ "locate_method": "not_located",
+ "outcome": "infrastructure_blocked",
+ "pin_method": "url_sha",
+ "pinned_commit": "1d7b3f00780b85ed0462e79a1cd5650ee9055655",
+ "ref": "1d7b3f00780b85ed0462e79a1cd5650ee9055655",
+ "repo": "plby/lean-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_314",
+ "target_statement": ": atTop.liminf (fun n : ℕ => (n : ℝ) ^ 2 * epsilon n) = 0",
+ "target_statement_sha256": "2bf536e2a22def92899a10dd5e1176d8b9a90a2934baf82e853892a7df0ae555",
+ "url": "https://github.com/plby/lean-proofs/blob/1d7b3f00780b85ed0462e79a1cd5650ee9055655/src/v4.29.1/ErdosProblems/Erdos314.lean"
+}

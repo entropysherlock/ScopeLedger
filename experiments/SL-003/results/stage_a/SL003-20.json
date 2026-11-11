@@ -1,0 +1,14 @@
+{
+ "case_id": "SL003-20",
+ "cause": "retrieval",
+ "certifies": "nothing; deterministic observations only",
+ "detail": "git clone -q --filter=blob:none --no-checkout --bare https://gist.github.com/96516af9100a37a1da81908dc0b0410c.git /tmp/claude-0/-home-claude/252ab6c7-c90f-5ff4-ae69-942dc89c4365/scratchpad/sa3/gists/96516af9100a37a1da81908dc0b0410c: fatal: unable to access 'https://gist.github.com/96516af9100a37a1da",
+ "fc_path": "FormalConjectures/ErdosProblems/692.lean",
+ "outcome": "infrastructure_blocked",
+ "source_kind": "gist",
+ "stage": "A",
+ "target": "erdos_692.parts.i",
+ "target_statement": ": ¬ ∀ δ : ℕ → ℕ → ℝ, (∀ a b, IsDelta₁ a b (δ a b)) → ∀ n, UnimodularOn (δ n) (n + 1)",
+ "target_statement_sha256": "e50d86ebcf933f8dd8efbcf343f0e6dbdc2cac2b3c1ef2f86800a9ef3271b6a0",
+ "url": "https://gist.githubusercontent.com/pitmonticone/96516af9100a37a1da81908dc0b0410c/raw/a1d6ca7f3835c58b257e5e715c8fdf3a224e1bd0/Erdos692.lean"
+}

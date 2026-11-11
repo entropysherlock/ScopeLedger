@@ -1,0 +1,23 @@
+{
+ "anchor_line": null,
+ "case_id": "SL003-36",
+ "cause": "locate",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": null,
+ "cited_file_sha256": "d66867f0cd5dcc2f7f5a972add3a7d6fda3203ba31a5a8513cc24f0474f1585c",
+ "cited_path": "src/v4.29.1/ErdosProblems/Erdos898.lean",
+ "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify",
+ "fc_path": "FormalConjectures/ErdosProblems/898.lean",
+ "locate_method": "not_located",
+ "outcome": "infrastructure_blocked",
+ "pin_method": "resolved_branch_at_cutoff",
+ "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+ "ref": "main",
+ "repo": "plby/lean-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_898",
+ "target_statement": "(A B C P L M N : ℝ²) (hABC : AffineIndependent ℝ ![A, B, C]) (hP : P ∈ interior (convexHull ℝ ({A, B, C} : Set ℝ²))) (hN : N ∈ line[ℝ, A, B]) (hPN : line[ℝ, P, N].direction ⟂ line[ℝ, A, B].direction) (hM : M ∈ line[ℝ, B, C]) (hPM : line[ℝ, P, M].direction ⟂ line[ℝ, B, C].direction) (hL : L ∈ line[ℝ, C, A]) (hPL : line[ℝ, P, L].direction ⟂ line[ℝ, C, A].direction) : dist P A + dist P B + dist P C ≥ 2 * (dist P M + dist P N + dist P L)",
+ "target_statement_sha256": "8530da77c257805059daf4ea89f8955c1b9f87a6240857fa702f95f5fa05484d",
+ "url": "https://github.com/plby/lean-proofs/blob/main/src/v4.29.1/ErdosProblems/Erdos898.lean"
+}

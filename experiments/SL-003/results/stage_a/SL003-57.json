@@ -1,0 +1,23 @@
+{
+ "anchor_line": null,
+ "case_id": "SL003-57",
+ "cause": "locate",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": null,
+ "cited_file_sha256": "9f11eac422d113c4aa87626e3f3dff7157531486ee6b268738fa2d94d9f3777e",
+ "cited_path": "starfleet/erdos-394/Research/FirstQuestion.lean",
+ "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify",
+ "fc_path": "FormalConjectures/ErdosProblems/394.lean",
+ "locate_method": "not_located",
+ "outcome": "infrastructure_blocked",
+ "pin_method": "url_sha",
+ "pinned_commit": "4f915a323443bfb1709a6805a013812016dca88a",
+ "ref": "4f915a323443bfb1709a6805a013812016dca88a",
+ "repo": "williamjblair/lean-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_394.parts.i",
+ "target_statement": ": ∃ c > (0 : ℝ), (fun x ↦ ∑ n ∈ Icc 1 ⌊x⌋₊, (t 2 n : ℝ)) ≪ (fun x ↦ x ^ 2 / (Real.log x) ^ c)",
+ "target_statement_sha256": "8b1a603bda5ea9198e141abcbb3dafb34fb5a7bda72f8c64df2d18bbee884a5a",
+ "url": "https://github.com/williamjblair/lean-proofs/blob/4f915a323443bfb1709a6805a013812016dca88a/starfleet/erdos-394/Research/FirstQuestion.lean"
+}

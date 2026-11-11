@@ -150,4 +150,15 @@ population link other than the SL-002 pair before the freeze.
 
 ## Amendments
 
-None.
+**Amendment 1, 2026-11-11, after Stage A outcomes were seen (launch 1, run 43063523513) and before any
+Stage B outcome was seen.**
+(a) Sections 6 and 10 contradicted each other about a link whose file exists but whose declaration the
+rules do not identify (section 6: `infrastructure_blocked: locate`; section 10: `certified_defect_link`).
+Section 6 governs. Such a link names a file, not a declaration; that is imprecision, not evidence that
+the proof is wrong. `certified_defect_link` now means only: the cited declaration builds and its axioms
+include `sorryAx` or a non-standard axiom. Stage A launch 1 reported 12 such cases as
+`certified_defect_link_candidate`; none is a defect.
+(b) Implementation fix: the anchor and name rules also recognise `alias` declarations (an alias is a
+name for a theorem). This was found on SL003-50, whose anchor points at an `alias`. Applied to every
+case; Stage A is re-run in full.
+No threshold, outcome definition other than (a), sampling rule or budget changed.

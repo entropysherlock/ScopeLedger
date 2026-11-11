@@ -18,7 +18,7 @@ sys.path.insert(0, str(HERE.parent / "SL-001"))
 import sl001  # noqa: E402  (theorem_statement, core, norm)
 
 CUTOFF = "2026-11-11T09:09:17Z"
-DECL = re.compile(r'^\s*(?:@\[[^\]]*\]\s*)*(?:private\s+|protected\s+|noncomputable\s+)*(?:theorem|lemma)\s+(\S+)', re.M)
+DECL = re.compile(r'^\s*(?:@\[[^\]]*\]\s*)*(?:private\s+|protected\s+|noncomputable\s+)*(?:theorem|lemma|alias)\s+(\S+)', re.M)
 
 
 def sh(*a, cwd=None, check=True):
@@ -163,8 +163,8 @@ def run_case(c: dict, fc: str, work: Path) -> dict:
     name, how = locate(src.stdout, u["line"], c["target"])
     r.update(cited_decl=name, locate_method=how)
     if not name:
-        return {**r, "outcome": "certified_defect_link_candidate", "cause": "locate",
-                "detail": "file exists at pin but no declaration matches the anchor or name rules"}
+        return {**r, "outcome": "infrastructure_blocked", "cause": "locate",
+                "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify"}
     st = sl001.theorem_statement(src.stdout, name)
     r["cited_statement"] = st
     r["cited_statement_sha256"] = sha(st)
@@ -178,7 +178,7 @@ def run_case(c: dict, fc: str, work: Path) -> dict:
         return {**r, "outcome": "infrastructure_blocked", "cause": "environment",
                 "detail": (env or {}).get("error", "no lean-toolchain + lake-manifest.json above the cited file")}
     hdr = next((i for i, l in enumerate(src.stdout.split("\n"), 1)
-                if re.search(r'\b(?:theorem|lemma)\s+' + re.escape(name) + r'(?=[\s:({\[])', l)), None)
+                if re.search(r'\b(?:theorem|lemma|alias)\s+' + re.escape(name) + r'(?=[\s:({\[])', l)), None)
     r["cited_qualified"] = sl001.qualified_name(src.stdout, hdr, name) if hdr else name
     rel = u["path"][len(env["root"]) + 1:] if env["root"] else u["path"]
     r["cited_module"] = rel[:-len(".lean")].replace("/", ".")

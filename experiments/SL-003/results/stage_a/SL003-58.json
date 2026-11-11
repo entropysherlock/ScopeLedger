@@ -1,0 +1,23 @@
+{
+ "anchor_line": null,
+ "case_id": "SL003-58",
+ "cause": "locate",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": null,
+ "cited_file_sha256": "f661a1df93bb9a78bddb5bcb7e3fc2fde6b32d4e8cfba9eca6957b182d6886a1",
+ "cited_path": "src/v4.29.1/ErdosProblems/Erdos666.lean",
+ "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify",
+ "fc_path": "FormalConjectures/ErdosProblems/666.lean",
+ "locate_method": "not_located",
+ "outcome": "infrastructure_blocked",
+ "pin_method": "resolved_branch_at_cutoff",
+ "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+ "ref": "main",
+ "repo": "plby/lean-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_666",
+ "target_statement": ": ¬ ∀ ε : ℝ, 0 < ε → ∀ᶠ n : ℕ in atTop, ∀ H : SimpleGraph (Fin n → Bool), H ≤ hypercube n → ε * n * 2 ^ (n - 1 : ℕ) ≤ (H.edgeSet.ncard : ℝ) → (cycleGraph 6 ⊑ H)",
+ "target_statement_sha256": "a2ac98e19279753fca266cb013820bce0b2a268a6b77050d7ca5e5d1cf5910a8",
+ "url": "https://github.com/plby/lean-proofs/blob/main/src/v4.29.1/ErdosProblems/Erdos666.lean"
+}

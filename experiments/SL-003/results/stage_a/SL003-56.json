@@ -1,0 +1,23 @@
+{
+ "anchor_line": null,
+ "case_id": "SL003-56",
+ "cause": "locate",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": null,
+ "cited_file_sha256": "b2b381e83d03d442568c4f9c86830e97710b9e5af079f03d443e2695f2848953",
+ "cited_path": "src/v4.29.1/ErdosProblems/Erdos199.lean",
+ "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify",
+ "fc_path": "FormalConjectures/ErdosProblems/199.lean",
+ "locate_method": "not_located",
+ "outcome": "infrastructure_blocked",
+ "pin_method": "resolved_branch_at_cutoff",
+ "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+ "ref": "main",
+ "repo": "plby/lean-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_199",
+ "target_statement": ": ¬ ∀ A : Set ℝ, ThreeAPFree A → ∃ S : Set ℝ, S.IsAPOfLength ⊤ ∧ S ⊆ Aᶜ",
+ "target_statement_sha256": "a1b0b36048eb994e49219553c46a83d303c38eb47e34efba20767ff72e9af7c9",
+ "url": "https://github.com/plby/lean-proofs/blob/main/src/v4.29.1/ErdosProblems/Erdos199.lean"
+}

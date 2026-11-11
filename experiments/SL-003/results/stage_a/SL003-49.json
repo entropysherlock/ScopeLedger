@@ -1,0 +1,23 @@
+{
+ "anchor_line": null,
+ "case_id": "SL003-49",
+ "cause": "locate",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": null,
+ "cited_file_sha256": "3cb64ae9dda86f640a6f3fd99cdd422c4c85481e45c496220b69bfaf54d9c5f4",
+ "cited_path": "src/v4.29.1/ErdosProblems/Erdos214.lean",
+ "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify",
+ "fc_path": "FormalConjectures/ErdosProblems/214.lean",
+ "locate_method": "not_located",
+ "outcome": "infrastructure_blocked",
+ "pin_method": "resolved_branch_at_cutoff",
+ "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+ "ref": "main",
+ "repo": "plby/lean-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_214",
+ "target_statement": ": ∀ S : Set ℝ², UnitDistanceAvoiding S → ∃ p : Fin 4 → ℝ², (∀ i, p i ∈ Sᶜ) ∧ (p ≅ unitSquare)",
+ "target_statement_sha256": "31d252f9c0e4bab082cf518589060eedf5b6f5bba1a19457c75139ff8add36fd",
+ "url": "https://github.com/plby/lean-proofs/blob/main/src/v4.29.1/ErdosProblems/Erdos214.lean"
+}

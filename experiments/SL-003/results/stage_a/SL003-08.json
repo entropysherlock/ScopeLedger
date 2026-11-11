@@ -1,0 +1,23 @@
+{
+ "anchor_line": null,
+ "case_id": "SL003-08",
+ "cause": "locate",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": null,
+ "cited_file_sha256": "a6373d1394cadc827f44357ce9c6c3a864cc05da11fdd4fcaf9e608f1c84891b",
+ "cited_path": "src/v4.29.1/ErdosProblems/Erdos775.lean",
+ "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify",
+ "fc_path": "FormalConjectures/ErdosProblems/775.lean",
+ "locate_method": "not_located",
+ "outcome": "infrastructure_blocked",
+ "pin_method": "resolved_branch_at_cutoff",
+ "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+ "ref": "main",
+ "repo": "plby/lean-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_775",
+ "target_statement": ": ¬ ∃ C : ℕ, ∃ᶠ n : ℕ in atTop, ∃ H : UniformHypergraph (Fin n) 3, n - C ≤ (UniformHypergraph.cliqueSizes H).ncard",
+ "target_statement_sha256": "3b9130d0cb8a916926d688ba3fe70df73211d65447e705571f694016ddfa4c51",
+ "url": "https://github.com/plby/lean-proofs/blob/main/src/v4.29.1/ErdosProblems/Erdos775.lean"
+}
