@@ -11,6 +11,7 @@ type guard against the transported target, axioms, leanchecker replay, and trans
 theorem. Results go to <out dir>/dev.json. Nothing here certifies anything by itself.
 """
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -61,7 +62,6 @@ def main():
     LEAN, CHECKER = str(bindir / "lean"), bindir / "leanchecker"
     work = out / "lean"
     work.mkdir(exist_ok=True)
-    import os
     env = {**os.environ, "LEAN_PATH": f"{work}:{lean_path}", "PATH": f"{bindir}:{os.environ.get('PATH', '')}"}
     tr = subprocess.run([sys.executable, str(SL003 / "transport.py"), sys.argv[1], fc, str(work),
                          sa["cited_module"], sa["cited_qualified"]], capture_output=True, text=True)
@@ -110,14 +110,17 @@ def main():
                             "proves_target": guard if ".bridge" in thm else None, "axioms": pax,
                             "standard_axioms": pax is not None and all(a in stage_b.ALLOWED for a in pax),
                             "leanchecker": rep, "uses_cited": (um.group(1) == "true") if um else None}
-    # Automatic engine (engine.py), compiled after the hand/AI candidates when SL004_ENGINE=1.
-    import os as _os
-    if _os.environ.get("SL004_ENGINE") == "1":
-        sys.path.insert(0, str(HERE))
-        import engine
-        edir = out / "engine_src"
-        names = engine.write(tp, sa["cited_qualified"], edir)
-        R["engine"] = {}
+    # Automatic candidate sets from engine.py, compiled after the hand/AI candidates:
+    # SL004_BASELINES=1 -> baseline tactics; SL004_ENGINE=1 -> the engine portfolio.
+    sys.path.insert(0, str(HERE))
+    import engine
+    for flag, setname, gen in (("SL004_BASELINES", "baselines", engine.baseline_candidates),
+                               ("SL004_ENGINE", "engine", engine.candidates)):
+        if os.environ.get(flag) != "1":
+            continue
+        edir = out / f"{setname}_src"
+        names = engine.write(tp, sa["cited_qualified"], edir, gen, prefix="X" if setname == "baselines" else "E")
+        R[setname] = {}
         for name in names:
             mod = Path(name).stem
             shutil.copy(edir / name, work / name)
@@ -141,7 +144,7 @@ def main():
                 ent.update(proves_target=not re.search(r':\d+:\d+: error', clog), axioms=pax,
                            standard_axioms=pax is not None and all(a in stage_b.ALLOWED for a in pax),
                            uses_cited=(um.group(1) == "true") if um else None, leanchecker=rep)
-            R["engine"][name] = ent
+            R[setname][name] = ent
     R["bridges"] = bridges
     R["seconds_total"] = round(time.time() - t0)
     return done("ok")

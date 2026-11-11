@@ -1,0 +1,152 @@
+name: SL-004 held-out evaluation
+
+# Launched by a new line in experiments/SL-004/EVAL_RUN. Regenerates the held-out sample (seed = the
+# engine-freeze commit), runs SL-003 Stage A on it, then per ready case: build, transport, baselines,
+# frozen engine, and any AI candidates in experiments/SL-004/heldout_ai/<case>/. Logs go to the
+# sl004-ci branch under eval-results/<run id>/.
+on:
+  push:
+    branches: ["main"]
+    paths: ["experiments/SL-004/EVAL_RUN"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FC_URL: https://github.com/google-deepmind/formal-conjectures
+  FC_COMMIT: da703a5f239f734a47ede2f4e99b9ccc9e644cb5
+
+jobs:
+  stage_a:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false, fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Formal Conjectures at the frozen commit
+        run: |
+          git clone -q --filter=blob:none --no-checkout "$FC_URL" "$RUNNER_TEMP/fc"
+          git -C "$RUNNER_TEMP/fc" checkout -q "$FC_COMMIT"
+      - name: Held-out sample (must regenerate identically)
+        run: |
+          set -euo pipefail
+          cd experiments/SL-004
+          cp heldout_sample.jsonl /tmp/h.committed
+          python heldout.py
+          cmp heldout_sample.jsonl /tmp/h.committed && echo "::notice title=SL-004 sample::held-out sample regenerates identically"
+      - name: Stage A on the held-out sample
+        run: |
+          SL_SAMPLE=experiments/SL-004/heldout_sample.jsonl SL_STAGE_A_OUT="$RUNNER_TEMP/stage_a" \
+            python experiments/SL-003/stage_a.py "$RUNNER_TEMP/fc" "$RUNNER_TEMP/work"
+          echo "::notice title=SL-004 Stage A summary::$(tr -d '\n ' < "$RUNNER_TEMP/stage_a/summary.json")"
+      - id: plan
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, glob, os
+          inc = []
+          for f in sorted(glob.glob(os.environ["RUNNER_TEMP"] + "/stage_a/H-*.json")):
+              r = json.load(open(f))
+              if r.get("outcome") != "ready_for_stage_b":
+                  continue
+              repo = r["repo"]
+              url = f"https://gist.github.com/{repo.split(':')[1]}.git" if repo.startswith("gist:") else f"https://github.com/{repo}"
+              inc.append({"case": r["case_id"], "clone": url, "commit": r["pinned_commit"],
+                          "root": r["environment"]["root"] or ".", "fc_path": r["fc_path"]})
+          print("matrix=" + json.dumps({"include": inc}))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sl004-heldout-stage-a
+          path: ${{ runner.temp }}/stage_a
+
+  eval:
+    needs: stage_a
+    if: ${{ needs.stage_a.outputs.matrix != '' && fromJSON(needs.stage_a.outputs.matrix).include[0] != null }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.stage_a.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/download-artifact@v4
+        with:
+          name: sl004-heldout-stage-a
+          path: ${{ runner.temp }}/stage_a
+      - name: elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o elan-init.sh
+          sh elan-init.sh -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Sources at the pinned commits
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone -q --filter=blob:none --no-checkout "$FC_URL" "$RUNNER_TEMP/fc"
+          git -C "$RUNNER_TEMP/fc" sparse-checkout set --no-cone "/${{ matrix.fc_path }}"
+          git -C "$RUNNER_TEMP/fc" checkout -q "$FC_COMMIT"
+          git clone -q --filter=blob:none --no-checkout "${{ matrix.clone }}" "$RUNNER_TEMP/target"
+          cd "$RUNNER_TEMP/target"
+          if [ "${{ matrix.root }}" != "." ]; then git sparse-checkout set --no-cone "/${{ matrix.root }}/**" "/*"; fi
+          git checkout -q "${{ matrix.commit }}"
+          test "$(git rev-parse HEAD)" = "${{ matrix.commit }}"
+      - name: Project build cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/target/${{ matrix.root }}/.lake/build
+          key: sl004-build-${{ matrix.case }}-${{ matrix.commit }}
+      - name: Baselines, frozen engine, AI candidates
+        shell: bash
+        run: |
+          set +e
+          mkdir -p "$GITHUB_WORKSPACE/experiments/SL-004/heldout_ai/${{ matrix.case }}"
+          cd "$RUNNER_TEMP/target/${{ matrix.root }}"
+          SL004_BASELINES=1 SL004_ENGINE=1 python "$GITHUB_WORKSPACE/experiments/SL-004/dev_run.py" \
+            "$RUNNER_TEMP/stage_a/${{ matrix.case }}.json" . "$RUNNER_TEMP/fc" \
+            "$GITHUB_WORKSPACE/experiments/SL-004/heldout_ai/${{ matrix.case }}" "$RUNNER_TEMP/out/${{ matrix.case }}"
+          cp "$RUNNER_TEMP/stage_a/${{ matrix.case }}.json" "$RUNNER_TEMP/out/${{ matrix.case }}/stage_a.json"
+          find "$RUNNER_TEMP/out" -type f \( -name '*.olean' -o -name '*.ilean' -o -name '*.c' -o -name '*.olean.*' \) -delete
+          find "$RUNNER_TEMP/out" -type f -name '*.log' -size +300k -exec sh -c 'tail -c 300000 "$1" > "$1.t" && mv "$1.t" "$1"' _ {} \;
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sl004-eval-${{ matrix.case }}
+          path: ${{ runner.temp }}/out/
+
+  collect:
+    needs: [stage_a, eval]
+    if: always()
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: sl004-*
+          path: ${{ runner.temp }}/arts
+      - name: Commit logs to the sl004-ci branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "scopeledger-ci"
+          git config user.email "scopeledger-ci@users.noreply.github.com"
+          if git fetch -q origin sl004-ci; then git checkout -q -B sl004-ci origin/sl004-ci; else git checkout -q --orphan sl004-ci && git rm -rqf . ; fi
+          dest="eval-results/${{ github.run_id }}"
+          mkdir -p "$dest"
+          cp -r "$RUNNER_TEMP/arts/." "$dest/" 2>/dev/null || true
+          echo "${{ github.sha }}" > "$dest/SOURCE_COMMIT"
+          git add -A eval-results
+          git commit -q -m "SL-004 held-out results, run ${{ github.run_id }} (source ${{ github.sha }})"
+          for i in 1 2 3 4 5; do git push -q origin sl004-ci && break; git pull -q --rebase origin sl004-ci; done

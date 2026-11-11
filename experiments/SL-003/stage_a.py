@@ -232,9 +232,12 @@ def run_case(c: dict, fc: str, work: Path) -> dict:
 def main():
     fc, work = sys.argv[1], Path(sys.argv[2])
     only = set(sys.argv[3:])
-    out = HERE / "results" / "stage_a"
+    # SL-004 reuses Stage A on its held-out sample; the defaults reproduce SL-003 exactly.
+    import os
+    out = Path(os.environ.get("SL_STAGE_A_OUT", HERE / "results" / "stage_a"))
     out.mkdir(parents=True, exist_ok=True)
-    cases = [json.loads(l) for l in (HERE / "sample.jsonl").read_text().splitlines() if l.strip()]
+    sample = Path(os.environ.get("SL_SAMPLE", HERE / "sample.jsonl"))
+    cases = [json.loads(l) for l in sample.read_text().splitlines() if l.strip()]
     res = []
     for c in cases:
         if only and c["case_id"] not in only:

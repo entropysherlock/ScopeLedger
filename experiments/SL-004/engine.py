@@ -54,12 +54,24 @@ def candidates(tp: str, cited: str):
     return out
 
 
-def write(tp: str, cited: str, out: Path):
+def baseline_candidates(tp: str, cited: str):
+    """Baselines (PROTOCOL section 3): exact, plain convert + rfl (no unfolding), aesop, exact?."""
+    c = f"@{cited}"
+    return {
+        "B1_exact": f"unfold {tp}\n  exact {c}",
+        "B2_convert_rfl": f"unfold {tp}\n  have h := {c}\n  convert h using 3 <;> rfl",
+        "B3_aesop": f"unfold {tp}\n  have h := {c}\n  aesop",
+        "B4_exact_q": f"unfold {tp}\n  have h := {c}\n  exact?",
+    }
+
+
+def write(tp: str, cited: str, out: Path, gen=None, prefix="E"):
     out.mkdir(parents=True, exist_ok=True)
     names = []
-    for name, tac in candidates(tp, cited).items():
-        f = out / f"E_{name}.lean"
-        f.write_text("import SL003Target\n\nset_option maxHeartbeats 400000 in\n"
+    for name, tac in (gen or candidates)(tp, cited).items():
+        f = out / f"{prefix}_{name}.lean"
+        hb = 2000000 if name == "B4_exact_q" else 400000
+        f.write_text(f"import SL003Target\n\nset_option maxHeartbeats {hb} in\n"
                      f"theorem SL004.bridge_{name} : {tp} := by\n  {tac}\n")
         names.append(f.name)
     return names
