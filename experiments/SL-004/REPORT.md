@@ -48,8 +48,8 @@ regression ([results/dev_round5/DEV_STATUS.md](results/dev_round5/DEV_STATUS.md)
 |---|---|---|
 | Sampled | 60 | 30 repositories; seed = freeze SHA; CI regenerated the sample byte for byte |
 | Reached Stage B | 46 | 6 locate, 4 environment, 4 retrieval blocked in Stage A |
-| Evaluated so far | 45 | H-47 (Gerver sofa project) still building at report time |
-| Transported target elaborates (T) | 32 | 10 `target_failed` (mostly FC utility definitions absent from the cited environment), 2 transport, 1 build |
+| Evaluated | 46 | H-47 (Gerver sofa project): build exceeded the frozen 60-minute budget, `infrastructure_blocked: build` |
+| Transported target elaborates (T) | 32 | 10 `target_failed` (mostly FC utility definitions absent from the cited environment), 2 transport, 2 build |
 | `exact` | 17 / 32 | |
 | Any baseline (`exact`, `convert … <;> rfl`, `aesop`, `exact?`) | 19 / 32 | |
 | Frozen automatic engine (37 strategies) | 19 / 32 | **+0 over the baselines** |
