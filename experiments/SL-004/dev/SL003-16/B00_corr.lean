@@ -12,4 +12,4 @@ theorem SL004.corr690_kth (k p : ℕ) (hk : 1 ≤ k) :
   · rintro ⟨-, hp, hc⟩
     exact ⟨by omega, hp, hc⟩
   · rintro ⟨-, hp, hc⟩
-    exact ⟨Nat.pos_of_ne_zero (Nat.ne_zero_of_mem_primeFactors hp), hp, hc⟩
+    exact ⟨Nat.pos_of_ne_zero (Nat.mem_primeFactors.mp hp).2.2, hp, hc⟩

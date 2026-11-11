@@ -14,5 +14,4 @@ theorem SL004.corr06_lib (N : ℕ) : SL003FC.Erdos441.g N = Erdos441.g N := by
       exact ⟨fun h => ⟨h.1, h⟩, fun h => h.2⟩)
     ⟨∅, by simp [Erdos441.candidates, Erdos441.LcmBounded]⟩
   convert this using 1
-  ext k
-  simp only [Set.mem_setOf_eq, and_assoc]
+  all_goals (try (ext k; simp only [Set.mem_setOf_eq, and_assoc]))
