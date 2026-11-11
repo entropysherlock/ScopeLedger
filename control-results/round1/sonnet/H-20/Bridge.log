@@ -1,0 +1,9 @@
+Bridge.lean:3:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+Bridge.lean:7:12: error: typeclass instance problem is stuck
+  MeasureTheory.IsProbabilityMeasure MeasureTheory.volume
+
+Note: Lean will not try to resolve this typeclass instance problem because the first, second, and third type arguments to `MeasureTheory.IsProbabilityMeasure` contain metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.

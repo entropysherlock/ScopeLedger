@@ -1,0 +1,34 @@
+{
+ "case_id": "H-20",
+ "cited": "E522.erdos_522_zero_one_solved",
+ "module": "Erdos522StrongLawFC",
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 92
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 134
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "Bridge.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 5,
+   "first_error": "Bridge.lean:7:12: error: typeclass instance problem is stuck\n  MeasureTheory.IsProbabilityMeasure MeasureTheory.volume\n\nNote: Lean will not try to resolve this typeclass instance problem because the first, second, and third type arguments to `MeasureTheory.IsProbabilityMeasure` contain metavariables. These arguments must be fully determined before Lean will try to resolve the typeclass.\n\nHint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typecl"
+  }
+ },
+ "target_prop": "SL003FC.Erdos522.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 242,
+ "status": "ok"
+}
