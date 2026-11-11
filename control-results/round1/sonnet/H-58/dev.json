@@ -1,0 +1,49 @@
+{
+ "case_id": "H-58",
+ "cited": "Erdos274.erdos_274.variants.abelian",
+ "module": "Erdos274.Main",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 101
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 15
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "Bridge.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos274.SL003.targetProp",
+ "bridges": {
+  "SL004.bridge_main": {
+   "file": "Bridge.lean",
+   "kind": "bridge_main",
+   "statement": "SL003FC.Erdos274.SL003.targetProp",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": null,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 142,
+ "status": "ok"
+}
