@@ -1,0 +1,112 @@
+name: SL-005 control
+
+# Compiles control-agent submissions (experiments/SL-005/control/<agent>/round<k>/<case>/) with the frozen
+# SL-004 runner in each case's pinned environment. Launched by a new line in experiments/SL-005/RUN, which
+# names the round; experiments/SL-005/CONTROL_JOBS lists "<agent> <case>" pairs for that round.
+on:
+  push:
+    branches: ["main"]
+    paths: ["experiments/SL-005/RUN"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FC_URL: https://github.com/google-deepmind/formal-conjectures
+  FC_COMMIT: da703a5f239f734a47ede2f4e99b9ccc9e644cb5
+
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      round: ${{ steps.plan.outputs.round }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - id: plan
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          rnd = open("experiments/SL-005/RUN").read().split()[1]
+          inc = []
+          for line in open("experiments/SL-005/CONTROL_JOBS"):
+              if not line.strip() or line.startswith("#"):
+                  continue
+              agent, case = line.split()
+              r = json.load(open(f"experiments/SL-005/stage_a/{case}.json"))
+              repo = r["repo"]
+              url = f"https://gist.github.com/{repo.split(':')[1]}.git" if repo.startswith("gist:") else f"https://github.com/{repo}"
+              inc.append({"agent": agent, "case": case, "clone": url, "commit": r["pinned_commit"],
+                          "root": r["environment"]["root"] or ".", "fc_path": r["fc_path"]})
+          print("round=" + rnd)
+          print("matrix=" + json.dumps({"include": inc}))
+          PY
+
+  control:
+    needs: plan
+    if: ${{ fromJSON(needs.plan.outputs.matrix).include[0] != null }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o elan-init.sh
+          sh elan-init.sh -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Sources at the pinned commits
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone -q --filter=blob:none --no-checkout "$FC_URL" "$RUNNER_TEMP/fc"
+          git -C "$RUNNER_TEMP/fc" sparse-checkout set --no-cone "/${{ matrix.fc_path }}"
+          git -C "$RUNNER_TEMP/fc" checkout -q "$FC_COMMIT"
+          git clone -q --filter=blob:none --no-checkout "${{ matrix.clone }}" "$RUNNER_TEMP/target"
+          cd "$RUNNER_TEMP/target"
+          if [ "${{ matrix.root }}" != "." ]; then git sparse-checkout set --no-cone "/${{ matrix.root }}/**" "/*"; fi
+          git checkout -q "${{ matrix.commit }}"
+          test "$(git rev-parse HEAD)" = "${{ matrix.commit }}"
+      - name: Project build cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/target/${{ matrix.root }}/.lake/build
+          key: sl004-build-${{ matrix.case }}-${{ matrix.commit }}
+      - name: Compile control submissions with the frozen SL-004 runner
+        shell: bash
+        run: |
+          set +e
+          C="$GITHUB_WORKSPACE/experiments/SL-005/control/${{ matrix.agent }}/round${{ needs.plan.outputs.round }}/${{ matrix.case }}"
+          mkdir -p "$C"
+          cd "$RUNNER_TEMP/target/${{ matrix.root }}"
+          python "$GITHUB_WORKSPACE/experiments/SL-004/dev_run.py" \
+            "$GITHUB_WORKSPACE/experiments/SL-005/stage_a/${{ matrix.case }}.json" . "$RUNNER_TEMP/fc" "$C" \
+            "$RUNNER_TEMP/out/${{ matrix.case }}"
+          find "$RUNNER_TEMP/out" -type f \( -name '*.olean' -o -name '*.ilean' -o -name '*.c' -o -name '*.olean.*' \) -delete
+      - name: Push logs to the sl005-ci branch
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          d="$RUNNER_TEMP/push"
+          git clone -q --depth 1 --branch sl005-ci "https://x-access-token:$GH_TOKEN@github.com/${{ github.repository }}.git" "$d" \
+            || { git clone -q --depth 1 "https://x-access-token:$GH_TOKEN@github.com/${{ github.repository }}.git" "$d" && cd "$d" && git checkout -q --orphan sl005-ci && git rm -rqf . && cd -; }
+          cd "$d"
+          git config user.name "scopeledger-ci"; git config user.email "scopeledger-ci@users.noreply.github.com"
+          dest="control-results/round${{ needs.plan.outputs.round }}/${{ matrix.agent }}/${{ matrix.case }}"
+          rm -rf "$dest"; mkdir -p "$dest"; cp -r "$RUNNER_TEMP/out/${{ matrix.case }}/." "$dest/" 2>/dev/null
+          echo "${{ github.run_id }} ${{ github.sha }}" > "$dest/RUN_INFO"
+          git add -A control-results; git commit -q -m "SL-005 control round ${{ needs.plan.outputs.round }} ${{ matrix.agent }} ${{ matrix.case }}"
+          for i in 1 2 3 4 5 6 7 8 9 10; do git push -q origin sl005-ci && break; sleep $((RANDOM % 10 + 2)); git pull -q --rebase origin sl005-ci; done

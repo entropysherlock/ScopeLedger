@@ -1,0 +1,15 @@
+{
+ "case": "H-56",
+ "formal_conjectures_file": "FormalConjectures/ErdosProblems/1150.lean",
+ "formal_conjectures_theorem": "erdos_1150",
+ "transported_target": "SL003FC.Erdos1150.SL003.targetProp",
+ "cited_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/Analysis/Littlewood/Main.lean#L187",
+ "cited_repository": "openai/math",
+ "pinned_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a",
+ "cited_file": "lean/OAI/Analysis/Littlewood/Main.lean",
+ "cited_theorem": "OAI.AsymptoticallyMinimalLittlewood.main",
+ "cited_module": "OAI.Analysis.Littlewood.Main",
+ "cited_statement_text": ": MainStatement",
+ "lean_toolchain": "leanprover/lean4:v4.34.1",
+ "project_root_in_repository": "lean"
+}

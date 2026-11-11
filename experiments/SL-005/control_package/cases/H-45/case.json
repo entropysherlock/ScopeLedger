@@ -1,0 +1,15 @@
+{
+ "case": "H-45",
+ "formal_conjectures_file": "FormalConjectures/ErdosProblems/49.lean",
+ "formal_conjectures_theorem": "erdos_49.variants.tao",
+ "transported_target": "SL003FC.Erdos49.SL003.targetProp",
+ "cited_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos49.lean#L120",
+ "cited_repository": "plby/lean-proofs",
+ "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+ "cited_file": "src/latest/ErdosProblems/Erdos49.lean",
+ "cited_theorem": "Erdos49.erdos_49_quantitative",
+ "cited_module": "ErdosProblems.Erdos49",
+ "cited_statement_text": ": QuantitativeResolution",
+ "lean_toolchain": "leanprover/lean4:v4.33.0",
+ "project_root_in_repository": "src/latest"
+}

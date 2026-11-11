@@ -1,0 +1,45 @@
+def SL003FC.Erdos534.SL003.targetProp : Prop :=
+∀ (N : ℕ),
+  (2 : ℕ) ≤ N →
+    ∃ q ∈ N.primeFactors,
+      SL003FC.Erdos534.IsAdmissible N (SL003FC.Erdos534.ahlswedeKhachatrian N q) ∧
+        SL003FC.Erdos534.maxCard N = (SL003FC.Erdos534.ahlswedeKhachatrian N q).card
+Erdos534.erdos_534 : ∀ (N : ℕ),
+  (2 : ℕ) ≤ N →
+    ∃ q ∈ N.primeFactors,
+      Erdos534.Admissible N (Erdos534.candidate N q) ∧
+        ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `A.card`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos534.A.card`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `Erdos534.A.card`
+def Erdos534.Admissible : ℕ → Finset ℕ → Prop :=
+fun N A => A ⊆ Erdos534.interval N ∧ N ∈ A ∧ (↑A).Pairwise fun a b => (1 : ℕ) < a.gcd b
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos534.Admissible`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `Admissible`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `Erdos534.IsAdmissible`
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `IsAdmissible`
+def SL003FC.Erdos534.IsAdmissible : ℕ → Finset ℕ → Prop :=
+fun N A => A ⊆ Finset.Icc (1 : ℕ) N ∧ N ∈ A ∧ (↑A).Pairwise fun a b => (1 : ℕ) < a.gcd b
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `Erdos534.N.primeFactors`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos534.N.primeFactors`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `N.primeFactors`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `ahlswedeKhachatrian`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `Erdos534.ahlswedeKhachatrian`
+def SL003FC.Erdos534.ahlswedeKhachatrian : ℕ → ℕ → Finset ℕ :=
+fun N q =>
+  {m ∈ Finset.Icc (1 : ℕ) N |
+    ∏ p ∈ SL003FC.Erdos534.primePrefix N q, p ∣ m ∨ ∃ p ∈ SL003FC.Erdos534.primePrefix N q, (2 : ℕ) * p ∣ m}
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos534.candidate`
+Z_explore.lean:22:7: error(lean.unknownIdentifier): Unknown constant `candidate`
+def Erdos534.candidate : ℕ → ℕ → Finset ℕ :=
+fun N q => {m ∈ Erdos534.interval N | Erdos534.prefixProduct N q ∣ m ∨ ∃ p ∈ Erdos534.primePrefix N q, (2 : ℕ) * p ∣ m}
+Z_explore.lean:24:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos534.card`
+Z_explore.lean:25:7: error(lean.unknownIdentifier): Unknown constant `Erdos534.card`
+Z_explore.lean:26:7: error(lean.unknownIdentifier): Unknown constant `card`
+Z_explore.lean:27:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos534.hN`
+Z_explore.lean:28:7: error(lean.unknownIdentifier): Unknown constant `hN`
+Z_explore.lean:29:7: error(lean.unknownIdentifier): Unknown constant `Erdos534.hN`
+Z_explore.lean:30:7: error(lean.unknownIdentifier): Unknown constant `maxCard`
+def SL003FC.Erdos534.maxCard : ℕ → ℕ :=
+fun N => sSup {n | ∃ A, SL003FC.Erdos534.IsAdmissible N A ∧ A.card = n}
+Z_explore.lean:32:7: error(lean.unknownIdentifier): Unknown constant `Erdos534.maxCard`

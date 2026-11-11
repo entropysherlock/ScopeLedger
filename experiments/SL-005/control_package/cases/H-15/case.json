@@ -1,0 +1,15 @@
+{
+ "case": "H-15",
+ "formal_conjectures_file": "FormalConjectures/ErdosProblems/673.lean",
+ "formal_conjectures_theorem": "erdos_673.parts.ii",
+ "transported_target": "SL003FC.Erdos673.SL003.targetProp",
+ "cited_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos673.lean#L914",
+ "cited_repository": "plby/lean-proofs",
+ "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+ "cited_file": "src/latest/ErdosProblems/Erdos673.lean",
+ "cited_theorem": "Erdos673.erdos_673",
+ "cited_module": "ErdosProblems.Erdos673",
+ "cited_statement_text": ": TendsToInfinityAlmostAll G ∧ (fun X : ℕ ↦ GSum X) ~[atTop] (fun X : ℕ ↦ (X : ℝ) * Real.log X) ∧ Tendsto (fun X : ℕ ↦ GSum X / (X : ℝ)) atTop atTop",
+ "lean_toolchain": "leanprover/lean4:v4.33.0",
+ "project_root_in_repository": "src/latest"
+}

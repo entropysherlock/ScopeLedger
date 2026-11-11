@@ -1,0 +1,15 @@
+{
+ "case": "H-18",
+ "formal_conjectures_file": "FormalConjectures/ErdosProblems/354.lean",
+ "formal_conjectures_theorem": "erdos_354.parts.i",
+ "transported_target": "SL003FC.Erdos354.SL003.targetProp",
+ "cited_url": "https://github.com/Andrewyzzz/erdos354/blob/c735d9389a79a2aa20fc04103d8890dd330b531e/formalization/Dyadic354/UpstreamBridge.lean#L34",
+ "cited_repository": "Andrewyzzz/erdos354",
+ "pinned_commit": "c735d9389a79a2aa20fc04103d8890dd330b531e",
+ "cited_file": "formalization/Dyadic354/UpstreamBridge.lean",
+ "cited_theorem": "Dyadic354.UpstreamBridge.erdos354_strong_upstream",
+ "cited_module": "Dyadic354.UpstreamBridge",
+ "cited_statement_text": "(α β : ℝ) (hα : 0 < α) (hβ : 0 < β) (hirr : Irrational (α / β)) : IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \\ {0})",
+ "lean_toolchain": "leanprover/lean4:v4.27.0",
+ "project_root_in_repository": "formalization"
+}

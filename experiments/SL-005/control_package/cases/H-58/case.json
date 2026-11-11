@@ -1,0 +1,15 @@
+{
+ "case": "H-58",
+ "formal_conjectures_file": "FormalConjectures/ErdosProblems/274.lean",
+ "formal_conjectures_theorem": "erdos_274.variants.abelian",
+ "transported_target": "SL003FC.Erdos274.SL003.targetProp",
+ "cited_url": "https://github.com/Jostamon/erdos274-hs-abelian/blob/2ab8a2e39e7dd7836adf577b52555f069244466f/Erdos274/Main.lean",
+ "cited_repository": "Jostamon/erdos274-hs-abelian",
+ "pinned_commit": "2ab8a2e39e7dd7836adf577b52555f069244466f",
+ "cited_file": "Erdos274/Main.lean",
+ "cited_theorem": "Erdos274.erdos_274.variants.abelian",
+ "cited_module": "Erdos274.Main",
+ "cited_statement_text": "{G : Type*} [Fintype G] [CommGroup G] (_hG : 1 < Fintype.card G) {ι : Type*} [Fintype ι] (P : Group.ExactCovering G ι) (hι : 1 < Fintype.card ι) : ∃ i j, i ≠ j ∧ #(P.parts i) = #(P.parts j)",
+ "lean_toolchain": "leanprover/lean4:v4.27.0",
+ "project_root_in_repository": "."
+}

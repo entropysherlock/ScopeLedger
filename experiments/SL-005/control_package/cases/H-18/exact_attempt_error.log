@@ -1,0 +1,8 @@
+X_B1_exact.lean:6:2: error: Type mismatch
+  Dyadic354.UpstreamBridge.erdos354_strong_upstream
+has type
+  ∀ (α : ℝ) (β : ℝ),
+    0 < α →
+      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \ {0})
+but is expected to have type
+  ∀ α > 0, ∀ β > 0, Irrational (α / β) → IsAddCompleteNatSeq' (SL003FC.Erdos354.FloorMultiples.interleave α β 2)

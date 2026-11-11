@@ -1,0 +1,45 @@
+def SL003FC.Erdos482.SL003.targetProp : Prop :=
+∀ (g : ℕ) [inst : NeZero g],
+  (2 : ℕ) ≤ g →
+    ∀ (w : ℝ),
+      (0 : ℝ) < w →
+        ∃ a b ε,
+          a * b = ↑g ∧
+            ∀ (n : ℕ),
+              (1 : ℕ) ≤ n →
+                SL003FC.Erdos482.generalRecurrence g a b ε ((2 : ℕ) * n) -
+                    ↑g * SL003FC.Erdos482.generalRecurrence g a b ε ((2 : ℕ) * n - (2 : ℕ)) =
+                  ↑↑((w / ↑g ^ ⌊Real.logb (↑g) w⌋ * ↑g ^ (n - (1 : ℕ)) / ↑g).digits g (0 : ℕ))
+LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional : ∀ (m : ℕ),
+  ↑(LeanGallery.NumberTheory.Erdos482.vv ((1 : ℝ) - Real.pi ^ (2 : ℕ) / Real.exp (3 : ℝ))
+          ((2 : ℕ) * (m + (31 : ℕ)) + (1 : ℕ))) -
+      (2 : ℤ) *
+        ↑(LeanGallery.NumberTheory.Erdos482.vv ((1 : ℝ) - Real.pi ^ (2 : ℕ) / Real.exp (3 : ℝ))
+            ((2 : ℕ) * (m + (31 : ℕ)) - (1 : ℕ))) =
+    LeanGallery.NumberTheory.Erdos482.binDigit ((759250125 : ℝ) * √(2 : ℝ)) (m + (1 : ℕ))
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `LeanGallery.NumberTheory.Erdos482.Statement.NeZero`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos482.NeZero`
+class NeZero.{u_1} {R : Type u_1} [Zero R] (n : R) : Prop
+number of parameters: 3
+fields:
+  NeZero.out : n ≠ (0 : R)
+constructor:
+  NeZero.mk.{u_1} {R : Type u_1} [Zero R] {n : R} (out : n ≠ (0 : R)) : NeZero n
+def Real.digits : ℝ → (b : ℕ) → [NeZero b] → ℕ → Fin b :=
+fun x b [NeZero b] i => Fin.ofNat b ⌊x * ↑b ^ (i + (1 : ℕ))⌋₊
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `LeanGallery.NumberTheory.Erdos482.Statement.Real.digits`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos482.Real.digits`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `LeanGallery.NumberTheory.Erdos482.Statement.Real.logb`
+def Real.logb : ℝ → ℝ → ℝ :=
+fun b x => Real.log x / Real.log b
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos482.Real.logb`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `generalRecurrence`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `LeanGallery.NumberTheory.Erdos482.Statement.generalRecurrence`
+def SL003FC.Erdos482.generalRecurrence : ℕ → ℝ → ℝ → ℝ → ℕ → ℤ :=
+fun g a b ε x => Nat.brecOn x (SL003FC.Erdos482.generalRecurrence._f g a b ε)
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `hg`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos482.hg`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `LeanGallery.NumberTheory.Erdos482.Statement.hg`
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `hw`
+Z_explore.lean:22:7: error(lean.unknownIdentifier): Unknown constant `LeanGallery.NumberTheory.Erdos482.Statement.hw`
+Z_explore.lean:23:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos482.hw`

@@ -1,0 +1,15 @@
+{
+ "case": "H-41",
+ "formal_conjectures_file": "FormalConjectures/Paper/MonochromaticQuantumGraph.lean",
+ "formal_conjectures_theorem": "eqSystem8_no_solution_d3_int",
+ "transported_target": "SL003FC.MonochromaticQuantumGraph.SL003.targetProp",
+ "cited_url": "https://github.com/KitaKen1/monochromatic-quantum-graphs-lean/blob/d3ed1892ef181f5f5f5d61d9b5817f05b53a6675/lean/QuantumLean/FormalConjecturesWrappers.lean#L60-L67",
+ "cited_repository": "KitaKen1/monochromatic-quantum-graphs-lean",
+ "pinned_commit": "d3ed1892ef181f5f5f5d61d9b5817f05b53a6675",
+ "cited_file": "lean/QuantumLean/FormalConjecturesWrappers.lean",
+ "cited_theorem": "QuantumLean.FormalConjecturesWrappers.eqSystem8_no_solution_d3_int",
+ "cited_module": "QuantumLean.FormalConjecturesWrappers",
+ "cited_statement_text": ": answer(True) ↔ ¬ ∃ W : WeightsN 8 3 ℤ, EqSystemN 8 3 W",
+ "lean_toolchain": "leanprover/lean4:v4.27.0",
+ "project_root_in_repository": "lean"
+}

@@ -1,0 +1,10 @@
+X_B1_exact.lean:6:2: error: Type mismatch
+  OAI.AsymptoticallyMinimalLittlewood.main
+has type
+  OAI.AsymptoticallyMinimalLittlewood.MainStatement
+but is expected to have type
+  ¬∃ c > 0,
+      ∀ᶠ (n : ℕ) in Filter.atTop,
+        ∀ (P : Polynomial ℂ),
+          (∀ i ≤ P.natDegree, P.coeff i = -1 ∨ P.coeff i = 1) →
+            P.natDegree = n → ⨆ z, ‖Polynomial.eval (↑z) P‖ > (1 + c) * √↑n

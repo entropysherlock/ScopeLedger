@@ -1,0 +1,15 @@
+{
+ "case": "H-20",
+ "formal_conjectures_file": "FormalConjectures/ErdosProblems/522.lean",
+ "formal_conjectures_theorem": "erdos_522.variants.zero_one",
+ "transported_target": "SL003FC.Erdos522.SL003.targetProp",
+ "cited_url": "https://github.com/KitaKen1/erdos-522-strong-law/blob/9374493206d192708ef50f90f2752aa0dc690e16/lean/Erdos522StrongLawFC.lean#L9101-L9104",
+ "cited_repository": "KitaKen1/erdos-522-strong-law",
+ "pinned_commit": "9374493206d192708ef50f90f2752aa0dc690e16",
+ "cited_file": "lean/Erdos522StrongLawFC.lean",
+ "cited_theorem": "E522.erdos_522_zero_one_solved",
+ "cited_module": "Erdos522StrongLawFC",
+ "cited_statement_text": ": answer(True) ↔ ∀ {Ω : Type*} [MeasureSpace Ω] [IsProbabilityMeasure (ℙ : Measure Ω)] {n : ℕ} (hn : 1 ≤ n) (f : Erdos522.KacCoefficients ({0, 1} : Set ℂ) Ω), ℙ {ω | atTop.Tendsto (fun n : ℕ ↦ (2 * f.numRootsInUnitDisk n ω : ℝ) / n) (𝓝 1)} = 1",
+ "lean_toolchain": "leanprover/lean4:v4.33.1",
+ "project_root_in_repository": "lean"
+}

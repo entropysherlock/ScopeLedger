@@ -1,0 +1,15 @@
+{
+ "case": "H-21",
+ "formal_conjectures_file": "FormalConjectures/ErdosProblems/841.lean",
+ "formal_conjectures_theorem": "erdos_841.variants.many_small_values",
+ "transported_target": "SL003FC.Erdos841.SL003.targetProp",
+ "cited_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos841/Core.lean#L16105",
+ "cited_repository": "plby/lean-proofs",
+ "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+ "cited_file": "src/latest/ErdosProblems/Erdos841/Core.lean",
+ "cited_theorem": "Erdos841.erdos841_many_small_values_global",
+ "cited_module": "ErdosProblems.Erdos841.Core",
+ "cited_statement_text": ": Filter.Tendsto (fun x : ℕ ↦ Real.log ((manySmallUpTo x).card : ℝ) / Real.log (x : ℝ)) Filter.atTop (nhds 1) ∧ ∀ x n : ℕ, n ∈ manySmallUpTo x ↔ 1 ≤ n ∧ n ≤ x ∧ (t n : ℝ) ≤ Real.exp (20 * Real.sqrt (Real.log n * Real.log (Real.log n)))",
+ "lean_toolchain": "leanprover/lean4:v4.33.0",
+ "project_root_in_repository": "src/latest"
+}

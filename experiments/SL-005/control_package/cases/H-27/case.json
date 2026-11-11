@@ -1,0 +1,15 @@
+{
+ "case": "H-27",
+ "formal_conjectures_file": "FormalConjectures/ErdosProblems/865.lean",
+ "formal_conjectures_theorem": "erdos_865",
+ "transported_target": "SL003FC.Erdos865.SL003.targetProp",
+ "cited_url": "https://github.com/mrricky22/erdos-865-lean/blob/f861539107a7adeaa97462ce7c7171127696b63a/RequestProject/Main.lean#L45",
+ "cited_repository": "mrricky22/erdos-865-lean",
+ "pinned_commit": "f861539107a7adeaa97462ce7c7171127696b63a",
+ "cited_file": "RequestProject/Main.lean",
+ "cited_theorem": "Erdos865.erdos865",
+ "cited_module": "RequestProject.Main",
+ "cited_statement_text": ": ∃ C : ℕ, ∀ (N : ℕ) (A : Finset ℕ), A ⊆ Finset.Icc 1 N → IsTripleFree A → 8 * A.card ≤ 5 * N + C",
+ "lean_toolchain": "leanprover/lean4:v4.28.0",
+ "project_root_in_repository": "."
+}

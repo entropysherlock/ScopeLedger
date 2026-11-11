@@ -1,0 +1,78 @@
+Z_explore.lean:3:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+def SL003FC.Erdos522.SL003.targetProp.{u_1} : Prop :=
+∀ {Ω : Type u_1} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]
+  {n : ℕ},
+  (1 : ℕ) ≤ n →
+    ∀ (f : SL003FC.Erdos522.KacCoefficients {(0 : ℂ), (1 : ℂ)} Ω),
+      MeasureTheory.volume
+          {ω | Filter.Tendsto (fun n => (2 : ℝ) * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds (1 : ℝ))} =
+        (1 : ENNReal)
+E522.erdos_522_zero_one_solved : True ↔
+  ∀ {Ω : Type u_1} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]
+    {n : ℕ},
+    (1 : ℕ) ≤ n →
+      ∀ (f : Erdos522.KacCoefficients {(0 : ℂ), (1 : ℂ)} Ω),
+        MeasureTheory.volume
+            {ω | Filter.Tendsto (fun n => (2 : ℝ) * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds (1 : ℝ))} =
+          (1 : ENNReal)
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `E522.Erdos522.KacCoefficients`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos522.Erdos522.KacCoefficients`
+structure Erdos522.KacCoefficients.{u_1, u_2} {k : Type u_1} [Field k] [MeasurableSpace k] (S : Set k) (Ω : Type u_2)
+  [MeasureTheory.MeasureSpace Ω] (μ : MeasureTheory.Measure k := MeasureTheory.Measure.count) : Type (max u_1 u_2)
+number of parameters: 7
+fields:
+  Erdos522.KacCoefficients.toFun : ℕ → Ω → k
+  Erdos522.KacCoefficients.h_indep : ProbabilityTheory.iIndepFun self.toFun MeasureTheory.volume
+  Erdos522.KacCoefficients.h_unif : ∀ (i : ℕ), MeasureTheory.pdf.IsUniform (self.toFun i) S MeasureTheory.volume μ
+constructor:
+  Erdos522.KacCoefficients.mk.{u_1, u_2} {k : Type u_1} [Field k] [MeasurableSpace k] {S : Set k} {Ω : Type u_2}
+    [MeasureTheory.MeasureSpace Ω] {μ : optParam (MeasureTheory.Measure k) MeasureTheory.Measure.count}
+    (toFun : ℕ → Ω → k) (h_indep : ProbabilityTheory.iIndepFun toFun MeasureTheory.volume)
+    (h_unif : ∀ (i : ℕ), MeasureTheory.pdf.IsUniform (toFun i) S MeasureTheory.volume μ) :
+    Erdos522.KacCoefficients S Ω μ
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `IsProbabilityMeasure`
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos522.IsProbabilityMeasure`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `E522.IsProbabilityMeasure`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `KacCoefficients`
+structure SL003FC.Erdos522.KacCoefficients.{u_1, u_2} {k : Type u_1} [Field k] [MeasurableSpace k] (S : Set k)
+  (Ω : Type u_2) [MeasureTheory.MeasureSpace Ω] (μ : MeasureTheory.Measure k := MeasureTheory.Measure.count) :
+  Type (max u_1 u_2)
+number of parameters: 7
+fields:
+  SL003FC.Erdos522.KacCoefficients.toFun : ℕ → Ω → k
+  SL003FC.Erdos522.KacCoefficients.h_indep : ProbabilityTheory.iIndepFun self.toFun MeasureTheory.volume
+  SL003FC.Erdos522.KacCoefficients.h_unif : ∀ (i : ℕ),
+      MeasureTheory.pdf.IsUniform (self.toFun i) S MeasureTheory.volume μ
+constructor:
+  SL003FC.Erdos522.KacCoefficients.mk.{u_1, u_2} {k : Type u_1} [Field k] [MeasurableSpace k] {S : Set k} {Ω : Type u_2}
+    [MeasureTheory.MeasureSpace Ω] {μ : optParam (MeasureTheory.Measure k) MeasureTheory.Measure.count}
+    (toFun : ℕ → Ω → k) (h_indep : ProbabilityTheory.iIndepFun toFun MeasureTheory.volume)
+    (h_unif : ∀ (i : ℕ), MeasureTheory.pdf.IsUniform (toFun i) S MeasureTheory.volume μ) :
+    SL003FC.Erdos522.KacCoefficients S Ω μ
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `E522.KacCoefficients`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos522.Measure`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `Measure`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `E522.Measure`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos522.MeasureSpace`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `MeasureSpace`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `E522.MeasureSpace`
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `E522.True`
+inductive True : Prop
+number of parameters: 0
+constructors:
+True.intro : True
+Z_explore.lean:23:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos522.True`
+Z_explore.lean:24:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos522.answer`
+Z_explore.lean:25:7: error(lean.unknownIdentifier): Unknown constant `E522.answer`
+Z_explore.lean:26:7: error(lean.unknownIdentifier): Unknown constant `answer`
+Z_explore.lean:27:7: error(lean.unknownIdentifier): Unknown constant `E522.atTop.Tendsto`
+Z_explore.lean:28:7: error(lean.unknownIdentifier): Unknown constant `atTop.Tendsto`
+Z_explore.lean:29:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos522.atTop.Tendsto`
+Z_explore.lean:30:7: error(lean.unknownIdentifier): Unknown constant `f.numRootsInUnitDisk`
+Z_explore.lean:31:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos522.f.numRootsInUnitDisk`
+Z_explore.lean:32:7: error(lean.unknownIdentifier): Unknown constant `E522.f.numRootsInUnitDisk`
+Z_explore.lean:33:7: error(lean.unknownIdentifier): Unknown constant `E522.hn`
+Z_explore.lean:34:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos522.hn`
+Z_explore.lean:35:7: error(lean.unknownIdentifier): Unknown constant `hn`

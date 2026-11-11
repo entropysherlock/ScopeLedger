@@ -1,0 +1,15 @@
+{
+ "case": "H-54",
+ "formal_conjectures_file": "FormalConjectures/Kourovka/21_149.lean",
+ "formal_conjectures_theorem": "kourovka_21_149.variants.not_inner",
+ "transported_target": "SL003FC.Kourovka.«21.149».SL003.targetProp",
+ "cited_url": "https://github.com/pitmonticone/Kourovka/blob/dcfdbdad8c434e30f6151fb3b4343364d70eeed4/Kourovka/Problem_21_149.lean#L770-L775",
+ "cited_repository": "pitmonticone/Kourovka",
+ "pinned_commit": "dcfdbdad8c434e30f6151fb3b4343364d70eeed4",
+ "cited_file": "Kourovka/Problem_21_149.lean",
+ "cited_theorem": "KourovkaNotebook.Solution21_149.kourovka_21_149",
+ "cited_module": "Kourovka.Problem_21_149",
+ "cited_statement_text": ": ∃ H : Subgroup PositiveSlopeGroup, ∃ o : LinearOrder (DlabGroup H), IsDlabBiOrder H o ∧ let _ : LinearOrder (DlabGroup H) := o ∃ φ : DlabGroup H ≃*o DlabGroup H, φ.toMulEquiv ∉ MulAut.innerSubgroup (DlabGroup H)",
+ "lean_toolchain": "leanprover/lean4:v4.28.0",
+ "project_root_in_repository": "."
+}

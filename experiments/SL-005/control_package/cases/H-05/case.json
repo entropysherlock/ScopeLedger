@@ -1,0 +1,15 @@
+{
+ "case": "H-05",
+ "formal_conjectures_file": "FormalConjectures/ErdosProblems/482.lean",
+ "formal_conjectures_theorem": "erdos_482.variants.stoll_general",
+ "transported_target": "SL003FC.Erdos482.SL003.targetProp",
+ "cited_url": "https://github.com/gotrevor/lean-gallery/blob/a834bbad2f36eedcc16066b2bc4da49f98ab5b85/LeanGallery/NumberTheory/Erdos482/Statement.lean#L64-L67",
+ "cited_repository": "gotrevor/lean-gallery",
+ "pinned_commit": "a834bbad2f36eedcc16066b2bc4da49f98ab5b85",
+ "cited_file": "LeanGallery/NumberTheory/Erdos482/Statement.lean",
+ "cited_theorem": "LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional",
+ "cited_module": "LeanGallery.NumberTheory.Erdos482.Statement",
+ "cited_statement_text": null,
+ "lean_toolchain": "leanprover/lean4:v4.33.1",
+ "project_root_in_repository": "."
+}

@@ -1,0 +1,15 @@
+{
+ "case": "H-10",
+ "formal_conjectures_file": "FormalConjectures/ErdosProblems/534.lean",
+ "formal_conjectures_theorem": "erdos_534",
+ "transported_target": "SL003FC.Erdos534.SL003.targetProp",
+ "cited_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534.lean#L39",
+ "cited_repository": "plby/lean-proofs",
+ "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+ "cited_file": "src/latest/ErdosProblems/Erdos534.lean",
+ "cited_theorem": "Erdos534.erdos_534",
+ "cited_module": "ErdosProblems.Erdos534",
+ "cited_statement_text": "(N : ℕ) (hN : 2 ≤ N) : ∃ q ∈ N.primeFactors, Admissible N (candidate N q) ∧ ∀ A, Admissible N A → A.card ≤ (candidate N q).card",
+ "lean_toolchain": "leanprover/lean4:v4.33.0",
+ "project_root_in_repository": "src/latest"
+}

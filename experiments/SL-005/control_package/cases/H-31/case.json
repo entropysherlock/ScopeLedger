@@ -1,0 +1,15 @@
+{
+ "case": "H-31",
+ "formal_conjectures_file": "FormalConjectures/ErdosProblems/136.lean",
+ "formal_conjectures_theorem": "erdos_136",
+ "transported_target": "SL003FC.Erdos136.SL003.targetProp",
+ "cited_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos136.lean#L49",
+ "cited_repository": "plby/lean-proofs",
+ "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+ "cited_file": "src/latest/ErdosProblems/Erdos136.lean",
+ "cited_theorem": "Erdos136.erdos_136",
+ "cited_module": "ErdosProblems.Erdos136",
+ "cited_statement_text": ": Tendsto (fun n : ℕ ↦ (erdos136Fun n : ℝ) / (n : ℝ)) atTop (nhds (5 / 6 : ℝ))",
+ "lean_toolchain": "leanprover/lean4:v4.33.0",
+ "project_root_in_repository": "src/latest"
+}
