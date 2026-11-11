@@ -1,0 +1,43 @@
+Stage B SL003-05|success|{"case_id": "SL003-05", "outcome": "infrastructure_blocked", "cause": "build", "detail": "cited declaration not found after build: error: no default toolchain configured. run `elan default stable` to install & configure the latest Lean 4 stable release.\n", "method": null, "cited_axioms": null, "proof_axioms": null, "replay": null, "toolchain": "leanprover/lean4:v4.35.0-rc2", "seconds": {"cache": 72, "build": 23, "cited_axioms": 0}}
+Stage B SL003-00|success|{"case_id": "SL003-00", "outcome": "infrastructure_blocked", "cause": "build", "detail": "cited declaration not found after build: error: no default toolchain configured. run `elan default stable` to install & configure the latest Lean 4 stable release.\n", "method": null, "cited_axioms": null, "proof_axioms": null, "replay": null, "toolchain": "leanprover/lean4:v4.33.0", "seconds": {"cache": 111, "build": 26, "cited_axioms": 0}}
+Stage B SL003-03|cancelled|{"case_id": "SL003-03", "outcome": "infrastructure_blocked", "cause": "build", "detail": "cited declaration not found after build: error: no default toolchain configured. run `elan default stable` to install & configure the latest Lean 4 stable release.\n", "method": null, "cited_axioms": null, "proof_axioms": null, "replay": null, "toolchain": "leanprover/lean4:v4.33.0", "seconds": {"cache": 107, "build": 48, "cited_axioms": 0}}
+Stage B SL003-09|cancelled|
+Stage B SL003-12|success|{"case_id": "SL003-12", "outcome": "infrastructure_blocked", "cause": "build", "detail": "cited declaration not found after build: error: no default toolchain configured. run `elan default stable` to install & configure the latest Lean 4 stable release.\n", "method": null, "cited_axioms": null, "proof_axioms": null, "replay": null, "toolchain": "leanprover/lean4:v4.33.0", "seconds": {"cache": 98, "build": 25, "cited_axioms": 0}}
+Stage B SL003-02|success|{"case_id": "SL003-02", "outcome": "infrastructure_blocked", "cause": "build", "detail": "lake build failed: error: no such file or directory (error code: 2) | error: build failed", "method": null, "cited_axioms": null, "proof_axioms": null, "replay": null, "toolchain": "leanprover/lean4:v4.27.0", "seconds": {"cache": 73, "build": 1}}
+Stage B SL003-07|cancelled|
+Stage B SL003-01|cancelled|
+Stage B SL003-15|success|{"case_id": "SL003-15", "outcome": "infrastructure_blocked", "cause": "build", "detail": "cited declaration not found after build: error: no default toolchain configured. run `elan default stable` to install & configure the latest Lean 4 stable release.\n", "method": null, "cited_axioms": null, "proof_axioms": null, "replay": null, "toolchain": "leanprover/lean4:v4.28.0", "seconds": {"cache": 82, "build": 15, "cited_axioms": 0}}
+Stage B SL003-10|cancelled|
+Stage B SL003-14|cancelled|
+Stage B SL003-11|success|{"case_id": "SL003-11", "outcome": "infrastructure_blocked", "cause": "build", "detail": "cited declaration not found after build: error: no default toolchain configured. run `elan default stable` to install & configure the latest Lean 4 stable release.\n", "method": null, "cited_axioms": null, "proof_axioms": null, "replay": null, "toolchain": "leanprover/lean4:v4.33.1", "seconds": {"cache": 75, "build": 69, "cited_axioms": 0}}
+Stage B SL003-21|cancelled|
+Stage B SL003-13|success|{"case_id": "SL003-13", "outcome": "infrastructure_blocked", "cause": "build", "detail": "cited declaration not found after build: error: no default toolchain configured. run `elan default stable` to install & configure the latest Lean 4 stable release.\n", "method": null, "cited_axioms": null, "proof_axioms": null, "replay": null, "toolchain": "leanprover/lean4:v4.34.0-rc2", "seconds": {"cache": 86, "build": 10, "cited_axioms": 0}}
+Stage B SL003-19|cancelled|
+Stage B SL003-24|cancelled|
+Stage B SL003-29|cancelled|
+Stage B SL003-27|cancelled|
+Stage B SL003-25|cancelled|
+Stage B SL003-06|success|{"case_id": "SL003-06", "outcome": "infrastructure_blocked", "cause": "build", "detail": "cited declaration not found after build: error: no default toolchain configured. run `elan default stable` to install & configure the latest Lean 4 stable release.\n", "method": null, "cited_axioms": null, "proof_axioms": null, "replay": null, "toolchain": "leanprover/lean4:v4.33.0", "seconds": {"cache": 107, "build": 13, "cited_axioms": 0}}
+Stage B SL003-28|cancelled|
+Stage B SL003-26|cancelled|
+Stage B SL003-23|cancelled|
+Stage B SL003-16|cancelled|
+Stage B SL003-32|cancelled|
+Stage B SL003-34|cancelled|
+Stage B SL003-31|cancelled|
+Stage B SL003-35|cancelled|
+Stage B SL003-22|success|{"case_id": "SL003-22", "outcome": "infrastructure_blocked", "cause": "build", "detail": "cited declaration not found after build: error: no default toolchain configured. run `elan default stable` to install & configure the latest Lean 4 stable release.\n", "method": null, "cited_axioms": null, "proof_axioms": null, "replay": null, "toolchain": "leanprover/lean4:v4.33.1", "seconds": {"cache": 75, "build": 109, "cited_axioms": 0}}
+Stage B SL003-17|cancelled|
+Stage B SL003-38|cancelled|
+Stage B SL003-37|cancelled|
+Stage B SL003-51|cancelled|
+Stage B SL003-40|cancelled|
+Stage B SL003-43|cancelled|
+Stage B SL003-52|cancelled|
+Stage B SL003-46|cancelled|
+Stage B SL003-53|cancelled|
+Stage B SL003-45|cancelled|
+Stage B SL003-41|cancelled|
+Stage B SL003-59|cancelled|
+Stage B SL003-54|cancelled|
+Stage B SL003-55|cancelled|

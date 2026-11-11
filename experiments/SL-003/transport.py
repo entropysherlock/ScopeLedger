@@ -85,15 +85,20 @@ def build(stage_a: dict, fc: str, module: str, cited_qualified: str):
             continue
         return None, edits + [f"STOP: unrecognized top-level construct: {core[:80]}"]
     stmt = stage_a["target_statement"]
-    if not stmt or not stmt.startswith(":"):
-        return None, edits + ["STOP: target statement has binders before ':' (not supported in v1.0)"]
-    body = stmt[1:].strip()
+    binders, colon_body = split_binders(stmt or "")
+    if colon_body is None:
+        return None, edits + ["STOP: could not find the statement's top-level ':'"]
+    body = colon_body
     m = re.match(r'^answer\(\s*(True|False|sorry)\s*\)\s*↔\s*(.*)$', body, re.S)
     if m:
         if m.group(1) == "sorry":
             return None, edits + ["STOP: answer(sorry) target (problem still open in Formal Conjectures)"]
         body = m.group(2) if m.group(1) == "True" else f"¬ ({m.group(2)})"
         edits.append(f"answer({m.group(1)}) wrapper rewritten")
+    if binders:
+        # A theorem `(x : α) : P x` has type `∀ (x : α), P x`; this is how Lean elaborates it (amendment 2).
+        body = f"∀ {binders}, {body}"
+        edits.append("binders before ':' written as a leading ∀ (the theorem's elaborated type)")
     ns = namespace_at_target(src, stage_a["target"])
     header = "import Mathlib\nimport " + module + "\n\n"
     target = (header + "\n".join(kept).strip() + "\n\n"
@@ -116,6 +121,22 @@ def namespace_at_target(src, target):
         if re.match(r'^\s*(?:@\[[^\]]*\]\s*)*theorem\s+' + re.escape(target) + r'\b', l):
             break
     return ".".join(stack)
+
+
+OPEN, CLOSE = "([{⦃⟨", ")]}⦄⟩"
+
+
+def split_binders(stmt):
+    """Split `binders : type` at the first ':' at bracket depth 0. Returns (binders, type) or (None, None)."""
+    depth = 0
+    for i, ch in enumerate(stmt):
+        if ch in OPEN:
+            depth += 1
+        elif ch in CLOSE:
+            depth -= 1
+        elif ch == ":" and depth == 0 and stmt[i + 1:i + 2] not in ("=", ":"):
+            return stmt[:i].strip(), stmt[i + 1:].strip()
+    return None, None
 
 
 CASCADE = ["simpa using @{c}", "exact_mod_cast @{c}", "simpa [{defs}] using @{c}", "exact (@{c}).1", "exact (@{c}).2"]

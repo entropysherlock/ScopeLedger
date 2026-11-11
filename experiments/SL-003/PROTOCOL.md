@@ -162,3 +162,26 @@ include `sorryAx` or a non-standard axiom. Stage A launch 1 reported 12 such cas
 name for a theorem). This was found on SL003-50, whose anchor points at an `alias`. Applied to every
 case; Stage A is re-run in full.
 No threshold, outcome definition other than (a), sampling rule or budget changed.
+
+**Amendment 2, 2026-11-11, after Stage B launch 1 was cancelled as invalid. No mathematical outcome
+had been produced.**
+Launch 1 Stage B (run 43063523513) is invalid because of a harness defect. After `lake build` succeeded,
+the harness called `lean` from an output directory outside the project, where elan has no toolchain.
+Every finished job (9: SL003-00, 02, 05, 06, 11, 12, 13, 15, 22) stopped with `infrastructure_blocked`.
+Eight of them showed `no default toolchain configured`. SL003-02 failed because a module name contained
+a numeric component (`ErdosProblems.987`) that Lake does not parse unescaped. These are harness errors,
+not environment outcomes. The run was cancelled and its annotations are kept in
+`results/launch1_invalid/annotations.txt`. Fixes, applied to every case:
+(a) `lean` and `leanchecker` are the project's own toolchain binaries, resolved by `elan which lean`
+inside the project root.
+(b) Module-name components that are not identifiers are written with `«»` (Lake and `import` syntax).
+(c) Transport: a target written with binders before `:` (`theorem t (x : α) : P x`) is transported as
+`∀ (x : α), P x`. This is the type Lean elaborates for that theorem, not a mathematical edit. Section 8
+never excluded such targets; the v1.0 transport script stopped on them by mistake, which affects 9 of
+the 44 ready cases.
+(d) A diagnostic control, which does not change outcomes. Every successful proof is re-run with the
+cited theorem replaced by `trivial`. If the control also succeeds, the target was proved without the
+cited proof, and the case is reported as "link not exercised" next to its outcome.
+(e) Each attempt's first Lean error is published as a second annotation.
+The sample, outcome definitions, thresholds and budgets are unchanged. Launch 2 re-runs Stage B on every
+ready case.
