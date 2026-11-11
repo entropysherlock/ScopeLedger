@@ -1,0 +1,43 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos1195.erdos_1195\nhas type\n  ∀ (F : ℝ → ℝ),\n    (∀ x ∈ Set.Ici 1, 0 ≤ F x) →\n      MonotoneOn F (Set.Ici 1) →\n        Filter.Tendsto F Filter.atTop Filter.atTop →\n          (Erdos1195.HasErdos1195Witness F ↔\n            MeasureTheory.IntegrableOn (fun x => F x / x ^ 2) (Set.Ici 1) MeasureTheory.volume)\nbut is expected to have type\n  {F | SL003FC.Erdos1195.IsGrowthRate F ∧ SL003FC.Erdos1195.HasSet F} = SL003FC.Erdos1195.erdos_1195.answer",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos1195.erdos_1195\n has type\n  ∀ (F : ℝ → ℝ),\n    (∀ (x : ℝ), 1 ≤ x → 0 ≤ F x) →\n      MonotoneOn F (Set.Ici 1) →\n        Filter.Tendsto F Filter.atTop Filter.atTop →\n          (Erdos1195.HasErdos1195Witness F ↔\n            MeasureTheory.IntegrableOn (fun x => F x / x ^ 2) (Set.Ici 1) MeasureTheory.volume)\nbut is expected to have type\n  {F | SL003FC.Erdos1195.IsGrowthRate F ∧ SL003FC.Erdos1195.HasSet F} = SL003FC.Erdos1195.erdos_1195.answer",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ∀ (F : ℝ → ℝ),\n    (∀ x ∈ Set.Ici 1, 0 ≤ F x) →\n      MonotoneOn F (Set.Ici 1) →\n        Filter.Tendsto F Filter.atTop Filter.atTop →\n          (Erdos1195.HasErdos1195Witness F ↔\n            MeasureTheory.IntegrableOn (fun x => F x / x ^ 2) (Set.Ici 1) MeasureTheory.volume)\nbut is expected to have type\n  {F | SL003FC.Erdos1195.IsGrowthRate F ∧ SL003FC.Erdos1195.HasSet F} = SL003FC.Erdos1195.erdos_1195.answer",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `HasSet`",
+  "Cascade3": "Cascade3.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1195.erdos_1195\nhas function type\n  ∀ (F : ℝ → ℝ),\n    (∀ x ∈ Set.Ici 1, 0 ≤ F x) →\n      MonotoneOn F (Set.Ici 1) →\n        Filter.Tendsto F Filter.atTop Filter.atTop →\n          (Erdos1195.HasErdos1195Witness F ↔\n            MeasureTheory.IntegrableOn (fun x => F x / x ^ 2) (Set.Ici 1) MeasureTheory.volume)",
+  "Cascade4": "Cascade4.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1195.erdos_1195\nhas function type\n  ∀ (F : ℝ → ℝ),\n    (∀ x ∈ Set.Ici 1, 0 ≤ F x) →\n      MonotoneOn F (Set.Ici 1) →\n        Filter.Tendsto F Filter.atTop Filter.atTop →\n          (Erdos1195.HasErdos1195Witness F ↔\n            MeasureTheory.IntegrableOn (fun x => F x / x ^ 2) (Set.Ici 1) MeasureTheory.volume)"
+ },
+ "case_id": "SL003-45",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "Erdos1195.countingFunction": "rfl",
+  "Erdos1195.IntegerRatioFree": "rfl",
+  "Erdos1195.IsGrowthRate": "absent",
+  "Erdos1195.HasSet": "absent",
+  "Erdos1195.erdos_1195.answer": "absent"
+ },
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 116,
+  "build": 12,
+  "cited_axioms": 2,
+  "transport_elaborate": 5,
+  "Direct": 4,
+  "Cascade0": 4,
+  "Cascade1": 4,
+  "Cascade2": 4,
+  "Cascade3": 4,
+  "Cascade4": 4
+ }
+}

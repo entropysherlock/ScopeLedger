@@ -1,0 +1,44 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_erdos_482_verbatim\nhas type\n  ∀ (n : ℕ),\n    1 ≤ n →\n      ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n + 1)) - 2 * ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n - 1)) =\n        ↑(⌊√2 * 2 ^ (n - 1)⌋₊ % 2)\nbut is expected to have type\n  (∀ (n : ℕ),\n      1 ≤ n →\n        ↑(SL003FC.Erdos482.a (2 * n + 1)) - 2 * ↑(SL003FC.Erdos482.a (2 * n - 1)) = ↑↑((√2 / 2).digits 2 (n - 1))) ∧\n    Real.ofDigits ((√2 / 2).digits 2) = √2 / 2",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_erdos_482_verbatim\n has type\n  ∀ (n : ℕ),\n    1 ≤ n →\n      ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n + 1)) - 2 * ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n - 1)) =\n        ↑⌊√2 * 2 ^ (n - 1)⌋₊ % 2\nbut is expected to have type\n  (∀ (n : ℕ),\n      1 ≤ n →\n        ↑(SL003FC.Erdos482.a (2 * n + 1)) - 2 * ↑(SL003FC.Erdos482.a (2 * n - 1)) = ↑↑((√2 / 2).digits 2 (n - 1))) ∧\n    Real.ofDigits ((√2 / 2).digits 2) = √2 / 2",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ∀ (n : ℕ),\n    1 ≤ n →\n      Int.subNatNat (LeanGallery.NumberTheory.Erdos482.a (2 * n + 1))\n          (2 * LeanGallery.NumberTheory.Erdos482.a (2 * n - 1)) =\n        ↑(⌊√2 * ↑(2 ^ (n - 1))⌋₊ % 2)\nbut is expected to have type\n  (∀ (n : ℕ),\n      1 ≤ n →\n        Int.subNatNat (SL003FC.Erdos482.a (2 * n + 1)) (2 * SL003FC.Erdos482.a (2 * n - 1)) =\n          ↑↑((√2 / 2).digits 2 (n - 1))) ∧\n    Real.ofDigits ((√2 / 2).digits 2) = √2 / 2",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `a`",
+  "Cascade3": "Cascade3.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_erdos_482_verbatim\nhas function type\n  ∀ (n : ℕ),\n    1 ≤ n →\n      ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n + 1)) - 2 * ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n - 1)) =\n        ↑(⌊√2 * 2 ^ (n - 1)⌋₊ % 2)",
+  "Cascade4": "Cascade4.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_erdos_482_verbatim\nhas function type\n  ∀ (n : ℕ),\n    1 ≤ n →\n      ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n + 1)) - 2 * ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n - 1)) =\n        ↑(⌊√2 * 2 ^ (n - 1)⌋₊ % 2)"
+ },
+ "case_id": "SL003-50",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "Erdos482.a": "absent",
+  "Erdos482.generalRecurrence": "absent",
+  "Erdos482.alpha": "absent",
+  "Erdos482.beta": "absent",
+  "Erdos482.stollBinary": "absent",
+  "Erdos482.binaryDigit": "absent"
+ },
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "seconds": {
+  "cache": 82,
+  "build": 338,
+  "cited_axioms": 3,
+  "transport_elaborate": 3,
+  "Direct": 3,
+  "Cascade0": 3,
+  "Cascade1": 3,
+  "Cascade2": 3,
+  "Cascade3": 3,
+  "Cascade4": 3
+ }
+}

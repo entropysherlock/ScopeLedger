@@ -1,0 +1,51 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int\nhas type\n  True ↔\n    ¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W\nbut is expected to have type\n  ¬∃ W,\n      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n        SL003FC.MonochromaticQuantumGraph.EqSystemN 6 3 W",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int\n has type\n  ∀ (x : MonochromaticQuantumGraph.WeightsN 6 3 ℤ),\n    (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), x e = -1 ∨ x e = 0 ∨ x e = 1) →\n      ¬MonochromaticQuantumGraph.EqSystemN 6 3 x\nbut is expected to have type\n  ∀ (x : SL003FC.MonochromaticQuantumGraph.WeightsN 6 3 ℤ),\n    (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), x e = -1 ∨ x e = 0 ∨ x e = 1) →\n      ¬SL003FC.MonochromaticQuantumGraph.EqSystemN 6 3 x",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  True ↔\n    ¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = Int.negSucc 0 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W\nbut is expected to have type\n  ¬∃ W,\n      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = Int.negSucc 0 ∨ W e = 0 ∨ W e = 1) ∧\n        SL003FC.MonochromaticQuantumGraph.EqSystemN 6 3 W",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `EqSystemN`",
+  "Cascade3": "Cascade3.lean:5:2: error: Type mismatch\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mp\nhas type\n  True →\n    ¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W\nbut is expected to have type\n  ¬∃ W,\n      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n        SL003FC.MonochromaticQuantumGraph.EqSystemN 6 3 W",
+  "Cascade4": "Cascade4.lean:5:2: error: Type mismatch\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W) →\n    True\nbut is expected to have type\n  ¬∃ W,\n      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n        SL003FC.MonochromaticQuantumGraph.EqSystemN 6 3 W"
+ },
+ "case_id": "SL003-14",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "MonochromaticQuantumGraph.V": "rfl",
+  "MonochromaticQuantumGraph.WeightsN": "not_rfl",
+  "MonochromaticQuantumGraph.mkEdge": "not_rfl",
+  "MonochromaticQuantumGraph.vertices": "not_rfl",
+  "MonochromaticQuantumGraph.allEqualList": "rfl",
+  "MonochromaticQuantumGraph.allEqual": "not_rfl",
+  "MonochromaticQuantumGraph.pmSumListAux": "not_rfl",
+  "MonochromaticQuantumGraph.pmSumList": "not_rfl",
+  "MonochromaticQuantumGraph.pmSumN": "not_rfl",
+  "MonochromaticQuantumGraph.EqSystemN": "not_rfl",
+  "MonochromaticQuantumGraph.Witness4_d2": "not_rfl",
+  "MonochromaticQuantumGraph.Witness4_d3": "not_rfl",
+  "MonochromaticQuantumGraph.Witness6_d2": "not_rfl"
+ },
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "seconds": {
+  "cache": 86,
+  "build": 378,
+  "cited_axioms": 4,
+  "transport_elaborate": 4,
+  "Direct": 4,
+  "Cascade0": 4,
+  "Cascade1": 4,
+  "Cascade2": 4,
+  "Cascade3": 4,
+  "Cascade4": 4
+ }
+}

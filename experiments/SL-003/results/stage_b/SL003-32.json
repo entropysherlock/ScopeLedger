@@ -1,0 +1,36 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos537.erdos_537\nhas type\n  ¬∀ ε > 0,\n      ∃ N₀,\n        ∀ N ≥ N₀,\n          ∀ A ⊆ Finset.range (N + 1),\n            ↑A.card ≥ ε * ↑N →\n              ∃ a₁ ∈ A,\n                ∃ a₂ ∈ A,\n                  ∃ a₃ ∈ A,\n                    ∃ p₁ p₂ p₃,\n                      Nat.Prime p₁ ∧\n                        Nat.Prime p₂ ∧\n                          Nat.Prime p₃ ∧ p₁ ≠ p₂ ∧ p₁ ≠ p₃ ∧ p₂ ≠ p₃ ∧ a₁ * p₁ = a₂ * p₂ ∧ a₂ * p₂ = a₃ * p₃\nbut is expected to have type\n  ¬∀ (ε : ℝ),\n      0 < ε →\n        ∀ᶠ (N : ℕ) in Filter.atTop,\n          ∀ A ⊆ Finset.Icc 1 N,\n            ↑A.card ≥ ε * ↑N →\n              ∃ a₁ ∈ A,\n                ∃ a₂ ∈ A,\n                  ∃ ",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos537.erdos_537\n has type\n  ∃ x,\n    0 < x ∧\n      ∀ (x_1 : ℕ),\n        ∃ x_2,\n          x_1 ≤ x_2 ∧\n            ∃ x_3 ⊆ Finset.range (x_2 + 1),\n              x * ↑x_2 ≤ ↑x_3.card ∧\n                ∀ x ∈ x_3,\n                  ∀ x_4 ∈ x_3,\n                    ∀ x_5 ∈ x_3,\n                      ∀ (x_6 : ℕ),\n                        Nat.Prime x_6 →\n                          ∀ (x_7 : ℕ),\n                            Nat.Prime x_7 →\n                              ∀ (x_8 : ℕ),\n                                Nat.Prime x_8 →\n                                  ¬x_6 = x_7 → ¬x_6 = x_8 → ¬x_7 = x_8 → x * x_6 = x_4 * x_7 → ¬x_4 * x_7",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ¬∀ ε > 0,\n      ∃ N₀,\n        ∀ N ≥ N₀,\n          ∀ A ⊆ Finset.range (N + 1),\n            ↑A.card ≥ ε * ↑N →\n              ∃ a₁ ∈ A,\n                ∃ a₂ ∈ A,\n                  ∃ a₃ ∈ A,\n                    ∃ p₁ p₂ p₃,\n                      Nat.Prime p₁ ∧\n                        Nat.Prime p₂ ∧\n                          Nat.Prime p₃ ∧ ¬p₁ = p₂ ∧ ¬p₁ = p₃ ∧ ¬p₂ = p₃ ∧ a₁ * p₁ = a₂ * p₂ ∧ a₂ * p₂ = a₃ * p₃\nbut is expected to have type\n  ¬∀ (ε : ℝ),\n      0 < ε →\n        ∀ᶠ (N : ℕ) in Filter.atTop,\n          ∀ A ⊆ Finset.Icc 1 N,\n            ↑A.card ≥ ε * ↑N →\n              ∃ a₁ ∈ A,\n                ∃ a₂ ∈ A,\n                  ∃ a₃ ∈ A,\n             ",
+  "Cascade3": "Cascade3.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos537.erdos_537\nhas function type\n  (∀ ε > 0,\n      ∃ N₀,\n        ∀ N ≥ N₀,\n          ∀ A ⊆ Finset.range (N + 1),\n            ↑A.card ≥ ε * ↑N →\n              ∃ a₁ ∈ A,\n                ∃ a₂ ∈ A,\n                  ∃ a₃ ∈ A,\n                    ∃ p₁ p₂ p₃,\n                      Nat.Prime p₁ ∧\n                        Nat.Prime p₂ ∧\n                          Nat.Prime p₃ ∧ p₁ ≠ p₂ ∧ p₁ ≠ p₃ ∧ p₂ ≠ p₃ ∧ a₁ * p₁ = a₂ * p₂ ∧ a₂ * p₂ = a₃ * p₃) →\n    False",
+  "Cascade4": "Cascade4.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos537.erdos_537\nhas function type\n  (∀ ε > 0,\n      ∃ N₀,\n        ∀ N ≥ N₀,\n          ∀ A ⊆ Finset.range (N + 1),\n            ↑A.card ≥ ε * ↑N →\n              ∃ a₁ ∈ A,\n                ∃ a₂ ∈ A,\n                  ∃ a₃ ∈ A,\n                    ∃ p₁ p₂ p₃,\n                      Nat.Prime p₁ ∧\n                        Nat.Prime p₂ ∧\n                          Nat.Prime p₃ ∧ p₁ ≠ p₂ ∧ p₁ ≠ p₃ ∧ p₂ ≠ p₃ ∧ a₁ * p₁ = a₂ * p₂ ∧ a₂ * p₂ = a₃ * p₃) →\n    False"
+ },
+ "case_id": "SL003-32",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade and AI attempts did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {},
+ "toolchain": "leanprover/lean4:v4.29.1",
+ "seconds": {
+  "cache": 78,
+  "build": 65,
+  "cited_axioms": 4,
+  "transport_elaborate": 4,
+  "Direct": 3,
+  "Cascade0": 7,
+  "Cascade1": 3,
+  "Cascade3": 3,
+  "Cascade4": 4,
+  "Attempt1": 4
+ }
+}

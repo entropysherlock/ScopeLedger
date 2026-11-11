@@ -1,0 +1,23 @@
+{
+ "case_id": "SL003-37",
+ "outcome": "infrastructure_blocked",
+ "cause": "transport",
+ "detail": "transported target does not elaborate: SL003Target.lean:28:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": null,
+ "toolchain": "leanprover/lean4:v4.34.1",
+ "seconds": {
+  "cache": 147,
+  "build": 647,
+  "cited_axioms": 6,
+  "transport_elaborate": 6
+ }
+}

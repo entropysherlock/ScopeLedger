@@ -1,0 +1,23 @@
+{
+ "case_id": "SL003-23",
+ "outcome": "infrastructure_blocked",
+ "cause": "transport",
+ "detail": "transported target does not elaborate: SL003Target.lean:16:16: error(lean.unknownIdentifier): Unknown identifier `DedekindNumber.M'`",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": null,
+ "toolchain": "leanprover/lean4:v4.29.1",
+ "seconds": {
+  "cache": 81,
+  "build": 233,
+  "cited_axioms": 5,
+  "transport_elaborate": 4
+ }
+}

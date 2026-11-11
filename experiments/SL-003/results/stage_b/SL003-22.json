@@ -1,0 +1,23 @@
+{
+ "case_id": "SL003-22",
+ "outcome": "infrastructure_blocked",
+ "cause": "transport",
+ "detail": "transported target does not elaborate: SL003Target.lean:20:42: error: unknown universe level `u` | SL003Target.lean:21:18: error: unknown universe level `u` | SL003Target.lean:21:92: error: unknown universe level `u`",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": null,
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "seconds": {
+  "cache": 82,
+  "build": 159,
+  "cited_axioms": 4,
+  "transport_elaborate": 4
+ }
+}

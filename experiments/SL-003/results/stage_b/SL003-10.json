@@ -1,0 +1,42 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos525.erdos_525\nhas type\n  (∀ (τ : ℝ),\n      0 < τ → Filter.Tendsto (fun N => Erdos525.minimumTail N τ) Filter.atTop (nhds (Real.exp (-Erdos525.rate * τ)))) ∧\n    ((fun N => ↑(Erdos525.exceptionalFamily N).card) =o[Filter.atTop] fun N => 2 ^ N) ∧\n      Filter.Tendsto (fun N => Erdos525.uniformProbability fun ε => Erdos525.HasSmallValue ε) Filter.atTop (nhds 1)\nbut is expected to have type\n  (fun n => ↑(SL003FC.Erdos525.exceptional n).ncard) =o[Filter.atTop] fun n => 2 ^ n",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos525.erdos_525\n has type\n  (∀ (τ : ℝ),\n      0 < τ →\n        Filter.Tendsto (fun N => Erdos525.minimumTail N τ) Filter.atTop (nhds (Real.exp (-(Erdos525.rate * τ))))) ∧\n    ((fun N => ↑(Erdos525.exceptionalFamily N).card) =o[Filter.atTop] fun N => 2 ^ N) ∧\n      Filter.Tendsto (fun N => Erdos525.uniformProbability fun ε => Erdos525.HasSmallValue ε) Filter.atTop (nhds 1)\nbut is expected to have type\n  (fun n => ↑(SL003FC.Erdos525.exceptional n).ncard) =o[Filter.atTop] fun n => 2 ^ n",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  (∀ (τ : ℝ),\n      0 < τ → Filter.Tendsto (fun N => Erdos525.minimumTail N τ) Filter.atTop (nhds (Real.exp (-Erdos525.rate * τ)))) ∧\n    ((fun N => ↑(Erdos525.exceptionalFamily N).card) =o[Filter.atTop] fun N => ↑(2 ^ N)) ∧\n      Filter.Tendsto (fun N => Erdos525.uniformProbability fun ε => Erdos525.HasSmallValue ε) Filter.atTop (nhds 1)\nbut is expected to have type\n  (fun n => ↑(SL003FC.Erdos525.exceptional n).ncard) =o[Filter.atTop] fun n => ↑(2 ^ n)",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `eval`",
+  "Cascade3": "Cascade3.lean:5:2: error: Type mismatch\n  Erdos525.erdos_525.left\nhas type\n  ∀ (τ : ℝ),\n    0 < τ → Filter.Tendsto (fun N => Erdos525.minimumTail N τ) Filter.atTop (nhds (Real.exp (-Erdos525.rate * τ)))\nbut is expected to have type\n  (fun n => ↑(SL003FC.Erdos525.exceptional n).ncard) =o[Filter.atTop] fun n => 2 ^ n",
+  "Cascade4": "Cascade4.lean:5:2: error: Type mismatch\n  Erdos525.erdos_525.right\nhas type\n  ((fun N => ↑(Erdos525.exceptionalFamily N).card) =o[Filter.atTop] fun N => 2 ^ N) ∧\n    Filter.Tendsto (fun N => Erdos525.uniformProbability fun ε => Erdos525.HasSmallValue ε) Filter.atTop (nhds 1)\nbut is expected to have type\n  (fun n => ↑(SL003FC.Erdos525.exceptional n).ncard) =o[Filter.atTop] fun n => 2 ^ n"
+ },
+ "case_id": "SL003-10",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "Erdos525.eval": "absent",
+  "Erdos525.exceptional": "absent",
+  "Erdos525.m": "absent",
+  "Erdos525.prob": "absent"
+ },
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 95,
+  "build": 337,
+  "cited_axioms": 4,
+  "transport_elaborate": 4,
+  "Direct": 4,
+  "Cascade0": 4,
+  "Cascade1": 4,
+  "Cascade2": 4,
+  "Cascade3": 4,
+  "Cascade4": 4
+ }
+}

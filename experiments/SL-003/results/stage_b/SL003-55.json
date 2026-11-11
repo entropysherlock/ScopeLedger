@@ -1,0 +1,39 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  ∀ᶠ (n : ℕ) in Filter.atTop,\n    ¬IsSquare n →\n      Erdos841.pellLowerBoundConstant *\n          (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤\n        ↑(Erdos841.t n)\nbut is expected to have type\n  ∃ C,\n    0 < C ∧\n      ∀ᶠ (n : ℕ) in Filter.atTop,\n        ¬IsSquare n →\n          C * (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-1 / 5)) ≤\n            ↑(SL003FC.Erdos841.t n)",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos841.erdos841_lower_bound_explicit\n has type\n  ∃ (a : ℕ),\n    ∀ (b : ℕ),\n      a ≤ b →\n        ¬IsSquare b →\n          Erdos841.pellLowerBoundConstant *\n              (Real.log (Real.log ↑b) ^ (6 / 5) * Real.log (Real.log (Real.log ↑b)) ^ (-5⁻¹)) ≤\n            ↑(Erdos841.t b)\nbut is expected to have type\n  ∃ (C : ℝ),\n    0 < C ∧\n      ∃ a,\n        ∀ (b : ℕ),\n          a ≤ b →\n            ¬IsSquare b →\n              C * (Real.log (Real.log ↑b) ^ (6 / 5) * Real.log (Real.log (Real.log ↑b)) ^ (-1 / 5)) ≤\n                ↑(SL003FC.Erdos841.t b)",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ∀ᶠ (n : ℕ) in Filter.atTop,\n    ¬IsSquare n →\n      Erdos841.pellLowerBoundConstant *\n          (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤\n        ↑(Erdos841.t n)\nbut is expected to have type\n  ∃ C,\n    0 < C ∧\n      ∀ᶠ (n : ℕ) in Filter.atTop,\n        ¬IsSquare n →\n          C * (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ ↑(Rat.divInt (Int.negSucc 0) 5)) ≤\n            ↑(SL003FC.Erdos841.t n)",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `t`",
+  "Cascade3": "Cascade3.lean:5:8: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConstant *\n                (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤\n              ↑(Erdos841.t n))\n        x}\nwhich does not have the necessary form.",
+  "Cascade4": "Cascade4.lean:5:8: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConstant *\n                (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤\n              ↑(Erdos841.t n))\n        x}\nwhich does not have the necessary form."
+ },
+ "case_id": "SL003-55",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "Erdos841.t": "not_rfl"
+ },
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 109,
+  "build": 472,
+  "cited_axioms": 5,
+  "transport_elaborate": 5,
+  "Direct": 5,
+  "Cascade0": 6,
+  "Cascade1": 5,
+  "Cascade2": 6,
+  "Cascade3": 5,
+  "Cascade4": 5
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos21.erdos_21\nhas type\n  ∃ C N, ∀ (n : ℕ), N ≤ n → Erdos21.erdosLovaszF n ≤ C * n\nbut is expected to have type\n  ∃ C, ∀ᶠ (n : ℕ) in Filter.atTop, SL003FC.Erdos21.f n ≤ C * n",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos21.erdos_21\n has type\n  ∃ C N, ∀ (n : ℕ), N ≤ n → Erdos21.erdosLovaszF n ≤ C * n\nbut is expected to have type\n  ∃ C a, ∀ (b : ℕ), a ≤ b → SL003FC.Erdos21.f b ≤ C * b",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ∃ C N, ∀ (n : ℕ), N ≤ n → Erdos21.erdosLovaszF n ≤ C * n\nbut is expected to have type\n  ∃ C, ∀ᶠ (n : ℕ) in Filter.atTop, SL003FC.Erdos21.f n ≤ C * n",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `IsErdosLovaszFamily`",
+  "Cascade3": "Cascade3.lean:5:8: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ\nfrom the expression\n  Erdos21.erdos_21\nwhich has propositional type\n  ∃ C N, ∀ (n : ℕ), N ≤ n → Erdos21.erdosLovaszF n ≤ C * n",
+  "Cascade4": "Cascade4.lean:5:2: error: Type mismatch\n  Erdos21.erdos_21.2\nhas type\n  ∃ N, ∀ (n : ℕ), N ≤ n → Erdos21.erdosLovaszF n ≤ Erdos21.erdos_21.1 * n\nbut is expected to have type\n  ∃ C, ∀ᶠ (n : ℕ) in Filter.atTop, SL003FC.Erdos21.f n ≤ C * n"
+ },
+ "case_id": "SL003-07",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "Erdos21.IsErdosLovaszFamily": "not_rfl",
+  "Erdos21.f": "absent"
+ },
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 108,
+  "build": 146,
+  "cited_axioms": 2,
+  "transport_elaborate": 5,
+  "Direct": 5,
+  "Cascade0": 5,
+  "Cascade1": 5,
+  "Cascade2": 5,
+  "Cascade3": 5,
+  "Cascade4": 5
+ }
+}

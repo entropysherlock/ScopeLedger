@@ -1,0 +1,39 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  @A397588.a_three_dvd\nhas type\n  ∀ {n : ℕ}, 1 < n → 3 ∣ A397588.a n\nbut is expected to have type\n  ∀ (n : ℕ), 1 < n → 3 ∣ SL003FC.OeisA397588.a n",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  @A397588.a_three_dvd\n has type\n  1 < ?m.8 → 3 ∣ A397588.a ?m.8\nbut is expected to have type\n  ∀ (n : ℕ), 1 < n → 3 ∣ SL003FC.OeisA397588.a n",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ∀ {n : ℕ}, 1 < n → 3 ∣ A397588.a n\nbut is expected to have type\n  ∀ (n : ℕ), 1 < n → 3 ∣ SL003FC.OeisA397588.a n",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `a`",
+  "Cascade3": "Cascade3.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.3 → 3 ∣ A397588.a ?m.3`",
+  "Cascade4": "Cascade4.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.3 → 3 ∣ A397588.a ?m.3`"
+ },
+ "case_id": "SL003-59",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "OeisA397588.a": "absent"
+ },
+ "toolchain": "leanprover/lean4:v4.34.0-rc2",
+ "seconds": {
+  "cache": 80,
+  "build": 8,
+  "cited_axioms": 3,
+  "transport_elaborate": 3,
+  "Direct": 3,
+  "Cascade0": 3,
+  "Cascade1": 3,
+  "Cascade2": 3,
+  "Cascade3": 3,
+  "Cascade4": 3
+ }
+}

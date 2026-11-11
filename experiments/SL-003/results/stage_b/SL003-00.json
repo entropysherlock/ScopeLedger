@@ -1,0 +1,43 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos235.erdos_235\nhas type\n  ∃ f, Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))\nbut is expected to have type\n  ∃ f,\n    ContinuousOn f (Set.Ici 0) ∧\n      ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (f c))",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos235.erdos_235\n has type\n  ∃ f, Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))\nbut is expected to have type\n  ∃ f,\n    ContinuousOn f (Set.Ici 0) ∧\n      ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (f c))",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ∃ f, Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))\nbut is expected to have type\n  ∃ f,\n    ContinuousOn f (Set.Ici 0) ∧\n      ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (f c))",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `N`",
+  "Cascade3": "Cascade3.lean:5:8: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ → ℝ\nfrom the expression\n  Erdos235.erdos_235\nwhich has propositional type\n  ∃ f, Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))",
+  "Cascade4": "Cascade4.lean:5:2: error: Type mismatch\n  Erdos235.erdos_235.2\nhas type\n  Continuous Erdos235.erdos_235.1 ∧\n    ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (Erdos235.erdos_235.1 c))\nbut is expected to have type\n  ∃ f,\n    ContinuousOn f (Set.Ici 0) ∧\n      ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (f c))"
+ },
+ "case_id": "SL003-00",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "Erdos235.N": "absent",
+  "Erdos235.coprimeList": "absent",
+  "Erdos235.gaps": "absent",
+  "Erdos235.countGaps": "absent",
+  "Erdos235.proportion": "absent"
+ },
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 109,
+  "build": 33,
+  "cited_axioms": 5,
+  "transport_elaborate": 5,
+  "Direct": 5,
+  "Cascade0": 5,
+  "Cascade1": 5,
+  "Cascade2": 5,
+  "Cascade3": 5,
+  "Cascade4": 5
+ }
+}

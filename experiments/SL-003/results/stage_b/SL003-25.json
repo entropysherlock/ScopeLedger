@@ -1,0 +1,40 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos306.Palomar.erdos_306\nhas type\n  True ↔\n    ∀ (q : ℚ),\n      0 < q →\n        Squarefree q.den →\n          ∃ k n,\n            n 0 = 1 ∧\n              StrictMono n ∧\n                (∀ i ∈ Finset.Icc 1 (Fin.last k),\n                    ArithmeticFunction.cardDistinctFactors (n i) = 2 ∧ ArithmeticFunction.cardFactors (n i) = 2) ∧\n                  q = ∑ i ∈ Finset.Icc 1 (Fin.last k), 1 / ↑(n i)\nbut is expected to have type\n  ∀ (q : ℚ),\n    0 < q →\n      Squarefree q.den →\n        ∃ k n,\n          n 0 = 1 ∧\n            StrictMono n ∧\n              (∀ i ∈ Finset.Icc 1 (Fin.last k),\n                  ArithmeticFunction.cardDistinctFactors (n i) = 2 ∧ Ar"
+ },
+ "case_id": "SL003-25",
+ "outcome": "auto_bridged_deterministic",
+ "cause": null,
+ "detail": null,
+ "method": "Cascade0",
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "replay": {
+  "tool": "leanchecker",
+  "rc": 0,
+  "seconds": 7,
+  "tail": ""
+ },
+ "control_without_cited": {
+  "proved": false,
+  "method": "transitive constant dependency"
+ },
+ "def_alignment": {},
+ "toolchain": "leanprover/lean4:v4.35.0-rc2",
+ "seconds": {
+  "cache": 83,
+  "build": 115,
+  "cited_axioms": 4,
+  "transport_elaborate": 3,
+  "Direct": 3,
+  "Cascade0": 4
+ }
+}

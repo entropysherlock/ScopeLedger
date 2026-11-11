@@ -1,0 +1,23 @@
+{
+ "case_id": "SL003-01",
+ "outcome": "infrastructure_blocked",
+ "cause": "transport",
+ "detail": "transported target does not elaborate: SL003Target.lean:13:24: error(lean.invalidField): Invalid field notation: Type of | SL003Target.lean:13:44: error(lean.unknownIdentifier): Unknown identifier `subsetSums` | SL003Target.lean:21:78: error(lean.unknownIdentifier): Unknown identifier `𝓝`",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": null,
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 106,
+  "build": 15,
+  "cited_axioms": 5,
+  "transport_elaborate": 6
+ }
+}

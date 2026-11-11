@@ -1,0 +1,48 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos310.erdos_310\nhas type\n  ∀ (α : ℝ),\n    0 < α →\n      ∃ C,\n        1 ≤ C ∧\n          ∀ (N : ℕ),\n            1 ≤ N →\n              ∀ A ⊆ Finset.Icc 1 N,\n                α * ↑N ≤ ↑A.card → ∃ S ⊆ A, S.Nonempty ∧ ∃ a b, 1 ≤ a ∧ a ≤ b ∧ b ≤ C ∧ ∑ n ∈ S, 1 / ↑n = ↑a / ↑b\nbut is expected to have type\n  ∀ (α : ℝ),\n    0 < α →\n      ∃ C,\n        ∀ (N : ℕ),\n          1 ≤ N →\n            ∀ A ⊆ Finset.Icc 1 N, α * ↑N ≤ ↑A.card → ∃ S ⊆ A, ∃ a b, 0 < a ∧ a ≤ b ∧ b ≤ C ∧ ∑ n ∈ S, 1 / ↑n = ↑a / ↑b",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos310.erdos_310\n has type\n  ∀ (α : ℝ),\n    0 < α →\n      ∃ C,\n        1 ≤ C ∧\n          ∀ (N : ℕ),\n            1 ≤ N →\n              ∀ A ⊆ Finset.Icc 1 N,\n                α * ↑N ≤ ↑A.card → ∃ S ⊆ A, S.Nonempty ∧ ∃ a, 1 ≤ a ∧ ∃ x, a ≤ x ∧ x ≤ C ∧ ∑ x ∈ S, (↑x)⁻¹ = ↑a / ↑x\nbut is expected to have type\n  ∀ (α : ℝ),\n    0 < α →\n      ∃ C,\n        ∀ (N : ℕ),\n          1 ≤ N →\n            ∀ A ⊆ Finset.Icc 1 N,\n              α * ↑N ≤ ↑A.card → ∃ S ⊆ A, ∃ a, 0 < a ∧ ∃ x, a ≤ x ∧ x ≤ C ∧ ∑ x ∈ S, (↑x)⁻¹ = ↑a / ↑x",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ∀ (α : ℝ),\n    0 < α →\n      ∃ C,\n        1 ≤ C ∧\n          ∀ (N : ℕ),\n            1 ≤ N →\n              ∀ A ⊆ Finset.Icc 1 N,\n                α * ↑N ≤ ↑A.card → ∃ S ⊆ A, S.Nonempty ∧ ∃ a b, 1 ≤ a ∧ a ≤ b ∧ b ≤ C ∧ ∑ x ∈ S, 1 / ↑x = ↑a / ↑b\nbut is expected to have type\n  ∀ (α : ℝ),\n    0 < α →\n      ∃ C,\n        ∀ (N : ℕ),\n          1 ≤ N →\n            ∀ A ⊆ Finset.Icc 1 N, α * ↑N ≤ ↑A.card → ∃ S ⊆ A, ∃ a b, 0 < a ∧ a ≤ b ∧ b ≤ C ∧ ∑ x ∈ S, 1 / ↑x = ↑a / ↑b",
+  "Cascade3": "Cascade3.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos310.erdos_310\nhas function type\n  ∀ (α : ℝ),\n    0 < α →\n      ∃ C,\n        1 ≤ C ∧\n          ∀ (N : ℕ),\n            1 ≤ N →\n              ∀ A ⊆ Finset.Icc 1 N,\n                α * ↑N ≤ ↑A.card → ∃ S ⊆ A, S.Nonempty ∧ ∃ a b, 1 ≤ a ∧ a ≤ b ∧ b ≤ C ∧ ∑ n ∈ S, 1 / ↑n = ↑a / ↑b",
+  "Cascade4": "Cascade4.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos310.erdos_310\nhas function type\n  ∀ (α : ℝ),\n    0 < α →\n      ∃ C,\n        1 ≤ C ∧\n          ∀ (N : ℕ),\n            1 ≤ N →\n              ∀ A ⊆ Finset.Icc 1 N,\n                α * ↑N ≤ ↑A.card → ∃ S ⊆ A, S.Nonempty ∧ ∃ a b, 1 ≤ a ∧ a ≤ b ∧ b ≤ C ∧ ∑ n ∈ S, 1 / ↑n = ↑a / ↑b"
+ },
+ "case_id": "SL003-27",
+ "outcome": "auto_bridged_ai",
+ "cause": null,
+ "detail": null,
+ "method": "Attempt1",
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "replay": {
+  "tool": "leanchecker",
+  "rc": 0,
+  "seconds": 13,
+  "tail": ""
+ },
+ "control_without_cited": {
+  "proved": false,
+  "method": "transitive constant dependency"
+ },
+ "def_alignment": {},
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 110,
+  "build": 211,
+  "cited_axioms": 4,
+  "transport_elaborate": 4,
+  "Direct": 4,
+  "Cascade0": 5,
+  "Cascade1": 5,
+  "Cascade3": 4,
+  "Cascade4": 4,
+  "Attempt1": 5
+ }
+}

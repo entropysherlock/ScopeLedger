@@ -1,0 +1,48 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos83.erdos_83\nhas type\n  ∀ (q : ℕ) (F : Finset (Finset (Fin (4 * q)))),\n    Erdos83.Uniform (2 * q) F → Erdos83.TwoIntersecting F → F.card ≤ ((4 * q).choose (2 * q) - (2 * q).choose q ^ 2) / 2\nbut is expected to have type\n  ∀ (n : ℕ) (F : Finset (Finset (Fin (4 * n)))),\n    (∀ A ∈ F, A.card = 2 * n) →\n      (∀ A ∈ F, ∀ B ∈ F, 2 ≤ (A ∩ B).card) → F.card ≤ ((4 * n).choose (2 * n) - (2 * n).choose n ^ 2) / 2",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos83.erdos_83\n has type\n  ∀ (q : ℕ) (F : Finset (Finset (Fin (4 * q)))),\n    Erdos83.Uniform (2 * q) F → Erdos83.TwoIntersecting F → F.card ≤ ((4 * q).choose (2 * q) - (2 * q).choose q ^ 2) / 2\nbut is expected to have type\n  ∀ (n : ℕ) (F : Finset (Finset (Fin (4 * n)))),\n    (∀ A ∈ F, A.card = 2 * n) →\n      (∀ A ∈ F, ∀ B ∈ F, 2 ≤ (A ∩ B).card) → F.card ≤ ((4 * n).choose (2 * n) - (2 * n).choose n ^ 2) / 2",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ∀ (q : ℕ) (F : Finset (Finset (Fin (4 * q)))),\n    Erdos83.Uniform (2 * q) F → Erdos83.TwoIntersecting F → F.card ≤ ((4 * q).choose (2 * q) - (2 * q).choose q ^ 2) / 2\nbut is expected to have type\n  ∀ (n : ℕ) (F : Finset (Finset (Fin (4 * n)))),\n    (∀ A ∈ F, A.card = 2 * n) →\n      (∀ A ∈ F, ∀ B ∈ F, 2 ≤ (A ∩ B).card) → F.card ≤ ((4 * n).choose (2 * n) - (2 * n).choose n ^ 2) / 2",
+  "Cascade3": "Cascade3.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos83.erdos_83\nhas function type\n  ∀ (q : ℕ) (F : Finset (Finset (Fin (4 * q)))),\n    Erdos83.Uniform (2 * q) F → Erdos83.TwoIntersecting F → F.card ≤ ((4 * q).choose (2 * q) - (2 * q).choose q ^ 2) / 2",
+  "Cascade4": "Cascade4.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos83.erdos_83\nhas function type\n  ∀ (q : ℕ) (F : Finset (Finset (Fin (4 * q)))),\n    Erdos83.Uniform (2 * q) F → Erdos83.TwoIntersecting F → F.card ≤ ((4 * q).choose (2 * q) - (2 * q).choose q ^ 2) / 2"
+ },
+ "case_id": "SL003-12",
+ "outcome": "auto_bridged_ai",
+ "cause": null,
+ "detail": null,
+ "method": "Attempt1",
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "replay": {
+  "tool": "leanchecker",
+  "rc": 0,
+  "seconds": 6,
+  "tail": ""
+ },
+ "control_without_cited": {
+  "proved": false,
+  "method": "transitive constant dependency"
+ },
+ "def_alignment": {},
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 105,
+  "build": 28,
+  "cited_axioms": 3,
+  "transport_elaborate": 3,
+  "Direct": 3,
+  "Cascade0": 3,
+  "Cascade1": 3,
+  "Cascade3": 3,
+  "Cascade4": 3,
+  "Attempt1": 4
+ }
+}

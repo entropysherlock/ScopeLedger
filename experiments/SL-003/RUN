@@ -1,1 +1,1 @@
-launch 3 2026-11-11 SL-003 amendment 3: transport v1.1 (namespace isolation, parser and locator fixes, replay PATH, type guard, dependency check); Stage B on every ready case with AI attempt 1 for SL003-12, 24, 27, 32
+launch 4 2026-11-11 SL-003 AI round: attempt 1 for SL003-07, 09, 59; SL003-24 and SL003-32 attempt 1 re-run after the theorem-name harness fix

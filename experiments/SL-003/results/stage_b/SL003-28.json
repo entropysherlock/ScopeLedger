@@ -1,0 +1,17 @@
+{
+ "case_id": "SL003-28",
+ "outcome": "infrastructure_blocked",
+ "cause": "build",
+ "detail": "lake build failed: error: WeakTilingProblem41FC.lean:4903:21: Thrown from the linter.style.existsImplication term linter: | error: Lean exited with code 1 | error: build failed",
+ "method": null,
+ "cited_axioms": null,
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": null,
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "seconds": {
+  "cache": 83,
+  "build": 154
+ }
+}

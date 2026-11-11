@@ -1,0 +1,40 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos441.not_erdos_441\nhas type\n  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧\n    ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\nbut is expected to have type\n  ¬∀ (N : ℕ), 1 ≤ N → SL003FC.Erdos441.g N = (SL003FC.Erdos441.erdosConstruction N).card",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos441.not_erdos_441\n has type\n  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧\n    ∀ (M : ℕ), ∃ N, M ≤ N ∧ (Erdos441.erdosConstruction N).card < Erdos441.g N\nbut is expected to have type\n  ∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧\n    ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\nbut is expected to have type\n  ¬∀ (N : ℕ), 1 ≤ N → SL003FC.Erdos441.g N = (SL003FC.Erdos441.erdosConstruction N).card",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `erdosConstruction`",
+  "Cascade3": "Cascade3.lean:5:2: error: Type mismatch\n  Erdos441.not_erdos_441.left\nhas type\n  ∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)\nbut is expected to have type\n  ¬∀ (N : ℕ), 1 ≤ N → SL003FC.Erdos441.g N = (SL003FC.Erdos441.erdosConstruction N).card",
+  "Cascade4": "Cascade4.lean:5:2: error: Type mismatch\n  Erdos441.not_erdos_441.right\nhas type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\nbut is expected to have type\n  ¬∀ (N : ℕ), 1 ≤ N → SL003FC.Erdos441.g N = (SL003FC.Erdos441.erdosConstruction N).card"
+ },
+ "case_id": "SL003-06",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "Erdos441.g": "not_rfl",
+  "Erdos441.erdosConstruction": "rfl"
+ },
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 102,
+  "build": 12,
+  "cited_axioms": 4,
+  "transport_elaborate": 4,
+  "Direct": 4,
+  "Cascade0": 4,
+  "Cascade1": 4,
+  "Cascade2": 4,
+  "Cascade3": 4,
+  "Cascade4": 4
+ }
+}

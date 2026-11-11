@@ -1,0 +1,39 @@
+{
+ "case_id": "SL003-19",
+ "outcome": "directly_verified",
+ "cause": null,
+ "detail": null,
+ "method": "Direct",
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "replay": {
+  "tool": "leanchecker",
+  "rc": 0,
+  "seconds": 14,
+  "tail": ""
+ },
+ "control_without_cited": {
+  "proved": false,
+  "method": "transitive constant dependency"
+ },
+ "def_alignment": {
+  "Erdos438.SquareSumFree": "rfl",
+  "Erdos438.extremalSize": "rfl"
+ },
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 108,
+  "build": 109,
+  "cited_axioms": 5,
+  "transport_elaborate": 5,
+  "Direct": 5
+ }
+}

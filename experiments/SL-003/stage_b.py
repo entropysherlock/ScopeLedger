@@ -96,7 +96,11 @@ def main():
         short["seconds"] = {k: v.get("seconds") for k, v in R["steps"].items()}
         print(f"::notice title=SL-003 {case}::" + json.dumps(short, ensure_ascii=False)[:3500])
         # Second annotation: first error of each attempt (results are read from annotations, not artifacts).
-        errs = {k: (v.get("first_error") or "")[:700] for k, v in R["steps"].items() if v.get("first_error")}
+        errs = {k: ((v.get("first_error") or "") + (" | REJECTED: " + v["rejected"] if v.get("rejected") else ""))[:900]
+                for k, v in R["steps"].items() if v.get("first_error") or v.get("rejected") or v.get("log_tail")}
+        for k, v in R["steps"].items():
+            if v.get("log_tail") and k in errs and not R["steps"][k].get("first_error"):
+                errs[k] = (errs[k] + " | LOG: " + v["log_tail"])[:900]
         if errs:
             print(f"::notice title=SL-003 errors {case}::" + json.dumps(errs, ensure_ascii=False)[:3500])
         return 0
@@ -187,9 +191,11 @@ def main():
         if outcome != "auto_bridged_ai":
             budget_det -= s
         R["steps"][mod] = {"rc": rc, "seconds": s, "first_error": first_error(log)}
+        if rc != 0 and not R["steps"][mod]["first_error"]:
+            R["steps"][mod]["log_tail"] = ("timeout" if rc is None else log[-400:])
         (out / f"{mod}.log").write_text(log)
         if rc == 0 and not re.search(r':\d+:\d+: error', log) and "sorry" not in log:
-            thm = re.search(r'theorem\s+(\S+)', (work / f"{mod}.lean").read_text()).group(1)
+            thm = re.search(r'^theorem\s+(\S+)', (work / f"{mod}.lean").read_text(), re.M).group(1)
             # Type guard: the attempt must prove exactly the transported target, whatever it states.
             (work / "ProofAxioms.lean").write_text(
                 f"import {mod}\n\nexample : {tp} := @{thm}\n\n#print axioms {thm}\n")

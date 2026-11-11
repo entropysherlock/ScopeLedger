@@ -1,0 +1,35 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos477.erdos477_sixth_power\nhas type\n  ∃ A, ∀ (n : ℤ), ∃! p, p.1 ∈ A ∧ (p.2 ∈ Set.range fun k => k ^ 6) ∧ p.1 + p.2 = n\nbut is expected to have type\n  ¬∀ (k : ℕ),\n      2 ≤ k →\n        ∀ (A : Set ℤ), ∃ z, ¬∃! a, (a ∈ A ×ˢ Set.range fun x => Polynomial.eval x (Polynomial.X ^ k)) ∧ z = a.1 + a.2",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos477.erdos477_sixth_power\n has type\n  ∃ (A : Set ℤ), ∀ (n : ℤ), ∃! p, p.1 ∈ A ∧ (∃ y, y ^ 6 = p.2) ∧ p.1 + p.2 = n\nbut is expected to have type\n  ∃ (x : ℕ), 2 ≤ x ∧ ∃ x_1, ∀ (x_2 : ℤ), ∃! a, (a.1 ∈ x_1 ∧ ∃ y, y ^ x = a.2) ∧ x_2 = a.1 + a.2",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ∃ A, ∀ (n : ℤ), ∃! p, p.1 ∈ A ∧ (p.2 ∈ Set.range fun k => k ^ 6) ∧ p.1 + p.2 = n\nbut is expected to have type\n  ¬∀ (k : ℕ),\n      2 ≤ k →\n        ∀ (A : Set ℤ), ∃ z, ¬∃! a, (a ∈ A ×ˢ Set.range fun x => Polynomial.eval x (Polynomial.X ^ k)) ∧ z = a.1 + a.2",
+  "Cascade3": "Cascade3.lean:5:8: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  Set ℤ\nfrom the expression\n  Erdos477.erdos477_sixth_power\nwhich has propositional type\n  ∃ A, ∀ (n : ℤ), ∃! p, p.1 ∈ A ∧ (p.2 ∈ Set.range fun k => k ^ 6) ∧ p.1 + p.2 = n",
+  "Cascade4": "Cascade4.lean:5:2: error: Type mismatch\n  Erdos477.erdos477_sixth_power.2\nhas type\n  ∀ (n : ℤ), ∃! p, p.1 ∈ Erdos477.erdos477_sixth_power.1 ∧ (p.2 ∈ Set.range fun k => k ^ 6) ∧ p.1 + p.2 = n\nbut is expected to have type\n  ¬∀ (k : ℕ),\n      2 ≤ k →\n        ∀ (A : Set ℤ), ∃ z, ¬∃! a, (a ∈ A ×ˢ Set.range fun x => Polynomial.eval x (Polynomial.X ^ k)) ∧ z = a.1 + a.2"
+ },
+ "case_id": "SL003-09",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {},
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 96,
+  "build": 257,
+  "cited_axioms": 4,
+  "transport_elaborate": 4,
+  "Direct": 4,
+  "Cascade0": 4,
+  "Cascade1": 4,
+  "Cascade3": 4,
+  "Cascade4": 5
+ }
+}

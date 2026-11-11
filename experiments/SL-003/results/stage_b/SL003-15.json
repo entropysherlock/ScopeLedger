@@ -1,0 +1,35 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  borwein_sine_series\nhas type\n  PiIrrBound → Summable fun n => (2 / 3 + 1 / 3 * Real.sin ↑↑n) ^ ↑n / ↑↑n\nbut is expected to have type\n  Summable fun n => (2 / 3 + 1 / 3 * Real.sin ↑↑n) ^ ↑n / ↑↑n",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  borwein_sine_series\n has type\n  PiIrrBound → Summable fun n => (2 / 3 + 3⁻¹ * Real.sin ↑↑n) ^ ↑n / ↑↑n\nbut is expected to have type\n  Summable fun n => (2 / 3 + 3⁻¹ * Real.sin ↑↑n) ^ ↑n / ↑↑n",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  PiIrrBound → Summable fun n => (2 / 3 + 1 / 3 * Real.sin ↑↑n) ^ ↑n / ↑↑n\nbut is expected to have type\n  Summable fun n => (2 / 3 + 1 / 3 * Real.sin ↑↑n) ^ ↑n / ↑↑n",
+  "Cascade3": "Cascade3.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  borwein_sine_series\nhas function type\n  PiIrrBound → Summable fun n => (2 / 3 + 1 / 3 * Real.sin ↑↑n) ^ ↑n / ↑↑n",
+  "Cascade4": "Cascade4.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  borwein_sine_series\nhas function type\n  PiIrrBound → Summable fun n => (2 / 3 + 1 / 3 * Real.sin ↑↑n) ^ ↑n / ↑↑n"
+ },
+ "case_id": "SL003-15",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {},
+ "toolchain": "leanprover/lean4:v4.28.0",
+ "seconds": {
+  "cache": 74,
+  "build": 16,
+  "cited_axioms": 5,
+  "transport_elaborate": 4,
+  "Direct": 4,
+  "Cascade0": 4,
+  "Cascade1": 4,
+  "Cascade3": 4,
+  "Cascade4": 4
+ }
+}

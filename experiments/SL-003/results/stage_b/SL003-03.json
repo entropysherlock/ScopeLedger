@@ -1,0 +1,39 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos581.erdos_581\nhas type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)\nbut is expected to have type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧ ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos581.erdos_581\n has type\n  ∃ c₁,\n    0 < c₁ ∧\n      ∃ x, 0 < x ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + x * ↑m ^ (4 / 5)\nbut is expected to have type\n  ∃ c₁,\n    0 < c₁ ∧\n      ∃ x,\n        0 < x ∧\n          ∀ (m : ℕ),\n            ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧ ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + x * ↑m ^ (4 / 5)",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)\nbut is expected to have type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧ ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `f`",
+  "Cascade3": "Cascade3.lean:5:8: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos581.erdos_581\nwhich has propositional type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)",
+  "Cascade4": "Cascade4.lean:5:2: error: Type mismatch\n  Erdos581.erdos_581.2\nhas type\n  ∃ c₂,\n    0 < Erdos581.erdos_581.1 ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)\nbut is expected to have type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧ ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)"
+ },
+ "case_id": "SL003-03",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "Erdos581.f": "not_rfl"
+ },
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 122,
+  "build": 63,
+  "cited_axioms": 3,
+  "transport_elaborate": 5,
+  "Direct": 5,
+  "Cascade0": 5,
+  "Cascade1": 5,
+  "Cascade2": 5,
+  "Cascade3": 5,
+  "Cascade4": 5
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  @Erdos737.eventually_cycles_through_fixed_edge\nhas type\n  ∀ {V : Type ?u.2} {G : SimpleGraph V},\n    Erdos594.IsUncountablyChromatic G →\n      ∃ (a : V), ∃ r, G.Adj a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges\nbut is expected to have type\n  ∀ (V : Type) (G : SimpleGraph V),\n    IsEmpty (G.Coloring ℕ) →\n      ∃ (e : Sym2 V), e ∈ G.edgeSet ∧ ∃ N, ∀ (n : ℕ), N ≤ n → SL003FC.Erdos737.CycleThroughEdgeOfLength G e n",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  @Erdos737.eventually_cycles_through_fixed_edge\n has type\n  Erdos594.IsUncountablyChromatic ?m.9 →\n    ∃ a r, SimpleGraph.Adj ?m.9 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges\nbut is expected to have type\n  ∀ (V : Type) (G : SimpleGraph V),\n    IsEmpty (G.Coloring ℕ) → ∃ e ∈ G.edgeSet, ∃ N, ∀ (n : ℕ), N ≤ n → SL003FC.Erdos737.CycleThroughEdgeOfLength G e n",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  ∀ {V : Type ?u.3} {G : SimpleGraph V},\n    Erdos594.IsUncountablyChromatic G →\n      ∃ (a : V), ∃ r, G.Adj a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges\nbut is expected to have type\n  ∀ (V : Type) (G : SimpleGraph V),\n    IsEmpty (G.Coloring ℕ) →\n      ∃ (e : Sym2 V), e ∈ G.edgeSet ∧ ∃ N, ∀ (n : ℕ), N ≤ n → SL003FC.Erdos737.CycleThroughEdgeOfLength G e n",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `ChromaticNumberAlephOne`",
+  "Cascade3": "Cascade3.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.4 →\n    ∃ a r, SimpleGraph.Adj ?m.4 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges",
+  "Cascade4": "Cascade4.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.4 →\n    ∃ a r, SimpleGraph.Adj ?m.4 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges"
+ },
+ "case_id": "SL003-35",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "Erdos737.ChromaticNumberAlephOne": "rfl",
+  "Erdos737.CycleThroughEdgeOfLength": "absent"
+ },
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 105,
+  "build": 23,
+  "cited_axioms": 5,
+  "transport_elaborate": 5,
+  "Direct": 5,
+  "Cascade0": 5,
+  "Cascade1": 5,
+  "Cascade2": 5,
+  "Cascade3": 5,
+  "Cascade4": 5
+ }
+}

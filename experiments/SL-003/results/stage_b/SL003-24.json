@@ -1,0 +1,42 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos440.erdos_440\nhas type\n  (∀ (A : Erdos440.IncreasingSequence), (fun x => ↑(A.count x)) =O[Filter.atTop] fun x => √↑x) ∧\n    (∀ (A : Erdos440.IncreasingSequence), Filter.limsup A.ratio Filter.atTop ≤ Erdos440.sharpConstant) ∧\n      (∃ A, Filter.limsup A.ratio Filter.atTop = Erdos440.sharpConstant) ∧\n        (∀ (A : Erdos440.IncreasingSequence), Filter.liminf A.ratio Filter.atTop ≤ 1) ∧\n          ∃ A, Filter.liminf A.ratio Filter.atTop = 1\nbut is expected to have type\n  ∀ (a : ℕ → ℕ),\n    StrictMono a → (∀ (i : ℕ), 0 < a i) → (fun x => ↑(SL003FC.Erdos440.count a x)) =O[Filter.atTop] fun x => √↑x",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos440.erdos_440\n has type\n  (∀ (A : Erdos440.IncreasingSequence), (fun x => ↑(A.count x)) =O[Filter.atTop] fun x => √↑x) ∧\n    (∀ (A : Erdos440.IncreasingSequence), Filter.limsup A.ratio Filter.atTop ≤ Erdos440.sharpConstant) ∧\n      (∃ A, Filter.limsup A.ratio Filter.atTop = Erdos440.sharpConstant) ∧\n        (∀ (A : Erdos440.IncreasingSequence), Filter.liminf A.ratio Filter.atTop ≤ 1) ∧\n          ∃ A, Filter.liminf A.ratio Filter.atTop = 1\nbut is expected to have type\n  ∀ (a : ℕ → ℕ),\n    StrictMono a → (∀ (i : ℕ), 0 < a i) → (fun x => ↑(SL003FC.Erdos440.count a x)) =O[Filter.atTop] fun x => √↑x",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  (∀ (A : Erdos440.IncreasingSequence), (fun x => ↑(A.count x)) =O[Filter.atTop] fun x => √↑x) ∧\n    (∀ (A : Erdos440.IncreasingSequence), Filter.limsup A.ratio Filter.atTop ≤ Erdos440.sharpConstant) ∧\n      (∃ A, Filter.limsup A.ratio Filter.atTop = Erdos440.sharpConstant) ∧\n        (∀ (A : Erdos440.IncreasingSequence), Filter.liminf A.ratio Filter.atTop ≤ 1) ∧\n          ∃ A, Filter.liminf A.ratio Filter.atTop = 1\nbut is expected to have type\n  ∀ (a : ℕ → ℕ),\n    StrictMono a → (∀ (i : ℕ), 0 < a i) → (fun x => ↑(SL003FC.Erdos440.count a x)) =O[Filter.atTop] fun x => √↑x",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `count`",
+  "Cascade3": "Cascade3.lean:5:2: error: Type mismatch\n  Erdos440.erdos_440.left\nhas type\n  ∀ (A : Erdos440.IncreasingSequence), (fun x => ↑(A.count x)) =O[Filter.atTop] fun x => √↑x\nbut is expected to have type\n  ∀ (a : ℕ → ℕ),\n    StrictMono a → (∀ (i : ℕ), 0 < a i) → (fun x => ↑(SL003FC.Erdos440.count a x)) =O[Filter.atTop] fun x => √↑x",
+  "Cascade4": "Cascade4.lean:5:2: error: Type mismatch\n  Erdos440.erdos_440.right\nhas type\n  (∀ (A : Erdos440.IncreasingSequence), Filter.limsup A.ratio Filter.atTop ≤ Erdos440.sharpConstant) ∧\n    (∃ A, Filter.limsup A.ratio Filter.atTop = Erdos440.sharpConstant) ∧\n      (∀ (A : Erdos440.IncreasingSequence), Filter.liminf A.ratio Filter.atTop ≤ 1) ∧\n        ∃ A, Filter.liminf A.ratio Filter.atTop = 1\nbut is expected to have type\n  ∀ (a : ℕ → ℕ),\n    StrictMono a → (∀ (i : ℕ), 0 < a i) → (fun x => ↑(SL003FC.Erdos440.count a x)) =O[Filter.atTop] fun x => √↑x"
+ },
+ "case_id": "SL003-24",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade and AI attempts did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "Erdos440.count": "absent",
+  "Erdos440.erdos_440.parts.ii.answer": "not_rfl",
+  "Erdos440.erdosSzemerediConstant": "absent"
+ },
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 105,
+  "build": 27,
+  "cited_axioms": 4,
+  "transport_elaborate": 4,
+  "Direct": 5,
+  "Cascade0": 5,
+  "Cascade1": 5,
+  "Cascade2": 5,
+  "Cascade3": 4,
+  "Cascade4": 5,
+  "Attempt1": 5
+ }
+}

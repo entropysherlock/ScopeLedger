@@ -1,0 +1,38 @@
+{
+ "case_id": "SL003-13",
+ "outcome": "directly_verified",
+ "cause": null,
+ "detail": null,
+ "method": "Direct",
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "replay": {
+  "tool": "leanchecker",
+  "rc": 0,
+  "seconds": 4,
+  "tail": ""
+ },
+ "control_without_cited": {
+  "proved": false,
+  "method": "transitive constant dependency"
+ },
+ "def_alignment": {
+  "OeisA98275.a": "absent"
+ },
+ "toolchain": "leanprover/lean4:v4.34.0-rc2",
+ "seconds": {
+  "cache": 91,
+  "build": 8,
+  "cited_axioms": 3,
+  "transport_elaborate": 3,
+  "Direct": 3
+ }
+}

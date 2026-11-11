@@ -1,0 +1,23 @@
+{
+ "case_id": "SL003-31",
+ "outcome": "infrastructure_blocked",
+ "cause": "transport",
+ "detail": "transported target does not elaborate: SL003Target.lean:17:19: error(lean.invalidField): Invalid field `HasDensity`: The environment does not contain `Function.HasDensity`, so it is not possible to project the field `HasDensity` from an expression | SL003Target.lean:17:53: error(lean.synthInstanceFailed): failed to synthesize instance of type class | SL003Target.lean:17:42: error(lean.unknownIdentifier): Unknown identifier `atTop`",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": null,
+ "toolchain": "leanprover/lean4:v4.29.1",
+ "seconds": {
+  "cache": 79,
+  "build": 72,
+  "cited_axioms": 6,
+  "transport_elaborate": 4
+ }
+}

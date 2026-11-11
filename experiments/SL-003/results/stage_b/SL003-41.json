@@ -1,0 +1,36 @@
+{
+ "case_id": "SL003-41",
+ "outcome": "directly_verified",
+ "cause": null,
+ "detail": null,
+ "method": "Direct",
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "replay": {
+  "tool": "leanchecker",
+  "rc": 0,
+  "seconds": 7,
+  "tail": ""
+ },
+ "control_without_cited": {
+  "proved": false,
+  "method": "transitive constant dependency"
+ },
+ "def_alignment": {},
+ "toolchain": "leanprover/lean4:v4.29.1",
+ "seconds": {
+  "cache": 74,
+  "build": 603,
+  "cited_axioms": 3,
+  "transport_elaborate": 9,
+  "Direct": 3
+ }
+}

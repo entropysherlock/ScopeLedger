@@ -215,3 +215,13 @@ Stage A is re-run in full; the ready set changes only by SL003-34. Outcome defin
 budgets and the sample are unchanged. AI attempts (step d) are written by Claude for every case that
 remains `undecided`, from the two statements, the definitions and the CI errors, with at most two
 compiled attempts and no human edits.
+
+**Amendment 4, 2026-11-11, after launch 3 (run 43071408322).** Implementation fix only. The harness
+took an attempt's theorem name from the first match of `theorem <name>` anywhere in the file. The
+docstrings of the SL003-24 and SL003-32 attempts contain "the cited theorem …", so the type guard
+looked up a nonexistent constant and rejected two attempts that had compiled. The name is now matched
+only at the start of a line. Those two attempts are re-run unchanged and still count as attempt 1.
+Rejection reasons are now published in the error annotation. Stage A records for SL003-20, 39 and 47
+are CI's, because the gist and Palomar hosts are unreachable from the local sandbox; the committed Stage
+A now equals CI's byte for byte. Launches can be limited to named cases with `STAGE_B_CASES`; every
+launch's annotations are kept under `results/`.

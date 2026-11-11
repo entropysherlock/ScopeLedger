@@ -18,3 +18,21 @@ Lean environment. Each stays `undecided`.
 * SL003-50 (Erdős 482): the cited statement uses `⌊√2·2^(n-1)⌋₊ % 2`; the target uses the binary digits
   of `√2/2` and adds a second conjunct `Real.ofDigits (…) = √2/2`. This needs a digit-extraction lemma and
   the reconstruction identity.
+
+## Round 1, cases that became undecided under transport v1.1 (launch 3)
+
+Attempted: SL003-07, SL003-09, SL003-59. Not attempted, still `undecided`:
+
+* SL003-03 (Erdős 581), SL003-06 (Erdős 441), SL003-55 (Erdős 841): the cited project re-implements
+  FC's extremal function computably (for example `(candidates N).sup card` against FC's `sSup {k | …}`).
+  A bridge needs an equality proof between an `sSup`/`sInf` and a Finset computation.
+* SL003-14, SL003-43 (monochromatic quantum graphs): the cited project re-declares FC's `structure
+  EdgeN`. Separately declared structures are distinct types, so a bridge needs a type equivalence and
+  invariance of `EqSystemN` under it.
+* SL003-16, SL003-40 (Erdős 690): the cited theorem is about `DensityUnimodal k`, defined through the
+  project's own `primeFactorDensity`; FC quantifies over every density function `d`. This needs a
+  uniqueness-of-density argument plus the definition equality.
+* SL003-35 (Erdős 737): cited hypothesis `IsUncountablyChromatic` (Erdős 594 namespace) against FC's
+  `IsEmpty (G.Coloring ℕ)`, the cited theorem's universe-polymorphic `V`, and a cycle predicate.
+* SL003-45 (Erdős 1195): the target is a set equality with FC's `answer` set; the cited theorem is a
+  characterisation through `HasErdos1195Witness`. This needs both definitions related.

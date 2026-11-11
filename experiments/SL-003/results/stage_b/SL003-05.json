@@ -1,0 +1,23 @@
+{
+ "case_id": "SL003-05",
+ "outcome": "infrastructure_blocked",
+ "cause": "transport",
+ "detail": "transported target does not elaborate: SL003Target.lean:11:37: error: unexpected token '²'; expected ')' | SL003Target.lean:16:39: error: unexpected token '²'; expected ')' | SL003Target.lean:26:36: error: unexpected token '²'; expected ','",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": null,
+ "toolchain": "leanprover/lean4:v4.35.0-rc2",
+ "seconds": {
+  "cache": 78,
+  "build": 17,
+  "cited_axioms": 4,
+  "transport_elaborate": 3
+ }
+}

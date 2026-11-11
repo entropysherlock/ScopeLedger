@@ -1,0 +1,40 @@
+{
+ "errors": {
+  "Direct": "Direct.lean:5:2: error: Type mismatch\n  Erdos690.erdos_690\nhas type\n  (∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)) ∧\n    (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\nbut is expected to have type\n  ¬∀ k ≥ 1,\n      ∀ (d : ℕ → ℝ),\n        (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet k p).HasDensity (d p)) →\n          SL003FC.Erdos690.IsUnimodalOnPrimes d",
+  "Cascade0": "Cascade0.lean:5:2: error: Type mismatch: After simplification, term\n  Erdos690.erdos_690\n has type\n  (∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)) ∧\n    (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\nbut is expected to have type\n  ∃ x,\n    1 ≤ x ∧\n      ∃ x_1,\n        (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n          ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1",
+  "Cascade1": "Cascade1.lean:5:2: error: mod_cast has type\n  (∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)) ∧\n    (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\nbut is expected to have type\n  ¬∀ k ≥ 1,\n      ∀ (d : ℕ → ℝ),\n        (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet k p).HasDensity (d p)) →\n          SL003FC.Erdos690.IsUnimodalOnPrimes d",
+  "Cascade2": "Cascade2.lean:5:9: error(lean.unknownIdentifier): Unknown identifier `IsUnimodalOnPrimes`",
+  "Cascade3": "Cascade3.lean:5:2: error: Type mismatch\n  Erdos690.erdos_690.left\nhas type\n  ∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)\nbut is expected to have type\n  ¬∀ k ≥ 1,\n      ∀ (d : ℕ → ℝ),\n        (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet k p).HasDensity (d p)) →\n          SL003FC.Erdos690.IsUnimodalOnPrimes d",
+  "Cascade4": "Cascade4.lean:5:2: error: Type mismatch\n  Erdos690.erdos_690.right\nhas type\n  (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\nbut is expected to have type\n  ¬∀ k ≥ 1,\n      ∀ (d : ℕ → ℝ),\n        (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet k p).HasDensity (d p)) →\n          SL003FC.Erdos690.IsUnimodalOnPrimes d"
+ },
+ "case_id": "SL003-16",
+ "outcome": "undecided",
+ "cause": null,
+ "detail": "target elaborates; direct, cascade did not prove it within budget",
+ "method": null,
+ "cited_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "proof_axioms": null,
+ "replay": null,
+ "control_without_cited": null,
+ "def_alignment": {
+  "Erdos690.kthPrimeFactorSet": "not_rfl",
+  "Erdos690.IsUnimodalOnPrimes": "absent"
+ },
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "seconds": {
+  "cache": 108,
+  "build": 273,
+  "cited_axioms": 6,
+  "transport_elaborate": 6,
+  "Direct": 6,
+  "Cascade0": 6,
+  "Cascade1": 6,
+  "Cascade2": 6,
+  "Cascade3": 6,
+  "Cascade4": 6
+ }
+}
