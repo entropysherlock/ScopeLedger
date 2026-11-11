@@ -1,0 +1,49 @@
+{
+ "case_id": "H-56",
+ "cited": "OAI.AsymptoticallyMinimalLittlewood.main",
+ "module": "OAI.Analysis.Littlewood.Main",
+ "toolchain": "leanprover/lean4:v4.34.1",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 159
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 5
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "Bridge.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 6,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos1150.SL003.targetProp",
+ "bridges": {
+  "SL004.bridge_main": {
+   "file": "Bridge.lean",
+   "kind": "bridge_main",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 213,
+ "status": "ok"
+}
