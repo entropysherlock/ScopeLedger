@@ -1,1 +1,1 @@
-dev 5 2026-11-11 16/40 with Nat.mem_primeFactors; 06 library variant goal handling
+dev 5r 2026-11-11 identical re-run of dev 5 (run 43094411580 lost its logs: artifact upload hung, jobs never finalised); push-based logging
