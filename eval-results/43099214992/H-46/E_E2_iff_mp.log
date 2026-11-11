@@ -1,0 +1,7 @@
+E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos548.erdos_548
+of type
+  ∀ (n k : ℕ),
+    k + 1 ≤ n →
+      ∀ (G : SimpleGraph (Fin n)),
+        (↑k - 1) / 2 * ↑n + 1 ≤ ↑G.edgeSet.ncard → ∀ (T : SimpleGraph (Fin (k + 1))), T.IsTree → T.IsContained G

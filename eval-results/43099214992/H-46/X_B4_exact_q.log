@@ -1,0 +1,2 @@
+Try this:
+  [apply] exact fun n k hk G H T hT => Erdos548.erdos_548 n k hk G H T hT
