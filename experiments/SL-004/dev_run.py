@@ -76,7 +76,10 @@ def main():
     if rc != 0:
         return done("target_failed")
     bridges = {}
-    for f in sorted(cand.glob("*.lean")):
+    # The shared correspondence library is compiled first, in the same environment, so candidates may
+    # `import SL004Lib`. Its own success or failure is recorded like any other file.
+    lib = sorted((HERE / "lib").glob("*.lean")) if (HERE / "lib").exists() else []
+    for f in lib + sorted(cand.glob("*.lean")):
         shutil.copy(f, work / f.name)
         mod = f.stem
         rc, log, s = stage_b.run([LEAN, "-o", f"{mod}.olean", f"{mod}.lean"], work, 3600, env)
