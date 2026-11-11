@@ -1,0 +1,11 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_673.parts.i : ∀ C : ℝ, {n : ℕ | C < G n}.HasDensity 1 :=",
+ "removed declaration: theorem erdos_673.parts.ii :",
+ "removed declaration: theorem erdos_673.variants.average :",
+ "removed declaration: theorem erdos_673.variants.tao (n m : ℕ) (hn : 0 < n) (hm : 1 < m) (hm",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

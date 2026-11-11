@@ -1,0 +1,25 @@
+✔ [8706/8717] Built UnitFractions.ForMathlib.IntegralRPow (3.7s)
+✔ [8707/8717] Built Util.Density (8.7s)
+✔ [8708/8717] Built UnitFractions.ForMathlib.Misc (9.6s)
+ℹ [8709/8717] Built ErdosProblems.Erdos448.PrimePowerMassLinear448 (21s)
+info: ErdosProblems/Erdos448/PrimePowerMassLinear448.lean:418:0: 'PrimePowerMassLinear448.primePowerMass_le_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8710/8717] Built ErdosProblems.Erdos448.PrimePowerConvolution448 (16s)
+info: ErdosProblems/Erdos448/PrimePowerConvolution448.lean:193:0: 'PrimePowerConvolution448.logPartialSum_le_primePowerMass_convolution' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [8711/8717] Built ErdosProblems.Erdos448.HalberstamLean (18s)
+info: ErdosProblems/Erdos448/HalberstamLean.lean:455:0: 'HalberstamScratch.prime_power_local_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos448/HalberstamLean.lean:456:0: 'HalberstamScratch.halberstam_richert_of_mass_convolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8712/8717] Built ErdosProblems.Erdos448.HalberstamComplete448 (10s)
+info: ErdosProblems/Erdos448/HalberstamComplete448.lean:94:0: 'HalberstamComplete448.halberstam_richert_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos448/HalberstamComplete448.lean:95:0: 'HalberstamComplete448.halberstam_richert_explicit_source_indexing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [8713/8717] Built ErdosProblems.Erdos459 (62s)
+info: ErdosProblems/Erdos459.lean:1642:0: 'Erdos459.erdos_459' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8714/8717] Built UnitFractions.ForMathlib.BasicEstimates (41s)
+✔ [8715/8717] Built ErdosProblems.Erdos448.MertensEulerProduct448 (4.7s)
+✔ [8716/8717] Built ErdosProblems.Erdos673.Mean (12s)
+ℹ [8717/8717] Built ErdosProblems.Erdos673 (7.9s)
+info: ErdosProblems/Erdos673.lean:922:0: 'Erdos673.erdos_673' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8717 jobs).
