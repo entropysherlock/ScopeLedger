@@ -1,0 +1,108 @@
+{
+ "cases": [
+  "H-05",
+  "H-10",
+  "H-15",
+  "H-18",
+  "H-20",
+  "H-21",
+  "H-27",
+  "H-31",
+  "H-41",
+  "H-45",
+  "H-54",
+  "H-56",
+  "H-58"
+ ],
+ "treatment": {
+  "H-05": false,
+  "H-10": true,
+  "H-15": false,
+  "H-18": false,
+  "H-20": true,
+  "H-21": true,
+  "H-27": true,
+  "H-31": true,
+  "H-41": true,
+  "H-45": true,
+  "H-54": false,
+  "H-56": true,
+  "H-58": true
+ },
+ "controls": {
+  "opus": {
+   "H-05": false,
+   "H-10": false,
+   "H-15": "round1",
+   "H-18": "round1",
+   "H-20": "round2",
+   "H-21": "round1",
+   "H-27": "round1",
+   "H-31": "round1",
+   "H-41": "round1",
+   "H-45": "round1",
+   "H-54": false,
+   "H-56": "round1",
+   "H-58": "round1"
+  },
+  "sonnet": {
+   "H-05": false,
+   "H-10": "round1",
+   "H-15": "round2",
+   "H-18": "round2",
+   "H-20": "round2",
+   "H-21": "round1",
+   "H-27": "round1",
+   "H-31": "round1",
+   "H-41": false,
+   "H-45": "round1",
+   "H-54": false,
+   "H-56": "round1",
+   "H-58": "round1"
+  }
+ },
+ "paired_vs_opus": {
+  "treatment_only": [
+   "H-10"
+  ],
+  "control_only": [
+   "H-15",
+   "H-18"
+  ],
+  "exact_mcnemar_p": 1.0
+ },
+ "paired_vs_sonnet": {
+  "treatment_only": [
+   "H-41"
+  ],
+  "control_only": [
+   "H-15",
+   "H-18"
+  ],
+  "exact_mcnemar_p": 1.0
+ },
+ "totals": {
+  "treatment": 9,
+  "opus": 10,
+  "sonnet": 10,
+  "either_control": 11
+ },
+ "cp95_of_13": {
+  "treatment": [
+   0.386,
+   0.909
+  ],
+  "opus": [
+   0.462,
+   0.95
+  ],
+  "sonnet": [
+   0.462,
+   0.95
+  ],
+  "either_control": [
+   0.546,
+   0.981
+  ]
+ }
+}

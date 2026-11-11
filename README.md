@@ -196,8 +196,19 @@ built definitions:
 - `sSup`/`sInf` against `Finset.sup`/`Nat.find`, via greatest and least elements;
 - uniqueness arguments and logical repackaging.
 
-Verdict: **Level 3 candidate**. The decisive control, an AI agent working without the procedure, has not
-been run yet.
+SL-004 verdict at the time: Level 3 candidate, pending the control. SL-005 ran that control.
+
+## SL-005: the controlled comparison
+
+Two fresh AI agents (opus, sonnet) worked from a blind package, with no ScopeLedger procedure, classes or
+library. They had the same 13 cases, harness, checks and budget. Each certified **10 of 13**; the
+structured treatment certified **9** (one by reuse). Exact McNemar p = 1.0 against each control. Both
+controls solved H-15 and H-18, which the treatment had not. Audit: no access outside the package and no
+solution content ([experiments/SL-005/REPORT.md](experiments/SL-005/REPORT.md)).
+
+**Verdict: Level 2.** The gain over standard automation comes from AI-assisted Lean proof development
+itself, not from ScopeLedger's transport procedure. The harness, the measurements and the finding that
+AI agents certify about 30 of 32 transportable held-out links stand.
 
 ## Reproducibility
 

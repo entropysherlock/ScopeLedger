@@ -112,3 +112,11 @@ AI bridges compiled in seconds. Human-written Lean: none.
 1. Run the AI-without-procedure baseline on the same 13 non-baseline cases, with the same budget.
 2. Have a second model or person apply the frozen procedure.
 3. Replay every certificate in a clean, independent environment.
+
+## 8. Update after SL-005
+
+The missing control was run in SL-005 ([../SL-005/REPORT.md](../SL-005/REPORT.md)). Two independent AI
+agents with no procedure each certified 10 of the same 13 cases; Layer B certified 9. The Level 3
+candidacy does not survive: **SL-004's method contribution is Level 2.** This report's held-out
+measurements are unchanged.
+

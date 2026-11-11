@@ -1,0 +1,26 @@
+Bridge.lean:129:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:129:6: warning: 'exact Subgroup.coe_equivMapOfInjective_apply _ _ _ _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Bridge.lean:168:14: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:168:14: warning: '(
+  show p < 1
+  exact hp1)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Bridge.lean:305:8: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:306:8: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:305:8: warning: 'exact φ.map_le_map_iff'' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Bridge.lean:306:8: warning: 'exact φ.toOrderIso.le_iff_le' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`

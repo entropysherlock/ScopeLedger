@@ -1,0 +1,9 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem kourovka_21_149 :",
+ "removed declaration: theorem kourovka_21_149.variants.not_inner :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

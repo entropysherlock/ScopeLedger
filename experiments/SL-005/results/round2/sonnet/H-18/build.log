@@ -1,0 +1,4 @@
+ℹ [3087/3125] Replayed Dyadic354.CyclicBoundary
+info: Dyadic354/CyclicBoundary.lean:78:6: Try this:
+  [apply] abel_nf
+Build completed successfully (3125 jobs).
