@@ -1,0 +1,17 @@
+Bridge.lean:47:79: error: Type mismatch
+  rfl
+has type
+  ?m.130 = ?m.130
+but is expected to have type
+  MonochromaticQuantumGraph.pmSumListAux W' ι (n + 2) (v :: vs) =
+    (List.map
+        (fun u =>
+          W' (MonochromaticQuantumGraph.mkEdge v u (ι v) (ι u)) *
+            MonochromaticQuantumGraph.pmSumListAux W' ι n (vs.erase u))
+        vs).sum
+Bridge.lean:65:9: warning: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Bridge.lean:85:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
