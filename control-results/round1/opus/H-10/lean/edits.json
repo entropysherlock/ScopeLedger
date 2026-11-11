@@ -1,0 +1,9 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_534 (N : ℕ) (hN : 2 ≤ N) :",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

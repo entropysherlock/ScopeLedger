@@ -1,0 +1,4 @@
+Bridge.lean:11:73: error: unsolved goals
+N q m : ℕ
+⊢ m ∈ {m ∈ Finset.Icc 1 N | ∏ p ∈ N.primeFactors with p ≤ q, p ∣ m ∨ ∃ p ∈ {x ∈ N.primeFactors | x ≤ q}, 2 * p ∣ m} ↔
+    m ∈ {m ∈ Finset.Icc 1 N | ∏ p ∈ N.primeFactors with p ≤ q, p ∣ m ∨ ∃ p ∈ {x ∈ N.primeFactors | x ≤ q}, 2 * p ∣ m}

@@ -1,0 +1,34 @@
+{
+ "case_id": "H-10",
+ "cited": "Erdos534.erdos_534",
+ "module": "ErdosProblems.Erdos534",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 127
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 5
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "Bridge.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 4,
+   "first_error": "Bridge.lean:11:73: error: unsolved goals\nN q m : ℕ\n⊢ m ∈ {m ∈ Finset.Icc 1 N | ∏ p ∈ N.primeFactors with p ≤ q, p ∣ m ∨ ∃ p ∈ {x ∈ N.primeFactors | x ≤ q}, 2 * p ∣ m} ↔\n    m ∈ {m ∈ Finset.Icc 1 N | ∏ p ∈ N.primeFactors with p ≤ q, p ∣ m ∨ ∃ p ∈ {x ∈ N.primeFactors | x ≤ q}, 2 * p ∣ m}"
+  }
+ },
+ "target_prop": "SL003FC.Erdos534.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 147,
+ "status": "ok"
+}
