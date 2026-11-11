@@ -1,0 +1,7 @@
+{
+ "seed": "e53ef139060a5f8336d8bdb0fd57f38a5993a910",
+ "method": "random.Random(seed).sample(range(997), 60)",
+ "python": "3.13.18",
+ "population_sha256": "cae3af687166f72cbd3e03555c89a8ab5569b1917ebfad0a7a672a6dff7e12f0",
+ "repos_in_sample": 20
+}
