@@ -1,0 +1,6 @@
+import SL003Target
+
+#print MonochromaticQuantumGraph.pmSumList
+#print SL003FC.MonochromaticQuantumGraph.pmSumList
+#print MonochromaticQuantumGraph.vertices
+#print MonochromaticQuantumGraph.allEqualList
