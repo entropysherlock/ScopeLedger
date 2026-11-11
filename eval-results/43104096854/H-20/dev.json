@@ -1,0 +1,258 @@
+{
+ "case_id": "H-20",
+ "cited": "E522.erdos_522_zero_one_solved",
+ "module": "Erdos522StrongLawFC",
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 89
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 138
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  },
+  "R1_bridge.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos522.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B1_exact.lean:6:2: error: Type mismatch\n  E522.erdos_522_zero_one_solved\nhas type\n  True ↔\n    ∀ {Ω : Type ?u.4} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n         "
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side\n  ∀ {Ω : Type u_1} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n    {n : ℕ},\n    1 ≤ n →\n      ∀ (f : SL003FC.Erdos522.KacCoefficients {0, 1} Ω),\n        MeasureTheory.volume"
+  },
+  "X_B3_aesop.lean": {
+   "ok": false,
+   "seconds": 37,
+   "first_error": "X_B3_aesop.lean:4:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (400000) has been reached\n\nNote: Use `set_option maxHeartbeats <num>` to set the limit.\n\nHint: Additional diagnostic information may be available using the `set_option diagnostics true` command."
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 18,
+   "first_error": "X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions."
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  E522.erdos_522_zero_one_solved\nhas type\n  True ↔\n    ∀ {Ω : Type ?u.4} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n   "
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E2_iff_mp.lean:6:88: error: Type mismatch\n  E522.erdos_522_zero_one_solved.mp trivial\nhas type\n  1 ≤ ?m.8 →\n    ∀ (f : Erdos522.KacCoefficients {0, 1} ?m.5),\n      MeasureTheory.volume {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =\n        1\nbut is exp"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k1.lean:4:77: error: unsolved goals\nh :\n  True ↔\n    ∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n      "
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k2.lean:4:77: error: unsolved goals\nh :\n  True ↔\n    ∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n      "
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k3.lean:4:77: error: unsolved goals\nh :\n  True ↔\n    ∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n      "
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k4.lean:4:77: error: unsolved goals\nh :\n  True ↔\n    ∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n      "
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p0.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ {Ω : Type u_1} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : SL003FC.Erdos522"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k1.lean:4:77: error: unsolved goals\nh :\n  True →\n    ∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n      "
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k2.lean:4:77: error: unsolved goals\nh :\n  True →\n    ∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n      "
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k3.lean:4:77: error: unsolved goals\nh :\n  True →\n    ∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n      "
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:4:77: error: unsolved goals\nh :\n  True →\n    ∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n      "
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k1.lean:4:77: error: unsolved goals\nh :\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n              {ω"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k2.lean:4:77: error: unsolved goals\nh :\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n              {ω"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:4:77: error: unsolved goals\nh :\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n              {ω"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k4.lean:4:77: error: unsolved goals\nh :\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),\n          MeasureTheory.volume\n              {ω"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n   "
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n   "
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n   "
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  E522.erdos_522_zero_one_solved.mpr\nhas function type\n  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]\n      {n : ℕ},\n      1 ≤ n →\n   "
+  }
+ },
+ "bridges": {
+  "SL004.bridgeH20": {
+   "file": "R1_bridge.lean",
+   "kind": "bridgeH",
+   "statement": "SL003FC.Erdos522.SL003.targetProp",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 495,
+ "status": "ok"
+}
