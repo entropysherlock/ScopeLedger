@@ -1,0 +1,4 @@
+✔ [8706/8707] Built Util.Density (3.7s)
+ℹ [8707/8707] Built ErdosProblems.Erdos109 (46s)
+info: ErdosProblems/Erdos109.lean:9608:0: 'Erdos109.erdos_109' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8707 jobs).

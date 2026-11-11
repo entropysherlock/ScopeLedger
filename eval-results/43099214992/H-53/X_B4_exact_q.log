@@ -1,0 +1,2 @@
+Try this:
+  [apply] exact fun A h => Erdos109.erdos_109 A h

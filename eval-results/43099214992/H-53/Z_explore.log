@@ -1,0 +1,15 @@
+def SL003FC.Erdos109.SL003.targetProp : Prop :=
+∀ (A : Set ℕ), A.upperDensity > (0 : ℝ) → ∃ B C, B.Infinite ∧ C.Infinite ∧ B + C ⊆ A
+Erdos109.erdos_109 : ∀ (A : Set ℕ), A.upperDensity > (0 : ℝ) → ∃ B C, B.Infinite ∧ C.Infinite ∧ B + C ⊆ A
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `Erdos109.A.upperDensity`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos109.A.upperDensity`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `A.upperDensity`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `Erdos109.B.Infinite`
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos109.B.Infinite`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `B.Infinite`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `C.Infinite`
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `Erdos109.C.Infinite`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos109.C.Infinite`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos109.hA`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `Erdos109.hA`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `hA`
