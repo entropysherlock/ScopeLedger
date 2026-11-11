@@ -1,1 +1,1 @@
-dev 3 2026-11-11 bridges for 03, 16, 40, 55 (characterisation and density uniqueness); automatic engine on all 14 dev cases
+dev 4 2026-11-11 16/40 lemma fix; version-robust SL004Lib; library variants for 06 and 55; engine v2 (Nat.find closer)

@@ -33,7 +33,13 @@ from pathlib import Path
 
 NORM = ("true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop, and_imp, "
         "not_not, Set.mem_setOf_eq")
-CLOSE = "first | rfl | with_unfolding_all rfl | simp | (with_unfolding_all simp)"
+# Residual-goal closers, in order: definitional (twins), simp, and the extremal characterisation
+# `sInf {n | P n} = Nat.find h` (least element), which needs no information about either side.
+CLOSE = ("first | rfl | with_unfolding_all rfl | simp | (with_unfolding_all simp)"
+         " | (apply IsLeast.csInf_eq; exact ⟨Nat.find_spec _, fun _ hm => Nat.find_min' _ hm⟩)"
+         " | (with_unfolding_all (apply IsLeast.csInf_eq; exact ⟨Nat.find_spec _, fun _ hm => Nat.find_min' _ hm⟩))"
+         " | (apply funext; intro; first | with_unfolding_all rfl"
+         " | (with_unfolding_all (apply IsLeast.csInf_eq; exact ⟨Nat.find_spec _, fun _ hm => Nat.find_min' _ hm⟩)))")
 PROJ = ["", ".1", ".2", ".2.1", ".2.2", ".2.2.1", ".2.2.2"]
 
 
