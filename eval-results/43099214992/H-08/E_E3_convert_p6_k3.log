@@ -1,0 +1,9 @@
+E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos742.erdos_742.2
+has function type
+  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ 2 / 4
+E_E3_convert_p6_k3.lean:4:86: error: unsolved goals
+⊢ ∃ n₀,
+    ∀ (V : Type u_1) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+      n₀ ≤ Fintype.card V → SL003FC.Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ 2 / 4

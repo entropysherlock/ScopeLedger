@@ -1,0 +1,32 @@
+import SL003Target
+
+set_option pp.numericTypes true
+#print SL003FC.Erdos742.variants.SL003.targetProp
+#check @Erdos742.erdos_742
+#print DecidableEq
+#print SL003FC.Erdos742.variants.DecidableEq
+#print Erdos742.DecidableEq
+#print Erdos742.DecidableRel
+#print SL003FC.Erdos742.variants.DecidableRel
+#print DecidableRel
+#print Fintype
+#print Erdos742.Fintype
+#print SL003FC.Erdos742.variants.Fintype
+#print Erdos742.Fintype.card
+#print SL003FC.Erdos742.variants.Fintype.card
+#print Fintype.card
+#print Erdos742.G.Adj
+#print G.Adj
+#print SL003FC.Erdos742.variants.G.Adj
+#print Erdos742.G.edgeFinset.card
+#print G.edgeFinset.card
+#print SL003FC.Erdos742.variants.G.edgeFinset.card
+#print Erdos742.IsDiameter2Critical
+#print IsDiameter2Critical
+#print SL003FC.Erdos742.variants.IsDiameter2Critical
+#print Erdos742.SimpleGraph
+#print SL003FC.Erdos742.variants.SimpleGraph
+#print SimpleGraph
+#print Erdos742.n₀
+#print n₀
+#print SL003FC.Erdos742.variants.n₀

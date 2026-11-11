@@ -1,0 +1,3 @@
+ℹ [2076/2076] Built ErdosProblems.Erdos742 (32s)
+info: ErdosProblems/Erdos742.lean:4374:0: 'Erdos742.erdos_742' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2076 jobs).
