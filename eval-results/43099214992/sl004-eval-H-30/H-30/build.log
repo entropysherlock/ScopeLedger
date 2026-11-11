@@ -1,0 +1,3 @@
+ℹ [8248/8248] Built ErdosProblems.Erdos674 (8.6s)
+info: ErdosProblems/Erdos674.lean:82:0: 'Erdos674.erdos_674_infinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8248 jobs).

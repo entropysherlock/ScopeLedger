@@ -1,0 +1,4 @@
+E_E2_iff_mp.lean:6:96: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  A361033.a_odd_iff
+of type
+  ∀ (n : ℕ), Odd (A361033.a n) ↔ ∃ k, n = 2 ^ k - 1

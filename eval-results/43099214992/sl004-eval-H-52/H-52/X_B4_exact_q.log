@@ -1,0 +1,2 @@
+Try this:
+  [apply] exact fun n => Iff.symm ((fun {a b} => iff_comm.mp) (h n))

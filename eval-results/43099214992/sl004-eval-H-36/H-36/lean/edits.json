@@ -1,0 +1,14 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: lemma count_false_morphism (b : Bool) : count false (morphism b) = if ",
+ "removed declaration: lemma count_true_morphism (b : Bool) : count true (morphism b) = 1 := ",
+ "removed declaration: lemma count_false_finiteWord : ∀ n, (finiteWord n).count false = 2 ^ n",
+ "removed declaration: lemma count_true_finiteWord : ∀ n, (finiteWord n).count true = 2 ^ n -",
+ "removed declaration: lemma length_finiteWord (n : ℕ) : (finiteWord n).length = 2 ^ (n + 1) ",
+ "removed declaration: theorem conjecture (n : ℕ) :",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

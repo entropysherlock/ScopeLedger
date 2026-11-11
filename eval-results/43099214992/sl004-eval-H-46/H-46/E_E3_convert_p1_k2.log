@@ -1,0 +1,12 @@
+E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos548.erdos_548
+has function type
+  ∀ (n k : ℕ),
+    k + 1 ≤ n →
+      ∀ (G : SimpleGraph (Fin n)),
+        (↑k - 1) / 2 * ↑n + 1 ≤ ↑G.edgeSet.ncard → ∀ (T : SimpleGraph (Fin (k + 1))), T.IsTree → T.IsContained G
+E_E3_convert_p1_k2.lean:4:77: error: unsolved goals
+⊢ ∀ (n k : ℕ),
+    k + 1 ≤ n →
+      ∀ (G : SimpleGraph (Fin n)),
+        (↑k - 1) / 2 * ↑n + 1 ≤ ↑G.edgeSet.ncard → ∀ (T : SimpleGraph (Fin (k + 1))), T.IsTree → T.IsContained G

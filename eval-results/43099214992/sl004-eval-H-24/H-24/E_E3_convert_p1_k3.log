@@ -1,0 +1,7 @@
+E_E3_convert_p1_k3.lean:4:77: error: unsolved goals
+case a
+h : True → {n | Erdos889.V_l 1 n = 1}.Finite
+⊢ {n | SL003FC.Erdos889.V_l 1 n = 1}.Finite ↔ {n | Erdos889.V_l 1 n = 1}.Finite
+E_E3_convert_p1_k3.lean:8:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

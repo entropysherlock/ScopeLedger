@@ -1,0 +1,49 @@
+{
+ "anchor_line": 41,
+ "case_id": "H-11",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": "monotoneOn",
+ "cited_file_sha256": "fb5ff95ab6381fc36a6e0bf8745aba6047dd98b19f841716d9ab54e7b086b2fa",
+ "cited_has_sorry_text": false,
+ "cited_module": "Solution",
+ "cited_path": "erdos-667/Solution.lean",
+ "cited_qualified": "Erdos667.variants.monotoneOn",
+ "cited_statement": "(p : ℕ) : MonotoneOn (c p) (Set.Icc 1 (Nat.choose (p - 1) 2 + 1))",
+ "cited_statement_sha256": "50d92054d20ac435febd4a992655bcc0e160728a0b183afc9aafe17d88f979da",
+ "core_identical": true,
+ "environment": {
+  "depends_on_formal_conjectures": false,
+  "packages": {
+   "Cli": "2842b9871b04862f944c032e34052cb9448ccb71",
+   "LeanSearchClient": "95e037bfdc31d3916ac615446847fb01960e2719",
+   "Qq": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+   "aesop": "75d936c7af167cc93fac0d31237682fc2204591d",
+   "batteries": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+   "importGraph": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+   "mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+   "plausible": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+   "proofwidgets": "4c70ac059693669e5756e32a7a94b57ee1e99dc5"
+  },
+  "root": "erdos-667",
+  "src_dirs": [
+   "Proofs"
+  ],
+  "toolchain": "leanprover/lean4:v4.35.0-rc2"
+ },
+ "fc_path": "FormalConjectures/ErdosProblems/667.lean",
+ "locate_method": "anchor",
+ "module_path_in_env": "Solution.lean",
+ "outcome": "ready_for_stage_b",
+ "pin_method": "url_sha",
+ "pinned_commit": "d16a9d73d85f1377e83798f5d9585ee4c4140979",
+ "ref": "d16a9d73d85f1377e83798f5d9585ee4c4140979",
+ "repo": "linrock/math-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_667.variants.monotoneOn",
+ "target_statement": "(p : ℕ) : MonotoneOn (c p) (Set.Icc 1 (Nat.choose (p - 1) 2 + 1))",
+ "target_statement_raw": "(p : ℕ) :\n    MonotoneOn (c p) (Set.Icc 1 (Nat.choose (p - 1) 2 + 1))",
+ "target_statement_sha256": "50d92054d20ac435febd4a992655bcc0e160728a0b183afc9aafe17d88f979da",
+ "text_identical": true,
+ "url": "https://github.com/linrock/math-proofs/blob/d16a9d73d85f1377e83798f5d9585ee4c4140979/erdos-667/Solution.lean#L41"
+}

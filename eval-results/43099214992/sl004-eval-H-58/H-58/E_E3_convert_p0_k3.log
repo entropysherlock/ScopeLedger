@@ -1,0 +1,15 @@
+E_E3_convert_p0_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  Type ?u.13
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.440473} {β : α → Sort ?u.440472} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case convert_1
+h :
+  ∀ {G : Type ?u.13} [inst : Fintype G] [inst_1 : CommGroup G],
+    1 < Fintype.card G →
+      ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering G ι),
+        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+⊢ Type ?u.13

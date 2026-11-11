@@ -1,0 +1,20 @@
+X_B3_aesop.lean:7:2: warning: aesop: failed to prove the goal after exhaustive search.
+X_B3_aesop.lean:4:69: error: unsolved goals
+h :
+  ∀ (m : ℕ),
+    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -
+        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) - 1)) =
+      LeanGallery.NumberTheory.Erdos482.binDigit (759250125 * √2) (m + 1)
+g : ℕ
+inst : NeZero g
+hg : 2 ≤ g
+w : ℝ
+hw : 0 < w
+⊢ ∃ a b,
+    a * b = ↑g ∧
+      ∃ x,
+        ∀ (n : ℕ),
+          1 ≤ n →
+            SL003FC.Erdos482.generalRecurrence g a b x (2 * n) -
+                ↑g * SL003FC.Erdos482.generalRecurrence g a b x (2 * n - 2) =
+              ↑↑((w / ↑g ^ ⌊Real.logb (↑g) w⌋ * ↑g ^ (n - 1) / ↑g).digits g 0)

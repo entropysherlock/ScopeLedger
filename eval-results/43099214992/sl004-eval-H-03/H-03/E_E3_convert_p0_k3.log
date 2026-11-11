@@ -1,0 +1,22 @@
+E_E3_convert_p0_k3.lean:7:24: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+E_E3_convert_p0_k3.lean:7:24: warning: Unused tactic linter: `(first
+  | rfl
+  | with_unfolding_all rfl
+  | simp
+  | (with_unfolding_all simp)
+  | (apply IsLeast.csInf_eq; exact ⟨Nat.find_spec _, fun _ hm => Nat.find_min' _ hm⟩)
+  | (with_unfolding_all (apply IsLeast.csInf_eq; exact ⟨Nat.find_spec _, fun _ hm => Nat.find_min' _ hm⟩))
+  |
+    (apply funext; intro;
+      first
+      | with_unfolding_all rfl
+      |
+        (with_unfolding_all
+            (apply IsLeast.csInf_eq; exact ⟨Nat.find_spec _, fun _ hm => Nat.find_min' _ hm⟩))))` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+E_E3_convert_p0_k3.lean:8:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

@@ -1,0 +1,14 @@
+X_B3_aesop.lean:6:7: error: failed to infer universe levels in `have` declaration type
+  ∃ n₀,
+    ∀ (V : Type ?u.5) [inst : Fintype.{?u.5} V] [DecidableEq.{?u.5 + 1} V] (G : SimpleGraph.{?u.5} V)
+      [inst_2 : DecidableRel.{?u.5 + 1, ?u.5 + 1} (SimpleGraph.Adj.{?u.5} G)],
+      n₀ ≤ Fintype.card.{?u.5} V →
+        Erdos742.IsDiameter2Critical.{?u.5} G →
+          Finset.card.{?u.5} (SimpleGraph.edgeFinset.{?u.5} G) ≤ Fintype.card.{?u.5} V ^ 2 / 4
+X_B3_aesop.lean:4:8: error: (kernel) application type mismatch
+  @h V
+argument has type
+  Type u_1
+but function has type
+  ∀ (V : Type) [inst : Fintype V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+    w ≤ Fintype.card V → Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ 2 / 4

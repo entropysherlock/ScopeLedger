@@ -1,0 +1,34 @@
+E_E3_convert_p2_k4.lean:4:78: error: unsolved goals
+h :
+  ∀ (ε : ℝ),
+    0 < ε →
+      ε ≤ 1 →
+        ∃ P,
+          ∀ (p : ℕ),
+            P ≤ p →
+              Nat.Prime p →
+                ∀ (a : ZMod p),
+                  ∃ s,
+                    ↑s.card ≤ Erdos1180.Palomar.erdos_1180_variants_shparlinski.1 * ε⁻¹ ^ 3 ∧
+                      Erdos1180.Palomar.Represents ε p a s
+⊢ (∃ K,
+      ∀ (ε : ℝ),
+        0 < ε →
+          ε ≤ 1 →
+            ∃ P,
+              ∀ (p : ℕ),
+                P ≤ p →
+                  Nat.Prime p → ∀ (a : ZMod p), ∃ s, ↑s.card ≤ K * (ε ^ 3)⁻¹ ∧ SL003FC.Erdos1180.Represents ε p a s) ↔
+    ∀ (ε : ℝ),
+      0 < ε →
+        ε ≤ 1 →
+          ∃ P,
+            ∀ (p : ℕ),
+              P ≤ p →
+                Nat.Prime p →
+                  ∀ (a : ZMod p),
+                    ∃ s,
+                      ↑s.card ≤ Erdos1180.Palomar.erdos_1180_variants_shparlinski.1 * (ε ^ 3)⁻¹ ∧
+                        Erdos1180.Palomar.Represents ε p a s
+E_E3_convert_p2_k4.lean:4:8: error: (kernel) invalid projection
+  Erdos1180.Palomar.erdos_1180_variants_shparlinski.1

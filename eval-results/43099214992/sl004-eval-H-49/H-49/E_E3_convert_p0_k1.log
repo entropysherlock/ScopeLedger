@@ -1,0 +1,82 @@
+E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (∀ (n k r t : ℕ),
+      1 ≤ r →
+        1 ≤ t →
+          k * r + (t - 1) * (k - 1) ≤ n →
+            ∀ (c : { e // e.card = r } → Fin t),
+              ∃ i e, (∀ (j : Fin k), c (e j) = i) ∧ Pairwise fun a b => Disjoint ↑(e a) ↑(e b)) ↔
+    1 ≤ ?convert_3 →
+      1 ≤ ?convert_4 →
+        ?convert_2 * ?convert_3 + (?convert_4 - 1) * (?convert_2 - 1) ≤ ?convert_1 →
+          ∀ (c : Erdos780.Edge ?convert_1 ?convert_3 → Fin ?convert_4), Erdos780.HasMonoMatching c ?convert_2
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h :
+  ∀ {n k r t : ℕ},
+    1 ≤ r → 1 ≤ t → k * r + (t - 1) * (k - 1) ≤ n → ∀ (c : Erdos780.Edge n r → Fin t), Erdos780.HasMonoMatching c k
+⊢ (∀ (n k r t : ℕ),
+      1 ≤ r →
+        1 ≤ t →
+          k * r + (t - 1) * (k - 1) ≤ n →
+            ∀ (c : { e // e.card = r } → Fin t),
+              ∃ i e, (∀ (j : Fin k), c (e j) = i) ∧ Pairwise fun a b => Disjoint ↑(e a) ↑(e b)) ↔
+    1 ≤ ?convert_3 →
+      1 ≤ ?convert_4 →
+        ?convert_2 * ?convert_3 + (?convert_4 - 1) * (?convert_2 - 1) ≤ ?convert_1 →
+          ∀ (c : Erdos780.Edge ?convert_1 ?convert_3 → Fin ?convert_4), Erdos780.HasMonoMatching c ?convert_2
+E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  ℕ
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case convert_1
+h :
+  ∀ {n k r t : ℕ},
+    1 ≤ r → 1 ≤ t → k * r + (t - 1) * (k - 1) ≤ n → ∀ (c : Erdos780.Edge n r → Fin t), Erdos780.HasMonoMatching c k
+⊢ ℕ
+E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  ℕ
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case convert_2
+h :
+  ∀ {n k r t : ℕ},
+    1 ≤ r → 1 ≤ t → k * r + (t - 1) * (k - 1) ≤ n → ∀ (c : Erdos780.Edge n r → Fin t), Erdos780.HasMonoMatching c k
+⊢ ℕ
+E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  ℕ
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case convert_3
+h :
+  ∀ {n k r t : ℕ},
+    1 ≤ r → 1 ≤ t → k * r + (t - 1) * (k - 1) ≤ n → ∀ (c : Erdos780.Edge n r → Fin t), Erdos780.HasMonoMatching c k
+⊢ ℕ
+E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  ℕ
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case convert_4
+h :
+  ∀ {n k r t : ℕ},
+    1 ≤ r → 1 ≤ t → k * r + (t - 1) * (k - 1) ≤ n → ∀ (c : Erdos780.Edge n r → Fin t), Erdos780.HasMonoMatching c k
+⊢ ℕ

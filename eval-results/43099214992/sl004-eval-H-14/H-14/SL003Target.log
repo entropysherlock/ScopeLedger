@@ -1,0 +1,6 @@
+SL003Target.lean:65:13: error(lean.unknownIdentifier): Unknown constant `SL003FC.MovingSofa.GerversSofa.ABφθSpec.existsUnique.choose`
+SL003Target.lean:66:13: error(lean.unknownIdentifier): Unknown constant `SL003FC.MovingSofa.GerversSofa.ABφθSpec.existsUnique.choose`
+SL003Target.lean:67:13: error(lean.unknownIdentifier): Unknown constant `SL003FC.MovingSofa.GerversSofa.ABφθSpec.existsUnique.choose`
+SL003Target.lean:68:13: error(lean.unknownIdentifier): Unknown constant `SL003FC.MovingSofa.GerversSofa.ABφθSpec.existsUnique.choose`
+SL003Target.lean:98:23: error: unexpected token; expected ']'
+SL003Target.lean:107:17: error(lean.unknownIdentifier): Unknown identifier `volume`

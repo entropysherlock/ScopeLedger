@@ -1,0 +1,15 @@
+✔ [2726/2738] Built PrimitiveSetsAboveX.Basic (1.8s)
+✔ [2727/2738] Built PrimitiveSetsAboveX.FirstEntryRowTerm (3.2s)
+✔ [2728/2738] Built PrimitiveSetsAboveX.PreliminariesMertens (3.9s)
+✔ [2729/2738] Built PrimitiveSetsAboveX.PreliminariesTailAux (4.2s)
+✔ [2730/2738] Built PrimitiveSetsAboveX.Preliminaries (9.4s)
+✔ [2731/2738] Built PrimitiveSetsAboveX.NormalizationCore (4.2s)
+✔ [2732/2738] Built PrimitiveSetsAboveX.NormalizationSmallPrime (4.5s)
+✔ [2733/2738] Built PrimitiveSetsAboveX.Normalization (4.2s)
+✔ [2734/2738] Built PrimitiveSetsAboveX.Markov (3.0s)
+✔ [2735/2738] Built PrimitiveSetsAboveX.PrimitiveWeight (2.7s)
+✔ [2736/2738] Built PrimitiveSetsAboveX.HitMass (4.1s)
+ℹ [2737/2738] Built PrimitiveSetsAboveX.Main (2.7s)
+info: PrimitiveSetsAboveX/Main.lean:115:0: 'PrimitiveSetsAboveX.mainTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [2738/2738] Built PrimitiveSetsAboveX.FormalConjecturesErdos1196 (3.8s)
+Build completed successfully (2738 jobs).

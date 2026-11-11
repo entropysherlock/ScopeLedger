@@ -1,0 +1,4 @@
+ℹ [8706/8706] Built Collatz.BMO.Problem3 (6.2s)
+info: lean/Collatz/BMO/Problem3.lean:390:0: 'Collatz.BMO.Problem3.selfSimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: lean/Collatz/BMO/Problem3.lean:391:0: 'Collatz.BMO.Problem3.beaver_math_olympiad_problem_3' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8706 jobs).

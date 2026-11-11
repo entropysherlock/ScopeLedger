@@ -1,0 +1,11 @@
+E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos274.erdos_274.variants.abelian
+has function type
+  1 < Fintype.card ?m.4 →
+    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),
+      1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+E_E4_norm_p5.lean:4:71: error: unsolved goals
+⊢ ∀ {G : Type u_1} [inst : Fintype G] [inst_1 : CommGroup G],
+    1 < Fintype.card G →
+      ∀ {ι : Type u_2} [inst : Fintype ι] (P : SL003FC.Erdos274.Group.ExactCovering G ι),
+        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)

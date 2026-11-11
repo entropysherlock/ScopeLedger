@@ -1,0 +1,45 @@
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side
+  ∀ {Ω : Type u_1} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]
+    {n : ℕ},
+    1 ≤ n →
+      ∀ (f : SL003FC.Erdos522.KacCoefficients {0, 1} Ω),
+        MeasureTheory.volume
+            {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =
+          1
+is not definitionally equal to the right-hand side
+  True ↔
+    ∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]
+      {n : ℕ},
+      1 ≤ n →
+        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),
+          MeasureTheory.volume
+              {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =
+            1
+
+h :
+  True ↔
+    ∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]
+      {n : ℕ},
+      1 ≤ n →
+        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),
+          MeasureTheory.volume
+              {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =
+            1
+⊢ (∀ {Ω : Type u_1} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]
+      {n : ℕ},
+      1 ≤ n →
+        ∀ (f : SL003FC.Erdos522.KacCoefficients {0, 1} Ω),
+          MeasureTheory.volume
+              {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =
+            1) ↔
+    (True ↔
+      ∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]
+        {n : ℕ},
+        1 ≤ n →
+          ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),
+            MeasureTheory.volume
+                {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =
+              1)
+X_B2_convert_rfl.lean:8:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

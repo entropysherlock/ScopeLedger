@@ -1,0 +1,6 @@
+E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  LeanGallery.NumberTheory.Erdos1050.erdos_1050
+has function type
+  ∑' (n : ℕ), 1 / (2 ^ (n + 1) - 3) ∈ Set.range Rat.cast → False
+E_E3_convert_p6_k1.lean:4:78: error: unsolved goals
+⊢ Irrational (∑' (n : ℕ), 1 / (2 ^ (n + 1) - 3))

@@ -1,0 +1,12 @@
+E_E3_convert_p2_k3.lean:4:86: error: unsolved goals
+h :
+  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ 2 / 4
+⊢ (∃ n₀,
+      ∀ (V : Type u_1) [inst : Fintype V] (G : SimpleGraph V) [inst_1 : DecidableRel G.Adj],
+        n₀ ≤ Fintype.card V → SL003FC.Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ 2 / 4) ↔
+    ∀ (V : Type ?u.5) [inst : Fintype V] (G : SimpleGraph V) [inst_1 : DecidableRel G.Adj],
+      Erdos742.erdos_742.1 ≤ Fintype.card V →
+        Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ 2 / 4
+E_E3_convert_p2_k3.lean:4:8: error: (kernel) invalid projection
+  Erdos742.erdos_742.1

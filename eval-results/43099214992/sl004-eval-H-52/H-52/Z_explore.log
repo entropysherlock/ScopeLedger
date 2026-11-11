@@ -1,0 +1,7 @@
+def SL003FC.OeisA361033.SL003.targetProp : Prop :=
+∀ (n : ℕ), Odd (SL003FC.OeisA361033.a n) ↔ ∃ k, n = (2 : ℕ) ^ k - (1 : ℕ)
+A361033.a_odd_iff : ∀ (n : ℕ), Odd (A361033.a n) ↔ ∃ k, n = (2 : ℕ) ^ k - (1 : ℕ)
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.OeisA361033.Odd`
+def Odd.{u_2} : {α : Type u_2} → [Semiring α] → α → Prop :=
+fun {α} [Semiring α] a => ∃ k, a = (2 : α) * k + (1 : α)
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `A361033.Odd`

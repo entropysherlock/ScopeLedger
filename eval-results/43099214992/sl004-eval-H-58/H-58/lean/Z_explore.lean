@@ -1,0 +1,29 @@
+import SL003Target
+
+set_option pp.numericTypes true
+#print SL003FC.Erdos274.SL003.targetProp
+#check @Erdos274.erdos_274.variants.abelian
+#print SL003FC.Erdos274.CommGroup
+#print CommGroup
+#print Erdos274.erdos_274.variants.CommGroup
+#print Erdos274.erdos_274.variants.Fintype
+#print SL003FC.Erdos274.Fintype
+#print Fintype
+#print Fintype.card
+#print SL003FC.Erdos274.Fintype.card
+#print Erdos274.erdos_274.variants.Fintype.card
+#print SL003FC.Erdos274.Group.ExactCovering
+#print Erdos274.erdos_274.variants.Group.ExactCovering
+#print Group.ExactCovering
+#print Erdos274.erdos_274.variants.P.parts
+#print P.parts
+#print SL003FC.Erdos274.P.parts
+#print _hG
+#print Erdos274.erdos_274.variants._hG
+#print SL003FC.Erdos274._hG
+#print hG
+#print Erdos274.erdos_274.variants.hG
+#print SL003FC.Erdos274.hG
+#print hι
+#print Erdos274.erdos_274.variants.hι
+#print SL003FC.Erdos274.hι

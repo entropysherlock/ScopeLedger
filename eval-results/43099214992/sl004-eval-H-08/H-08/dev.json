@@ -1,0 +1,300 @@
+{
+ "case_id": "H-08",
+ "cited": "Erdos742.erdos_742",
+ "module": "ErdosProblems.Erdos742",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 139
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 34
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos742.variants.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B3_aesop.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "X_B3_aesop.lean:6:7: error: failed to infer universe levels in `have` declaration type\n  ∃ n₀,\n    ∀ (V : Type ?u.5) [inst : Fintype.{?u.5} V] [DecidableEq.{?u.5 + 1} V] (G : SimpleGraph.{?u.5} V)\n      [inst_2 : DecidableRel.{?u.5 + 1, ?u.5 + 1} (SimpleGraph.Adj.{?u.5} G)],\n      n₀ ≤ Fintype.card."
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 15,
+   "first_error": "X_B4_exact_q.lean:6:7: error: failed to infer universe levels in `have` declaration type\n  ∃ n₀,\n    ∀ (V : Type ?u.5) [inst : Fintype.{?u.5} V] [DecidableEq.{?u.5 + 1} V] (G : SimpleGraph.{?u.5} V)\n      [inst_2 : DecidableRel.{?u.5 + 1, ?u.5 + 1} (SimpleGraph.Adj.{?u.5} G)],\n      n₀ ≤ Fintype.car"
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos742.erdos_742\nof type\n  ∃ n₀,\n    ∀ (V : Type ?u.4) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [ins"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p0.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ\nfrom the expression\n  Erdos742.erdos_742\nwhich has propositional type\n  ∃ n₀,\n    ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 :"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ\nfrom the expression\n  Erdos742.erdos_742\nwhich has propositional type\n  ∃ n₀,\n    ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 :"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ\nfrom the expression\n  Erdos742.erdos_742\nwhich has propositional type\n  ∃ n₀,\n    ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 :"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ\nfrom the expression\n  Erdos742.erdos_742\nwhich has propositional type\n  ∃ n₀,\n    ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 :"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ\nfrom the expression\n  Erdos742.erdos_742\nwhich has propositional type\n  ∃ n₀,\n    ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : Decid"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:4:86: error: unsolved goals\nh :\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ 2 / 4\n⊢ (∃ n₀,\n      ∀ ("
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k2.lean:4:86: error: unsolved goals\nh :\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ 2 / 4\n⊢ (∃ n₀,\n      ∀ ("
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k3.lean:4:86: error: unsolved goals\nh :\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ 2 / 4\n⊢ (∃ n₀,\n      ∀ ("
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:4:86: error: unsolved goals\nh :\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ 2 / 4\n⊢ (∃ n₀,\n      ∀ ("
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos742.IsDi"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos742.IsDi"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos742.IsDi"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos74"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos742.erdos_742.2\nhas function type\n  ∀ (V : Type ?u.5) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],\n    Erdos742.erdos_742.1 ≤ Fintype.card V → Erdos742.IsDi"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 457,
+ "status": "ok"
+}

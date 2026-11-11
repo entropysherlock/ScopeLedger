@@ -1,0 +1,19 @@
+{
+ "case_id": "H-32",
+ "cited": "WrittenOnTheWallII.GraphConjecture144.conjecture144",
+ "module": "WOWII144.Main",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 102
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 42
+  }
+ },
+ "files": {},
+ "target_prop": "SL003FC.WrittenOnTheWallII.GraphConjecture144.SL003.targetProp",
+ "status": "target_failed"
+}

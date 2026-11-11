@@ -1,0 +1,16 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: private lemma mem_Icc_of_mem_unitSquare {p : ℝ²} (hp : p ∈ unitSquare)",
+ "removed declaration: theorem isMovingSofa_unitSquare : ∃ m, IsMovingSofa unitSquare m := by",
+ "removed declaration: theorem rotateTranslate_apply (α : Real.Angle) (p q : ℝ²) :",
+ "removed declaration: theorem ABφθSpec.existsUnique : ∃! ABφθ : ℝ × ℝ × ℝ × ℝ,",
+ "removed declaration: theorem isMovingSofa_gerversSofa : ∃ m, IsMovingSofa gerversSofa m := ",
+ "removed declaration: theorem one_le_sofaConstant : 1 ≤ sofaConstant := by",
+ "removed declaration: theorem sofaConstant_eq : sofaConstant = sofaConstant_eq.answer := by",
+ "removed declaration: theorem sofaConstant_eq_volume_gerversSofa : sofaConstant = volume ger",
+ "removed declaration: theorem volume_eq_sofaConstant_iff_congruent_gerversSofa (s : Set ℝ²)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

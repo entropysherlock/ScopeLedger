@@ -1,0 +1,14 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem a_0 : a 0 = 3 := by decide",
+ "removed declaration: theorem a_1 : a 1 = 9 := by decide",
+ "removed declaration: theorem a_2 : a 2 = 280 := by decide",
+ "removed declaration: theorem a_3 : a 3 = 17325 := by decide",
+ "removed declaration: theorem a_4 : a 4 = 1513512 := by decide",
+ "removed declaration: theorem conjecture_1 (n : ℕ) : Odd (a n) ↔ ∃ k : ℕ, n = 2 ^ k - 1 := b",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

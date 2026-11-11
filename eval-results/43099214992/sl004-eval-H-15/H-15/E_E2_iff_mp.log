@@ -1,0 +1,6 @@
+E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `And.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos673.erdos_673
+of type
+  Erdos673.TendsToInfinityAlmostAll Erdos673.G ∧
+    (Asymptotics.IsEquivalent Filter.atTop (fun X => Erdos673.GSum X) fun X => ↑X * Real.log ↑X) ∧
+      Filter.Tendsto (fun X => Erdos673.GSum X / ↑X) Filter.atTop Filter.atTop

@@ -1,0 +1,4 @@
+E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos136.erdos_136
+of type
+  ?m.3 ∈ nhds (5 / 6) → ?m.3 ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop

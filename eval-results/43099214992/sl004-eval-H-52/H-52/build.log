@@ -1,0 +1,5 @@
+ℹ [8763/8763] Built LeanOeisProofs.NewFormalization.A361033 (4.8s)
+info: LeanOeisProofs/NewFormalization/A361033.lean:411:0: 'A361033.a_odd_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanOeisProofs/NewFormalization/A361033.lean:412:0: 'A361033.denom_dvd_num' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanOeisProofs/NewFormalization/A361033.lean:413:0: 'A361033.v2_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8763 jobs).

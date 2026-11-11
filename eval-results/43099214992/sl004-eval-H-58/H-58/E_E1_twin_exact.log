@@ -1,0 +1,12 @@
+E_E1_twin_exact.lean:6:21: error: Type mismatch
+  @Erdos274.erdos_274.variants.abelian
+has type
+  ∀ {G : Type ?u.11} [inst : Fintype G] [inst_1 : CommGroup G],
+    1 < Fintype.card G →
+      ∀ {ι : Type ?u.10} [inst : Fintype ι] (P : Group.ExactCovering G ι),
+        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+but is expected to have type
+  ∀ {G : Type u_1} [inst : Fintype G] [inst_1 : CommGroup G],
+    1 < Fintype.card G →
+      ∀ {ι : Type u_2} [inst : Fintype ι] (P : SL003FC.Erdos274.Group.ExactCovering G ι),
+        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)

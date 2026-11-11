@@ -1,0 +1,48 @@
+def SL003FC.Erdos548.SL003.targetProp : Prop :=
+∀ (n k : ℕ),
+  k + (1 : ℕ) ≤ n →
+    ∀ (G : SimpleGraph (Fin n)),
+      (↑k - (1 : ℚ)) / (2 : ℚ) * ↑n + (1 : ℚ) ≤ ↑G.edgeSet.ncard →
+        ∀ (T : SimpleGraph (Fin (k + (1 : ℕ)))), T.IsTree → T.IsContained G
+Erdos548.erdos_548 : ∀ (n k : ℕ),
+  k + (1 : ℕ) ≤ n →
+    ∀ (G : SimpleGraph (Fin n)),
+      (↑k - (1 : ℚ)) / (2 : ℚ) * ↑n + (1 : ℚ) ≤ ↑G.edgeSet.ncard →
+        ∀ (T : SimpleGraph (Fin (k + (1 : ℕ)))), T.IsTree → T.IsContained G
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos548.Fin`
+structure Fin (n : ℕ) : Type
+number of parameters: 1
+fields:
+  Fin.val : ℕ
+  Fin.isLt : ↑self < n
+constructor:
+  Fin.mk {n : ℕ} (val : ℕ) (isLt : val < n) : Fin n
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `Erdos548.Fin`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `Erdos548.G.edgeSet.ncard`
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos548.G.edgeSet.ncard`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `G.edgeSet.ncard`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos548.SimpleGraph`
+structure SimpleGraph.{u} (V : Type u) : Type u
+number of parameters: 1
+fields:
+  SimpleGraph.Adj : V → V → Prop
+  SimpleGraph.symm : Symmetric self.Adj := by
+    aesop_graph
+  SimpleGraph.loopless : Std.Irrefl self.Adj := by
+    aesop_graph
+constructor:
+  SimpleGraph.mk.{u} {V : Type u} (Adj : V → V → Prop) (symm : Symmetric Adj := by aesop_graph)
+    (loopless : Std.Irrefl Adj := by aesop_graph) : SimpleGraph V
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `Erdos548.SimpleGraph`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `T.IsContained`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos548.T.IsContained`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `Erdos548.T.IsContained`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos548.T.IsTree`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `T.IsTree`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `Erdos548.T.IsTree`
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `hT`
+Z_explore.lean:22:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos548.hT`
+Z_explore.lean:23:7: error(lean.unknownIdentifier): Unknown constant `Erdos548.hT`
+Z_explore.lean:24:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos548.hk`
+Z_explore.lean:25:7: error(lean.unknownIdentifier): Unknown constant `Erdos548.hk`
+Z_explore.lean:26:7: error(lean.unknownIdentifier): Unknown constant `hk`

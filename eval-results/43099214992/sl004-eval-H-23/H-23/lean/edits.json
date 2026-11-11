@@ -1,0 +1,12 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_1180 : ∀ ε : ℝ, 0 < ε → ∃ C : ℕ, ∀ p : ℕ, p.Prime → ∀ a ",
+ "removed declaration: theorem erdos_1180.variants.shparlinski : ∃ K : ℝ, ∀ ε : ℝ, 0 < ε → ε ",
+ "removed declaration: theorem erdos_1180.variants.glibichuk : ∃ K : ℝ, ∀ ε : ℝ, 0 < ε → ε ≤ ",
+ "removed declaration: theorem erdos_1180.variants.lower_bound : ∃ K : ℝ, 0 < K ∧ ∀ ε : ℝ, 0 ",
+ "removed declaration: theorem erdos_1180.variants.optimal : ∀ δ : ℝ, 0 < δ →",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

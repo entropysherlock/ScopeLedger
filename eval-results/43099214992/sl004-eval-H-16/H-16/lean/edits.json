@@ -1,0 +1,11 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_877 :",
+ "removed declaration: theorem erdos_877.variants.luczak_schoen :",
+ "removed declaration: theorem erdos_877.variants.cameron_erdos :",
+ "removed declaration: theorem erdos_877.variants.balogh_liu_sharifzadeh_treglown :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

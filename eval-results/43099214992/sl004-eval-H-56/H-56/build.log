@@ -1,0 +1,36 @@
+✔ [8924/8947] Built OAI.Analysis.Littlewood.Model (4.1s)
+✔ [8925/8947] Built OAI.Analysis.Littlewood.Gaussian (5.1s)
+✔ [8926/8947] Built OAI.Analysis.Littlewood.Rounding (11s)
+✔ [8927/8947] Built OAI.Analysis.Littlewood.BinaryPacket (6.1s)
+✔ [8928/8947] Built OAI.Analysis.Littlewood.Curvature (4.7s)
+✔ [8929/8947] Built OAI.Analysis.Littlewood.Cutoff (4.1s)
+✔ [8930/8947] Built OAI.Analysis.Littlewood.QuadraticTail (6.3s)
+✔ [8931/8947] Built OAI.Analysis.Littlewood.Spreading (8.0s)
+✔ [8932/8947] Built OAI.Analysis.Littlewood.ProductProbability (5.5s)
+✔ [8933/8947] Built OAI.Analysis.Littlewood.Nibble (12s)
+✔ [8934/8947] Built OAI.Analysis.Littlewood.Matching (3.9s)
+✔ [8935/8947] Built OAI.Analysis.Littlewood.Averages (4.3s)
+✔ [8936/8947] Built OAI.Analysis.Littlewood.FiniteRank (4.5s)
+✔ [8937/8947] Built OAI.Analysis.Littlewood.Chunks (5.3s)
+✔ [8938/8947] Built OAI.Analysis.Littlewood.DependentMoments (5.6s)
+✔ [8939/8947] Built OAI.Analysis.Littlewood.SlotGraph (4.7s)
+✔ [8940/8947] Built OAI.Analysis.Littlewood.SlotParameters (5.1s)
+✔ [8941/8947] Built OAI.Analysis.Littlewood.IntervalPacking (10s)
+✔ [8942/8947] Built OAI.Analysis.Littlewood.SamplingTail (5.1s)
+✔ [8943/8947] Built OAI.Analysis.Littlewood.SamplingEnergy (4.6s)
+✔ [8944/8947] Built OAI.Analysis.Littlewood.ModeSampling (4.5s)
+✔ [8945/8947] Built OAI.Analysis.Littlewood.BlockSampling (6.5s)
+✔ [8946/8947] Built OAI.Analysis.Littlewood.AlmostSign (4.9s)
+✔ [8947/8947] Built OAI.Analysis.Littlewood.Main (5.3s)
+Build completed successfully (8947 jobs).
+warning: belyi: repository '/home/runner/work/_temp/target/lean/.lake/packages/belyi' has local changes
+warning: formal-schemes: repository '/home/runner/work/_temp/target/lean/.lake/packages/formal-schemes' has local changes
+warning: elliptic-curves: repository '/home/runner/work/_temp/target/lean/.lake/packages/elliptic-curves' has local changes
+warning: tempered-fundamental-groups: repository '/home/runner/work/_temp/target/lean/.lake/packages/tempered-fundamental-groups' has local changes
+warning: oka: repository '/home/runner/work/_temp/target/lean/.lake/packages/oka' has local changes
+warning: orbicurve-cores: repository '/home/runner/work/_temp/target/lean/.lake/packages/orbicurve-cores' has local changes
+warning: pi1: repository '/home/runner/work/_temp/target/lean/.lake/packages/pi1' has local changes
+warning: heights: repository '/home/runner/work/_temp/target/lean/.lake/packages/heights' has local changes
+warning: genl: repository '/home/runner/work/_temp/target/lean/.lake/packages/genl' has local changes
+warning: tate-curves-theta: repository '/home/runner/work/_temp/target/lean/.lake/packages/tate-curves-theta' has local changes
+warning: iut: repository '/home/runner/work/_temp/target/lean/.lake/packages/iut' has local changes

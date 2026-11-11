@@ -1,0 +1,3 @@
+ℹ [8026/8027] Built Erdos548 (7.0s)
+info: Erdos548.lean:1211:0: 'Erdos548.erdos_548' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8027 jobs).

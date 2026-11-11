@@ -1,0 +1,7 @@
+E_E2_iff_mp.lean:6:124: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos261.Palomar.borwein_loring
+of type
+  ∀ (m : ℕ),
+    0 < m →
+      have n := 2 ^ (m + 1) - m - 2;
+      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k

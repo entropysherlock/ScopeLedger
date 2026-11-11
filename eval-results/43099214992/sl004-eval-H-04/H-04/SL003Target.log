@@ -1,0 +1,6 @@
+SL003Target.lean:15:17: error(lean.invalidField): Invalid field `maxPrimeFac`: The environment does not contain `Nat.maxPrimeFac`, so it is not possible to project the field `maxPrimeFac` from an expression
+  n
+of type `ℕ`
+SL003Target.lean:15:39: error(lean.invalidField): Invalid field `maxPrimeFac`: The environment does not contain `Nat.maxPrimeFac`, so it is not possible to project the field `maxPrimeFac` from an expression
+  n + 1
+of type `ℕ`

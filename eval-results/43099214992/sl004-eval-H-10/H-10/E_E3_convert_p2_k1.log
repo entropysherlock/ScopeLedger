@@ -1,0 +1,14 @@
+E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos534.erdos_534
+has function type
+  ∀ (N : ℕ),
+    2 ≤ N →
+      ∃ q ∈ N.primeFactors,
+        Erdos534.Admissible N (Erdos534.candidate N q) ∧
+          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card
+E_E3_convert_p2_k1.lean:4:77: error: unsolved goals
+⊢ ∀ (N : ℕ),
+    2 ≤ N →
+      ∃ q ∈ N.primeFactors,
+        SL003FC.Erdos534.IsAdmissible N (SL003FC.Erdos534.ahlswedeKhachatrian N q) ∧
+          SL003FC.Erdos534.maxCard N = (SL003FC.Erdos534.ahlswedeKhachatrian N q).card

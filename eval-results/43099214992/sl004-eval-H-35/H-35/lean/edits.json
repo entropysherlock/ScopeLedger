@@ -1,0 +1,20 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_501 :",
+ "removed declaration: theorem erdos_501.variants.erdosHajnal_finite :",
+ "removed declaration: theorem erdos_501.variants.hechler_CH :",
+ "removed declaration: theorem erdos_501.variants.closed_size3 :",
+ "removed declaration: theorem erdos_501.variants.newelski_pawlikowski_seredynski :",
+ "removed declaration: theorem erdos_501.variants.gladysz_size2 :",
+ "removed declaration: theorem erdos_501.variants.singleton_independent (A : ℝ → Set ℝ) (x : ",
+ "removed declaration: theorem erdos_501.variants.pair_independent_iff (A : ℝ → Set ℝ) {x y :",
+ "removed declaration: theorem erdos_501.tests.empty_family_is_valid :",
+ "removed declaration: theorem erdos_501.tests.singleton_zero_independent (A : ℝ → Set ℝ) :",
+ "removed declaration: theorem erdos_501.tests.pair_independent_empty :",
+ "removed declaration: theorem erdos_501.tests.singleton_outer_measure_lt_one (x : ℝ) :",
+ "removed declaration: theorem erdos_501.tests.unit_interval_measure :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

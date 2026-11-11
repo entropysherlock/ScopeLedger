@@ -1,0 +1,8 @@
+E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos534.erdos_534
+of type
+  ∀ (N : ℕ),
+    2 ≤ N →
+      ∃ q ∈ N.primeFactors,
+        Erdos534.Admissible N (Erdos534.candidate N q) ∧
+          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card

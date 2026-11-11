@@ -1,0 +1,6 @@
+E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Collatz.BMO.Problem3.beaver_math_olympiad_problem_3
+has function type
+  ∀ (a : ℕ → ℕ), a 0 = 2 → (∀ (n : ℕ), a (n + 1) = a n + 2 ^ (padicValNat 2 (a n) + 2) - 1) → ¬∃ n k, a n = 4 ^ k
+E_E3_convert_p6_k2.lean:4:87: error: unsolved goals
+⊢ ∀ (a : ℕ → ℕ), a 0 = 2 → (∀ (n : ℕ), a (n + 1) = a n + 2 ^ (padicValNat 2 (a n) + 2) - 1) → ¬∃ n k, a n = 4 ^ k

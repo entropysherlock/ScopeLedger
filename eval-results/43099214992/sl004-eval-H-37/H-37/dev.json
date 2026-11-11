@@ -1,0 +1,327 @@
+{
+ "case_id": "H-37",
+ "cited": "Erdos1196.erdos_1196",
+ "module": "PrimitiveSetsAboveX.FormalConjecturesErdos1196",
+ "toolchain": "leanprover/lean4:v4.30.0-rc1",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 90
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 44
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos1196.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B3_aesop.lean": {
+   "ok": true,
+   "seconds": 11,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B4_exact_q.lean": {
+   "ok": true,
+   "seconds": 14,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E2_iff_mp.lean:6:102: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos1196.erdos_1196\nof type\n  ∃ o,\n    o =o[Filter.atTop] 1 ∧\n      ∀ x > 0, ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitiv"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ → ℝ\nfrom the expression\n  Erdos1196.erdos_1196\nwhich has propositional type\n  ∃ o,\n    o =o[Filter.atTop] 1 ∧\n      ∀ x > 0, ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive "
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ → ℝ\nfrom the expression\n  Erdos1196.erdos_1196\nwhich has propositional type\n  ∃ o,\n    o =o[Filter.atTop] 1 ∧\n      ∀ x > 0, ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive "
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ → ℝ\nfrom the expression\n  Erdos1196.erdos_1196\nwhich has propositional type\n  ∃ o,\n    o =o[Filter.atTop] 1 ∧\n      ∀ x > 0, ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive "
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ → ℝ\nfrom the expression\n  Erdos1196.erdos_1196\nwhich has propositional type\n  ∃ o,\n    o =o[Filter.atTop] 1 ∧\n      ∀ x > 0, ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive "
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E4_norm_p1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ → ℝ\nfrom the expression\n  Erdos1196.erdos_1196\nwhich has propositional type\n  ∃ o,\n    o =o[Filter.atTop] 1 ∧\n      ∀ x > 0, ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑'"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k1.lean:4:78: error: unsolved goals\ncase a\nh :\n  Erdos1196.erdos_1196.1 =o[Filter.atTop] 1 ∧\n    ∀ x > 0,\n      ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n    "
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k2.lean:4:78: error: unsolved goals\ncase a\nh :\n  Erdos1196.erdos_1196.1 =o[Filter.atTop] 1 ∧\n    ∀ x > 0,\n      ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n    "
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:4:78: error: unsolved goals\ncase a\nh :\n  Erdos1196.erdos_1196.1 =o[Filter.atTop] 1 ∧\n    ∀ x > 0,\n      ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n    "
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k4.lean:4:78: error: unsolved goals\ncase a\nh :\n  Erdos1196.erdos_1196.1 =o[Filter.atTop] 1 ∧\n    ∀ x > 0,\n      ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n    "
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p2.lean:4:72: error: unsolved goals\ncase a\nh :\n  Erdos1196.erdos_1196.1 =o[Filter.atTop] 1 ∧\n    ∀ (x : ℕ),\n      0 < x →\n        ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ ("
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:4:78: error: unsolved goals\ncase a\nh : Erdos1196.erdos_1196.1 =o[Filter.atTop] 1\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n          0 < x →\n            ∀ A ⊆ Set.Ici x, SL003FC.Erdos1196.IsPrimitive A → ∑' (a : ↑A), (↑↑a)⁻¹ * (Real.log ↑↑a)⁻¹ < 1 + o x) ↔\n    E"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:4:78: error: unsolved goals\ncase a\nh : Erdos1196.erdos_1196.1 =o[Filter.atTop] 1\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n          0 < x →\n            ∀ A ⊆ Set.Ici x, SL003FC.Erdos1196.IsPrimitive A → ∑' (a : ↑A), (↑↑a)⁻¹ * (Real.log ↑↑a)⁻¹ < 1 + o x) ↔\n    E"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:4:78: error: unsolved goals\ncase a\nh : Erdos1196.erdos_1196.1 =o[Filter.atTop] 1\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n          0 < x →\n            ∀ A ⊆ Set.Ici x, SL003FC.Erdos1196.IsPrimitive A → ∑' (a : ↑A), (↑↑a)⁻¹ * (Real.log ↑↑a)⁻¹ < 1 + o x) ↔\n    E"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:4:78: error: unsolved goals\ncase a\nh : Erdos1196.erdos_1196.1 =o[Filter.atTop] 1\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n          0 < x →\n            ∀ A ⊆ Set.Ici x, SL003FC.Erdos1196.IsPrimitive A → ∑' (a : ↑A), (↑↑a)⁻¹ * (Real.log ↑↑a)⁻¹ < 1 + o x) ↔\n    E"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p3.lean:4:72: error: unsolved goals\ncase a\nh : Erdos1196.erdos_1196.1 =o[Filter.atTop] 1\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n          0 < x →\n            ∀ A ⊆ Set.Ici x, SL003FC.Erdos1196.IsPrimitive A → ∑' (a : ↑A), (↑↑a)⁻¹ * (Real.log ↑↑a)⁻¹ < 1 + o x) ↔\n    Erdos11"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k1.lean:4:78: error: unsolved goals\ncase a\nh :\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n          0 < x →\n            ∀ A ⊆ Set.Ici x, SL003FC"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k2.lean:4:78: error: unsolved goals\ncase a\nh :\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n          0 < x →\n            ∀ A ⊆ Set.Ici x, SL003FC"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k3.lean:4:78: error: unsolved goals\ncase a\nh :\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n          0 < x →\n            ∀ A ⊆ Set.Ici x, SL003FC"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:4:78: error: unsolved goals\ncase a\nh :\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n          0 < x →\n            ∀ A ⊆ Set.Ici x, SL003FC"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p4.lean:4:72: error: unsolved goals\ncase a\nh :\n  ∀ (x : ℕ),\n    0 < x →\n      ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x\n⊢ (∃ o,\n      o =o[Filter.atTop] 1 ∧\n        ∀ (x : ℕ),\n          0 < x →\n            ∀ A ⊆ Set.Ici "
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1196.erdos_1196.2.right\nhas function type\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1196.erdos_1196.2.right\nhas function type\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1196.erdos_1196.2.right\nhas function type\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1196.erdos_1196.2.right\nhas function type\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1196.erdos_1196.2.right\nhas function type\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1196.erdos_1196.2.right\nhas function type\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1196.erdos_1196.2.right\nhas function type\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1196.erdos_1196.2.right\nhas function type\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1196.erdos_1196.2.right\nhas function type\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1196.erdos_1196.2.right\nhas function type\n  ∀ x > 0,\n    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 440,
+ "status": "ok"
+}

@@ -1,0 +1,5 @@
+ℹ [8706/8707] Built ErdosProblems.Erdos368b (23s)
+info: ErdosProblems/Erdos368b.lean:1274:0: 'Erdos368b.erdos_368' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8707/8707] Built ErdosProblems.Erdos649 (17s)
+info: ErdosProblems/Erdos649.lean:1123:0: 'Erdos649.erdos_649' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8707 jobs).

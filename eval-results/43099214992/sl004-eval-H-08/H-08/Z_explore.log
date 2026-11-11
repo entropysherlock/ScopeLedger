@@ -1,0 +1,55 @@
+def SL003FC.Erdos742.variants.SL003.targetProp.{u_1} : Prop :=
+∃ n₀,
+  ∀ (V : Type u_1) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+    n₀ ≤ Fintype.card V →
+      SL003FC.Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ (2 : ℕ) / (4 : ℕ)
+Erdos742.erdos_742 : ∃ n₀,
+  ∀ (V : Type u_1) [inst : Fintype V] [DecidableEq V] (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj],
+    n₀ ≤ Fintype.card V → Erdos742.IsDiameter2Critical G → G.edgeFinset.card ≤ Fintype.card V ^ (2 : ℕ) / (4 : ℕ)
+@[reducible] def DecidableEq.{u} : Sort u → Sort (max 1 u) :=
+fun α => (a b : α) → Decidable (a = b)
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos742.variants.DecidableEq`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `Erdos742.DecidableEq`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `Erdos742.DecidableRel`
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos742.variants.DecidableRel`
+@[reducible] def DecidableRel.{u, v} : {α : Sort u} → {β : Sort v} → (α → β → Prop) → Sort (max (max 1 u) v) :=
+fun {α} {β} r => (a : α) → (b : β) → Decidable (r a b)
+class Fintype.{u_4} (α : Type u_4) : Type u_4
+number of parameters: 1
+fields:
+  Fintype.elems : Finset α
+  Fintype.complete : ∀ (x : α), x ∈ Fintype.elems
+constructor:
+  Fintype.mk.{u_4} {α : Type u_4} (elems : Finset α) (complete : ∀ (x : α), x ∈ elems) : Fintype α
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `Erdos742.Fintype`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos742.variants.Fintype`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `Erdos742.Fintype.card`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos742.variants.Fintype.card`
+def Fintype.card.{u_4} : (α : Type u_4) → [Fintype α] → ℕ :=
+fun α [Fintype α] => Finset.univ.card
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `Erdos742.G.Adj`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `G.Adj`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos742.variants.G.Adj`
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `Erdos742.G.edgeFinset.card`
+Z_explore.lean:22:7: error(lean.unknownIdentifier): Unknown constant `G.edgeFinset.card`
+Z_explore.lean:23:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos742.variants.G.edgeFinset.card`
+def Erdos742.IsDiameter2Critical.{u} : {V : Type u} → SimpleGraph V → Prop :=
+fun {V} G => G.diam = (2 : ℕ) ∧ ∀ e ∈ G.edgeSet, (G.deleteEdges {e}).diam ≠ (2 : ℕ)
+Z_explore.lean:25:7: error(lean.unknownIdentifier): Unknown constant `IsDiameter2Critical`
+Z_explore.lean:26:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos742.variants.IsDiameter2Critical`
+Z_explore.lean:27:7: error(lean.unknownIdentifier): Unknown constant `Erdos742.SimpleGraph`
+Z_explore.lean:28:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos742.variants.SimpleGraph`
+structure SimpleGraph.{u} (V : Type u) : Type u
+number of parameters: 1
+fields:
+  SimpleGraph.Adj : V → V → Prop
+  SimpleGraph.symm : Std.Symm self.Adj := by
+    aesop_graph
+  SimpleGraph.loopless : Std.Irrefl self.Adj := by
+    aesop_graph
+constructor:
+  SimpleGraph.mk.{u} {V : Type u} (Adj : V → V → Prop) (symm : Std.Symm Adj := by aesop_graph)
+    (loopless : Std.Irrefl Adj := by aesop_graph) : SimpleGraph V
+Z_explore.lean:30:7: error(lean.unknownIdentifier): Unknown constant `Erdos742.n₀`
+Z_explore.lean:31:7: error(lean.unknownIdentifier): Unknown constant `n₀`
+Z_explore.lean:32:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos742.variants.n₀`

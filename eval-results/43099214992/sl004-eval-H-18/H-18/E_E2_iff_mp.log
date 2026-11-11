@@ -1,0 +1,6 @@
+E_E2_iff_mp.lean:6:160: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  Dyadic354.UpstreamBridge.erdos354_strong_upstream
+of type
+  ∀ (α β : ℝ),
+    0 < α →
+      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \ {0})

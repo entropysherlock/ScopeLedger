@@ -1,0 +1,11 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_316 : ¬ ∀ A : Finset ℕ, 0 ∉ A → 1 ∉ A →",
+ "removed declaration: lemma erdos_316.variants.multiset : ∃ A : Multiset ℕ, 0 ∉ A ∧ 1 ∉ A ∧",
+ "removed declaration: theorem erdos_316.variants.generalized (n : ℕ) (hn : 2 ≤ n) : ∃ A : Fi",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

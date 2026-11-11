@@ -1,0 +1,2 @@
+Try this:
+  [apply] exact fun a a_ini a_rec => Collatz.BMO.Problem3.beaver_math_olympiad_problem_3 a a_ini a_rec

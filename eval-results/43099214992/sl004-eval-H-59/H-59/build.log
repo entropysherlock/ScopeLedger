@@ -1,0 +1,3 @@
+ℹ [8248/8248] Built ErdosProblems.Erdos499 (6.2s)
+info: ErdosProblems/Erdos499.lean:217:0: 'Erdos499.erdos_499' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8248 jobs).

@@ -1,0 +1,32 @@
+import SL003Target
+
+set_option pp.numericTypes true
+#print SL003FC.Erdos780.SL003.targetProp
+#check @Erdos780.erdos_780
+#print Disjoint
+#print SL003FC.Erdos780.Disjoint
+#print Erdos780.Disjoint
+#print Erdos780.Edge
+#print Edge
+#print SL003FC.Erdos780.Edge
+#print SL003FC.Erdos780.Fin
+#print Fin
+#print Erdos780.Fin
+#print Erdos780.HasMonoMatching
+#print HasMonoMatching
+#print SL003FC.Erdos780.HasMonoMatching
+#print Erdos780.Pairwise
+#print Pairwise
+#print SL003FC.Erdos780.Pairwise
+#print Erdos780.e.card
+#print SL003FC.Erdos780.e.card
+#print e.card
+#print SL003FC.Erdos780.hn
+#print hn
+#print Erdos780.hn
+#print SL003FC.Erdos780.hr
+#print Erdos780.hr
+#print hr
+#print Erdos780.ht
+#print SL003FC.Erdos780.ht
+#print ht

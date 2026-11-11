@@ -1,0 +1,9 @@
+E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos889Proof.erdos_889_V1_eq_1_finite_solved.mpr
+has function type
+  {n | Erdos889.V_l 1 n = 1}.Finite → True
+E_E3_convert_p5_k2.lean:4:77: error: unsolved goals
+⊢ {n | SL003FC.Erdos889.V_l 1 n = 1}.Finite
+E_E3_convert_p5_k2.lean:8:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

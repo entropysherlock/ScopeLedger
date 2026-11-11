@@ -1,0 +1,18 @@
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side
+  a✝ > 0 → ∀ β > 0, Irrational (a✝ / β) → IsAddCompleteNatSeq' (SL003FC.Erdos354.FloorMultiples.interleave a✝ β 2)
+is not definitionally equal to the right-hand side
+  ∀ (β : ℝ),
+    0 < a✝ →
+      0 < β → Irrational (a✝ / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave a✝ β 2) \ {0})
+
+case h.a
+h :
+  ∀ (α β : ℝ),
+    0 < α →
+      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \ {0})
+a✝ : ℝ
+⊢ (a✝ > 0 → ∀ β > 0, Irrational (a✝ / β) → IsAddCompleteNatSeq' (SL003FC.Erdos354.FloorMultiples.interleave a✝ β 2)) ↔
+    ∀ (β : ℝ),
+      0 < a✝ →
+        0 < β →
+          Irrational (a✝ / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave a✝ β 2) \ {0})

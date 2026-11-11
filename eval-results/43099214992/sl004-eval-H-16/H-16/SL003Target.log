@@ -1,0 +1,2 @@
+SL003Target.lean:11:23: error(lean.unknownIdentifier): Unknown identifier `IsSumFree`
+SL003Target.lean:12:26: error(lean.unknownIdentifier): Unknown identifier `IsSumFree`

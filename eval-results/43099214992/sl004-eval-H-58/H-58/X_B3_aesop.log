@@ -1,0 +1,16 @@
+X_B3_aesop.lean:7:2: warning: aesop: failed to prove the goal after exhaustive search.
+X_B3_aesop.lean:4:69: error: unsolved goals
+G : Type u_1
+inst : Fintype G
+inst_1 : CommGroup G
+ι : Type u_2
+inst_2 : Fintype ι
+P : SL003FC.Erdos274.Group.ExactCovering G ι
+h :
+  ∀ {G : Type ?u.13} [inst : Fintype G] [inst_3 : CommGroup G],
+    1 < Fintype.card G →
+      ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering G ι),
+        1 < Fintype.card ι → ∃ i j, ¬i = j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+hG : 1 < Fintype.card G
+hι : 1 < Fintype.card ι
+⊢ ∃ i j, ¬i = j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)

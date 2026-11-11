@@ -1,0 +1,12 @@
+X_B3_aesop.lean:7:2: warning: aesop: failed to prove the goal after exhaustive search.
+X_B3_aesop.lean:4:69: error: unsolved goals
+w : ℕ
+h : ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + w
+⊢ ∃ C,
+    0 < C ∧
+      ∃ a,
+        ∀ (b : ℕ),
+          a ≤ b →
+            ∀ A ⊆ Finset.Icc 1 b,
+              5 / 8 * ↑b + C ≤ ↑A.card →
+                ∃ a ∈ A, ∃ b ∈ A, ∃ c ∈ A, ¬a = b ∧ ¬a = c ∧ ¬b = c ∧ a + b ∈ A ∧ a + c ∈ A ∧ b + c ∈ A

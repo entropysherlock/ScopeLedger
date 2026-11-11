@@ -1,0 +1,6 @@
+def SL003FC.Erdos674.SL003.targetProp : Prop :=
+SL003FC.Erdos674.solutionSet.Nonempty
+Erdos674.erdos_674 : Erdos674.solutionSet.Nonempty
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `Erdos674.solutionSet.Nonempty`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos674.solutionSet.Nonempty`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `solutionSet.Nonempty`

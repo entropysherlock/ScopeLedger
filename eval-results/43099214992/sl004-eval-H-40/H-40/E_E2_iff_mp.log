@@ -1,0 +1,4 @@
+E_E2_iff_mp.lean:6:164: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  Collatz.BMO.Problem3.beaver_math_olympiad_problem_3
+of type
+  ∀ (a : ℕ → ℕ), a 0 = 2 → (∀ (n : ℕ), a (n + 1) = a n + 2 ^ (padicValNat 2 (a n) + 2) - 1) → ¬∃ n k, a n = 4 ^ k

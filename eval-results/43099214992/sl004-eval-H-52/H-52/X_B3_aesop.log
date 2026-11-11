@@ -1,0 +1,12 @@
+X_B3_aesop.lean:7:2: warning: aesop: failed to prove the goal after exhaustive search.
+X_B3_aesop.lean:4:72: error: unsolved goals
+case mp
+h : ∀ (n : ℕ), Odd (A361033.a n) ↔ ∃ k, n = 2 ^ k - 1
+n : ℕ
+a : Odd (SL003FC.OeisA361033.a n)
+⊢ ∃ k, n = 2 ^ k - 1
+
+case mpr
+h : ∀ (n : ℕ), Odd (A361033.a n) ↔ ∃ k, n = 2 ^ k - 1
+w : ℕ
+⊢ Odd (SL003FC.OeisA361033.a (2 ^ w - 1))

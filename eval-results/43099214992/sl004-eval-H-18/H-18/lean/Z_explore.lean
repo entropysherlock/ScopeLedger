@@ -1,0 +1,32 @@
+import SL003Target
+
+set_option pp.numericTypes true
+#print SL003FC.Erdos354.SL003.targetProp
+#check @Dyadic354.UpstreamBridge.erdos354_strong_upstream
+#print Dyadic354.UpstreamBridge.Erdos354.FloorMultiples.interleave
+#print Erdos354.FloorMultiples.interleave
+#print SL003FC.Erdos354.Erdos354.FloorMultiples.interleave
+#print FloorMultiples.interleave
+#print SL003FC.Erdos354.FloorMultiples.interleave
+#print Dyadic354.UpstreamBridge.FloorMultiples.interleave
+#print Irrational
+#print SL003FC.Erdos354.Irrational
+#print Dyadic354.UpstreamBridge.Irrational
+#print SL003FC.Erdos354.IsAddCompleteNatSeq'
+#print IsAddCompleteNatSeq'
+#print Dyadic354.UpstreamBridge.IsAddCompleteNatSeq'
+#print SL003FC.Erdos354.IsAddStronglyComplete
+#print Dyadic354.UpstreamBridge.IsAddStronglyComplete
+#print IsAddStronglyComplete
+#print Dyadic354.UpstreamBridge.Set.range
+#print SL003FC.Erdos354.Set.range
+#print Set.range
+#print hirr
+#print Dyadic354.UpstreamBridge.hirr
+#print SL003FC.Erdos354.hirr
+#print hα
+#print Dyadic354.UpstreamBridge.hα
+#print SL003FC.Erdos354.hα
+#print hβ
+#print Dyadic354.UpstreamBridge.hβ
+#print SL003FC.Erdos354.hβ

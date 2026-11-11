@@ -1,0 +1,4 @@
+Try this:
+  [apply] exact fun m hm =>
+    let n := 2 ^ (m + 1) - m - 2;
+    Erdos261.borwein_loring m hm

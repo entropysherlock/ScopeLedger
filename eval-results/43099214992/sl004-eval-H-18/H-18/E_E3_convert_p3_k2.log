@@ -1,0 +1,8 @@
+E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Dyadic354.UpstreamBridge.erdos354_strong_upstream
+has function type
+  ∀ (α β : ℝ),
+    0 < α →
+      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \ {0})
+E_E3_convert_p3_k2.lean:4:77: error: unsolved goals
+⊢ ∀ α > 0, ∀ β > 0, Irrational (α / β) → IsAddCompleteNatSeq' (SL003FC.Erdos354.FloorMultiples.interleave α β 2)

@@ -1,0 +1,22 @@
+E_E3_convert_p6_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  SL003FC.Erdos674.solutionSet.Nonempty ↔
+    1 < Erdos674.erdos_674.1.2.2 ∧
+      Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 * Erdos674.erdos_674.1.2.1 ^ Erdos674.erdos_674.1.2.1 =
+        Erdos674.erdos_674.1.2.2 ^ Erdos674.erdos_674.1.2.2
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.3.2887} {β : α → Sort ?u.3.2886} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case a
+h :
+  1 < Erdos674.erdos_674.1.2.2 ∧
+    Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 * Erdos674.erdos_674.1.2.1 ^ Erdos674.erdos_674.1.2.1 =
+      Erdos674.erdos_674.1.2.2 ^ Erdos674.erdos_674.1.2.2
+⊢ SL003FC.Erdos674.solutionSet.Nonempty ↔
+    1 < Erdos674.erdos_674.1.2.2 ∧
+      Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 * Erdos674.erdos_674.1.2.1 ^ Erdos674.erdos_674.1.2.1 =
+        Erdos674.erdos_674.1.2.2 ^ Erdos674.erdos_674.1.2.2
+E_E3_convert_p6_k4.lean:4:8: error: (kernel) invalid projection
+  Erdos674.erdos_674.1

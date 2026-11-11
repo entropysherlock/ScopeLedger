@@ -1,0 +1,4 @@
+X_B3_aesop.lean:7:2: error: Tactic `aesop` failed, made no progress
+Initial goal:
+  h : Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6))
+  ⊢ Filter.Tendsto (fun n => ↑(SL003FC.Erdos136.f n) / ↑n) Filter.atTop (nhds (5 / 6))

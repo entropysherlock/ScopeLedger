@@ -1,0 +1,19 @@
+{
+ "case_id": "H-22",
+ "cited": "Erdos1007Dim5.Standalone.Mathlib.InlineErdos1007Dim5.DimensionFive.proof",
+ "module": "Erdos1007Dim5.Standalone.Mathlib.InlineErdos1007Dim5Proof",
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 96
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 26
+  }
+ },
+ "files": {},
+ "target_prop": "SL003FC.Erdos1007.SL003.targetProp",
+ "status": "target_failed"
+}

@@ -1,0 +1,45 @@
+E_E3_convert_p0_k3.lean:7:39: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+E_E3_convert_p0_k3.lean:7:64: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+E_E3_convert_p0_k3.lean:7:71: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+E_E3_convert_p0_k3.lean:7:99: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+E_E3_convert_p0_k3.lean:7:183: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+E_E3_convert_p0_k3.lean:7:288: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+E_E3_convert_p0_k3.lean:7:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+E_E3_convert_p0_k3.lean:7:39: warning: Unused tactic linter: `with_unfolding_all rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+E_E3_convert_p0_k3.lean:7:64: warning: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+E_E3_convert_p0_k3.lean:7:71: warning: Unused tactic linter: `(with_unfolding_all simp)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+E_E3_convert_p0_k3.lean:7:99: warning: Unused tactic linter: `(apply IsLeast.csInf_eq; exact ⟨Nat.find_spec _, fun _ hm => Nat.find_min' _ hm⟩)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+E_E3_convert_p0_k3.lean:7:183: warning: Unused tactic linter: `(with_unfolding_all
+    (apply IsLeast.csInf_eq; exact ⟨Nat.find_spec _, fun _ hm => Nat.find_min' _ hm⟩))` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+E_E3_convert_p0_k3.lean:7:288: warning: Unused tactic linter: `(apply funext; intro;
+  first
+  | with_unfolding_all rfl
+  |
+    (with_unfolding_all
+        (apply IsLeast.csInf_eq; exact ⟨Nat.find_spec _, fun _ hm => Nat.find_min' _ hm⟩)))` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`

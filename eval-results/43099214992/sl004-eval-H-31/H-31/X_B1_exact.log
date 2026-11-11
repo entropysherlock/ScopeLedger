@@ -1,0 +1,6 @@
+X_B1_exact.lean:6:2: error: Type mismatch
+  Erdos136.erdos_136
+has type
+  Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6))
+but is expected to have type
+  Filter.Tendsto (fun n => ↑(SL003FC.Erdos136.f n) / ↑n) Filter.atTop (nhds (5 / 6))

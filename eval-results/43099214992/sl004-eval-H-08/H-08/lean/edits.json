@@ -1,0 +1,12 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_742 :",
+ "removed declaration: theorem complete_bipartite_edge_count (a b : ℕ) :",
+ "removed declaration: theorem plesnik_bound (G : SimpleGraph V) [DecidableRel G.Adj] (hG : I",
+ "removed declaration: theorem fan_bound (G : SimpleGraph V) [DecidableRel G.Adj]",
+ "removed declaration: theorem furedi_bound : ∃ n₀ : ℕ, ∀ (V : Type*) [Fintype V] [DecidableE",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

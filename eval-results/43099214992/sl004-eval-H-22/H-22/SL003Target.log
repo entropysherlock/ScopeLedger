@@ -1,0 +1,3 @@
+SL003Target.lean:18:54: error(lean.invalidField): Invalid field `HasDimension`: The environment does not contain `SimpleGraph.HasDimension`, so it is not possible to project the field `HasDimension` from an expression
+  G
+of type `SimpleGraph (Fin n)`

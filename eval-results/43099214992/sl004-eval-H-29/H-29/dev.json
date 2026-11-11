@@ -1,0 +1,327 @@
+{
+ "case_id": "H-29",
+ "cited": "Erdos1096.erdos_1096",
+ "module": "ErdosProblems.Erdos1096",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 133
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 58
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos1096.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B3_aesop.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B4_exact_q.lean": {
+   "ok": true,
+   "seconds": 15,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E2_iff_mp.lean:6:102: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos1096.erdos_1096\nof type\n  ∃ ε > 0,\n    ∀ (q : ℝ),\n      1 < q →\n        q < 1 + ε →\n          ∀ (x : ℕ → ℝ),\n "
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos1096.erdos_1096\nwhich has propositional type\n  ∃ ε > 0,\n    ∀ (q : ℝ),\n      1 < q →\n        q < 1 + ε →\n          ∀ (x : ℕ → ℝ),\n       "
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos1096.erdos_1096\nwhich has propositional type\n  ∃ ε > 0,\n    ∀ (q : ℝ),\n      1 < q →\n        q < 1 + ε →\n          ∀ (x : ℕ → ℝ),\n       "
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos1096.erdos_1096\nwhich has propositional type\n  ∃ ε > 0,\n    ∀ (q : ℝ),\n      1 < q →\n        q < 1 + ε →\n          ∀ (x : ℕ → ℝ),\n       "
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos1096.erdos_1096\nwhich has propositional type\n  ∃ ε > 0,\n    ∀ (q : ℝ),\n      1 < q →\n        q < 1 + ε →\n          ∀ (x : ℕ → ℝ),\n       "
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos1096.erdos_1096\nwhich has propositional type\n  ∃ ε > 0,\n    ∀ (q : ℝ),\n      1 < q →\n        q < 1 + ε →\n          ∀ (x : ℕ → ℝ),\n            S"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:4:78: error: unsolved goals\nh :\n  Erdos1096.erdos_1096.1 > 0 ∧\n    ∀ (q : ℝ),\n      1 < q →\n        q < 1 + Erdos1096.erdos_1096.1 →\n          ∀ (x : ℕ → ℝ),\n            StrictMono x →\n              Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n                Filter.Tendsto "
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k2.lean:4:78: error: unsolved goals\nh :\n  Erdos1096.erdos_1096.1 > 0 ∧\n    ∀ (q : ℝ),\n      1 < q →\n        q < 1 + Erdos1096.erdos_1096.1 →\n          ∀ (x : ℕ → ℝ),\n            StrictMono x →\n              Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n                Filter.Tendsto "
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k3.lean:4:78: error: unsolved goals\nh :\n  Erdos1096.erdos_1096.1 > 0 ∧\n    ∀ (q : ℝ),\n      1 < q →\n        q < 1 + Erdos1096.erdos_1096.1 →\n          ∀ (x : ℕ → ℝ),\n            StrictMono x →\n              Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n                Filter.Tendsto "
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:4:78: error: unsolved goals\nh :\n  Erdos1096.erdos_1096.1 > 0 ∧\n    ∀ (q : ℝ),\n      1 < q →\n        q < 1 + Erdos1096.erdos_1096.1 →\n          ∀ (x : ℕ → ℝ),\n            StrictMono x →\n              Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n                Filter.Tendsto "
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ ε,\n      0 < ε ∧\n        ∀ (q : ℝ),\n          1 < q →\n            q < 1 + ε →\n              ∀ (x : ℕ → ℝ),\n                StrictMono x →\n                  Set.range x = {"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:4:78: error: unsolved goals\nh : Erdos1096.erdos_1096.1 > 0\n⊢ (∃ ε,\n      0 < ε ∧\n        ∀ (q : ℝ),\n          1 < q →\n            q < 1 + ε →\n              ∀ (x : ℕ → ℝ),\n                StrictMono x →\n                  Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n          "
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:4:78: error: unsolved goals\nh : Erdos1096.erdos_1096.1 > 0\n⊢ (∃ ε,\n      0 < ε ∧\n        ∀ (q : ℝ),\n          1 < q →\n            q < 1 + ε →\n              ∀ (x : ℕ → ℝ),\n                StrictMono x →\n                  Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n          "
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:4:78: error: unsolved goals\nh : Erdos1096.erdos_1096.1 > 0\n⊢ (∃ ε,\n      0 < ε ∧\n        ∀ (q : ℝ),\n          1 < q →\n            q < 1 + ε →\n              ∀ (x : ℕ → ℝ),\n                StrictMono x →\n                  Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n          "
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:4:78: error: unsolved goals\nh : Erdos1096.erdos_1096.1 > 0\n⊢ (∃ ε,\n      0 < ε ∧\n        ∀ (q : ℝ),\n          1 < q →\n            q < 1 + ε →\n              ∀ (x : ℕ → ℝ),\n                StrictMono x →\n                  Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n          "
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ ε,\n      0 < ε ∧\n        ∀ (q : ℝ),\n          1 < q →\n            q < 1 + ε →\n              ∀ (x : ℕ → ℝ),\n                StrictMono x →\n                  Set.range x = {"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:4:78: error: unsolved goals\nh :\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n              Filter.Tendsto (fun k => x (k + 1) - x k) Filter.atTop (nhds"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:4:78: error: unsolved goals\nh :\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n              Filter.Tendsto (fun k => x (k + 1) - x k) Filter.atTop (nhds"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:4:78: error: unsolved goals\nh :\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n              Filter.Tendsto (fun k => x (k + 1) - x k) Filter.atTop (nhds"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:4:78: error: unsolved goals\nh :\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →\n              Filter.Tendsto (fun k => x (k + 1) - x k) Filter.atTop (nhds"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ ε,\n      0 < ε ∧\n        ∀ (q : ℝ),\n          1 < q →\n            q < 1 + ε →\n              ∀ (x : ℕ → ℝ),\n                StrictMono x →\n                  Set.range x = {"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1096.erdos_1096.2.right\nhas function type\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1096.erdos_1096.2.right\nhas function type\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1096.erdos_1096.2.right\nhas function type\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1096.erdos_1096.2.right\nhas function type\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1096.erdos_1096.2.right\nhas function type\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑ i ∈ S"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1096.erdos_1096.2.right\nhas function type\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1096.erdos_1096.2.right\nhas function type\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1096.erdos_1096.2.right\nhas function type\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1096.erdos_1096.2.right\nhas function type\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1096.erdos_1096.2.right\nhas function type\n  ∀ (q : ℝ),\n    1 < q →\n      q < 1 + Erdos1096.erdos_1096.1 →\n        ∀ (x : ℕ → ℝ),\n          StrictMono x →\n            Set.range x = {x | ∃ S, ∑ i ∈ S"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 518,
+ "status": "ok"
+}

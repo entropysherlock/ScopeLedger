@@ -1,0 +1,25 @@
+def SL003FC.Erdos865.SL003.targetProp : Prop :=
+∃ C > (0 : ℝ),
+  ∀ᶠ (N : ℕ) in Filter.atTop,
+    ∀ A ⊆ Finset.Icc (1 : ℕ) N,
+      ↑A.card ≥ (5 / 8 : ℝ) * ↑N + C →
+        ∃ a ∈ A, ∃ b ∈ A, ∃ c ∈ A, a ≠ b ∧ a ≠ c ∧ b ≠ c ∧ a + b ∈ A ∧ a + c ∈ A ∧ b + c ∈ A
+Erdos865.erdos865 : ∃ C,
+  ∀ (N : ℕ), ∀ A ⊆ Finset.Icc (1 : ℕ) N, Erdos865.IsTripleFree A → (8 : ℕ) * A.card ≤ (5 : ℕ) * N + C
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `Erdos865.A.card`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos865.A.card`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `A.card`
+def Finset.Icc.{u_1} : {α : Type u_1} → [inst : Preorder α] → [LocallyFiniteOrder α] → α → α → Finset α :=
+fun {α} [Preorder α] [LocallyFiniteOrder α] a b => LocallyFiniteOrder.finsetIcc a b
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos865.Finset.Icc`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `Erdos865.Finset.Icc`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos865.Icc`
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `Erdos865.Icc`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `Icc`
+def Erdos865.IsTripleFree : Finset ℕ → Prop :=
+fun A => ¬Erdos865.HasTriple A
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `IsTripleFree`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos865.IsTripleFree`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `Erdos865.atTop`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `atTop`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos865.atTop`

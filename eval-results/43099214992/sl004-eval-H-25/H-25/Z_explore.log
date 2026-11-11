@@ -1,0 +1,24 @@
+Z_explore.lean:3:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+def SL003FC.SpectralSetProduct.SL003.targetProp : Prop :=
+∀ (m : ℕ), (0 : ℕ) < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral (3 : ℕ) m
+ProductInterval.fc_three_dimensional : True ↔
+  ∀ (m : ℕ), (0 : ℕ) < m → ProductInterval.spectralProductImpliesRightSpectral (3 : ℕ) m
+inductive True : Prop
+number of parameters: 0
+constructors:
+True.intro : True
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `ProductInterval.True`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.SpectralSetProduct.True`
+def ProductInterval.spectralProductImpliesRightSpectral : ℕ → ℕ → Prop :=
+fun n m =>
+  ∀ (A : ConvexBody (Fin n → ℝ)) (B : Set (Fin m → ℝ)),
+    (interior ↑A).Nonempty →
+      Bornology.IsBounded B → MeasurableSet B → isSpectral (FCBridge.productSet (↑A) B) → isSpectral B
+def SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral : ℕ → ℕ → Prop :=
+fun n m =>
+  ∀ (A : ConvexBody (Fin n → ℝ)) (B : Set (Fin m → ℝ)),
+    (interior ↑A).Nonempty →
+      Bornology.IsBounded B → MeasurableSet B → isSpectral (SL003FC.SpectralSetProduct.productSet (↑A) B) → isSpectral B
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `spectralProductImpliesRightSpectral`

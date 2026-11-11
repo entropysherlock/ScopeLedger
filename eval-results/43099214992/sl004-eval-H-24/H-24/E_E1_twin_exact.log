@@ -1,0 +1,9 @@
+E_E1_twin_exact.lean:6:21: error: Type mismatch
+  Erdos889Proof.erdos_889_V1_eq_1_finite_solved
+has type
+  True ↔ {n | Erdos889.V_l 1 n = 1}.Finite
+but is expected to have type
+  {n | SL003FC.Erdos889.V_l 1 n = 1}.Finite
+E_E1_twin_exact.lean:7:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

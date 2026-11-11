@@ -1,0 +1,33 @@
+✔ [8706/8733] Built ErdosProblems.Erdos780.External.TargetChains (8.7s)
+✔ [8707/8733] Built ErdosProblems.Erdos780.External.PeriodicDescent (9.8s)
+✔ [8708/8733] Built ErdosProblems.Erdos780.External.FinsetOrientation (9.0s)
+✔ [8709/8733] Built ErdosProblems.Erdos780.External.CyclicAlgebra (8.7s)
+✔ [8710/8733] Built ErdosProblems.Erdos780.External.ZpTuckerDefs (7.9s)
+✔ [8711/8733] Built ErdosProblems.Erdos780.External.Erdos780Helpers (18s)
+✔ [8712/8733] Built ErdosProblems.Erdos780.External.SourceFlags (11s)
+✔ [8713/8733] Built ErdosProblems.Erdos780.External.AllowedFaces (4.6s)
+✔ [8714/8733] Built ErdosProblems.Erdos780.External.SignedMap (9.7s)
+✔ [8715/8733] Built ErdosProblems.Erdos780.External.TargetOrbits (14s)
+✔ [8716/8733] Built ErdosProblems.Erdos780.External.CyclicExactness (15s)
+✔ [8717/8733] Built ErdosProblems.Erdos95.External.Chapter39 (25s)
+ℹ [8718/8733] Built ErdosProblems.Erdos780.External.PrimeResolution (15s)
+info: ErdosProblems/Erdos780/External/PrimeResolution.lean:349:0: PrimeResolutionScratch.primeResolution (tucker : TuckerAlphaStatement) {p : ℕ} : Nat.Prime p → ResolutionStatement p
+info: ErdosProblems/Erdos780/External/PrimeResolution.lean:350:0: 'PrimeResolutionScratch.primeResolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8719/8733] Built ErdosProblems.Erdos780.External.TargetBridge (11s)
+✔ [8720/8733] Built ErdosProblems.Erdos780.External.LabelChainMap (12s)
+✔ [8721/8733] Built ErdosProblems.Erdos780.External.SignedSphere (13s)
+✔ [8722/8733] Built ErdosProblems.Erdos780.External.PositiveTarget (16s)
+✔ [8723/8733] Built ErdosProblems.Erdos780.External.TargetOrientation (16s)
+✔ [8724/8733] Built ErdosProblems.Erdos780.External.LabelAllowed (13s)
+✔ [8725/8733] Built ErdosProblems.Erdos780.External.SignedSphereLength (9.9s)
+✔ [8726/8733] Built ErdosProblems.Erdos780.External.SignedTargetOrbits (18s)
+✔ [8727/8733] Built ErdosProblems.Erdos95.External.Tucker (45s)
+✔ [8728/8733] Built ErdosProblems.Erdos780.External.AllowedComplex (13s)
+✔ [8729/8733] Built ErdosProblems.Erdos780.External.PositiveAllowed (15s)
+✔ [8730/8733] Built ErdosProblems.Erdos780.External.ReducedLabelEquivariance (7.5s)
+✔ [8731/8733] Built ErdosProblems.Erdos780.External.AllowedDescent (5.7s)
+ℹ [8732/8733] Built ErdosProblems.Erdos780.External.Erdos780Core (5.9s)
+info: ErdosProblems/Erdos780/External/Erdos780Core.lean:322:0: 'Erdos780Core.zpTucker_alpha' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8733/8733] Built ErdosProblems.Erdos780 (8.7s)
+info: ErdosProblems/Erdos780.lean:350:0: 'Erdos780.erdos_780' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8733 jobs).

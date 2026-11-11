@@ -1,0 +1,2 @@
+Try this:
+  [apply] exact Set.Nonempty.mono (fun ⦃a⦄ a_1 => a_1) h

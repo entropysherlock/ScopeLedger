@@ -1,0 +1,18 @@
+{
+ "case_id": "H-00",
+ "cited": "OeisA102722Proof.oeis_A102722",
+ "module": "OEIS102722FC",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 78
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 87
+  }
+ },
+ "files": {},
+ "status": "transport_failed"
+}

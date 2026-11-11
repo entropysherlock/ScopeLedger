@@ -1,0 +1,6 @@
+E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos109.erdos_109
+has function type
+  ∀ (A : Set ℕ), A.upperDensity > 0 → ∃ B C, B.Infinite ∧ C.Infinite ∧ B + C ⊆ A
+E_E3_convert_p3_k3.lean:4:77: error: unsolved goals
+⊢ ∀ (A : Set ℕ), A.upperDensity > 0 → ∃ B C, B.Infinite ∧ C.Infinite ∧ B + C ⊆ A

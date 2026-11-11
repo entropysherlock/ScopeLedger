@@ -1,0 +1,12 @@
+SL003Target.lean:15:5: warning: Variable name `a_ini` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _a_ini
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+SL003Target.lean:16:5: warning: Variable name `a_rec` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _a_rec
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

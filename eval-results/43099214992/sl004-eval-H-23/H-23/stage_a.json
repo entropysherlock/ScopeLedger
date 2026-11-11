@@ -1,0 +1,49 @@
+{
+ "anchor_line": 89,
+ "case_id": "H-23",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": "erdos_1180_variants_shparlinski",
+ "cited_file_sha256": "d75139f227e9716172479791e74d1ea021c86facfa179d353c6bfa833eccea49",
+ "cited_has_sorry_text": false,
+ "cited_module": "Solution",
+ "cited_path": "erdos-1180/Solution.lean",
+ "cited_qualified": "Erdos1180.Palomar.erdos_1180_variants_shparlinski",
+ "cited_statement": ": ∃ K : ℝ, ∀ ε : ℝ, 0 < ε → ε ≤ 1 → ∃ P : ℕ, ∀ p : ℕ, P ≤ p → p.Prime → ∀ a : ZMod p, ∃ s : Multiset ℕ, (s.card : ℝ) ≤ K * ε⁻¹ ^ 3 ∧ Represents ε p a s",
+ "cited_statement_sha256": "98ac17122c0f2b8207d2e793bd92ba2de558f688db6b18b5b8e723c52233b55d",
+ "core_identical": true,
+ "environment": {
+  "depends_on_formal_conjectures": false,
+  "packages": {
+   "Cli": "2842b9871b04862f944c032e34052cb9448ccb71",
+   "LeanSearchClient": "95e037bfdc31d3916ac615446847fb01960e2719",
+   "Qq": "786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334",
+   "aesop": "75d936c7af167cc93fac0d31237682fc2204591d",
+   "batteries": "ed9b316aabe389fec1ef43c3326ab48c7e59be42",
+   "importGraph": "10930f8138f0462dbd744a91fc03a16fae0e046f",
+   "mathlib": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+   "plausible": "e50948299c4dc4a4c21b1c34b6a6a4fddc19f912",
+   "proofwidgets": "4c70ac059693669e5756e32a7a94b57ee1e99dc5"
+  },
+  "root": "erdos-1180",
+  "src_dirs": [
+   "Proofs"
+  ],
+  "toolchain": "leanprover/lean4:v4.35.0-rc2"
+ },
+ "fc_path": "FormalConjectures/ErdosProblems/1180.lean",
+ "locate_method": "anchor",
+ "module_path_in_env": "Solution.lean",
+ "outcome": "ready_for_stage_b",
+ "pin_method": "url_sha",
+ "pinned_commit": "ba96303b34a95ac458958c1eb0bbdee54733484a",
+ "ref": "ba96303b34a95ac458958c1eb0bbdee54733484a",
+ "repo": "linrock/math-proofs",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_1180.variants.shparlinski",
+ "target_statement": ": ∃ K : ℝ, ∀ ε : ℝ, 0 < ε → ε ≤ 1 → ∃ P : ℕ, ∀ p : ℕ, P ≤ p → p.Prime → ∀ a : ZMod p, ∃ s : Multiset ℕ, (s.card : ℝ) ≤ K * ε⁻¹ ^ 3 ∧ Represents ε p a s",
+ "target_statement_raw": ": ∃ K : ℝ, ∀ ε : ℝ, 0 < ε → ε ≤ 1 →\n    ∃ P : ℕ, ∀ p : ℕ, P ≤ p → p.Prime → ∀ a : ZMod p,\n      ∃ s : Multiset ℕ, (s.card : ℝ) ≤ K * ε⁻¹ ^ 3 ∧ Represents ε p a s",
+ "target_statement_sha256": "98ac17122c0f2b8207d2e793bd92ba2de558f688db6b18b5b8e723c52233b55d",
+ "text_identical": true,
+ "url": "https://github.com/linrock/math-proofs/blob/ba96303b34a95ac458958c1eb0bbdee54733484a/erdos-1180/Solution.lean#L89"
+}

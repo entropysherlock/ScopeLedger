@@ -1,0 +1,10 @@
+E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  erdos501_closed_infinite
+has function type
+  ∀ (A : ℝ → Set ℝ),
+    (∀ (x : ℝ), IsClosed (A x)) →
+      (∀ (x : ℝ), MeasureTheory.volume (A x) < 1) → ∃ X, X.Infinite ∧ X.Pairwise fun x y => x ∉ A y
+E_E3_convert_p5_k4.lean:4:77: error: unsolved goals
+⊢ ∀ (A : ℝ → Set ℝ),
+    (∀ (x : ℝ), IsClosed (A x)) →
+      (∀ (x : ℝ), MeasureTheory.volume (A x) < 1) → ∃ X, X.Infinite ∧ X.Pairwise fun x y => x ∉ A y

@@ -1,0 +1,14 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_649 :",
+ "removed declaration: theorem erdos_649.variants.finite (p q : ℕ) :",
+ "removed declaration: theorem erdos_649.variants.no_solution_two_seven :",
+ "removed declaration: theorem erdos_649.variants.tong (p : ℕ) (hp : p.Prime) :",
+ "removed declaration: theorem erdos_649.variants.tong_question :",
+ "removed declaration: theorem erdos_649.variants.sampaio :",
+ "removed declaration: theorem erdos_649.variants.rmm_2020 :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

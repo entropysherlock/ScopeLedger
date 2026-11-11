@@ -1,0 +1,19 @@
+{
+ "case_id": "H-14",
+ "cited": "FormalConjectures.MovingSofa.sofaConstant_eq_volume_gerversSofa",
+ "module": "Solution",
+ "toolchain": "leanprover/lean4:v4.35.0-rc3",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 92
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 322
+  }
+ },
+ "files": {},
+ "target_prop": "SL003FC.MovingSofa.SL003.targetProp",
+ "status": "target_failed"
+}

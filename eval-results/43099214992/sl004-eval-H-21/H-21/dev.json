@@ -1,0 +1,237 @@
+{
+ "case_id": "H-21",
+ "cited": "Erdos841.erdos841_many_small_values_global",
+ "module": "ErdosProblems.Erdos841.Core",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 124
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 474
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos841.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "X_B1_exact.lean:6:2: error: Type mismatch\n  Erdos841.erdos841_many_small_values_global\nhas type\n  Filter.Tendsto (fun x => Real.log ↑(Erdos841.manySmallUpTo x).card / Real.log ↑x) Filter.atTop (nhds 1) ∧\n    ∀ (x n : ℕ),\n      n ∈ Erdos841.manySmallUpTo x ↔\n        1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ "
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side\n  ∃ K,\n    Filter.Tendsto\n      (fun x =>\n        Real.log\n            ↑{n ∈ Finset.Icc 1 x |\n                  ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.log ↑n * Real.log (Real.log ↑n)))}.card /\n          Real.log ↑x)\n "
+  },
+  "X_B3_aesop.lean": {
+   "ok": false,
+   "seconds": 42,
+   "first_error": "X_B3_aesop.lean:7:2: error: (deterministic) timeout at `isDefEq`, maximum number of heartbeats (400000) has been reached\n\nNote: Use `set_option maxHeartbeats <num>` to set the limit.\n\nHint: Additional diagnostic information may be available using the `set_option diagnostics true` command."
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 18,
+   "first_error": "X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions."
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  Erdos841.erdos841_many_small_values_global\nhas type\n  Filter.Tendsto (fun x => Real.log ↑(Erdos841.manySmallUpTo x).card / Real.log ↑x) Filter.atTop (nhds 1) ∧\n    ∀ (x n : ℕ),\n      n ∈ Erdos841.manySmallUpTo x ↔\n        1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E2_iff_mp.lean:6:146: error(lean.invalidField): Invalid field `mp`: The environment does not contain `And.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos841.erdos841_many_small_values_global\nof type\n  Filter.Tendsto (fun x => Real.log ↑(Erdos841.manySmallUpTo x).car"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p0.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p1.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ K,\n      Filter.Tendsto\n        (fun x =>\n          Real.log\n              ↑{n ∈ Finset.Icc 1 x |\n                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.l"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p2.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log (Real"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log (Real"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log (Real"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos841.erdos841_many_small_values_global.right\nhas function type\n  ∀ (x n : ℕ),\n    n ∈ Erdos841.manySmallUpTo x ↔\n      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log (Real"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 868,
+ "status": "ok"
+}

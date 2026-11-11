@@ -1,0 +1,14 @@
+E_E3_convert_p0_k2.lean:4:77: error: unsolved goals
+case h.a
+h :
+  ∀ (α β : ℝ),
+    0 < α →
+      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \ {0})
+a✝ : ℝ
+⊢ (0 < a✝ →
+      ∀ (β : ℝ),
+        0 < β → Irrational (a✝ / β) → IsAddCompleteNatSeq' (SL003FC.Erdos354.FloorMultiples.interleave a✝ β 2)) ↔
+    ∀ (β : ℝ),
+      0 < a✝ →
+        0 < β →
+          Irrational (a✝ / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave a✝ β 2) \ {0})
