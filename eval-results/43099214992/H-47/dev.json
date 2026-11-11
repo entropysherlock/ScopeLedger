@@ -1,0 +1,18 @@
+{
+ "case_id": "H-47",
+ "cited": "GerverSofa.PartE.deepMindABPhiTheta_existsUnique",
+ "module": "GerverSofa.KernelOnly.PartE.E24KC6KernelFinalClosure",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 112
+  },
+  "build": {
+   "rc": null,
+   "seconds": 3600
+  }
+ },
+ "files": {},
+ "status": "build_failed"
+}
