@@ -1,0 +1,64 @@
+def SL003FC.Erdos841.SL003.targetProp : Prop :=
+∃ K,
+  Filter.Tendsto
+    (fun x =>
+      Real.log
+          ↑{n ∈ Finset.Icc (1 : ℕ) x |
+                ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.log ↑n * Real.log (Real.log ↑n)))}.card /
+        Real.log ↑x)
+    Filter.atTop (nhds (1 : ℝ))
+Erdos841.erdos841_many_small_values_global : Filter.Tendsto
+    (fun x => Real.log ↑(Erdos841.manySmallUpTo x).card / Real.log ↑x) Filter.atTop (nhds (1 : ℝ)) ∧
+  ∀ (x n : ℕ),
+    n ∈ Erdos841.manySmallUpTo x ↔
+      (1 : ℕ) ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp ((20 : ℝ) * √(Real.log ↑n * Real.log (Real.log ↑n)))
+def Filter.Tendsto.{u_1, u_2} : {α : Type u_1} → {β : Type u_2} → (α → β) → Filter α → Filter β → Prop :=
+fun {α} {β} f l₁ l₂ => Filter.map f l₁ ≤ l₂
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.Filter.Tendsto`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.Filter.Tendsto`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.Filter.atTop`
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.Filter.atTop`
+def Filter.atTop.{u_3} : {α : Type u_3} → [Preorder α] → Filter α :=
+fun {α} [Preorder α] => ⨅ a, Filter.principal (Set.Ici a)
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.Finset.Icc`
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.Finset.Icc`
+def Finset.Icc.{u_1} : {α : Type u_1} → [inst : Preorder α] → [LocallyFiniteOrder α] → α → α → Finset α :=
+fun {α} [Preorder α] [LocallyFiniteOrder α] a b => LocallyFiniteOrder.finsetIcc a b
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.Real.exp`
+def Real.exp : ℝ → ℝ :=
+fun x => (Complex.exp ↑x).re
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.Real.exp`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.Real.log`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.Real.log`
+def Real.log : ℝ → ℝ :=
+fun x => if hx : x = (0 : ℝ) then (0 : ℝ) else Real.expOrderIso.symm ⟨|x|, ⋯⟩
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.Real.sqrt`
+Z_explore.lean:22:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.Real.sqrt`
+@[irreducible] def Real.sqrt : ℝ → ℝ :=
+fun x => ↑(NNReal.sqrt x.toNNReal)
+Z_explore.lean:24:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.Tendsto`
+Z_explore.lean:25:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.Tendsto`
+Z_explore.lean:26:7: error(lean.unknownIdentifier): Unknown constant `Tendsto`
+Z_explore.lean:27:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.atTop`
+Z_explore.lean:28:7: error(lean.unknownIdentifier): Unknown constant `atTop`
+Z_explore.lean:29:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.atTop`
+Z_explore.lean:30:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.card`
+Z_explore.lean:31:7: error(lean.unknownIdentifier): Unknown constant `card`
+Z_explore.lean:32:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.card`
+Z_explore.lean:33:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.exp`
+Z_explore.lean:34:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.exp`
+Z_explore.lean:35:7: error(lean.unknownIdentifier): Unknown constant `exp`
+Z_explore.lean:36:7: error(lean.unknownIdentifier): Unknown constant `filter`
+Z_explore.lean:37:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.filter`
+Z_explore.lean:38:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.filter`
+Z_explore.lean:39:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.log`
+Z_explore.lean:40:7: error(lean.unknownIdentifier): Unknown constant `log`
+Z_explore.lean:41:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.log`
+def Erdos841.manySmallUpTo : ℕ → Finset ℕ :=
+fun x => {n ∈ Finset.Icc (1 : ℕ) x | ↑(Erdos841.t n) ≤ Real.exp ((20 : ℝ) * √(Real.log ↑n * Real.log (Real.log ↑n)))}
+Z_explore.lean:43:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.manySmallUpTo`
+Z_explore.lean:44:7: error(lean.unknownIdentifier): Unknown constant `manySmallUpTo`
+Z_explore.lean:45:7: error(lean.unknownIdentifier): Unknown constant `Erdos841.nhds`
+@[irreducible] def nhds.{u_3} : {X : Type u_3} → [TopologicalSpace X] → X → Filter X :=
+wrapped✝.1
+Z_explore.lean:47:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos841.nhds`

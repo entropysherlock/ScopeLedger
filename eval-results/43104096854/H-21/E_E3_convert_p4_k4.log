@@ -1,0 +1,15 @@
+E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos841.erdos841_many_small_values_global.right
+has function type
+  ∀ (x n : ℕ),
+    n ∈ Erdos841.manySmallUpTo x ↔
+      1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log (Real.log ↑n)))
+E_E3_convert_p4_k4.lean:4:77: error: unsolved goals
+⊢ ∃ K,
+    Filter.Tendsto
+      (fun x =>
+        Real.log
+            ↑{n ∈ Finset.Icc 1 x |
+                  ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.log ↑n * Real.log (Real.log ↑n)))}.card /
+          Real.log ↑x)
+      Filter.atTop (nhds 1)
