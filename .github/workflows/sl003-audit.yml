@@ -1,0 +1,117 @@
+name: SL-003 audit
+
+# Launched by committing a new line to experiments/SL-003/RUN, or by hand.
+on:
+  push:
+    branches: ["main"]
+    paths: ["experiments/SL-003/RUN"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FC_URL: https://github.com/google-deepmind/formal-conjectures
+  FC_COMMIT: da703a5f239f734a47ede2f4e99b9ccc9e644cb5
+
+jobs:
+  stage_a:
+    name: "Stage A: population check, retrieval, pinning, environment (60 cases)"
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false, fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Formal Conjectures at the frozen commit
+        run: |
+          set -euo pipefail
+          git clone -q --filter=blob:none --no-checkout "$FC_URL" "$RUNNER_TEMP/fc"
+          git -C "$RUNNER_TEMP/fc" checkout -q "$FC_COMMIT"
+      - name: Population (must be 997) and sample (seed = freeze commit)
+        run: |
+          set -euo pipefail
+          cd experiments/SL-003
+          cp population.jsonl /tmp/pop.committed; cp sample.jsonl /tmp/sample.committed
+          python population.py enumerate "$RUNNER_TEMP/fc"
+          python population.py sample "$RUNNER_TEMP/fc"
+          cmp population.jsonl /tmp/pop.committed && cmp sample.jsonl /tmp/sample.committed \
+            && echo "::notice title=SL-003 sample::population and sample regenerate identically"
+      - name: Stage A
+        run: |
+          python experiments/SL-003/stage_a.py "$RUNNER_TEMP/fc" "$RUNNER_TEMP/work" | tee "$RUNNER_TEMP/stage_a.txt"
+          echo "::notice title=SL-003 Stage A summary::$(tr -d '\n ' < experiments/SL-003/results/stage_a/summary.json)"
+      - id: plan
+        name: Plan Stage B
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, glob, os
+          inc = []
+          for f in sorted(glob.glob("experiments/SL-003/results/stage_a/SL003-*.json")):
+              r = json.load(open(f))
+              if r.get("outcome") != "ready_for_stage_b":
+                  continue
+              repo = r["repo"]
+              url = f"https://gist.github.com/{repo.split(':')[1]}.git" if repo.startswith("gist:") else f"https://github.com/{repo}"
+              inc.append({"case": r["case_id"], "clone": url, "commit": r["pinned_commit"],
+                          "root": r["environment"]["root"] or ".", "fc_path": r["fc_path"]})
+          print("matrix=" + json.dumps({"include": inc}))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sl003-stage-a
+          path: experiments/SL-003/results/stage_a/
+
+  stage_b:
+    name: "Stage B ${{ matrix.case }}"
+    needs: stage_a
+    if: ${{ needs.stage_a.outputs.matrix != '' && fromJSON(needs.stage_a.outputs.matrix).include[0] != null }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.stage_a.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/download-artifact@v4
+        with:
+          name: sl003-stage-a
+          path: ${{ runner.temp }}/stage_a
+      - name: elan (Lean version manager)
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o elan-init.sh
+          sh elan-init.sh -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Sources at the pinned commits
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone -q --filter=blob:none --no-checkout "$FC_URL" "$RUNNER_TEMP/fc"
+          git -C "$RUNNER_TEMP/fc" sparse-checkout set --no-cone "/${{ matrix.fc_path }}"
+          git -C "$RUNNER_TEMP/fc" checkout -q "$FC_COMMIT"
+          git clone -q --filter=blob:none --no-checkout "${{ matrix.clone }}" "$RUNNER_TEMP/target"
+          cd "$RUNNER_TEMP/target"
+          if [ "${{ matrix.root }}" != "." ]; then git sparse-checkout set --no-cone "/${{ matrix.root }}/**" "/*"; fi
+          git checkout -q "${{ matrix.commit }}"
+          test "$(git rev-parse HEAD)" = "${{ matrix.commit }}"
+      - name: Stage B
+        shell: bash
+        run: |
+          set +e
+          cd "$RUNNER_TEMP/target/${{ matrix.root }}"
+          lean --version 2>/dev/null | head -1
+          python "$GITHUB_WORKSPACE/experiments/SL-003/stage_b.py" "$RUNNER_TEMP/stage_a/${{ matrix.case }}.json" \
+            . "$RUNNER_TEMP/fc" "$RUNNER_TEMP/out"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sl003-stage-b-${{ matrix.case }}
+          path: ${{ runner.temp }}/out/

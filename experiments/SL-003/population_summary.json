@@ -1,0 +1,15 @@
+{
+ "fc_commit": "da703a5f239f734a47ede2f4e99b9ccc9e644cb5",
+ "formal_proof_attributes": 1173,
+ "eligible_lean4": 997,
+ "distinct_targets": 975,
+ "hosts": {
+  "github.com": 961,
+  "palomar-registry.org": 19,
+  "gist.githubusercontent.com": 9,
+  "www.erdosproblems.com": 5,
+  "zenodo.org": 1,
+  "domthedeveloper.github.io": 1,
+  "gist.github.com": 1
+ }
+}
