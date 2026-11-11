@@ -1,0 +1,24 @@
+def SL003FC.Erdos49.SL003.targetProp : Prop :=
+∃ C,
+  (0 : ℝ) ≤ C ∧
+    ∀ (N : ℕ),
+      (10 : ℕ) ≤ N →
+        ↑(SL003FC.Erdos49.g N) ≤ ((1 : ℝ) + C * (Real.log (Real.log ↑N) ^ (5 : ℕ) / Real.log ↑N)) * ↑N.primeCounting
+Erdos49.erdos_49_quantitative : Erdos49.QuantitativeResolution
+def Nat.primeCounting : ℕ → ℕ :=
+fun n => (n + (1 : ℕ)).primeCounting'
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `Erdos49.Nat.primeCounting`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos49.Nat.primeCounting`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos49.QuantitativeResolution`
+def Erdos49.QuantitativeResolution : Prop :=
+∃ C,
+  (0 : ℝ) ≤ C ∧
+    ∀ (N : ℕ),
+      (10 : ℕ) ≤ N →
+        ∀ (A : Finset ℕ),
+          Erdos49.MonotoneAdmissible N A → ↑A.card ≤ ((1 : ℝ) + C * Erdos49.taoRate N) * ↑N.primeCounting
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `QuantitativeResolution`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos49.Real.log`
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `Erdos49.Real.log`
+def Real.log : ℝ → ℝ :=
+fun x => if hx : x = (0 : ℝ) then (0 : ℝ) else Real.expOrderIso.symm ⟨|x|, ⋯⟩

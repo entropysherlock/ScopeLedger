@@ -1,0 +1,11 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_49 : ∀ ε : ℝ, 0 < ε →",
+ "removed declaration: theorem erdos_49.variants.little_o :",
+ "removed declaration: theorem erdos_49.variants.tao : ∃ C : ℝ, 0 ≤ C ∧ ∀ N : ℕ, 10 ≤ N →",
+ "removed declaration: theorem erdos_49.variants.primes_maximal :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

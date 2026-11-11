@@ -1,0 +1,36 @@
+E_E3_convert_p2_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (∃ C,
+      0 ≤ C ∧
+        ∀ (N : ℕ),
+          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔
+    0 ≤ Erdos49.erdos_49_quantitative.1 ∧
+      ∀ (N : ℕ),
+        10 ≤ N →
+          ∀ (A : Finset ℕ),
+            Erdos49.MonotoneAdmissible N A →
+              ↑A.card ≤ (1 + Erdos49.erdos_49_quantitative.1 * Erdos49.taoRate N) * ↑N.primeCounting
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h :
+  0 ≤ Erdos49.erdos_49_quantitative.1 ∧
+    ∀ (N : ℕ),
+      10 ≤ N →
+        ∀ (A : Finset ℕ),
+          Erdos49.MonotoneAdmissible N A →
+            ↑A.card ≤ (1 + Erdos49.erdos_49_quantitative.1 * Erdos49.taoRate N) * ↑N.primeCounting
+⊢ (∃ C,
+      0 ≤ C ∧
+        ∀ (N : ℕ),
+          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔
+    0 ≤ Erdos49.erdos_49_quantitative.1 ∧
+      ∀ (N : ℕ),
+        10 ≤ N →
+          ∀ (A : Finset ℕ),
+            Erdos49.MonotoneAdmissible N A →
+              ↑A.card ≤ (1 + Erdos49.erdos_49_quantitative.1 * Erdos49.taoRate N) * ↑N.primeCounting
+E_E3_convert_p2_k2.lean:4:8: error: (kernel) invalid projection
+  Erdos49.erdos_49_quantitative.1
