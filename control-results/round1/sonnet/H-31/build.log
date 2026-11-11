@@ -1,0 +1,10 @@
+ℹ [8719/8725] Replayed ErdosProblems.Erdos136.LowerBound
+info: ErdosProblems/Erdos136/LowerBound.lean:880:0: 'Erdos136.erdos136Fun_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos136/LowerBound.lean:881:0: 'Erdos136.erdos136Fun_lower_bound_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8721/8725] Replayed ErdosProblems.Erdos136.LocalLemma
+info: ErdosProblems/Erdos136/LocalLemma.lean:355:0: 'Erdos136.LocalLemma.exists_avoiding_of_four_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8722/8725] Replayed ErdosProblems.Erdos136.LeaveCompletion
+info: ErdosProblems/Erdos136/LeaveCompletion.lean:2130:0: 'Erdos136.LeaveCompletion.colorable_of_partialGood_jmLeaveBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Build completed successfully (8725 jobs).
