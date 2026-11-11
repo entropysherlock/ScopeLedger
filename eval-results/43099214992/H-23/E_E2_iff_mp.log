@@ -1,0 +1,10 @@
+E_E2_iff_mp.lean:6:160: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos1180.Palomar.erdos_1180_variants_shparlinski
+of type
+  ∃ K,
+    ∀ (ε : ℝ),
+      0 < ε →
+        ε ≤ 1 →
+          ∃ P,
+            ∀ (p : ℕ),
+              P ≤ p → Nat.Prime p → ∀ (a : ZMod p), ∃ s, ↑s.card ≤ K * ε⁻¹ ^ 3 ∧ Erdos1180.Palomar.Represents ε p a s

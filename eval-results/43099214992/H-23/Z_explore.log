@@ -1,0 +1,39 @@
+def SL003FC.Erdos1180.SL003.targetProp : Prop :=
+∃ K,
+  ∀ (ε : ℝ),
+    (0 : ℝ) < ε →
+      ε ≤ (1 : ℝ) →
+        ∃ P,
+          ∀ (p : ℕ),
+            P ≤ p →
+              Nat.Prime p → ∀ (a : ZMod p), ∃ s, ↑s.card ≤ K * ε⁻¹ ^ (3 : ℕ) ∧ SL003FC.Erdos1180.Represents ε p a s
+Erdos1180.Palomar.erdos_1180_variants_shparlinski : ∃ K,
+  ∀ (ε : ℝ),
+    (0 : ℝ) < ε →
+      ε ≤ (1 : ℝ) →
+        ∃ P,
+          ∀ (p : ℕ),
+            P ≤ p →
+              Nat.Prime p → ∀ (a : ZMod p), ∃ s, ↑s.card ≤ K * ε⁻¹ ^ (3 : ℕ) ∧ Erdos1180.Palomar.Represents ε p a s
+def Multiset.{u} : Type u → Type u :=
+fun α => Quotient (List.isSetoid α)
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `Erdos1180.Palomar.Multiset`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1180.Multiset`
+def SL003FC.Erdos1180.Represents : ℝ → (p : ℕ) → ZMod p → Multiset ℕ → Prop :=
+fun ε p a s => (∀ n ∈ s, (1 : ℕ) ≤ n ∧ ↑n ≤ ↑p ^ ε ∧ n.Coprime p) ∧ (Multiset.map (fun n => (↑n)⁻¹) s).sum = a
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `Represents`
+def Erdos1180.Palomar.Represents : ℝ → (p : ℕ) → ZMod p → Multiset ℕ → Prop :=
+fun ε p a s => (∀ n ∈ s, (1 : ℕ) ≤ n ∧ ↑n ≤ ↑p ^ ε ∧ n.Coprime p) ∧ (Multiset.map (fun n => (↑n)⁻¹) s).sum = a
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1180.ZMod`
+def ZMod : ℕ → Type :=
+fun x =>
+  match x with
+  | (0 : ℕ) => ℤ
+  | n.succ => Fin (n + (1 : ℕ))
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `Erdos1180.Palomar.ZMod`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `Erdos1180.Palomar.p.Prime`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1180.p.Prime`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `p.Prime`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `Erdos1180.Palomar.s.card`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1180.s.card`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `s.card`

@@ -1,0 +1,318 @@
+{
+ "case_id": "H-23",
+ "cited": "Erdos1180.Palomar.erdos_1180_variants_shparlinski",
+ "module": "Solution",
+ "toolchain": "leanprover/lean4:v4.35.0-rc2",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 97
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 33
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos1180.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B3_aesop.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B4_exact_q.lean": {
+   "ok": true,
+   "seconds": 12,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E2_iff_mp.lean:6:160: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski\nof type\n  ∃ K,\n    ∀ (ε : ℝ),\n      0 < ε →\n        ε ≤ 1 →\n     "
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p0.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski\nwhich has propositional type\n  ∃ K,\n    ∀ (ε : ℝ),\n      0 < ε →\n        ε ≤ 1 →\n          ∃"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski\nwhich has propositional type\n  ∃ K,\n    ∀ (ε : ℝ),\n      0 < ε →\n        ε ≤ 1 →\n          ∃"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski\nwhich has propositional type\n  ∃ K,\n    ∀ (ε : ℝ),\n      0 < ε →\n        ε ≤ 1 →\n          ∃"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski\nwhich has propositional type\n  ∃ K,\n    ∀ (ε : ℝ),\n      0 < ε →\n        ε ≤ 1 →\n          ∃"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski\nwhich has propositional type\n  ∃ K,\n    ∀ (ε : ℝ),\n      0 < ε →\n        ε ≤ 1 →\n          ∃ P,\n  "
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:4:78: error: unsolved goals\nh :\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n                ∀ (a : ZMod p),\n                  ∃ s,\n                    ↑s.card ≤ Erdos1180.Palomar.erdos_1180_variants_"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k2.lean:4:78: error: unsolved goals\nh :\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n                ∀ (a : ZMod p),\n                  ∃ s,\n                    ↑s.card ≤ Erdos1180.Palomar.erdos_1180_variants_"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k3.lean:4:78: error: unsolved goals\nh :\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n                ∀ (a : ZMod p),\n                  ∃ s,\n                    ↑s.card ≤ Erdos1180.Palomar.erdos_1180_variants_"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:4:78: error: unsolved goals\nh :\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n                ∀ (a : ZMod p),\n                  ∃ s,\n                    ↑s.card ≤ Erdos1180.Palomar.erdos_1180_variants_"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n           "
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n           "
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n           "
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n     "
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos1180.Palomar.erdos_1180_variants_shparlinski.2\nhas function type\n  ∀ (ε : ℝ),\n    0 < ε →\n      ε ≤ 1 →\n        ∃ P,\n          ∀ (p : ℕ),\n            P ≤ p →\n              Nat.Prime p →\n           "
+  }
+ },
+ "bridges": {},
+ "seconds_total": 441,
+ "status": "ok"
+}
