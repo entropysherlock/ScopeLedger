@@ -1,0 +1,6 @@
+E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  A361033.a_odd_iff
+has function type
+  ∀ (n : ℕ), Odd (A361033.a n) ↔ ∃ k, n = 2 ^ k - 1
+E_E3_convert_p4_k3.lean:4:80: error: unsolved goals
+⊢ ∀ (n : ℕ), Odd (SL003FC.OeisA361033.a n) ↔ ∃ k, n = 2 ^ k - 1
