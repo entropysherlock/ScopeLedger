@@ -1,0 +1,9 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_354.parts.i : ∀ᵉ (α > 0) (β > 0), Irrational (α / β) →",
+ "removed declaration: theorem erdos_354.parts.ii : ∃ γ ∈ Set.Ioo (1 : ℝ) 2, ∀ᵉ (α > 0) (β > ",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]
