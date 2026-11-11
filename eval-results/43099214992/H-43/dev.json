@@ -1,0 +1,327 @@
+{
+ "case_id": "H-43",
+ "cited": "Erdos261.Palomar.borwein_loring",
+ "module": "Solution",
+ "toolchain": "leanprover/lean4:v4.35.0-rc2",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 83
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 96
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos261.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B3_aesop.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B4_exact_q.lean": {
+   "ok": true,
+   "seconds": 16,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E2_iff_mp.lean:6:124: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos261.Palomar.borwein_loring\nof type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / "
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos261.Palomar.borwein_loring\nhas function type\n  ∀ (m : ℕ),\n    0 < m →\n      have n := 2 ^ (m + 1) - m - 2;\n      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 555,
+ "status": "ok"
+}

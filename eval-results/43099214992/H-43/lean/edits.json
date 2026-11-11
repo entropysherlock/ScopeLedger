@@ -1,0 +1,15 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_261.variants.borwein_loring (m : ℕ) (hm : 0 < m) :",
+ "removed declaration: theorem erdos_261.variants.borwein_loring_property (m : ℕ) (hm : 2 ≤ m",
+ "removed declaration: theorem erdos_261.parts.i : {n : ℕ | 0 < n ∧ Erdos261Prop n}.Infinite ",
+ "removed declaration: theorem erdos_261.variants.le_10000 {n : ℕ} (hn_pos : 0 < n) (hn : n ≤",
+ "removed declaration: theorem erdos_261.parts.ii : ∀ n > 0, Erdos261Prop n := by",
+ "removed declaration: theorem erdos_261.parts.iii : ∃ x : ℚ,",
+ "removed declaration: theorem erdos_261.variants.two_representations : ∃ x : ℚ,",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

@@ -1,0 +1,12 @@
+E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos261.Palomar.borwein_loring
+has function type
+  ∀ (m : ℕ),
+    0 < m →
+      have n := 2 ^ (m + 1) - m - 2;
+      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k
+E_E4_norm_p5.lean:4:71: error: unsolved goals
+⊢ ∀ (m : ℕ),
+    0 < m →
+      have n := 2 ^ (m + 1) - m - 2;
+      ↑n / 2 ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / 2 ^ k

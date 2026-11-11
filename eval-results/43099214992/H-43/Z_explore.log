@@ -1,0 +1,19 @@
+def SL003FC.Erdos261.SL003.targetProp : Prop :=
+∀ (m : ℕ),
+  (0 : ℕ) < m →
+    have n := (2 : ℕ) ^ (m + (1 : ℕ)) - m - (2 : ℕ);
+    ↑n / (2 : ℚ) ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / (2 : ℚ) ^ k
+Erdos261.Palomar.borwein_loring : ∀ (m : ℕ),
+  (0 : ℕ) < m →
+    have n := (2 : ℕ) ^ (m + (1 : ℕ)) - m - (2 : ℕ);
+    ↑n / (2 : ℚ) ^ n = ∑ k ∈ Finset.Ioc n (n + m), ↑k / (2 : ℚ) ^ k
+def Finset.Ioc.{u_1} : {α : Type u_1} → [inst : Preorder α] → [LocallyFiniteOrder α] → α → α → Finset α :=
+fun {α} [Preorder α] [LocallyFiniteOrder α] a b => LocallyFiniteOrder.finsetIoc a b
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos261.Finset.Ioc`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `Erdos261.Palomar.Finset.Ioc`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos261.hm`
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `Erdos261.Palomar.hm`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `hm`
+Z_explore.lean:12:6: error: unexpected token 'let'; expected 'axioms', 'dependents', 'eqns', 'equations', 'opaques', 'prefix', 'sig', 'sorries', 'tactic', identifier or string literal
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `Erdos261.Palomar.let`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos261.let`
