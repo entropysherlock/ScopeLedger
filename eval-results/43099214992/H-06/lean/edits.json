@@ -1,0 +1,10 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_763 : ¬ ∃ (A : Set ℕ) (c : ℝ), 0 < c ∧",
+ "removed declaration: theorem erdos_763.variants.erdos_fuchs : ¬ ∃ (A : Set ℕ) (c : ℝ), 0 < ",
+ "removed declaration: theorem erdos_763.variants.montgomery_vaughan : ¬ ∃ (A : Set ℕ) (c : ℝ",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

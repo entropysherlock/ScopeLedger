@@ -1,0 +1,19 @@
+{
+ "case_id": "H-06",
+ "cited": "Erdos763.not_erdos_763",
+ "module": "ErdosProblems.Erdos763",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 120
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 15
+  }
+ },
+ "files": {},
+ "target_prop": "SL003FC.Erdos763.SL003.targetProp",
+ "status": "target_failed"
+}

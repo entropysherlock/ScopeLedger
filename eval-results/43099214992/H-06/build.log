@@ -1,0 +1,3 @@
+ℹ [2990/2990] Built ErdosProblems.Erdos763 (12s)
+info: ErdosProblems/Erdos763.lean:1491:0: 'Erdos763.not_erdos_763' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2990 jobs).
