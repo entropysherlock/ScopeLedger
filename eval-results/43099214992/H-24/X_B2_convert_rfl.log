@@ -1,0 +1,11 @@
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side
+  {n | SL003FC.Erdos889.V_l 1 n = 1}.Finite
+is not definitionally equal to the right-hand side
+  True ↔ {n | Erdos889.V_l 1 n = 1}.Finite
+
+case a
+h : True ↔ {n | Erdos889.V_l 1 n = 1}.Finite
+⊢ {n | SL003FC.Erdos889.V_l 1 n = 1}.Finite ↔ (True ↔ {n | Erdos889.V_l 1 n = 1}.Finite)
+X_B2_convert_rfl.lean:8:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

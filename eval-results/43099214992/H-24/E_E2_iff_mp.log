@@ -1,0 +1,9 @@
+E_E2_iff_mp.lean:6:78: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+E_E2_iff_mp.lean:6:78: warning: 'with_unfolding_all exact (@Erdos889Proof.erdos_889_V1_eq_1_finite_solved).mp trivial' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+E_E2_iff_mp.lean:7:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

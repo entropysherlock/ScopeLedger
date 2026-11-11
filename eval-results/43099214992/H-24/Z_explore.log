@@ -1,0 +1,29 @@
+def SL003FC.Erdos889.SL003.targetProp : Prop :=
+{n | SL003FC.Erdos889.V_l (1 : ℕ) n = (1 : ℕ∞)}.Finite
+Erdos889Proof.erdos_889_V1_eq_1_finite_solved : True ↔ {n | Erdos889.V_l (1 : ℕ) n = (1 : ℕ∞)}.Finite
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `Erdos889Proof.Erdos889.V_l`
+Z_explore.lean:6:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+def Erdos889.V_l : ℕ → ℕ → ℕ∞ :=
+fun l n => ⨆ k, ⨆ (_ : k ≥ l), ↑(Erdos889.V n k)
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos889.Erdos889.V_l`
+inductive Finite.{u_3} : Sort u_3 → Prop
+number of parameters: 1
+constructors:
+Finite.intro : ∀ {α : Sort u_3} {n : ℕ} (a : α ≃ Fin n), Finite α
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `Erdos889Proof.Finite`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos889.Finite`
+inductive True : Prop
+number of parameters: 0
+constructors:
+True.intro : True
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `Erdos889Proof.True`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos889.True`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `Erdos889Proof.V_l`
+def SL003FC.Erdos889.V_l : ℕ → ℕ → ℕ∞ :=
+fun l n => ⨆ k, ⨆ (_ : k ≥ l), ↑(SL003FC.Erdos889.V n k)
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `V_l`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos889.answer`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `Erdos889Proof.answer`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `answer`

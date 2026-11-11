@@ -1,0 +1,12 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_889 : Tendsto v₀ atTop (𝓝 ⊤) := by",
+ "removed declaration: theorem erdos_889.variants.v0_gt_1 :",
+ "removed declaration: theorem erdos_889.variants.general :",
+ "removed declaration: theorem erdos_889.variants.v1_eq_1_finite :",
+ "removed declaration: theorem erdos_889.variants.V1_eq_1_finite :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]
