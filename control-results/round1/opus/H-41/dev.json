@@ -1,0 +1,49 @@
+{
+ "case_id": "H-41",
+ "cited": "QuantumLean.FormalConjecturesWrappers.eqSystem8_no_solution_d3_int",
+ "module": "QuantumLean.FormalConjecturesWrappers",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 89
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 125
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "Bridge.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.MonochromaticQuantumGraph.SL003.targetProp",
+ "bridges": {
+  "SL004.bridge_main": {
+   "file": "Bridge.lean",
+   "kind": "bridge_main",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": null,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 240,
+ "status": "ok"
+}
