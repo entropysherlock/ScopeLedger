@@ -1,0 +1,34 @@
+{
+ "case_id": "H-20",
+ "cited": "E522.erdos_522_zero_one_solved",
+ "module": "Erdos522StrongLawFC",
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 89
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 139
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  },
+  "Bridge.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 4,
+   "first_error": "Bridge.lean:13:57: error: Invalid argument name `Ω` for function `Iff.mp`\n\nHint: Perhaps you meant one of the following parameter names:\n  • `hn`: Ω̵h̲n̲\n  • `f`: Ω̵f̲"
+  }
+ },
+ "target_prop": "SL003FC.Erdos522.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 243,
+ "status": "ok"
+}

@@ -1,0 +1,13 @@
+Bridge.lean:13:57: error: Invalid argument name `Ω` for function `Iff.mp`
+
+Hint: Perhaps you meant one of the following parameter names:
+  • `hn`: Ω̵h̲n̲
+  • `f`: Ω̵f̲
+Bridge.lean:10:69: error: unsolved goals
+Ω : Type u
+inst✝¹ : MeasureTheory.MeasureSpace Ω
+inst✝ : MeasureTheory.IsProbabilityMeasure MeasureTheory.volume
+n : ℕ
+hn : 1 ≤ n
+f : SL003FC.Erdos522.KacCoefficients {0, 1} Ω
+⊢ MeasureTheory.volume {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} = 1
