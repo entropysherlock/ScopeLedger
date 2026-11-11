@@ -1,0 +1,34 @@
+{
+ "case_id": "H-18",
+ "cited": "Dyadic354.UpstreamBridge.erdos354_strong_upstream",
+ "module": "Dyadic354.UpstreamBridge",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 98
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 2
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "Bridge.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 5,
+   "first_error": "Bridge.lean:29:85: error: unexpected token '\\'; expected ')', ',' or ':'"
+  }
+ },
+ "target_prop": "SL003FC.Erdos354.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 114,
+ "status": "ok"
+}

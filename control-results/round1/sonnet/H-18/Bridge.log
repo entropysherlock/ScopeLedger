@@ -1,0 +1,28 @@
+Bridge.lean:22:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:22:6: warning: '(
+  funext n
+  simp [SL003FC.Erdos354.FloorMultiples.interleave, Erdos354.FloorMultiples.interleave, SL003FC.Erdos354.FloorMultiples,
+    Erdos354.FloorMultiples])' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Bridge.lean:29:85: error: unexpected token '\'; expected ')', ',' or ':'
+Bridge.lean:26:65: error: unsolved goals
+case h0
+α : ℝ
+hα : α > 0
+β : ℝ
+hβ : β > 0
+hirr : Irrational (α / β)
+h : IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \ {0})
+⊢ IsAddComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \ {0})
+
+α : ℝ
+hα : α > 0
+β : ℝ
+hβ : β > 0
+hirr : Irrational (α / β)
+h : IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \ {0})
+h0 : IsAddComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \ {0})
+⊢ IsAddCompleteNatSeq' (SL003FC.Erdos354.FloorMultiples.interleave α β 2)
