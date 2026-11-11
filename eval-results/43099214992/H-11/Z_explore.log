@@ -1,0 +1,16 @@
+def SL003FC.Erdos667.SL003.targetProp : Prop :=
+∀ (p : ℕ), MonotoneOn (SL003FC.Erdos667.c p) (Set.Icc (1 : ℕ) ((p - (1 : ℕ)).choose (2 : ℕ) + (1 : ℕ)))
+Erdos667.variants.monotoneOn : ∀ (p : ℕ),
+  MonotoneOn (Erdos667.c p) (Set.Icc (1 : ℕ) ((p - (1 : ℕ)).choose (2 : ℕ) + (1 : ℕ)))
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `Erdos667.variants.MonotoneOn`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos667.MonotoneOn`
+def MonotoneOn.{u, v} : {α : Type u} → {β : Type v} → [Preorder α] → [Preorder β] → (α → β) → Set α → Prop :=
+fun {α} {β} [Preorder α] [Preorder β] f s => ∀ ⦃a : α⦄, a ∈ s → ∀ ⦃b : α⦄, b ∈ s → a ≤ b → f a ≤ f b
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos667.Nat.choose`
+def Nat.choose : ℕ → ℕ → ℕ :=
+fun x x_1 => Nat.brecOn (motive := fun x => ℕ → ℕ) x Nat.choose._f x_1
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `Erdos667.variants.Nat.choose`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos667.Set.Icc`
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `Erdos667.variants.Set.Icc`
+def Set.Icc.{u_1} : {α : Type u_1} → [Preorder α] → α → α → Set α :=
+fun {α} [Preorder α] a b => {x | a ≤ x ∧ x ≤ b}

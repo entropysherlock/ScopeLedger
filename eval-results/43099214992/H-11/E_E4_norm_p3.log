@@ -1,0 +1,6 @@
+E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos667.variants.monotoneOn
+has function type
+  ∀ (p : ℕ), MonotoneOn (Erdos667.c p) (Set.Icc 1 ((p - 1).choose 2 + 1))
+E_E4_norm_p3.lean:4:71: error: unsolved goals
+⊢ ∀ (p : ℕ), MonotoneOn (SL003FC.Erdos667.c p) (Set.Icc 1 ((p - 1).choose 2 + 1))

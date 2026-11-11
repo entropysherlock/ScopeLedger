@@ -1,0 +1,12 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_667 :",
+ "removed declaration: theorem erdos_667.variants.monotoneOn (p : ℕ) :",
+ "removed declaration: theorem erdos_667.variants.endpoint (p : ℕ) (hp : 2 ≤ p) :",
+ "removed declaration: theorem erdos_667.variants.ramsey_bounds (p : ℕ) (hp : 3 ≤ p) :",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]
