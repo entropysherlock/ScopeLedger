@@ -1,0 +1,18 @@
+E_E3_convert_p2_k2.lean:4:78: error: unsolved goals
+case a
+h :
+  Erdos1196.erdos_1196.1 =o[Filter.atTop] 1 ∧
+    ∀ x > 0,
+      ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x
+⊢ (∃ o,
+      o =o[Filter.atTop] 1 ∧
+        ∀ (x : ℕ),
+          0 < x →
+            ∀ A ⊆ Set.Ici x, SL003FC.Erdos1196.IsPrimitive A → ∑' (a : ↑A), (↑↑a)⁻¹ * (Real.log ↑↑a)⁻¹ < 1 + o x) ↔
+    Erdos1196.erdos_1196.1 =o[Filter.atTop] 1 ∧
+      ∀ (x : ℕ),
+        0 < x →
+          ∀ A ⊆ Set.Ici x,
+            Erdos1196.IsPrimitive A → ∑' (a : ↑A), (↑↑a)⁻¹ * (Real.log ↑↑a)⁻¹ < 1 + Erdos1196.erdos_1196.1 x
+E_E3_convert_p2_k2.lean:4:8: error: (kernel) invalid projection
+  Erdos1196.erdos_1196.1

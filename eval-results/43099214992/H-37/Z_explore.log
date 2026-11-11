@@ -1,0 +1,28 @@
+def SL003FC.Erdos1196.SL003.targetProp : Prop :=
+∃ o,
+  o =o[Filter.atTop] (1 : ℕ → ℝ) ∧
+    ∀ x > (0 : ℕ),
+      ∀ A ⊆ Set.Ici x, SL003FC.Erdos1196.IsPrimitive A → ∑' (a : ↑A), (1 : ℝ) / (Real.log ↑↑a * ↑↑a) < (1 : ℝ) + o x
+Erdos1196.erdos_1196 : ∃ o,
+  o =o[Filter.atTop] (1 : ℕ → ℝ) ∧
+    ∀ x > (0 : ℕ),
+      ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), (1 : ℝ) / (Real.log ↑↑a * ↑↑a) < (1 : ℝ) + o x
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1196.Filter.atTop`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `Erdos1196.Filter.atTop`
+def Filter.atTop.{u_3} : {α : Type u_3} → [Preorder α] → Filter α :=
+fun {α} [Preorder α] => ⨅ a, Filter.principal (Set.Ici a)
+def Erdos1196.IsPrimitive.{u_1} : {M : Type u_1} → [CommMonoid M] → Set M → Prop :=
+fun {M} [CommMonoid M] A => ∀ x ∈ A, ∀ y ∈ A, x ∣ y → Associated x y
+def SL003FC.Erdos1196.IsPrimitive.{u_1} : {M : Type u_1} → [CommMonoid M] → Set M → Prop :=
+fun {M} [CommMonoid M] A => ∀ x ∈ A, ∀ y ∈ A, x ∣ y → Associated x y
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `IsPrimitive`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `Erdos1196.Set.Ici`
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1196.Set.Ici`
+def Set.Ici.{u_1} : {α : Type u_1} → [Preorder α] → α → Set α :=
+fun {α} [Preorder α] b => {x | b ≤ x}
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1196.a.val`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `Erdos1196.a.val`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `a.val`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `log`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `Erdos1196.log`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1196.log`

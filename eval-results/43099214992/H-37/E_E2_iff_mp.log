@@ -1,0 +1,6 @@
+E_E2_iff_mp.lean:6:102: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos1196.erdos_1196
+of type
+  ∃ o,
+    o =o[Filter.atTop] 1 ∧
+      ∀ x > 0, ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + o x

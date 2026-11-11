@@ -1,0 +1,12 @@
+E_E3_convert_p1_k2.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type
+  ℕ → ℝ
+from the expression
+  Erdos1196.erdos_1196
+which has propositional type
+  ∃ o,
+    o =o[Filter.atTop] 1 ∧
+      ∀ x > 0, ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + o x
+E_E3_convert_p1_k2.lean:4:78: error: unsolved goals
+⊢ ∃ o,
+    o =o[Filter.atTop] 1 ∧
+      ∀ x > 0, ∀ A ⊆ Set.Ici x, SL003FC.Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + o x

@@ -1,0 +1,9 @@
+E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos1196.erdos_1196.2.right
+has function type
+  ∀ x > 0,
+    ∀ A ⊆ Set.Ici x, Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + Erdos1196.erdos_1196.1 x
+E_E3_convert_p5_k4.lean:4:78: error: unsolved goals
+⊢ ∃ o,
+    o =o[Filter.atTop] 1 ∧
+      ∀ x > 0, ∀ A ⊆ Set.Ici x, SL003FC.Erdos1196.IsPrimitive A → ∑' (a : ↑A), 1 / (Real.log ↑↑a * ↑↑a) < 1 + o x
