@@ -1,0 +1,31 @@
+def SL003FC.Erdos673.SL003.targetProp : Prop :=
+Asymptotics.IsEquivalent Filter.atTop (fun X => ∑ n ∈ Finset.Icc (1 : ℕ) X, SL003FC.Erdos673.G n) fun X =>
+  ↑X * Real.log ↑X
+Erdos673.erdos_673 : Erdos673.TendsToInfinityAlmostAll Erdos673.G ∧
+  (Asymptotics.IsEquivalent Filter.atTop (fun X => Erdos673.GSum X) fun X => ↑X * Real.log ↑X) ∧
+    Filter.Tendsto (fun X => Erdos673.GSum X / ↑X) Filter.atTop Filter.atTop
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos673.Finset.Icc`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `Erdos673.Finset.Icc`
+def Finset.Icc.{u_1} : {α : Type u_1} → [inst : Preorder α] → [LocallyFiniteOrder α] → α → α → Finset α :=
+fun {α} [Preorder α] [LocallyFiniteOrder α] a b => LocallyFiniteOrder.finsetIcc a b
+def Erdos673.GSum : ℕ → ℝ :=
+fun X => ∑ n ∈ Finset.Icc (1 : ℕ) X, Erdos673.G n
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos673.GSum`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `GSum`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `Erdos673.Real.log`
+def Real.log : ℝ → ℝ :=
+fun x => if hx : x = (0 : ℝ) then (0 : ℝ) else Real.expOrderIso.symm ⟨|x|, ⋯⟩
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos673.Real.log`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos673.TendsToInfinityAlmostAll`
+def Erdos673.TendsToInfinityAlmostAll : (ℕ → ℝ) → Prop :=
+fun f => ∀ (C : ℝ), {n | C < f n}.HasDensity (1 : ℝ)
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `TendsToInfinityAlmostAll`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos673.Tendsto`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `Erdos673.Tendsto`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `Tendsto`
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `Erdos673.atTop`
+Z_explore.lean:22:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos673.atTop`
+Z_explore.lean:23:7: error(lean.unknownIdentifier): Unknown constant `atTop`
+Z_explore.lean:24:7: error(lean.unknownIdentifier): Unknown constant `log`
+Z_explore.lean:25:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos673.log`
+Z_explore.lean:26:7: error(lean.unknownIdentifier): Unknown constant `Erdos673.log`

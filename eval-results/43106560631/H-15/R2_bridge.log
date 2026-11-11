@@ -1,0 +1,15 @@
+R2_bridge.lean:15:13: warning: `setOf` has been deprecated: Use `Set.ofPred` instead
+R2_bridge.lean:18:4: error: Type mismatch: After simplification, term
+  hd
+ has type
+  d ∈ setOf fun x => x ∣ n
+but is expected to have type
+  d ∣ n
+R2_bridge.lean:19:41: error: unsolved goals
+n : ℕ
+hn : n ≠ 0
+j : ℕ
+hj : j < n.divisors.card
+hf : (setOf fun x => x ∣ n).Finite
+d : ℕ
+⊢ (d ∈ setOf fun x => x ∣ n) ↔ d ∣ n

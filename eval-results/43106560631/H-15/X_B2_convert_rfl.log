@@ -1,0 +1,16 @@
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side
+  Asymptotics.IsEquivalent Filter.atTop (fun X => ∑ n ∈ Finset.Icc 1 X, SL003FC.Erdos673.G n) fun X => ↑X * Real.log ↑X
+is not definitionally equal to the right-hand side
+  Erdos673.TendsToInfinityAlmostAll Erdos673.G ∧
+    (Asymptotics.IsEquivalent Filter.atTop (fun X => Erdos673.GSum X) fun X => ↑X * Real.log ↑X) ∧
+      Filter.Tendsto (fun X => Erdos673.GSum X / ↑X) Filter.atTop Filter.atTop
+
+h :
+  Erdos673.TendsToInfinityAlmostAll Erdos673.G ∧
+    (Asymptotics.IsEquivalent Filter.atTop (fun X => Erdos673.GSum X) fun X => ↑X * Real.log ↑X) ∧
+      Filter.Tendsto (fun X => Erdos673.GSum X / ↑X) Filter.atTop Filter.atTop
+⊢ (Asymptotics.IsEquivalent Filter.atTop (fun X => ∑ n ∈ Finset.Icc 1 X, SL003FC.Erdos673.G n) fun X =>
+      ↑X * Real.log ↑X) ↔
+    Erdos673.TendsToInfinityAlmostAll Erdos673.G ∧
+      (Asymptotics.IsEquivalent Filter.atTop (fun X => Erdos673.GSum X) fun X => ↑X * Real.log ↑X) ∧
+        Filter.Tendsto (fun X => Erdos673.GSum X / ↑X) Filter.atTop Filter.atTop
