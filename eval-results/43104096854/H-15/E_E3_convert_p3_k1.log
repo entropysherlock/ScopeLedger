@@ -1,0 +1,11 @@
+E_E3_convert_p3_k1.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`
+  sInf ?s = ?a
+with the goal
+  ∑ n ∈ Finset.Icc 1 x✝, SL003FC.Erdos673.G n = Erdos673.GSum x✝
+
+Note: The full type of `@IsLeast.csInf_eq` is
+  ∀ {α : Type ?u.7} [inst : ConditionallyCompletePartialOrderInf α] {s : Set α} {a : α}, IsLeast s a → sInf s = a
+
+h : Asymptotics.IsEquivalent Filter.atTop (fun X => Erdos673.GSum X) fun X => ↑X * Real.log ↑X
+x✝ : ℕ
+⊢ ∑ n ∈ Finset.Icc 1 x✝, SL003FC.Erdos673.G n = Erdos673.GSum x✝

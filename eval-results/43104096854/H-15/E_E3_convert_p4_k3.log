@@ -1,0 +1,14 @@
+E_E3_convert_p4_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (Asymptotics.IsEquivalent Filter.atTop (fun X => ∑ n ∈ Finset.Icc 1 X, SL003FC.Erdos673.G n) fun X =>
+      ↑X * Real.log ↑X) ↔
+    Filter.Tendsto (fun X => Erdos673.GSum X / ↑X) Filter.atTop Filter.atTop
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h : Filter.Tendsto (fun X => Erdos673.GSum X / ↑X) Filter.atTop Filter.atTop
+⊢ (Asymptotics.IsEquivalent Filter.atTop (fun X => ∑ n ∈ Finset.Icc 1 X, SL003FC.Erdos673.G n) fun X =>
+      ↑X * Real.log ↑X) ↔
+    Filter.Tendsto (fun X => Erdos673.GSum X / ↑X) Filter.atTop Filter.atTop

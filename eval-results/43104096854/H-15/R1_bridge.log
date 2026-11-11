@@ -1,0 +1,11 @@
+R1_bridge.lean:15:13: warning: `setOf` has been deprecated: Use `Set.ofPred` instead
+R1_bridge.lean:18:15: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+R1_bridge.lean:18:4: error: `simp` made no progress
+R1_bridge.lean:20:41: error: unsolved goals
+n : ℕ
+hn : n ≠ 0
+j : ℕ
+hj : j < n.divisors.card
+hf : (setOf fun x => x ∣ n).Finite
+d : ℕ
+⊢ (d ∈ setOf fun x => x ∣ n) ↔ d ∣ n
