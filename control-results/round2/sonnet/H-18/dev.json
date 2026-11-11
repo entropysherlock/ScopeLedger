@@ -1,0 +1,49 @@
+{
+ "case_id": "H-18",
+ "cited": "Dyadic354.UpstreamBridge.erdos354_strong_upstream",
+ "module": "Dyadic354.UpstreamBridge",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 103
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 2
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  },
+  "Bridge.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos354.SL003.targetProp",
+ "bridges": {
+  "SL004.bridge_main": {
+   "file": "Bridge.lean",
+   "kind": "bridge_main",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": null,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 126,
+ "status": "ok"
+}
