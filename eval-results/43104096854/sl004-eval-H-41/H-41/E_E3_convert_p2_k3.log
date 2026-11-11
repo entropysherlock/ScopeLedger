@@ -1,0 +1,13 @@
+E_E3_convert_p2_k3.lean:4:94: error: unsolved goals
+case h.a
+h : (¬∃ W, MonochromaticQuantumGraph.EqSystemN 8 3 W) → True
+⊢ (∃ W, SL003FC.MonochromaticQuantumGraph.EqSystemN 8 3 W) ↔
+    ∀ (x : MonochromaticQuantumGraph.WeightsN 8 3 ℤ), ¬MonochromaticQuantumGraph.EqSystemN 8 3 x
+
+case h'.a
+h : (¬∃ W, MonochromaticQuantumGraph.EqSystemN 8 3 W) → True
+a✝ : ¬∃ W, MonochromaticQuantumGraph.EqSystemN 8 3 W
+⊢ False
+E_E3_convert_p2_k3.lean:8:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

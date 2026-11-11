@@ -1,0 +1,87 @@
+E_E4_norm_p0.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  Type ?u.13
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.886241} {β : α → Sort ?u.886240} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case convert_1
+h :
+  ∀ {G : Type ?u.13} [inst : Fintype G] [inst_1 : CommGroup G],
+    1 < Fintype.card G →
+      ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering G ι),
+        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+⊢ Type ?u.13
+E_E4_norm_p0.lean:7:13: warning: This simp argument is unused:
+  true_iff
+
+Hint: Omit it from the simp argument list.
+  simp only [t̵r̵u̵e̵_̵iff,̵ ̵i̵f̵f̵_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop, and_imp, not_not,
+  ̲  ̲ ̲ ̲Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:23: warning: This simp argument is unused:
+  iff_true
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, i̵f̵f̵_̵t̵r̵u̵e̵,̵ ̵Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop, and_imp, not_not,
+  ̲  ̲ ̲ ̲Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:33: warning: This simp argument is unused:
+  Filter.eventually_atTop
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, iff_true, F̵i̵l̵t̵e̵r̵.̵e̵v̵e̵n̵t̵u̵a̵l̵l̵y̵_̵a̵t̵T̵o̵p̵,̵ ̵ge_iff_le, gt_iff_lt, exists_prop, and_imp, not_not,
+  ̲  ̲ ̲ ̲Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:58: warning: This simp argument is unused:
+  ge_iff_le
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, iff_true, Filter.eventually_atTop, ge̵_̵i̵f̵f̵_̵l̵e̵,̵ ̵g̵t_iff_lt, exists_prop, and_imp, not_not,
+  ̲  ̲ ̲ ̲Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:69: warning: This simp argument is unused:
+  gt_iff_lt
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, g̵t̵_̵i̵f̵f̵_̵l̵t̵,̵ ̵exists_prop, and_imp, not_not,
+  ̲  ̲ ̲ ̲Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:80: warning: This simp argument is unused:
+  exists_prop
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, e̵x̵i̵s̵t̵s̵_̵p̵r̵o̵p̵,̵ ̵and_imp, not_not,
+  ̲  ̲ ̲ ̲Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:93: warning: This simp argument is unused:
+  and_imp
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop,
+  ̲ a̵n̵d̵_̵i̵m̵p̵,̵  ̲ ̲not_not, Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:102: warning: This simp argument is unused:
+  not_not
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop,
+  ̲  ̲ ̲ ̲and_imp, n̵o̵t̵_̵n̵o̵t̵,̵ ̵Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:111: warning: This simp argument is unused:
+  Set.mem_setOf_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop,
+  ̲  ̲ ̲ ̲and_imp, not_not,̵ ̵S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

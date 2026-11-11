@@ -1,0 +1,12 @@
+E_E3_convert_p0_k4.lean:4:77: error: unsolved goals
+case a
+h : ∃ C, ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + C
+⊢ (∃ C,
+      0 < C ∧
+        ∃ a,
+          ∀ (b : ℕ),
+            a ≤ b →
+              ∀ A ⊆ Finset.Icc 1 b,
+                5 / 8 * ↑b + C ≤ ↑A.card →
+                  ∃ a ∈ A, ∃ b ∈ A, ∃ c ∈ A, ¬a = b ∧ ¬a = c ∧ ¬b = c ∧ a + b ∈ A ∧ a + c ∈ A ∧ b + c ∈ A) ↔
+    ∃ C, ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + C

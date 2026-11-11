@@ -1,0 +1,16 @@
+R1_bridge.lean:20:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  SL003FC.Erdos534.ahlswedeKhachatrian ?N ?q
+in the target expression
+  ∃ q ∈ N.primeFactors,
+    SL003FC.Erdos534.IsAdmissible N (SL003FC.Erdos534.ahlswedeKhachatrian N q) ∧
+      SL003FC.Erdos534.maxCard N = (SL003FC.Erdos534.ahlswedeKhachatrian N q).card
+
+N : ℕ
+hN : 2 ≤ N
+q : ℕ
+hq : q ∈ N.primeFactors
+hadm : Erdos534.Admissible N (Erdos534.candidate N q)
+hmax : ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card
+⊢ ∃ q ∈ N.primeFactors,
+    SL003FC.Erdos534.IsAdmissible N (SL003FC.Erdos534.ahlswedeKhachatrian N q) ∧
+      SL003FC.Erdos534.maxCard N = (SL003FC.Erdos534.ahlswedeKhachatrian N q).card

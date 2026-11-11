@@ -1,0 +1,22 @@
+E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  E522.erdos_522_zero_one_solved.mpr
+has function type
+  (∀ {Ω : Type ?u.5} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]
+      {n : ℕ},
+      1 ≤ n →
+        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),
+          MeasureTheory.volume
+              {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =
+            1) →
+    True
+E_E3_convert_p4_k2.lean:4:77: error: unsolved goals
+⊢ ∀ {Ω : Type u_1} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]
+    {n : ℕ},
+    1 ≤ n →
+      ∀ (f : SL003FC.Erdos522.KacCoefficients {0, 1} Ω),
+        MeasureTheory.volume
+            {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =
+          1
+E_E3_convert_p4_k2.lean:8:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

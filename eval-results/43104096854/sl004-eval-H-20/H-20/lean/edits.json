@@ -1,0 +1,11 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_522 :",
+ "removed declaration: theorem erdos_522.variants.zero_one :",
+ "removed declaration: theorem erdos_522.variants.number_real_roots : ∃ p o : ℕ → ℝ,",
+ "removed declaration: theorem erdos_522.variants.yakir_solution :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

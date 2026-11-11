@@ -1,0 +1,101 @@
+def SL003FC.Erdos274.SL003.targetProp.{u_1, u_2} : Prop :=
+∀ {G : Type u_1} [inst : Fintype G] [inst_1 : CommGroup G],
+  (1 : ℕ) < Fintype.card G →
+    ∀ {ι : Type u_2} [inst : Fintype ι] (P : SL003FC.Erdos274.Group.ExactCovering G ι),
+      (1 : ℕ) < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+@Erdos274.erdos_274.variants.abelian : ∀ {G : Type u_1} [inst : Fintype G] [inst_1 : CommGroup G],
+  (1 : ℕ) < Fintype.card G →
+    ∀ {ι : Type u_2} [inst : Fintype ι] (P : Group.ExactCovering G ι),
+      (1 : ℕ) < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `Erdos274.erdos_274.variants.CommGroup`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos274.CommGroup`
+class CommGroup.{u} (G : Type u) : Type u
+number of parameters: 1
+parents:
+  CommGroup.toGroup : Group G
+  CommGroup.toCommMonoid : CommMonoid G
+fields:
+  Mul.mul : G → G → G
+  Semigroup.mul_assoc : ∀ (a b c : G), a * b * c = a * (b * c)
+  One.one : G
+  MulOneClass.one_mul : ∀ (a : G), (1 : G) * a = a
+  MulOneClass.mul_one : ∀ (a : G), a * (1 : G) = a
+  Monoid.npow : ℕ → G → G :=
+    npowRecAuto
+  Monoid.npow_zero : ∀ (x : G), Monoid.npow (0 : ℕ) x = (1 : G) := by
+    intros; rfl
+  Monoid.npow_succ : ∀ (n : ℕ) (x : G), Monoid.npow (n + (1 : ℕ)) x = Monoid.npow n x * x := by
+    intros; rfl
+  Inv.inv : G → G
+  Div.div : G → G → G :=
+    DivInvMonoid.div'
+  DivInvMonoid.div_eq_mul_inv : ∀ (a b : G), a / b = a * b⁻¹ := by
+    intros; rfl
+  DivInvMonoid.zpow : ℤ → G → G :=
+    zpowRec
+  DivInvMonoid.zpow_zero' : ∀ (a : G), DivInvMonoid.zpow (0 : ℤ) a = (1 : G) := by
+    intros; rfl
+  DivInvMonoid.zpow_succ' : ∀ (n : ℕ) (a : G), DivInvMonoid.zpow (↑n.succ) a = DivInvMonoid.zpow (↑n) a * a := by
+    intros; rfl
+  DivInvMonoid.zpow_neg' : ∀ (n : ℕ) (a : G),
+      DivInvMonoid.zpow (Int.negSucc n) a = (DivInvMonoid.zpow (↑n.succ) a)⁻¹ := by
+    intros; rfl
+  Group.inv_mul_cancel : ∀ (a : G), a⁻¹ * a = (1 : G)
+  CommMagma.mul_comm : ∀ (a b : G), a * b = b * a
+constructor:
+  CommGroup.mk.{u} {G : Type u} [toGroup : Group G] (mul_comm : ∀ (a b : G), a * b = b * a) : CommGroup G
+field notation resolution order:
+  CommGroup, Group, CommMonoid, DivInvMonoid, Monoid, Inv, Div, CommSemigroup, Semigroup, MulOneClass, MulOne, One, CommMagma, Mul
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos274.Fintype`
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `Erdos274.erdos_274.variants.Fintype`
+class Fintype.{u_4} (α : Type u_4) : Type u_4
+number of parameters: 1
+fields:
+  Fintype.elems : Finset α
+  Fintype.complete : ∀ (x : α), x ∈ Fintype.elems
+constructor:
+  Fintype.mk.{u_4} {α : Type u_4} (elems : Finset α) (complete : ∀ (x : α), x ∈ elems) : Fintype α
+def Fintype.card.{u_4} : (α : Type u_4) → [Fintype α] → ℕ :=
+fun α [Fintype α] => Finset.univ.card
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos274.Fintype.card`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `Erdos274.erdos_274.variants.Fintype.card`
+structure Group.ExactCovering.{u_1, u_2} (G : Type u_1) [Group G] (ι : Type u_2) [Fintype ι] : Type (max u_1 u_2)
+number of parameters: 4
+fields:
+  Group.ExactCovering.parts : ι → Subgroup G
+  Group.ExactCovering.reps : ι → G
+  Group.ExactCovering.nonempty : ∀ (i : ι), (↑(self.parts i)).Nonempty
+  Group.ExactCovering.disjoint : Set.univ.PairwiseDisjoint fun i => self.reps i • ↑(self.parts i)
+  Group.ExactCovering.covers : ⋃ i, self.reps i • ↑(self.parts i) = Set.univ
+constructor:
+  Group.ExactCovering.mk.{u_1, u_2} {G : Type u_1} [Group G] {ι : Type u_2} [Fintype ι] (parts : ι → Subgroup G)
+    (reps : ι → G) (nonempty : ∀ (i : ι), (↑(parts i)).Nonempty)
+    (disjoint : Set.univ.PairwiseDisjoint fun i => reps i • ↑(parts i)) (covers : ⋃ i, reps i • ↑(parts i) = Set.univ) :
+    Group.ExactCovering G ι
+structure SL003FC.Erdos274.Group.ExactCovering.{u_1, u_2} (G : Type u_1) [Group G] (ι : Type u_2) [Fintype ι] :
+  Type (max u_1 u_2)
+number of parameters: 4
+fields:
+  SL003FC.Erdos274.Group.ExactCovering.parts : ι → Subgroup G
+  SL003FC.Erdos274.Group.ExactCovering.reps : ι → G
+  SL003FC.Erdos274.Group.ExactCovering.nonempty : ∀ (i : ι), (↑(self.parts i)).Nonempty
+  SL003FC.Erdos274.Group.ExactCovering.disjoint : Set.univ.PairwiseDisjoint fun i => self.reps i • ↑(self.parts i)
+  SL003FC.Erdos274.Group.ExactCovering.covers : ⋃ i, self.reps i • ↑(self.parts i) = Set.univ
+constructor:
+  SL003FC.Erdos274.Group.ExactCovering.mk.{u_1, u_2} {G : Type u_1} [Group G] {ι : Type u_2} [Fintype ι]
+    (parts : ι → Subgroup G) (reps : ι → G) (nonempty : ∀ (i : ι), (↑(parts i)).Nonempty)
+    (disjoint : Set.univ.PairwiseDisjoint fun i => reps i • ↑(parts i)) (covers : ⋃ i, reps i • ↑(parts i) = Set.univ) :
+    SL003FC.Erdos274.Group.ExactCovering G ι
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `Erdos274.erdos_274.variants.Group.ExactCovering`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `Erdos274.erdos_274.variants.P.parts`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `P.parts`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos274.P.parts`
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos274._hG`
+Z_explore.lean:22:7: error(lean.unknownIdentifier): Unknown constant `Erdos274.erdos_274.variants._hG`
+Z_explore.lean:23:7: error(lean.unknownIdentifier): Unknown constant `_hG`
+Z_explore.lean:24:7: error(lean.unknownIdentifier): Unknown constant `hG`
+Z_explore.lean:25:7: error(lean.unknownIdentifier): Unknown constant `Erdos274.erdos_274.variants.hG`
+Z_explore.lean:26:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos274.hG`
+Z_explore.lean:27:7: error(lean.unknownIdentifier): Unknown constant `hι`
+Z_explore.lean:28:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos274.hι`
+Z_explore.lean:29:7: error(lean.unknownIdentifier): Unknown constant `Erdos274.erdos_274.variants.hι`

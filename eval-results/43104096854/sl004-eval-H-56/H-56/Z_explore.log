@@ -1,0 +1,41 @@
+def SL003FC.Erdos1150.SL003.targetProp : Prop :=
+¬∃ c > (0 : ℝ),
+    ∀ᶠ (n : ℕ) in Filter.atTop,
+      ∀ (P : Polynomial ℂ),
+        (∀ i ≤ P.natDegree, P.coeff i = (-1 : ℂ) ∨ P.coeff i = (1 : ℂ)) →
+          P.natDegree = n → ⨆ z, ‖Polynomial.eval (↑z) P‖ > ((1 : ℝ) + c) * √↑n
+OAI.AsymptoticallyMinimalLittlewood.main : OAI.AsymptoticallyMinimalLittlewood.MainStatement
+def Filter.atTop.{u_2} : {α : Type u_2} → [Preorder α] → Filter α :=
+fun {α} [Preorder α] => ⨅ a, Filter.principal (Set.Ici a)
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1150.Filter.atTop`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `OAI.AsymptoticallyMinimalLittlewood.Filter.atTop`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1150.MainStatement`
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `MainStatement`
+def OAI.AsymptoticallyMinimalLittlewood.MainStatement : Prop :=
+∀ (η : ℝ),
+  (0 : ℝ) < η →
+    ∃ N₀,
+      (1 : ℕ) ≤ N₀ ∧
+        ∀ (N : ℕ),
+          N₀ ≤ N →
+            ∃ ε,
+              OAI.AsymptoticallyMinimalLittlewood.IsRealSigning ε ∧
+                ∀ (z : ℂ),
+                  ‖z‖ = (1 : ℝ) → ‖OAI.AsymptoticallyMinimalLittlewood.littlewoodValue ε z‖ ≤ ((1 : ℝ) + η) * √↑N
+def Metric.sphere.{u} : {α : Type u} → [PseudoMetricSpace α] → α → ℝ → Set α :=
+fun {α} [PseudoMetricSpace α] x ε => {y | dist y x = ε}
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `OAI.AsymptoticallyMinimalLittlewood.Metric.sphere`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1150.Metric.sphere`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `OAI.AsymptoticallyMinimalLittlewood.P.coeff`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1150.P.coeff`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `P.coeff`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `P.eval`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `OAI.AsymptoticallyMinimalLittlewood.P.eval`
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1150.P.eval`
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `P.natDegree`
+Z_explore.lean:22:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1150.P.natDegree`
+Z_explore.lean:23:7: error(lean.unknownIdentifier): Unknown constant `OAI.AsymptoticallyMinimalLittlewood.P.natDegree`
+Z_explore.lean:24:7: error(lean.unknownIdentifier): Unknown constant `OAI.AsymptoticallyMinimalLittlewood.Real.sqrt`
+Z_explore.lean:25:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1150.Real.sqrt`
+@[irreducible] def Real.sqrt : ℝ → ℝ :=
+fun x => ↑(NNReal.sqrt x.toNNReal)

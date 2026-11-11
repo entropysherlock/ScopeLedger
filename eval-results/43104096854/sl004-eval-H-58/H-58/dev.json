@@ -1,0 +1,258 @@
+{
+ "case_id": "H-58",
+ "cited": "Erdos274.erdos_274.variants.abelian",
+ "module": "Erdos274.Main",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 93
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 14
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "R1_bridge.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos274.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B1_exact.lean:6:2: error: Type mismatch\n  @Erdos274.erdos_274.variants.abelian\nhas type\n  ∀ {G : Type ?u.11} [inst : Fintype G] [inst_1 : CommGroup G],\n    1 < Fintype.card G →\n      ∀ {ι : Type ?u.10} [inst : Fintype ι] (P : Group.ExactCovering G ι),\n        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Ca"
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side\n  ∀ {G : Type u_1} [inst : Fintype G] [inst_1 : CommGroup G],\n    1 < Fintype.card G →\n      ∀ {ι : Type u_2} [inst : Fintype ι] (P : SL003FC.Erdos274.Group.ExactCovering G ι),\n        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Card"
+  },
+  "X_B3_aesop.lean": {
+   "ok": false,
+   "seconds": 29,
+   "first_error": "X_B3_aesop.lean:4:69: error: unsolved goals\nG : Type u_1\ninst : Fintype G\ninst_1 : CommGroup G\nι : Type u_2\ninst_2 : Fintype ι\nP : SL003FC.Erdos274.Group.ExactCovering G ι\nh :\n  ∀ {G : Type ?u.13} [inst : Fintype G] [inst_3 : CommGroup G],\n    1 < Fintype.card G →\n      ∀ {ι : Type ?u.12} [inst : Fi"
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 17,
+   "first_error": "X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions."
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  @Erdos274.erdos_274.variants.abelian\nhas type\n  ∀ {G : Type ?u.11} [inst : Fintype G] [inst_1 : CommGroup G],\n    1 < Fintype.card G →\n      ∀ {ι : Type ?u.10} [inst : Fintype ι] (P : Group.ExactCovering G ι),\n        1 < Fintype.card ι → ∃ i j, i ≠ "
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E2_iff_mp.lean:6:132: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos274.erdos_274.variants.abelian\nof type\n  1 < Fintype.card ?m.3 →\n    ∀ {ι : Type ?u.428} [inst : Fintype ι] "
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 11,
+   "first_error": "E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  Type ?u.13\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.440473} {β : α → Sort ?u.440472} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g\n\ncase convert_1\nh"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 11,
+   "first_error": "E_E3_convert_p0_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  Type ?u.13\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.440473} {β : α → Sort ?u.440472} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g\n\ncase convert_1\nh"
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 11,
+   "first_error": "E_E3_convert_p0_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  Type ?u.13\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.440473} {β : α → Sort ?u.440472} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g\n\ncase convert_1\nh"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 11,
+   "first_error": "E_E3_convert_p0_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  Type ?u.13\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.440473} {β : α → Sort ?u.440472} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g\n\ncase convert_1\nh"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 17,
+   "first_error": "E_E4_norm_p0.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  Type ?u.13\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.886241} {β : α → Sort ?u.886240} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g\n\ncase convert_1\nh :\n  "
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Card"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Card"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Card"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Card"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Card"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j "
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos274.erdos_274.variants.abelian\nhas function type\n  1 < Fintype.card ?m.4 →\n    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?m.4 ι),\n      1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Card"
+  }
+ },
+ "bridges": {
+  "SL004.bridgeH58": {
+   "file": "R1_bridge.lean",
+   "kind": "bridgeH",
+   "statement": "SL003FC.Erdos274.SL003.targetProp",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": null,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 393,
+ "status": "ok"
+}

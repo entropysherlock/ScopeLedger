@@ -1,0 +1,15 @@
+{
+ "case_id": "H-28",
+ "cause": "retrieval",
+ "certifies": "nothing; deterministic observations only",
+ "detail": "non-git host",
+ "fc_path": "FormalConjectures/ErdosProblems/817.lean",
+ "outcome": "infrastructure_blocked",
+ "source_kind": "other",
+ "stage": "A",
+ "target": "erdos_817",
+ "target_statement": ": ¬ (fun n => (3 ^ n : ℝ)) =O[atTop] fun n => (g 3 n : ℝ)",
+ "target_statement_raw": ":\n    ¬ (fun n => (3 ^ n : ℝ)) =O[atTop] fun n => (g 3 n : ℝ)",
+ "target_statement_sha256": "6abc2a392eb34fbc71b5daea34d9768ea48990fe34649143d1142da75b2f3390",
+ "url": "https://zenodo.org/records/22638810"
+}

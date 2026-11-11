@@ -1,0 +1,15 @@
+E_E2_iff_mp.lean:6:88: error: Type mismatch
+  E522.erdos_522_zero_one_solved.mp trivial
+has type
+  1 ≤ ?m.8 →
+    ∀ (f : Erdos522.KacCoefficients {0, 1} ?m.5),
+      MeasureTheory.volume {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =
+        1
+but is expected to have type
+  1 ≤ n✝ →
+    ∀ (f : SL003FC.Erdos522.KacCoefficients {0, 1} Ω✝),
+      MeasureTheory.volume {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =
+        1
+E_E2_iff_mp.lean:7:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

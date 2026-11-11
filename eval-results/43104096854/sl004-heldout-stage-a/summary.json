@@ -1,0 +1,8 @@
+{
+ "core_identical": 16,
+ "infrastructure_blocked:environment": 4,
+ "infrastructure_blocked:locate": 6,
+ "infrastructure_blocked:retrieval": 4,
+ "ready_for_stage_b": 46,
+ "text_identical": 16
+}

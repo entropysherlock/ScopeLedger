@@ -1,0 +1,32 @@
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side
+  ∃ K,
+    Filter.Tendsto
+      (fun x =>
+        Real.log
+            ↑{n ∈ Finset.Icc 1 x |
+                  ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.log ↑n * Real.log (Real.log ↑n)))}.card /
+          Real.log ↑x)
+      Filter.atTop (nhds 1)
+is not definitionally equal to the right-hand side
+  Filter.Tendsto (fun x => Real.log ↑(Erdos841.manySmallUpTo x).card / Real.log ↑x) Filter.atTop (nhds 1) ∧
+    ∀ (x n : ℕ),
+      n ∈ Erdos841.manySmallUpTo x ↔
+        1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log (Real.log ↑n)))
+
+h :
+  Filter.Tendsto (fun x => Real.log ↑(Erdos841.manySmallUpTo x).card / Real.log ↑x) Filter.atTop (nhds 1) ∧
+    ∀ (x n : ℕ),
+      n ∈ Erdos841.manySmallUpTo x ↔
+        1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log (Real.log ↑n)))
+⊢ (∃ K,
+      Filter.Tendsto
+        (fun x =>
+          Real.log
+              ↑{n ∈ Finset.Icc 1 x |
+                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.log ↑n * Real.log (Real.log ↑n)))}.card /
+            Real.log ↑x)
+        Filter.atTop (nhds 1)) ↔
+    Filter.Tendsto (fun x => Real.log ↑(Erdos841.manySmallUpTo x).card / Real.log ↑x) Filter.atTop (nhds 1) ∧
+      ∀ (x n : ℕ),
+        n ∈ Erdos841.manySmallUpTo x ↔
+          1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log (Real.log ↑n)))

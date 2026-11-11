@@ -1,0 +1,9 @@
+R1_bridge.lean:13:69: error: unsolved goals
+C : ℝ
+hC : 0 ≤ C
+hb :
+  ∀ (N : ℕ),
+    10 ≤ N → ∀ (A : Finset ℕ), Erdos49.MonotoneAdmissible N A → ↑A.card ≤ (1 + C * Erdos49.taoRate N) * ↑N.primeCounting
+N : ℕ
+hN : 10 ≤ N
+⊢ MonotoneOn Nat.totient ∅

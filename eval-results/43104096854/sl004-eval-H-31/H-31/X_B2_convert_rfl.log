@@ -1,0 +1,8 @@
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side
+  ↑(SL003FC.Erdos136.f x✝)
+is not definitionally equal to the right-hand side
+  ↑(Erdos136.erdos136Fun x✝)
+
+h : Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6))
+x✝ : ℕ
+⊢ ↑(SL003FC.Erdos136.f x✝) = ↑(Erdos136.erdos136Fun x✝)

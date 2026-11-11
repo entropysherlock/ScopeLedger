@@ -1,0 +1,49 @@
+{
+ "anchor_line": 296,
+ "case_id": "H-40",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": "beaver_math_olympiad_problem_3",
+ "cited_file_sha256": "f34a434f47fa5b6f5b64a874d04631a294a01e319a3c68b64ade9ecf7b114a74",
+ "cited_has_sorry_text": false,
+ "cited_module": "Collatz.BMO.Problem3",
+ "cited_path": "lean/Collatz/BMO/Problem3.lean",
+ "cited_qualified": "Collatz.BMO.Problem3.beaver_math_olympiad_problem_3",
+ "cited_statement": "(a : ℕ → ℕ) (a_ini : a 0 = 2) (a_rec : ∀ n, a (n + 1) = (a n) + 2 ^ ((padicValNat 2 (a n)) + 2) - 1) : ¬ (∃ n k, a n = 4 ^ k)",
+ "cited_statement_sha256": "406dad9c0e4fe8632099503632056b0e50080e218bd9340fedd32e8661a6ed51",
+ "core_identical": true,
+ "environment": {
+  "depends_on_formal_conjectures": false,
+  "packages": {
+   "Cli": "6130a47896ce867c6a4a55373441e59e565bad0f",
+   "LeanSearchClient": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+   "Qq": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+   "aesop": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+   "batteries": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+   "importGraph": "16f02aa7642864af59f1ff0e384a015994db9118",
+   "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+   "plausible": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+   "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+  },
+  "root": "",
+  "src_dirs": [
+   "lean"
+  ],
+  "toolchain": "leanprover/lean4:v4.33.1"
+ },
+ "fc_path": "FormalConjectures/Other/BeaverMathOlympiad.lean",
+ "locate_method": "anchor",
+ "module_path_in_env": "lean/Collatz/BMO/Problem3.lean",
+ "outcome": "ready_for_stage_b",
+ "pin_method": "url_sha",
+ "pinned_commit": "62a4b7b0c0af9400098694cb5c5e65120ad4dc67",
+ "ref": "62a4b7b0c0af9400098694cb5c5e65120ad4dc67",
+ "repo": "gotrevor/collatz-cryptid",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "beaver_math_olympiad_problem_3",
+ "target_statement": "(a : ℕ → ℕ) (a_ini : a 0 = 2) (a_rec : ∀ n, a (n + 1) = (a n) + 2 ^ ((padicValNat 2 (a n)) + 2) - 1) : ¬ (∃ n k, a n = 4 ^ k)",
+ "target_statement_raw": "(a : ℕ → ℕ)\n    (a_ini : a 0 = 2)\n    (a_rec : ∀ n, a (n + 1) = (a n) + 2 ^ ((padicValNat 2 (a n)) + 2) - 1) :\n    ¬ (∃ n k, a n = 4 ^ k)",
+ "target_statement_sha256": "406dad9c0e4fe8632099503632056b0e50080e218bd9340fedd32e8661a6ed51",
+ "text_identical": true,
+ "url": "https://github.com/gotrevor/collatz-cryptid/blob/62a4b7b0c0af9400098694cb5c5e65120ad4dc67/lean/Collatz/BMO/Problem3.lean#L296"
+}

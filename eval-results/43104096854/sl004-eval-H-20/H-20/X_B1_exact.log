@@ -1,0 +1,22 @@
+X_B1_exact.lean:6:2: error: Type mismatch
+  E522.erdos_522_zero_one_solved
+has type
+  True ↔
+    ∀ {Ω : Type ?u.4} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]
+      {n : ℕ},
+      1 ≤ n →
+        ∀ (f : Erdos522.KacCoefficients {0, 1} Ω),
+          MeasureTheory.volume
+              {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =
+            1
+but is expected to have type
+  ∀ {Ω : Type u_1} [inst : MeasureTheory.MeasureSpace Ω] [MeasureTheory.IsProbabilityMeasure MeasureTheory.volume]
+    {n : ℕ},
+    1 ≤ n →
+      ∀ (f : SL003FC.Erdos522.KacCoefficients {0, 1} Ω),
+        MeasureTheory.volume
+            {ω | Filter.Tendsto (fun n => 2 * ↑(f.numRootsInUnitDisk n ω) / ↑n) Filter.atTop (nhds 1)} =
+          1
+X_B1_exact.lean:4:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

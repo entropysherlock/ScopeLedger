@@ -1,0 +1,18 @@
+E_E3_convert_p0_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (∃ C,
+      0 ≤ C ∧
+        ∀ (N : ℕ),
+          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔
+    Erdos49.QuantitativeResolution
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h : Erdos49.QuantitativeResolution
+⊢ (∃ C,
+      0 ≤ C ∧
+        ∀ (N : ℕ),
+          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔
+    Erdos49.QuantitativeResolution

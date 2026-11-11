@@ -1,0 +1,19 @@
+ℹ [8708/8717] Replayed ErdosProblems.Erdos448.HalberstamLean
+info: ErdosProblems/Erdos448/HalberstamLean.lean:455:0: 'HalberstamScratch.prime_power_local_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos448/HalberstamLean.lean:456:0: 'HalberstamScratch.halberstam_richert_of_mass_convolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8709/8717] Replayed ErdosProblems.Erdos448.PrimePowerConvolution448
+info: ErdosProblems/Erdos448/PrimePowerConvolution448.lean:193:0: 'PrimePowerConvolution448.logPartialSum_le_primePowerMass_convolution' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [8710/8717] Replayed ErdosProblems.Erdos448.PrimePowerMassLinear448
+info: ErdosProblems/Erdos448/PrimePowerMassLinear448.lean:418:0: 'PrimePowerMassLinear448.primePowerMass_le_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8711/8717] Replayed ErdosProblems.Erdos448.HalberstamComplete448
+info: ErdosProblems/Erdos448/HalberstamComplete448.lean:94:0: 'HalberstamComplete448.halberstam_richert_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos448/HalberstamComplete448.lean:95:0: 'HalberstamComplete448.halberstam_richert_explicit_source_indexing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [8715/8717] Replayed ErdosProblems.Erdos459
+info: ErdosProblems/Erdos459.lean:1642:0: 'Erdos459.erdos_459' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8717/8717] Replayed ErdosProblems.Erdos673
+info: ErdosProblems/Erdos673.lean:922:0: 'Erdos673.erdos_673' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8717 jobs).

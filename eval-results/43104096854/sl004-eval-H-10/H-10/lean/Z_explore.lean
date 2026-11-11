@@ -1,0 +1,32 @@
+import SL003Target
+
+set_option pp.numericTypes true
+#print SL003FC.Erdos534.SL003.targetProp
+#check @Erdos534.erdos_534
+#print Erdos534.A.card
+#print A.card
+#print SL003FC.Erdos534.A.card
+#print Erdos534.Admissible
+#print SL003FC.Erdos534.Admissible
+#print Admissible
+#print SL003FC.Erdos534.IsAdmissible
+#print Erdos534.IsAdmissible
+#print IsAdmissible
+#print N.primeFactors
+#print SL003FC.Erdos534.N.primeFactors
+#print Erdos534.N.primeFactors
+#print Erdos534.ahlswedeKhachatrian
+#print ahlswedeKhachatrian
+#print SL003FC.Erdos534.ahlswedeKhachatrian
+#print Erdos534.candidate
+#print candidate
+#print SL003FC.Erdos534.candidate
+#print SL003FC.Erdos534.card
+#print card
+#print Erdos534.card
+#print Erdos534.hN
+#print hN
+#print SL003FC.Erdos534.hN
+#print SL003FC.Erdos534.maxCard
+#print Erdos534.maxCard
+#print maxCard

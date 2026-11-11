@@ -1,0 +1,16 @@
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side
+  ¬∃ c > 0,
+      ∀ᶠ (n : ℕ) in Filter.atTop,
+        ∀ (P : Polynomial ℂ),
+          (∀ i ≤ P.natDegree, P.coeff i = -1 ∨ P.coeff i = 1) →
+            P.natDegree = n → ⨆ z, ‖Polynomial.eval (↑z) P‖ > (1 + c) * √↑n
+is not definitionally equal to the right-hand side
+  OAI.AsymptoticallyMinimalLittlewood.MainStatement
+
+h : OAI.AsymptoticallyMinimalLittlewood.MainStatement
+⊢ (¬∃ c > 0,
+        ∀ᶠ (n : ℕ) in Filter.atTop,
+          ∀ (P : Polynomial ℂ),
+            (∀ i ≤ P.natDegree, P.coeff i = -1 ∨ P.coeff i = 1) →
+              P.natDegree = n → ⨆ z, ‖Polynomial.eval (↑z) P‖ > (1 + c) * √↑n) ↔
+    OAI.AsymptoticallyMinimalLittlewood.MainStatement

@@ -1,0 +1,4 @@
+E_E2_iff_mp.lean:6:96: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos865.erdos865
+of type
+  ∃ C, ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + C
