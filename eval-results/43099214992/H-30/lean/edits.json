@@ -1,0 +1,9 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_674 : solutionSet.Nonempty := by",
+ "removed declaration: theorem erdos_674.variants.infinite : solutionSet.Infinite := by",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

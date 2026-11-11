@@ -1,0 +1,8 @@
+E_E4_norm_p1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type
+  ℕ × ℕ × ℕ
+from the expression
+  Erdos674.erdos_674
+which has propositional type
+  Erdos674.solutionSet.Nonempty
+E_E4_norm_p1.lean:4:71: error: unsolved goals
+⊢ SL003FC.Erdos674.solutionSet.Nonempty

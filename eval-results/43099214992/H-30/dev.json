@@ -1,0 +1,307 @@
+{
+ "case_id": "H-30",
+ "cited": "Erdos674.erdos_674",
+ "module": "ErdosProblems.Erdos674",
+ "toolchain": "leanprover/lean4:v4.29.1",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 97
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 13
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos674.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B3_aesop.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B4_exact_q.lean": {
+   "ok": true,
+   "seconds": 13,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos674.erdos_674\nof type `∃ x, x ∈ Erdos674.solutionSet`"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ × ℕ × ℕ\nfrom the expression\n  Erdos674.erdos_674\nwhich has propositional type\n  Erdos674.solutionSet.Nonempty"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ × ℕ × ℕ\nfrom the expression\n  Erdos674.erdos_674\nwhich has propositional type\n  Erdos674.solutionSet.Nonempty"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ × ℕ × ℕ\nfrom the expression\n  Erdos674.erdos_674\nwhich has propositional type\n  Erdos674.solutionSet.Nonempty"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ × ℕ × ℕ\nfrom the expression\n  Erdos674.erdos_674\nwhich has propositional type\n  Erdos674.solutionSet.Nonempty"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℕ × ℕ × ℕ\nfrom the expression\n  Erdos674.erdos_674\nwhich has propositional type\n  Erdos674.solutionSet.Nonempty"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ Erdos674.erdos_674.1 ∈ Erdos674.solutionSet\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.1021} {β : α → Sort ?u.3.1020"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p2_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ Erdos674.erdos_674.1 ∈ Erdos674.solutionSet\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.1021} {β : α → Sort ?u.3.1020"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p2_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ Erdos674.erdos_674.1 ∈ Erdos674.solutionSet\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.1021} {β : α → Sort ?u.3.1020"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ Erdos674.erdos_674.1 ∈ Erdos674.solutionSet\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.1021} {β : α → Sort ?u.3.1020"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ Erdos674.erdos_674.1 ∈ Erdos674.solutionSet\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.2178} {β : α → Sort ?u.3.2177} {f "
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ 1 < Erdos674.erdos_674.1.1\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.2808} {β : α → Sort ?u.3.2807} {f g : (x : α) "
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ 1 < Erdos674.erdos_674.1.1\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.2808} {β : α → Sort ?u.3.2807} {f g : (x : α) "
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ 1 < Erdos674.erdos_674.1.1\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.2808} {β : α → Sort ?u.3.2807} {f g : (x : α) "
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ 1 < Erdos674.erdos_674.1.1\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.2808} {β : α → Sort ?u.3.2807} {f g : (x : α) "
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ 1 < Erdos674.erdos_674.1.1\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.5740} {β : α → Sort ?u.3.5739} {f g : (x : α) → β x"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔\n    1 < Erdos674.erdos_674.1.2.1 ∧\n      1 < Erdos674.erdos_674.1.2.2 ∧\n        Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 *"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔\n    1 < Erdos674.erdos_674.1.2.1 ∧\n      1 < Erdos674.erdos_674.1.2.2 ∧\n        Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 *"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔\n    1 < Erdos674.erdos_674.1.2.1 ∧\n      1 < Erdos674.erdos_674.1.2.2 ∧\n        Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 *"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔\n    1 < Erdos674.erdos_674.1.2.1 ∧\n      1 < Erdos674.erdos_674.1.2.2 ∧\n        Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 *"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔\n    1 < Erdos674.erdos_674.1.2.1 ∧\n      1 < Erdos674.erdos_674.1.2.2 ∧\n        Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 * Erdo"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ 1 < Erdos674.erdos_674.1.2.1\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.2866} {β : α → Sort ?u.3.2865} {f g : (x : α"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ 1 < Erdos674.erdos_674.1.2.1\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.2866} {β : α → Sort ?u.3.2865} {f g : (x : α"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ 1 < Erdos674.erdos_674.1.2.1\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.2866} {β : α → Sort ?u.3.2865} {f g : (x : α"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ 1 < Erdos674.erdos_674.1.2.1\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.2866} {β : α → Sort ?u.3.2865} {f g : (x : α"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔ 1 < Erdos674.erdos_674.1.2.1\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.3.5854} {β : α → Sort ?u.3.5853} {f g : (x : α) → β"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔\n    1 < Erdos674.erdos_674.1.2.2 ∧\n      Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 * Erdos674.erdos_674.1.2.1 ^ Erdos674.er"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 3,
+   "first_error": "E_E3_convert_p6_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔\n    1 < Erdos674.erdos_674.1.2.2 ∧\n      Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 * Erdos674.erdos_674.1.2.1 ^ Erdos674.er"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔\n    1 < Erdos674.erdos_674.1.2.2 ∧\n      Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 * Erdos674.erdos_674.1.2.1 ^ Erdos674.er"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔\n    1 < Erdos674.erdos_674.1.2.2 ∧\n      Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 * Erdos674.erdos_674.1.2.1 ^ Erdos674.er"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos674.solutionSet.Nonempty ↔\n    1 < Erdos674.erdos_674.1.2.2 ∧\n      Erdos674.erdos_674.1.1 ^ Erdos674.erdos_674.1.1 * Erdos674.erdos_674.1.2.1 ^ Erdos674.erdos_6"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 427,
+ "status": "ok"
+}
