@@ -1,0 +1,19 @@
+def SL003FC.BeaverMathOlympiad.SL003.targetProp : Prop :=
+∀ (a : ℕ → ℕ),
+  a (0 : ℕ) = (2 : ℕ) →
+    (∀ (n : ℕ), a (n + (1 : ℕ)) = a n + (2 : ℕ) ^ (padicValNat (2 : ℕ) (a n) + (2 : ℕ)) - (1 : ℕ)) →
+      ¬∃ n k, a n = (4 : ℕ) ^ k
+Collatz.BMO.Problem3.beaver_math_olympiad_problem_3 : ∀ (a : ℕ → ℕ),
+  a (0 : ℕ) = (2 : ℕ) →
+    (∀ (n : ℕ), a (n + (1 : ℕ)) = a n + (2 : ℕ) ^ (padicValNat (2 : ℕ) (a n) + (2 : ℕ)) - (1 : ℕ)) →
+      ¬∃ n k, a n = (4 : ℕ) ^ k
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.BeaverMathOlympiad.a_ini`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `a_ini`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `Collatz.BMO.Problem3.a_ini`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `a_rec`
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `Collatz.BMO.Problem3.a_rec`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.BeaverMathOlympiad.a_rec`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.BeaverMathOlympiad.padicValNat`
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `Collatz.BMO.Problem3.padicValNat`
+def padicValNat : ℕ → ℕ → ℕ :=
+fun p n => (p.maxPowDvdDiv n).1

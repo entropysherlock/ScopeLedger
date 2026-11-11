@@ -1,0 +1,15 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem beaver_math_olympiad_problem_1 :",
+ "removed declaration: theorem beaver_math_olympiad_problem_2_antihydra",
+ "removed declaration: theorem beaver_math_olympiad_problem_2_antihydra.variants.set",
+ "removed declaration: theorem beaver_math_olympiad_problem_3",
+ "removed declaration: theorem beaver_math_olympiad_problem_4",
+ "removed declaration: theorem beaver_math_olympiad_problem_5 :",
+ "removed declaration: theorem beaver_math_olympiad_problem_8 :",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]
