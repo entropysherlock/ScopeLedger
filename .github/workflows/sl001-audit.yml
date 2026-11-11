@@ -4,7 +4,7 @@ name: SL-001 audit
 # or by hand from the Actions tab.
 on:
   push:
-    branches: ["main", "scopeledger/**"]
+    branches: ["main"]
     paths: ["experiments/SL-001/RUN"]
   workflow_dispatch:
 

@@ -1,2 +1,3 @@
 launch 3 2026-11-11 build.py runs lean from the source root (run 43024708516 assembly: 'must be contained in root directory')
 launch 4 2026-11-11 standalone-repository readiness check (branch scopeledger/standalone)
+launch 5 2026-11-11 first run in the standalone repository entropysherlock/ScopeLedger
