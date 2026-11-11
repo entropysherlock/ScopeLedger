@@ -110,6 +110,38 @@ def main():
                             "proves_target": guard if ".bridge" in thm else None, "axioms": pax,
                             "standard_axioms": pax is not None and all(a in stage_b.ALLOWED for a in pax),
                             "leanchecker": rep, "uses_cited": (um.group(1) == "true") if um else None}
+    # Automatic engine (engine.py), compiled after the hand/AI candidates when SL004_ENGINE=1.
+    import os as _os
+    if _os.environ.get("SL004_ENGINE") == "1":
+        sys.path.insert(0, str(HERE))
+        import engine
+        edir = out / "engine_src"
+        names = engine.write(tp, sa["cited_qualified"], edir)
+        R["engine"] = {}
+        for name in names:
+            mod = Path(name).stem
+            shutil.copy(edir / name, work / name)
+            rc, log, s = stage_b.run([LEAN, "-o", f"{mod}.olean", f"{mod}.lean"], work, 900, env)
+            (out / f"{mod}.log").write_text(log)
+            ok = rc == 0 and not re.search(r':\d+:\d+: error', log)
+            ent = {"ok": ok, "seconds": s, "first_error": (stage_b.first_error(log) or "")[:300]}
+            if ok:
+                thm = f"SL004.bridge_{mod[2:]}"
+                chk = work / f"Check_{mod}.lean"
+                chk.write_text(f"import {mod}\n\nexample : {tp} := @{thm}\n\n#print axioms {thm}\n")
+                _, clog, _ = stage_b.run([LEAN, chk.name], work, 600, env)
+                pax = stage_b.axioms(clog, thm)
+                (work / "Uses.lean").write_text(stage_b.USES.format(mod=mod, thm=thm, cited=sa["cited_qualified"]))
+                _, ulog, _ = stage_b.run([LEAN, "Uses.lean"], work, 300, env)
+                um = re.search(r'USES_CITED (true|false)', ulog)
+                rep = None
+                if CHECKER.exists():
+                    rc2, _, _ = stage_b.run([str(CHECKER), mod], work, 3600, env)
+                    rep = rc2 == 0
+                ent.update(proves_target=not re.search(r':\d+:\d+: error', clog), axioms=pax,
+                           standard_axioms=pax is not None and all(a in stage_b.ALLOWED for a in pax),
+                           uses_cited=(um.group(1) == "true") if um else None, leanchecker=rep)
+            R["engine"][name] = ent
     R["bridges"] = bridges
     R["seconds_total"] = round(time.time() - t0)
     return done("ok")
