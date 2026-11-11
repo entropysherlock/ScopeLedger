@@ -1,1 +1,1 @@
-eval 1 2026-11-11 held-out evaluation: Stage A, baselines, frozen Layer A engine, automatic exploration (Layer B follows)
+eval 2 2026-11-11 Layer B round 1 (Claude) on 10 held-out cases; 3 declined (heldout_ai/DECLINED.md)

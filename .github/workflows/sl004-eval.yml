@@ -53,6 +53,10 @@ jobs:
               r = json.load(open(f))
               if r.get("outcome") != "ready_for_stage_b":
                   continue
+              only = [l.strip() for l in open("experiments/SL-004/EVAL_CASES") if l.strip()] \
+                  if os.path.exists("experiments/SL-004/EVAL_CASES") else None
+              if only is not None and r["case_id"] not in only:
+                  continue
               repo = r["repo"]
               url = f"https://gist.github.com/{repo.split(':')[1]}.git" if repo.startswith("gist:") else f"https://github.com/{repo}"
               inc.append({"case": r["case_id"], "clone": url, "commit": r["pinned_commit"],
