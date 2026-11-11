@@ -1,0 +1,18 @@
+E_E3_convert_p0_k4.lean:4:77: error: unsolved goals
+case h'
+h :
+  ∀ (N : ℕ),
+    2 ≤ N →
+      ∃ q ∈ N.primeFactors,
+        Erdos534.Admissible N (Erdos534.candidate N q) ∧
+          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card
+a✝¹ : ℕ
+a✝ : 2 ≤ a✝¹
+x✝ : ℕ
+⊢ Nat.Prime x✝ →
+    x✝ ∣ a✝¹ →
+      ¬a✝¹ = 0 →
+        (SL003FC.Erdos534.IsAdmissible a✝¹ (SL003FC.Erdos534.ahlswedeKhachatrian a✝¹ x✝) ∧
+            SL003FC.Erdos534.maxCard a✝¹ = (SL003FC.Erdos534.ahlswedeKhachatrian a✝¹ x✝).card ↔
+          Erdos534.Admissible a✝¹ (Erdos534.candidate a✝¹ x✝) ∧
+            ∀ (A : Finset ℕ), Erdos534.Admissible a✝¹ A → A.card ≤ (Erdos534.candidate a✝¹ x✝).card)

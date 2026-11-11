@@ -1,0 +1,286 @@
+{
+ "case_id": "H-10",
+ "cited": "Erdos534.erdos_534",
+ "module": "ErdosProblems.Erdos534",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 111
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 5
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  },
+  "R2_bridge.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos534.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B1_exact.lean:6:2: error: Type mismatch\n  Erdos534.erdos_534\nhas type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card\nbut is expected to have t"
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side\n  fun q =>\n    q ∈ a✝¹.primeFactors ∧\n      SL003FC.Erdos534.IsAdmissible a✝¹ (SL003FC.Erdos534.ahlswedeKhachatrian a✝¹ q) ∧\n        SL003FC.Erdos534.maxCard a✝¹ = (SL003FC.Erdos534.ahlswedeKhachatrian a✝¹ q).card\nis not defi"
+  },
+  "X_B3_aesop.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B3_aesop.lean:4:69: error: unsolved goals\nN : ℕ\nh :\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q,\n        (Nat.Prime q ∧ q ∣ N ∧ ¬N = 0) ∧\n          Erdos534.Admissible N (Erdos534.candidate N q) ∧\n            ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card\nhN : 2 ≤ N\n⊢ ∃ "
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 13,
+   "first_error": "X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions."
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  Erdos534.erdos_534\nhas type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card\nbut is expected to "
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos534.erdos_534\nof type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erd"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k1.lean:4:77: error: unsolved goals\nh :\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card\na✝ : ℕ\n⊢ (2 ≤ a✝ →\n      ∃ q,\n        (Na"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k2.lean:4:77: error: unsolved goals\ncase h'\nh :\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card\na✝¹ : ℕ\na✝ : 2 ≤ a✝¹\n⊢ (∃ q,\n    "
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k3.lean:4:77: error: unsolved goals\ncase h'\nh :\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card\na✝¹ : ℕ\na✝ : 2 ≤ a✝¹\n⊢ (fun q =>\n"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k4.lean:4:77: error: unsolved goals\ncase h'\nh :\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card\na✝¹ : ℕ\na✝ : 2 ≤ a✝¹\nx✝ : ℕ\n⊢ Nat"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p0.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos534.erdos_534\nhas function type\n  ∀ (N : ℕ),\n    2 ≤ N →\n      ∃ q ∈ N.primeFactors,\n        Erdos534.Admissible N (Erdos534.candidate N q) ∧\n          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A"
+  }
+ },
+ "bridges": {
+  "SL004.corrH10_adm_r2": {
+   "file": "R2_bridge.lean",
+   "kind": "corrH10_adm_r",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": false
+  },
+  "SL004.corrH10_ak_r2": {
+   "file": "R2_bridge.lean",
+   "kind": "corrH10_ak_r",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": false
+  },
+  "SL004.bridgeH10_r2": {
+   "file": "R2_bridge.lean",
+   "kind": "bridgeH10_r",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 356,
+ "status": "ok"
+}
