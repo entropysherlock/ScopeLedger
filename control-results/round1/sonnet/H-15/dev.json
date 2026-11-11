@@ -1,0 +1,34 @@
+{
+ "case_id": "H-15",
+ "cited": "Erdos673.erdos_673",
+ "module": "ErdosProblems.Erdos673",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 126
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 5
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 3,
+   "first_error": null
+  },
+  "Bridge.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 3,
+   "first_error": "Bridge.lean:14:40: error: unsolved goals\nn k : ℕ\nhn : n ≠ 0\nhk : k < n.divisors.card\nhf : (setOf fun d => d ∣ n).Finite\nd : ℕ\n⊢ (d ∈ setOf fun d => d ∣ n) ↔ d ∣ n"
+  }
+ },
+ "target_prop": "SL003FC.Erdos673.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 142,
+ "status": "ok"
+}

@@ -1,0 +1,20 @@
+Bridge.lean:10:13: warning: `setOf` has been deprecated: Use `Set.ofPred` instead
+Bridge.lean:14:40: error: unsolved goals
+n k : ℕ
+hn : n ≠ 0
+hk : k < n.divisors.card
+hf : (setOf fun d => d ∣ n).Finite
+d : ℕ
+⊢ (d ∈ setOf fun d => d ∣ n) ↔ d ∣ n
+Bridge.lean:34:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:35:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:34:6: warning: Unused tactic linter: `(simp only [h1, h2])` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Bridge.lean:35:6: warning: Unused tactic linter: `(simp [Fin.val_add, h1, h2])` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
