@@ -1,0 +1,22 @@
+E_E3_convert_p0_k2.lean:4:77: error: unsolved goals
+h :
+  ∀ (m : ℕ),
+    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -
+        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) - 1)) =
+      LeanGallery.NumberTheory.Erdos482.binDigit (759250125 * √2) (m + 1)
+a✝ : ℕ
+⊢ (∀ [inst : NeZero a✝],
+      2 ≤ a✝ →
+        ∀ (w : ℝ),
+          0 < w →
+            ∃ a b,
+              a * b = ↑a✝ ∧
+                ∃ x,
+                  ∀ (n : ℕ),
+                    1 ≤ n →
+                      SL003FC.Erdos482.generalRecurrence a✝ a b x (2 * n) -
+                          ↑a✝ * SL003FC.Erdos482.generalRecurrence a✝ a b x (2 * n - 2) =
+                        ↑↑((w / ↑a✝ ^ ⌊Real.logb (↑a✝) w⌋ * ↑a✝ ^ (n - 1) / ↑a✝).digits a✝ 0)) ↔
+    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (a✝ + 31) + 1)) -
+        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (a✝ + 31) - 1)) =
+      LeanGallery.NumberTheory.Erdos482.binDigit (759250125 * √2) (a✝ + 1)

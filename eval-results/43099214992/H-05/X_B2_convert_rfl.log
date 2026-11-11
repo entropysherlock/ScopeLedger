@@ -1,0 +1,37 @@
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side
+  ∀ [inst : NeZero a✝],
+    2 ≤ a✝ →
+      ∀ (w : ℝ),
+        0 < w →
+          ∃ a b ε,
+            a * b = ↑a✝ ∧
+              ∀ (n : ℕ),
+                1 ≤ n →
+                  SL003FC.Erdos482.generalRecurrence a✝ a b ε (2 * n) -
+                      ↑a✝ * SL003FC.Erdos482.generalRecurrence a✝ a b ε (2 * n - 2) =
+                    ↑↑((w / ↑a✝ ^ ⌊Real.logb (↑a✝) w⌋ * ↑a✝ ^ (n - 1) / ↑a✝).digits a✝ 0)
+is not definitionally equal to the right-hand side
+  ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (a✝ + 31) + 1)) -
+      2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (a✝ + 31) - 1)) =
+    LeanGallery.NumberTheory.Erdos482.binDigit (759250125 * √2) (a✝ + 1)
+
+h :
+  ∀ (m : ℕ),
+    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -
+        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) - 1)) =
+      LeanGallery.NumberTheory.Erdos482.binDigit (759250125 * √2) (m + 1)
+a✝ : ℕ
+⊢ (∀ [inst : NeZero a✝],
+      2 ≤ a✝ →
+        ∀ (w : ℝ),
+          0 < w →
+            ∃ a b ε,
+              a * b = ↑a✝ ∧
+                ∀ (n : ℕ),
+                  1 ≤ n →
+                    SL003FC.Erdos482.generalRecurrence a✝ a b ε (2 * n) -
+                        ↑a✝ * SL003FC.Erdos482.generalRecurrence a✝ a b ε (2 * n - 2) =
+                      ↑↑((w / ↑a✝ ^ ⌊Real.logb (↑a✝) w⌋ * ↑a✝ ^ (n - 1) / ↑a✝).digits a✝ 0)) ↔
+    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (a✝ + 31) + 1)) -
+        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (a✝ + 31) - 1)) =
+      LeanGallery.NumberTheory.Erdos482.binDigit (759250125 * √2) (a✝ + 1)

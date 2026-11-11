@@ -1,0 +1,19 @@
+E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional
+has function type
+  ∀ (m : ℕ),
+    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -
+        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) - 1)) =
+      LeanGallery.NumberTheory.Erdos482.binDigit (759250125 * √2) (m + 1)
+E_E3_convert_p1_k1.lean:4:77: error: unsolved goals
+⊢ ∀ (g : ℕ) [inst : NeZero g],
+    2 ≤ g →
+      ∀ (w : ℝ),
+        0 < w →
+          ∃ a b ε,
+            a * b = ↑g ∧
+              ∀ (n : ℕ),
+                1 ≤ n →
+                  SL003FC.Erdos482.generalRecurrence g a b ε (2 * n) -
+                      ↑g * SL003FC.Erdos482.generalRecurrence g a b ε (2 * n - 2) =
+                    ↑↑((w / ↑g ^ ⌊Real.logb (↑g) w⌋ * ↑g ^ (n - 1) / ↑g).digits g 0)

@@ -1,0 +1,237 @@
+{
+ "case_id": "H-05",
+ "cited": "LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional",
+ "module": "LeanGallery.NumberTheory.Erdos482.Statement",
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 95
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 283
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos482.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B1_exact.lean:6:2: error: Type mismatch\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi "
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side\n  ∀ [inst : NeZero a✝],\n    2 ≤ a✝ →\n      ∀ (w : ℝ),\n        0 < w →\n          ∃ a b ε,\n            a * b = ↑a✝ ∧\n              ∀ (n : ℕ),\n                1 ≤ n →\n                  SL003FC.Erdos482.generalRecurrence a✝ a b ε"
+  },
+  "X_B3_aesop.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "X_B3_aesop.lean:4:69: error: unsolved goals\nh :\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) - 1)) =\n      LeanGallery.NumberTheory.Erdos482"
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 14,
+   "first_error": "X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions."
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Re"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E2_iff_mp.lean:6:208: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nof type\n  ∀ (m : ℕ),\n    ↑(LeanGallery."
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k1.lean:4:77: error: unsolved goals\nh :\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) - 1)) =\n      LeanGallery.NumberTheory."
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k2.lean:4:77: error: unsolved goals\nh :\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) - 1)) =\n      LeanGallery.NumberTheory."
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k3.lean:4:77: error: unsolved goals\nh :\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) - 1)) =\n      LeanGallery.NumberTheory."
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k4.lean:4:77: error: unsolved goals\nh :\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) - 1)) =\n      LeanGallery.NumberTheory."
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p0.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n "
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n "
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n "
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n "
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n "
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional\nhas function type\n  ∀ (m : ℕ),\n    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -\n "
+  }
+ },
+ "bridges": {},
+ "seconds_total": 554,
+ "status": "ok"
+}

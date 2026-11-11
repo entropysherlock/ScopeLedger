@@ -1,0 +1,7 @@
+E_E2_iff_mp.lean:6:208: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  LeanGallery.NumberTheory.Erdos482.Statement.statement_cor33_unconditional
+of type
+  ∀ (m : ℕ),
+    ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) + 1)) -
+        2 * ↑(LeanGallery.NumberTheory.Erdos482.vv (1 - Real.pi ^ 2 / Real.exp 3) (2 * (m + 31) - 1)) =
+      LeanGallery.NumberTheory.Erdos482.binDigit (759250125 * √2) (m + 1)
