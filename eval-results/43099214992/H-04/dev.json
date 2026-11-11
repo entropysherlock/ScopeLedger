@@ -1,0 +1,19 @@
+{
+ "case_id": "H-04",
+ "cited": "Erdos649.erdos_649",
+ "module": "ErdosProblems.Erdos649",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 131
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 46
+  }
+ },
+ "files": {},
+ "target_prop": "SL003FC.Erdos649.SL003.targetProp",
+ "status": "target_failed"
+}
