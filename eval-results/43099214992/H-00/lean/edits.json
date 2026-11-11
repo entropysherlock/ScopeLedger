@@ -1,0 +1,12 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: lemma a_sum_1 (f : ℕ → ℝ) : (Icc 1 1).sum f = f 1 := by",
+ "removed declaration: lemma a_sum_2 (f : ℕ → ℝ) : (Icc 1 2).sum f = f 1 + f 2 := by",
+ "removed declaration: lemma a_sum_3 (f : ℕ → ℝ) : (Icc 1 3).sum f = f 1 + f 2 + f 3 := by",
+ "removed declaration: lemma a_sum_4 (f : ℕ → ℝ) : (Icc 1 4).sum f = f 1 + f 2 + f 3 + f 4 :=",
+ "removed declaration: lemma a_sum_5 (f : ℕ → ℝ) : (Icc 1 5).sum f = f 1 + f 2 + f 3 + f 4 + ",
+ "STOP: unrecognized top-level construct: macro \"eval_a\" : tactic => `(tactic| (\n  delta a\n  simp only [a_sum_1, a_sum_2, "
+]
