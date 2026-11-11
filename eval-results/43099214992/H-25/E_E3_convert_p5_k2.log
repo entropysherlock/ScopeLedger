@@ -1,0 +1,9 @@
+E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  ProductInterval.fc_three_dimensional.mpr
+has function type
+  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True
+E_E3_convert_p5_k2.lean:4:87: error: unsolved goals
+⊢ ∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m
+E_E3_convert_p5_k2.lean:8:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

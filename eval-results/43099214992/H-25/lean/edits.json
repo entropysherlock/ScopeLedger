@@ -1,0 +1,12 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem exists_nowhereDense_spectralSet :",
+ "removed declaration: theorem isSpectral_right_of_product_one_dimensional :",
+ "removed declaration: theorem isSpectral_right_of_product_two_dimensional :",
+ "removed declaration: theorem isSpectral_right_of_product_three_dimensional :",
+ "removed declaration: theorem isSpectral_right_of_product_of_convexBody :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

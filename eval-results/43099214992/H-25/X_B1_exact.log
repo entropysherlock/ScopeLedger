@@ -1,0 +1,9 @@
+X_B1_exact.lean:6:2: error: Type mismatch
+  ProductInterval.fc_three_dimensional
+has type
+  True ↔ ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m
+but is expected to have type
+  ∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m
+X_B1_exact.lean:4:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

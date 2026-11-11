@@ -1,0 +1,264 @@
+{
+ "case_id": "H-25",
+ "cited": "ProductInterval.fc_three_dimensional",
+ "module": "SpectralProduct3DFC",
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 95
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 244
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.SpectralSetProduct.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B1_exact.lean:6:2: error: Type mismatch\n  ProductInterval.fc_three_dimensional\nhas type\n  True ↔ ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m\nbut is expected to have type\n  ∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m"
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side\n  ∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m\nis not definitionally equal to the right-hand side\n  True ↔ ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m\n\nh"
+  },
+  "X_B3_aesop.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 23,
+   "first_error": "X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions."
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  ProductInterval.fc_three_dimensional\nhas type\n  True ↔ ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m\nbut is expected to have type\n  ∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k1.lean:4:87: error: unsolved goals\nh : True ↔ ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m\n⊢ (∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m) ↔\n    ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpec"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k2.lean:4:87: error: unsolved goals\nh : True ↔ ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m\n⊢ (∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m) ↔\n    ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpec"
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k3.lean:4:87: error: unsolved goals\nh : True ↔ ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m\n⊢ (∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m) ↔\n    ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpec"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k4.lean:4:87: error: unsolved goals\nh : True ↔ ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m\n⊢ (∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m) ↔\n    ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpec"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:4:87: error: unsolved goals\nh : True → ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m\n⊢ (∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m) ↔\n    ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpec"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:4:87: error: unsolved goals\nh : True → ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m\n⊢ (∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m) ↔\n    ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpec"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:4:87: error: unsolved goals\nh : True → ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m\n⊢ (∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m) ↔\n    ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpec"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k4.lean:4:87: error: unsolved goals\nh : True → ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m\n⊢ (∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m) ↔\n    ∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpec"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:4:87: error: unsolved goals\nh : (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True\n⊢ ∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k2.lean:4:87: error: unsolved goals\nh : (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True\n⊢ ∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k3.lean:4:87: error: unsolved goals\nh : (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True\n⊢ ∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:4:87: error: unsolved goals\nh : (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True\n⊢ ∀ (m : ℕ), 0 < m → SL003FC.SpectralSetProduct.spectralProductImpliesRightSpectral 3 m"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  ProductInterval.fc_three_dimensional.mpr\nhas function type\n  (∀ (m : ℕ), 0 < m → ProductInterval.spectralProductImpliesRightSpectral 3 m) → True"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 582,
+ "status": "ok"
+}

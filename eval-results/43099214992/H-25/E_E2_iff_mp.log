@@ -1,0 +1,9 @@
+E_E2_iff_mp.lean:6:69: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+E_E2_iff_mp.lean:6:69: warning: Unused tactic linter: `with_unfolding_all exact (@ProductInterval.fc_three_dimensional).mp trivial` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+E_E2_iff_mp.lean:7:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
