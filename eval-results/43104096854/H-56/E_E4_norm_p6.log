@@ -1,0 +1,18 @@
+E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  OAI.AsymptoticallyMinimalLittlewood.main
+has function type
+  ∀ (η : ℝ),
+    0 < η →
+      ∃ N₀,
+        1 ≤ N₀ ∧
+          ∀ (N : ℕ),
+            N₀ ≤ N →
+              ∃ ε,
+                OAI.AsymptoticallyMinimalLittlewood.IsRealSigning ε ∧
+                  ∀ (z : ℂ), ‖z‖ = 1 → ‖OAI.AsymptoticallyMinimalLittlewood.littlewoodValue ε z‖ ≤ (1 + η) * √↑N
+E_E4_norm_p6.lean:4:72: error: unsolved goals
+⊢ ¬∃ c > 0,
+      ∀ᶠ (n : ℕ) in Filter.atTop,
+        ∀ (P : Polynomial ℂ),
+          (∀ i ≤ P.natDegree, P.coeff i = -1 ∨ P.coeff i = 1) →
+            P.natDegree = n → ⨆ z, ‖Polynomial.eval (↑z) P‖ > (1 + c) * √↑n

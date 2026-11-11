@@ -1,0 +1,258 @@
+{
+ "case_id": "H-56",
+ "cited": "OAI.AsymptoticallyMinimalLittlewood.main",
+ "module": "OAI.Analysis.Littlewood.Main",
+ "toolchain": "leanprover/lean4:v4.34.1",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 184
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 8
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "R1_bridge.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 6,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos1150.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "X_B1_exact.lean:6:2: error: Type mismatch\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas type\n  OAI.AsymptoticallyMinimalLittlewood.MainStatement\nbut is expected to have type\n  ¬∃ c > 0,\n      ∀ᶠ (n : ℕ) in Filter.atTop,\n        ∀ (P : Polynomial ℂ),\n          (∀ i ≤ P.natDegree, P.coeff i = -1 ∨ P."
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side\n  ¬∃ c > 0,\n      ∀ᶠ (n : ℕ) in Filter.atTop,\n        ∀ (P : Polynomial ℂ),\n          (∀ i ≤ P.natDegree, P.coeff i = -1 ∨ P.coeff i = 1) →\n            P.natDegree = n → ⨆ z, ‖Polynomial.eval (↑z) P‖ > (1 + c) * √↑n\nis not de"
+  },
+  "X_B3_aesop.lean": {
+   "ok": false,
+   "seconds": 7,
+   "first_error": "X_B3_aesop.lean:4:70: error: unsolved goals\nh : OAI.AsymptoticallyMinimalLittlewood.MainStatement\nx : ℝ\na : 0 < x\nx_1 : ℕ\n⊢ ∃ x_2,\n    x_1 ≤ x_2.natDegree ∧\n      (∀ i ≤ x_2.natDegree, x_2.coeff i = -1 ∨ x_2.coeff i = 1) ∧\n        ⨆ z, ‖Polynomial.eval (↑z) x_2‖ ≤ (1 + x) * √↑x_2.natDegree"
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 18,
+   "first_error": "X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions."
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas type\n  OAI.AsymptoticallyMinimalLittlewood.MainStatement\nbut is expected to have type\n  ¬∃ c > 0,\n      ∀ᶠ (n : ℕ) in Filter.atTop,\n        ∀ (P : Polynomial ℂ),\n          (∀ i ≤ P.natDegree, P.coeff i = -"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E2_iff_mp.lean:6:142: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression\n  OAI.AsymptoticallyMinimalLittlewood.main\nof type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          "
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p0_k1.lean:4:78: error: unsolved goals\nh : OAI.AsymptoticallyMinimalLittlewood.MainStatement\n⊢ (∀ (x : ℝ),\n      0 < x →\n        ∀ (x_1 : ℕ),\n          ∃ x_2,\n            x_1 ≤ x_2.natDegree ∧\n              (∀ i ≤ x_2.natDegree, x_2.coeff i = -1 ∨ x_2.coeff i = 1) ∧\n                ⨆ z,"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p0_k2.lean:4:78: error: unsolved goals\nh : OAI.AsymptoticallyMinimalLittlewood.MainStatement\n⊢ (∀ (x : ℝ),\n      0 < x →\n        ∀ (x_1 : ℕ),\n          ∃ x_2,\n            x_1 ≤ x_2.natDegree ∧\n              (∀ i ≤ x_2.natDegree, x_2.coeff i = -1 ∨ x_2.coeff i = 1) ∧\n                ⨆ z,"
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p0_k3.lean:4:78: error: unsolved goals\nh : OAI.AsymptoticallyMinimalLittlewood.MainStatement\n⊢ (∀ (x : ℝ),\n      0 < x →\n        ∀ (x_1 : ℕ),\n          ∃ x_2,\n            x_1 ≤ x_2.natDegree ∧\n              (∀ i ≤ x_2.natDegree, x_2.coeff i = -1 ∨ x_2.coeff i = 1) ∧\n                ⨆ z,"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p0_k4.lean:4:78: error: unsolved goals\nh : OAI.AsymptoticallyMinimalLittlewood.MainStatement\n⊢ (∀ (x : ℝ),\n      0 < x →\n        ∀ (x_1 : ℕ),\n          ∃ x_2,\n            x_1 ≤ x_2.natDegree ∧\n              (∀ i ≤ x_2.natDegree, x_2.coeff i = -1 ∨ x_2.coeff i = 1) ∧\n                ⨆ z,"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E4_norm_p0.lean:4:72: error: unsolved goals\nh : OAI.AsymptoticallyMinimalLittlewood.MainStatement\n⊢ (∀ (x : ℝ),\n      0 < x →\n        ∀ (x_1 : ℕ),\n          ∃ x_2,\n            x_1 ≤ x_2.natDegree ∧\n              (∀ i ≤ x_2.natDegree, x_2.coeff i = -1 ∨ x_2.coeff i = 1) ∧\n                ⨆ z, ‖Poly"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.Asymptot"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.Asymptot"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.Asymptot"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.Asymptot"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.Asymptot"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.As"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  OAI.AsymptoticallyMinimalLittlewood.main\nhas function type\n  ∀ (η : ℝ),\n    0 < η →\n      ∃ N₀,\n        1 ≤ N₀ ∧\n          ∀ (N : ℕ),\n            N₀ ≤ N →\n              ∃ ε,\n                OAI.Asymptot"
+  }
+ },
+ "bridges": {
+  "SL004.bridgeH56": {
+   "file": "R1_bridge.lean",
+   "kind": "bridgeH",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 471,
+ "status": "ok"
+}

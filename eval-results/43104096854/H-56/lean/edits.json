@@ -1,0 +1,9 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_1150 :",
+ "removed declaration: theorem erdos_1150.variants.parseval_lower_bound (P : ℂ[X]) (n : ℕ)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]
