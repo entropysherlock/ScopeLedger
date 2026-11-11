@@ -1,0 +1,26 @@
+E_E3_convert_p1_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (∃ K,
+      Filter.Tendsto
+        (fun x =>
+          Real.log
+              ↑{n ∈ Finset.Icc 1 x |
+                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.log ↑n * Real.log (Real.log ↑n)))}.card /
+            Real.log ↑x)
+        Filter.atTop (nhds 1)) ↔
+    Filter.Tendsto (fun x => Real.log ↑(Erdos841.manySmallUpTo x).card / Real.log ↑x) Filter.atTop (nhds 1)
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h : Filter.Tendsto (fun x => Real.log ↑(Erdos841.manySmallUpTo x).card / Real.log ↑x) Filter.atTop (nhds 1)
+⊢ (∃ K,
+      Filter.Tendsto
+        (fun x =>
+          Real.log
+              ↑{n ∈ Finset.Icc 1 x |
+                    ↑(SL003FC.Erdos841.t n) ≤ Real.exp (K * √(Real.log ↑n * Real.log (Real.log ↑n)))}.card /
+            Real.log ↑x)
+        Filter.atTop (nhds 1)) ↔
+    Filter.Tendsto (fun x => Real.log ↑(Erdos841.manySmallUpTo x).card / Real.log ↑x) Filter.atTop (nhds 1)

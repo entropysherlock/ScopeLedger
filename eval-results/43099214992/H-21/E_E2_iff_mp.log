@@ -1,0 +1,7 @@
+E_E2_iff_mp.lean:6:146: error(lean.invalidField): Invalid field `mp`: The environment does not contain `And.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos841.erdos841_many_small_values_global
+of type
+  Filter.Tendsto (fun x => Real.log ↑(Erdos841.manySmallUpTo x).card / Real.log ↑x) Filter.atTop (nhds 1) ∧
+    ∀ (x n : ℕ),
+      n ∈ Erdos841.manySmallUpTo x ↔
+        1 ≤ n ∧ n ≤ x ∧ ↑(Erdos841.t n) ≤ Real.exp (20 * √(Real.log ↑n * Real.log (Real.log ↑n)))
