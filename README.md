@@ -6,6 +6,7 @@
 [![SL-001](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl001-audit.yml/badge.svg?branch=main)](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl001-audit.yml)
 [![SL-002](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl002-bridges.yml/badge.svg?branch=main)](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl002-bridges.yml)
 [![SL-003](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl003-audit.yml/badge.svg?branch=main)](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl003-audit.yml)
+[![SL-004 held-out](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl004-eval.yml/badge.svg?branch=main)](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl004-eval.yml)
 ![license](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![maturity](https://img.shields.io/badge/maturity-research%20prototype%2C%20unreviewed-orange)
 
@@ -175,6 +176,28 @@ asked whether the kernel confirms that the cited declaration proves the attached
 
 The rates are in-sample: the harness was fixed on this sample, so a confirmatory run on a fresh sample
 is needed.
+
+## SL-004: theorem transport across independently built definitions
+
+The engine was frozen at `ea1712a`, then evaluated on 60 fresh links. 32 of them reach a transported
+target ([experiments/SL-004/REPORT.md](experiments/SL-004/REPORT.md)).
+
+| Method | Certified (of 32) |
+|---|---|
+| `exact` | 17 |
+| Any standard tactic (`exact`, `convert`, `aesop`, `exact?`) | 19 |
+| Frozen automatic transport engine | 19 (+0) |
+| + AI layer (fixed procedure, ≤ 2 rounds, no human Lean) | **28** |
+
+Every certificate proves exactly the Formal Conjectures statement, uses only the standard axioms, and
+depends on the cited theorem. The added proofs are kernel-checked correspondences between independently
+built definitions:
+- twin definitions and structures;
+- `sSup`/`sInf` against `Finset.sup`/`Nat.find`, via greatest and least elements;
+- uniqueness arguments and logical repackaging.
+
+Verdict: **Level 3 candidate**. The decisive control, an AI agent working without the procedure, has not
+been run yet.
 
 ## Reproducibility
 

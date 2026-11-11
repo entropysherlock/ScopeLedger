@@ -1,0 +1,388 @@
+{
+ "sample": 60,
+ "reach_stage_b": 45,
+ "transported_T": 32,
+ "exact": 17,
+ "any_baseline": 19,
+ "engine_layerA": 19,
+ "engine_beyond_baselines": 0,
+ "layerB_certified": 9,
+ "layerB_new_not_reuse": 8,
+ "total_certified": 28,
+ "rates_over_T": {
+  "exact": {
+   "k": 17,
+   "n": 32,
+   "cp95": [
+    0.347,
+    0.709
+   ]
+  },
+  "any_baseline": {
+   "k": 19,
+   "n": 32,
+   "cp95": [
+    0.406,
+    0.763
+   ]
+  },
+  "engine_layerA": {
+   "k": 19,
+   "n": 32,
+   "cp95": [
+    0.406,
+    0.763
+   ]
+  },
+  "total_certified": {
+   "k": 28,
+   "n": 32,
+   "cp95": [
+    0.71,
+    0.965
+   ]
+  }
+ },
+ "layerB_repos": [
+  "Jostamon/erdos274-hs-abelian",
+  "KitaKen1/erdos-522-strong-law",
+  "KitaKen1/monochromatic-quantum-graphs-lean",
+  "mrricky22/erdos-865-lean",
+  "openai/math",
+  "plby/lean-proofs"
+ ],
+ "undecided": [
+  "H-15 (two rounds failed)"
+ ],
+ "declined": [
+  "H-05",
+  "H-18",
+  "H-54"
+ ],
+ "cases": {
+  "H-00": {
+   "repo": "KitaKen1/oeis-102722-asymptotic",
+   "status": "transport_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-03": {
+   "repo": "anatoliiohorodnyk/lean-fc-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-04": {
+   "repo": "plby/lean-proofs",
+   "status": "target_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-05": {
+   "repo": "gotrevor/lean-gallery",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-06": {
+   "repo": "plby/lean-proofs",
+   "status": "target_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-08": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-10": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false,
+   "layerB": "r2"
+  },
+  "H-11": {
+   "repo": "linrock/math-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-12": {
+   "repo": "Dishah3241/Erdos1007Dim5",
+   "status": "target_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-14": {
+   "repo": "vltanh/lean4-moving-sofa",
+   "status": "target_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-15": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-16": {
+   "repo": "plby/lean-proofs",
+   "status": "target_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-18": {
+   "repo": "Andrewyzzz/erdos354",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-19": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-20": {
+   "repo": "KitaKen1/erdos-522-strong-law",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false,
+   "layerB": "r1"
+  },
+  "H-21": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false,
+   "layerB": "r1"
+  },
+  "H-22": {
+   "repo": "Dishah3241/Erdos1007Dim5",
+   "status": "target_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-23": {
+   "repo": "linrock/math-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-24": {
+   "repo": "KitaKen1/erdos-889-capital-v1-finite",
+   "status": "ok",
+   "exact": false,
+   "baseline": true,
+   "engine": true
+  },
+  "H-25": {
+   "repo": "KitaKen1/klm-7-2-spectral-product-3d",
+   "status": "ok",
+   "exact": false,
+   "baseline": true,
+   "engine": true
+  },
+  "H-26": {
+   "repo": "Marti2203/formal-conjectures",
+   "status": "target_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-27": {
+   "repo": "mrricky22/erdos-865-lean",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false,
+   "layerB": "r1"
+  },
+  "H-29": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-30": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-31": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false,
+   "layerB": "r1"
+  },
+  "H-32": {
+   "repo": "beowulf127/wowii144-lean",
+   "status": "target_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-33": {
+   "repo": "VictorLiwentao/lean-oeis-proofs",
+   "status": "transport_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-35": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-36": {
+   "repo": "AxiomMath/gdm-formal-conjectures",
+   "status": "target_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-37": {
+   "repo": "math-inc/Erdos1196",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-38": {
+   "repo": "gotrevor/lean-gallery",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-39": {
+   "repo": "plby/lean-proofs",
+   "status": "target_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-40": {
+   "repo": "gotrevor/collatz-cryptid",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-41": {
+   "repo": "KitaKen1/monochromatic-quantum-graphs-lean",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false,
+   "layerB": "r1"
+  },
+  "H-43": {
+   "repo": "linrock/math-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-45": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false,
+   "layerB": "r2"
+  },
+  "H-46": {
+   "repo": "Jayyhk/erdos-lean",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-49": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-52": {
+   "repo": "VictorLiwentao/lean-oeis-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-53": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  },
+  "H-54": {
+   "repo": "pitmonticone/Kourovka",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-55": {
+   "repo": "plby/lean-proofs",
+   "status": "build_failed",
+   "exact": false,
+   "baseline": false,
+   "engine": false
+  },
+  "H-56": {
+   "repo": "openai/math",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false,
+   "layerB": "r1 (SL-002 reuse)"
+  },
+  "H-58": {
+   "repo": "Jostamon/erdos274-hs-abelian",
+   "status": "ok",
+   "exact": false,
+   "baseline": false,
+   "engine": false,
+   "layerB": "r1"
+  },
+  "H-59": {
+   "repo": "plby/lean-proofs",
+   "status": "ok",
+   "exact": true,
+   "baseline": true,
+   "engine": true
+  }
+ }
+}
