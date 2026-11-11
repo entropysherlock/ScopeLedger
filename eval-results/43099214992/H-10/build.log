@@ -1,0 +1,9 @@
+✔ [8706/8712] Built ErdosProblems.Erdos534.Erdos534Core (71s)
+✔ [8707/8712] Built ErdosProblems.Erdos534.Erdos534PrimeCounting (32s)
+✔ [8708/8712] Built ErdosProblems.Erdos534.Erdos534FiniteCertificate (406s)
+✔ [8709/8712] Built ErdosProblems.Erdos534.Erdos534PrimeExpansion (4.5s)
+✔ [8710/8712] Built ErdosProblems.Erdos534.Erdos534Sieve (18s)
+✔ [8711/8712] Built ErdosProblems.Erdos534.Erdos534Assembly (6.0s)
+ℹ [8712/8712] Built ErdosProblems.Erdos534 (3.8s)
+info: ErdosProblems/Erdos534.lean:47:0: 'Erdos534.erdos_534' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8712 jobs).

@@ -1,0 +1,15 @@
+X_B3_aesop.lean:7:2: warning: aesop: failed to prove the goal after exhaustive search.
+X_B3_aesop.lean:4:69: error: unsolved goals
+N : ℕ
+h :
+  ∀ (N : ℕ),
+    2 ≤ N →
+      ∃ q,
+        (Nat.Prime q ∧ q ∣ N ∧ ¬N = 0) ∧
+          Erdos534.Admissible N (Erdos534.candidate N q) ∧
+            ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card
+hN : 2 ≤ N
+⊢ ∃ q,
+    (Nat.Prime q ∧ q ∣ N ∧ ¬N = 0) ∧
+      SL003FC.Erdos534.IsAdmissible N (SL003FC.Erdos534.ahlswedeKhachatrian N q) ∧
+        SL003FC.Erdos534.maxCard N = (SL003FC.Erdos534.ahlswedeKhachatrian N q).card
