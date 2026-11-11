@@ -1,0 +1,22 @@
+Bridge.lean:9:6: warning: `Polynomial.finset_sum_coeff` has been deprecated: Use `Polynomial.finsetSum_coeff` instead
+Bridge.lean:12:8: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+Bridge.lean:19:8: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+Bridge.lean:31:26: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+Bridge.lean:32:26: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+Bridge.lean:40:24: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+Bridge.lean:50:6: warning: `Polynomial.eval_finset_sum` has been deprecated: Use `Polynomial.eval_finsetSum` instead
+Bridge.lean:70:2: warning: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+Bridge.lean:96:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
