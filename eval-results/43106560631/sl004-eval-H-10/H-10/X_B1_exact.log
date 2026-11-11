@@ -1,0 +1,14 @@
+X_B1_exact.lean:6:2: error: Type mismatch
+  Erdos534.erdos_534
+has type
+  ∀ (N : ℕ),
+    2 ≤ N →
+      ∃ q ∈ N.primeFactors,
+        Erdos534.Admissible N (Erdos534.candidate N q) ∧
+          ∀ (A : Finset ℕ), Erdos534.Admissible N A → A.card ≤ (Erdos534.candidate N q).card
+but is expected to have type
+  ∀ (N : ℕ),
+    2 ≤ N →
+      ∃ q ∈ N.primeFactors,
+        SL003FC.Erdos534.IsAdmissible N (SL003FC.Erdos534.ahlswedeKhachatrian N q) ∧
+          SL003FC.Erdos534.maxCard N = (SL003FC.Erdos534.ahlswedeKhachatrian N q).card

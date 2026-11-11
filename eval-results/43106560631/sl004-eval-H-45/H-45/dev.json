@@ -1,0 +1,258 @@
+{
+ "case_id": "H-45",
+ "cited": "Erdos49.erdos_49_quantitative",
+ "module": "ErdosProblems.Erdos49",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 160
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 6
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "R2_bridge.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos49.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "X_B1_exact.lean:6:2: error: Type mismatch\n  Erdos49.erdos_49_quantitative\nhas type\n  Erdos49.QuantitativeResolution\nbut is expected to have type\n  ∃ C,\n    0 ≤ C ∧\n      ∀ (N : ℕ),\n        10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting"
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side\n  ∃ C,\n    0 ≤ C ∧\n      ∀ (N : ℕ),\n        10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting\nis not definitionally equal to the right-hand side\n  Erdos49.QuantitativeRe"
+  },
+  "X_B3_aesop.lean": {
+   "ok": false,
+   "seconds": 11,
+   "first_error": "X_B3_aesop.lean:7:2: error: Tactic `aesop` failed, made no progress\nInitial goal:\n  h : Erdos49.QuantitativeResolution\n  ⊢ ∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting"
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 19,
+   "first_error": "X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions."
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  Erdos49.erdos_49_quantitative\nhas type\n  Erdos49.QuantitativeResolution\nbut is expected to have type\n  ∃ C,\n    0 ≤ C ∧\n      ∀ (N : ℕ),\n        10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E2_iff_mp.lean:6:120: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos49.erdos_49_quantitative\nof type\n  ∃ C,\n    0 ≤ C ∧\n      ∀ (N : ℕ),\n        10 ≤ N →\n          ∀ (A : Finset "
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    Erdos49"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    Erdos49"
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    Erdos49"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    Erdos49"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p0.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos49.erdos_49_quantitative\nwhich has propositional type\n  Erdos49.QuantitativeResolution"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos49.erdos_49_quantitative\nwhich has propositional type\n  Erdos49.QuantitativeResolution"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos49.erdos_49_quantitative\nwhich has propositional type\n  Erdos49.QuantitativeResolution"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos49.erdos_49_quantitative\nwhich has propositional type\n  Erdos49.QuantitativeResolution"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos49.erdos_49_quantitative\nwhich has propositional type\n  Erdos49.QuantitativeResolution"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    0 ≤ Erd"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    0 ≤ Erd"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    0 ≤ Erd"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    0 ≤ Erd"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p2.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    0 ≤ Erd"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    0 ≤ Erd"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    0 ≤ Erd"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    0 ≤ Erd"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p3.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    ∀ (N : "
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    ∀ (N : "
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    ∀ (N : "
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ C,\n      0 ≤ C ∧\n        ∀ (N : ℕ),\n          10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting) ↔\n    ∀ (N : "
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p4.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos49.erdos_49_quantitative.2.right\nhas function type\n  ∀ (N : ℕ),\n    10 ≤ N →\n      ∀ (A : Finset ℕ),\n        Erdos49.MonotoneAdmissible N A →\n          ↑A.card ≤ (1 + Erdos49.erdos_49_quantit"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos49.erdos_49_quantitative.2.right\nhas function type\n  ∀ (N : ℕ),\n    10 ≤ N →\n      ∀ (A : Finset ℕ),\n        Erdos49.MonotoneAdmissible N A →\n          ↑A.card ≤ (1 + Erdos49.erdos_49_quantit"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos49.erdos_49_quantitative.2.right\nhas function type\n  ∀ (N : ℕ),\n    10 ≤ N →\n      ∀ (A : Finset ℕ),\n        Erdos49.MonotoneAdmissible N A →\n          ↑A.card ≤ (1 + Erdos49.erdos_49_quantit"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos49.erdos_49_quantitative.2.right\nhas function type\n  ∀ (N : ℕ),\n    10 ≤ N →\n      ∀ (A : Finset ℕ),\n        Erdos49.MonotoneAdmissible N A →\n          ↑A.card ≤ (1 + Erdos49.erdos_49_quantit"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos49.erdos_49_quantitative.2.right\nhas function type\n  ∀ (N : ℕ),\n    10 ≤ N →\n      ∀ (A : Finset ℕ),\n        Erdos49.MonotoneAdmissible N A →\n          ↑A.card ≤ (1 + Erdos49.erdos_49_quantitative."
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos49.erdos_49_quantitative.2.right\nhas function type\n  ∀ (N : ℕ),\n    10 ≤ N →\n      ∀ (A : Finset ℕ),\n        Erdos49.MonotoneAdmissible N A →\n          ↑A.card ≤ (1 + Erdos49.erdos_49_quantit"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos49.erdos_49_quantitative.2.right\nhas function type\n  ∀ (N : ℕ),\n    10 ≤ N →\n      ∀ (A : Finset ℕ),\n        Erdos49.MonotoneAdmissible N A →\n          ↑A.card ≤ (1 + Erdos49.erdos_49_quantit"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos49.erdos_49_quantitative.2.right\nhas function type\n  ∀ (N : ℕ),\n    10 ≤ N →\n      ∀ (A : Finset ℕ),\n        Erdos49.MonotoneAdmissible N A →\n          ↑A.card ≤ (1 + Erdos49.erdos_49_quantit"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos49.erdos_49_quantitative.2.right\nhas function type\n  ∀ (N : ℕ),\n    10 ≤ N →\n      ∀ (A : Finset ℕ),\n        Erdos49.MonotoneAdmissible N A →\n          ↑A.card ≤ (1 + Erdos49.erdos_49_quantit"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos49.erdos_49_quantitative.2.right\nhas function type\n  ∀ (N : ℕ),\n    10 ≤ N →\n      ∀ (A : Finset ℕ),\n        Erdos49.MonotoneAdmissible N A →\n          ↑A.card ≤ (1 + Erdos49.erdos_49_quantitative."
+  }
+ },
+ "bridges": {
+  "SL004.bridgeH45_r2": {
+   "file": "R2_bridge.lean",
+   "kind": "bridgeH45_r",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 440,
+ "status": "ok"
+}

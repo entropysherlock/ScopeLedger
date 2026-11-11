@@ -1,0 +1,11 @@
+E_E3_convert_p3_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  ∑ n ∈ Finset.Icc 1 x✝, SL003FC.Erdos673.G n = Erdos673.GSum x✝
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.8} {β : α → Sort ?u.7} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h : Asymptotics.IsEquivalent Filter.atTop (fun X => Erdos673.GSum X) fun X => ↑X * Real.log ↑X
+x✝ : ℕ
+⊢ ∑ n ∈ Finset.Icc 1 x✝, SL003FC.Erdos673.G n = Erdos673.GSum x✝
