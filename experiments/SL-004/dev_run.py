@@ -110,6 +110,24 @@ def main():
                             "proves_target": guard if ".bridge" in thm else None, "axioms": pax,
                             "standard_axioms": pax is not None and all(a in stage_b.ALLOWED for a in pax),
                             "leanchecker": rep, "uses_cited": (um.group(1) == "true") if um else None}
+    # Automatic exploration (SL004_EXPLORE=1): print the target, the cited theorem and every identifier
+    # in either statement, on both sides of the SL003FC namespace. Never a candidate; evidence for the
+    # AI layer, generated identically for every case.
+    if os.environ.get("SL004_EXPLORE") == "1":
+        tgt_txt = (work / "SL003Target.lean").read_text()
+        ids = sorted(set(re.findall(r"[A-Za-z_][\w']*(?:\.[A-Za-z_][\w']*)*",
+                                     (sa.get("cited_statement") or "") + "\n" + (sa.get("target_statement_raw") or ""))))
+        ns = tp[:-len(".SL003.targetProp")]
+        lines = ["import SL003Target", "", "set_option pp.numericTypes true", f"#print {tp}", f"#check @{sa['cited_qualified']}"]
+        cited_ns = sa["cited_qualified"].rsplit(".", 1)[0] if "." in sa["cited_qualified"] else ""
+        for i in ids:
+            if len(i) < 2 or i in ("fun", "by", "in", "at", "with", "Type", "Prop", "Set", "Finset"):
+                continue
+            for q in {f"{ns}.{i}", f"{cited_ns}.{i}" if cited_ns else i, i}:
+                lines.append(f"#print {q}")
+        (work / "Z_explore.lean").write_text("\n".join(lines) + "\n")
+        _, xlog, _ = stage_b.run([LEAN, "Z_explore.lean"], work, 900, env)
+        (out / "Z_explore.log").write_text(xlog)
     # Automatic candidate sets from engine.py, compiled after the hand/AI candidates:
     # SL004_BASELINES=1 -> baseline tactics; SL004_ENGINE=1 -> the engine portfolio.
     sys.path.insert(0, str(HERE))

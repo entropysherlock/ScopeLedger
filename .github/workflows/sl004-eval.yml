@@ -111,7 +111,7 @@ jobs:
           set +e
           mkdir -p "$GITHUB_WORKSPACE/experiments/SL-004/heldout_ai/${{ matrix.case }}"
           cd "$RUNNER_TEMP/target/${{ matrix.root }}"
-          SL004_BASELINES=1 SL004_ENGINE=1 python "$GITHUB_WORKSPACE/experiments/SL-004/dev_run.py" \
+          SL004_EXPLORE=1 SL004_BASELINES=1 SL004_ENGINE=1 python "$GITHUB_WORKSPACE/experiments/SL-004/dev_run.py" \
             "$RUNNER_TEMP/stage_a/${{ matrix.case }}.json" . "$RUNNER_TEMP/fc" \
             "$GITHUB_WORKSPACE/experiments/SL-004/heldout_ai/${{ matrix.case }}" "$RUNNER_TEMP/out/${{ matrix.case }}"
           cp "$RUNNER_TEMP/stage_a/${{ matrix.case }}.json" "$RUNNER_TEMP/out/${{ matrix.case }}/stage_a.json"
