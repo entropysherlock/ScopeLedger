@@ -1,0 +1,56 @@
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side
+  ∀ {G : Type u_1} [inst : Fintype G] [inst_1 : CommGroup G],
+    1 < Fintype.card G →
+      ∀ {ι : Type u_2} [inst : Fintype ι] (P : SL003FC.Erdos274.Group.ExactCovering G ι),
+        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+is not definitionally equal to the right-hand side
+  1 < Fintype.card ?convert_1 →
+    ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?convert_1 ι),
+      1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+
+case a
+h :
+  ∀ {G : Type ?u.13} [inst : Fintype G] [inst_1 : CommGroup G],
+    1 < Fintype.card G →
+      ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering G ι),
+        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+⊢ (∀ {G : Type u_1} [inst : Fintype G] [inst_1 : CommGroup G],
+      1 < Fintype.card G →
+        ∀ {ι : Type u_2} [inst : Fintype ι] (P : SL003FC.Erdos274.Group.ExactCovering G ι),
+          1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)) ↔
+    1 < Fintype.card ?convert_1 →
+      ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering ?convert_1 ι),
+        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: Expected the goal to be a binary relation
+
+Hint: Reflexivity tactics can only be used on goals of the form `x ~ x` or `R x x`
+
+case convert_1
+h :
+  ∀ {G : Type ?u.13} [inst : Fintype G] [inst_1 : CommGroup G],
+    1 < Fintype.card G →
+      ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering G ι),
+        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+⊢ Type ?u.13
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: Expected the goal to be a binary relation
+
+Hint: Reflexivity tactics can only be used on goals of the form `x ~ x` or `R x x`
+
+case convert_2
+h :
+  ∀ {G : Type ?u.13} [inst : Fintype G] [inst_1 : CommGroup G],
+    1 < Fintype.card G →
+      ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering G ι),
+        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+⊢ Fintype sorry
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: Expected the goal to be a binary relation
+
+Hint: Reflexivity tactics can only be used on goals of the form `x ~ x` or `R x x`
+
+case convert_3
+h :
+  ∀ {G : Type ?u.13} [inst : Fintype G] [inst_1 : CommGroup G],
+    1 < Fintype.card G →
+      ∀ {ι : Type ?u.12} [inst : Fintype ι] (P : Group.ExactCovering G ι),
+        1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
+⊢ CommGroup sorry

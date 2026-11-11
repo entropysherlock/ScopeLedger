@@ -1,0 +1,6 @@
+SL003Target.lean:30:5: warning: unused variable `hG`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+SL003Target.lean:31:5: warning: unused variable `hι`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

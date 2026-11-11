@@ -1,0 +1,6 @@
+E_E2_iff_mp.lean:6:132: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos274.erdos_274.variants.abelian
+of type
+  1 < Fintype.card ?m.3 →
+    ∀ {ι : Type ?u.428} [inst : Fintype ι] (P : Group.ExactCovering ?m.3 ι),
+      1 < Fintype.card ι → ∃ i j, i ≠ j ∧ Cardinal.mk ↥(P.parts i) = Cardinal.mk ↥(P.parts j)
