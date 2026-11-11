@@ -1,0 +1,34 @@
+{
+ "case_id": "H-41",
+ "cited": "QuantumLean.FormalConjecturesWrappers.eqSystem8_no_solution_d3_int",
+ "module": "QuantumLean.FormalConjecturesWrappers",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 84
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 83
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  },
+  "Bridge.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 4,
+   "first_error": "Bridge.lean:45:6: error: `simp` made no progress"
+  }
+ },
+ "target_prop": "SL003FC.MonochromaticQuantumGraph.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 179,
+ "status": "ok"
+}

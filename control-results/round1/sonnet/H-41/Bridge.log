@@ -1,0 +1,7 @@
+Bridge.lean:45:6: error: `simp` made no progress
+Bridge.lean:60:9: warning: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Bridge.lean:80:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
