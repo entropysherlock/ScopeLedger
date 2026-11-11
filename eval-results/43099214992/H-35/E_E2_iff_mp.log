@@ -1,0 +1,6 @@
+E_E2_iff_mp.lean:6:110: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  erdos501_closed_infinite
+of type
+  ∀ (A : ℝ → Set ℝ),
+    (∀ (x : ℝ), IsClosed (A x)) →
+      (∀ (x : ℝ), MeasureTheory.volume (A x) < 1) → ∃ X, X.Infinite ∧ X.Pairwise fun x y => x ∉ A y

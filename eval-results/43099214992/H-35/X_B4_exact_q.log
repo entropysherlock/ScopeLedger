@@ -1,0 +1,2 @@
+Try this:
+  [apply] exact fun A a a_1 => Erdos501.erdos501_pairwise A a a_1

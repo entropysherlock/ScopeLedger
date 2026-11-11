@@ -1,0 +1,20 @@
+def SL003FC.Erdos501.SL003.targetProp : Prop :=
+∀ (A : ℝ → Set ℝ),
+  (∀ (x : ℝ), IsClosed (A x)) →
+    (∀ (x : ℝ), MeasureTheory.volume (A x) < (1 : ENNReal)) → ∃ X, X.Infinite ∧ X.Pairwise fun x y => x ∉ A y
+erdos501_closed_infinite : ∀ (A : ℝ → Set ℝ),
+  (∀ (x : ℝ), IsClosed (A x)) →
+    (∀ (x : ℝ), MeasureTheory.volume (A x) < (1 : ENNReal)) → ∃ X, X.Infinite ∧ X.Pairwise fun x y => x ∉ A y
+class IsClosed.{u} {X : Type u} [TopologicalSpace X] (s : Set X) : Prop
+number of parameters: 3
+fields:
+  IsClosed.isOpen_compl : IsOpen sᶜ
+constructor:
+  IsClosed.mk.{u} {X : Type u} [TopologicalSpace X] {s : Set X} (isOpen_compl : IsOpen sᶜ) : IsClosed s
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos501.IsClosed`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos501.X.Infinite`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `X.Infinite`
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos501.X.Pairwise`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `X.Pairwise`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos501.volume`
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `volume`

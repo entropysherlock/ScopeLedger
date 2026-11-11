@@ -1,0 +1,185 @@
+✔ [2515/2524] Built ErdosProblems.Erdos501.ZFCCore.IcoPartition (3.7s)
+✔ [2516/2524] Built ErdosProblems.Erdos501.Hechler (4.6s)
+✔ [2522/2533] Built ErdosProblems.Erdos501.Flypitch4.BvTauto (689ms)
+✔ [3038/3078] Built ErdosProblems.Erdos501.ZFCCore.Selection (6.6s)
+✔ [3039/3102] Built ErdosProblems.Erdos501.Closed (7.6s)
+✔ [3045/3104] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.DeltaSystem (4.1s)
+✔ [3047/3109] Built ErdosProblems.Erdos501.FOL.Statement (5.0s)
+✔ [3048/3109] Built ErdosProblems.Erdos501.Flypitch4.ToMathlib (9.5s)
+✔ [3049/3109] Built ErdosProblems.Erdos501.ZFCCore.Certificate (7.0s)
+✔ [3050/3109] Built ErdosProblems.Erdos501.Flypitch4.Colimit (4.2s)
+✔ [3051/3109] Built ErdosProblems.Erdos501.Flypitch4.SetTheoryExt (5.1s)
+✔ [3052/3109] Built ErdosProblems.Erdos501.Flypitch4.MeasureAlgebra (6.3s)
+✔ [3053/3109] Built ErdosProblems.Erdos501.Flypitch4.PSetOrdinal (6.2s)
+✔ [3054/3109] Built ErdosProblems.Erdos501.ZFCCore (3.8s)
+✔ [3055/3109] Built ErdosProblems.Erdos501.Flypitch4.RegularOpenAlgebra (4.5s)
+✔ [3056/3109] Built ErdosProblems.Erdos501.Flypitch4.CantorSpace (6.6s)
+✔ [3057/3109] Built ErdosProblems.Erdos501.Flypitch4.Collapse (7.7s)
+✔ [3058/3109] Built ErdosProblems.Erdos501.Flypitch4.Bvm (16s)
+✔ [3059/3109] Built ErdosProblems.Erdos501.Flypitch4.BvmExtras (20s)
+✔ [3060/3109] Built ErdosProblems.Erdos501.Flypitch4.Forcing (6.2s)
+✔ [3061/3109] Built ErdosProblems.Erdos501.Flypitch4.BvmExtras2 (7.5s)
+✔ [3062/3109] Built ErdosProblems.Erdos501.Flypitch4.RandomAlgebra (4.4s)
+✔ [3063/3109] Built ErdosProblems.Erdos501.Flypitch4.Fol (53s)
+✔ [3064/3109] Built ErdosProblems.Erdos501.Flypitch4.AlephOne (7.0s)
+✔ [3065/3109] Built ErdosProblems.Erdos501.Flypitch4.Compactness (2.9s)
+✔ [3066/3109] Built ErdosProblems.Erdos501.Flypitch4.Completion (5.2s)
+✔ [3067/3109] Built ErdosProblems.Erdos501.Flypitch4.ForcingCH (8.6s)
+✔ [3068/3109] Built ErdosProblems.Erdos501.Flypitch4.Bfol (10s)
+✔ [3069/3109] Built ErdosProblems.Erdos501.Flypitch4.LanguageExtension (12s)
+✔ [3070/3109] Built ErdosProblems.Erdos501.Flypitch4.Henkin (4.9s)
+✔ [3071/3109] Built ErdosProblems.Erdos501.Flypitch4.Completeness (1.5s)
+✔ [3072/3109] Built ErdosProblems.Erdos501.Flypitch4.Zfc (11s)
+✔ [3073/3109] Built ErdosProblems.Erdos501.Flypitch4.PrintFormula (2.6s)
+✔ [3074/3109] Built ErdosProblems.Erdos501.FOL.FolLemmas (2.8s)
+✔ [3075/3109] Built ErdosProblems.Erdos501.FOL.Translate (4.7s)
+✔ [3076/3109] Built ErdosProblems.Erdos501.Flypitch4.ForcingRandom (4.0s)
+✔ [3077/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.Sentence (3.3s)
+ℹ [3078/3109] Built ErdosProblems.Erdos501.Flypitch4.Summary (3.2s)
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:31:0: structure Fol.Language.{u} : Type (u + 1)
+number of parameters: 0
+fields:
+  Fol.Language.functions : ℕ → Type u
+  Fol.Language.relations : ℕ → Type u
+constructor:
+  Fol.Language.mk.{u} (functions relations : ℕ → Type u) : Language
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:33:0: inductive Fol.preterm.{u} : Language → ℕ → Type u
+number of parameters: 1
+constructors:
+Fol.preterm.var : {L : Language} → ℕ → preterm L 0
+Fol.preterm.func : {L : Language} → {l : ℕ} → L.functions l → preterm L l
+Fol.preterm.app : {L : Language} → {l : ℕ} → preterm L (l + 1) → preterm L 0 → preterm L l
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:35:0: inductive Fol.preformula.{u} : {L : Language} → ℕ → Type u
+number of parameters: 1
+constructors:
+Fol.preformula.falsum : {L : Language} → preformula 0
+Fol.preformula.equal : {L : Language} → term L → term L → preformula 0
+Fol.preformula.rel : {L : Language} → {l : ℕ} → L.relations l → preformula l
+Fol.preformula.apprel : {L : Language} → {l : ℕ} → preformula (l + 1) → term L → preformula l
+Fol.preformula.imp : {L : Language} → preformula 0 → preformula 0 → preformula 0
+Fol.preformula.all : {L : Language} → preformula 0 → preformula 0
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:38:0: @[reducible] def Fol.term.{u} : Language → Type u :=
+fun L ↦ preterm L 0
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:41:0: @[reducible] def Fol.formula.{u} : Language → Type u :=
+fun L ↦ preformula 0
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:44:0: @[reducible] def Fol.sentence.{u} : Language → Type u :=
+fun L ↦ presentence L 0
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:47:0: theorem Fol.formula_soundness.{u} : ∀ {L : Language} {Γ : Set (formula L)} {A : formula L} (H : Γ ⊢ A), Γ ⊨ A :=
+fun {L} {Γ} {A} H S ↦
+  prf.rec (motive := fun {Γ} {A} H ↦
+    ∀ (v : ℕ → S.carrier), (∀ f' ∈ Γ, realize_formula v f' DVec.nil) → realize_formula v A DVec.nil)
+    (fun {Γ} {A} h v hΓ ↦ hΓ A h)
+    (fun {Γ} {A B} h ih v hΓ ha ↦
+      ih v fun f hf ↦
+        Or.casesOn hf
+          (fun h_1 ↦
+            Eq.ndrec (motive := fun {A} ↦
+              ∀ (h : insert A Γ ⊢ B),
+                (∀ (v : ℕ → S.carrier),
+                    (∀ f' ∈ insert A Γ, realize_formula v f' DVec.nil) → realize_formula v B DVec.nil) →
+                  realize_formula v A DVec.nil → realize_formula v f DVec.nil)
+              (fun h ih ha ↦ ha) h_1 h ih ha)
+          fun hf ↦ hΓ f hf)
+    (fun {Γ} A {B} h₁ h₂ ih₁ ih₂ v hΓ ↦ ih₁ v hΓ (ih₂ v hΓ))
+    (fun {Γ} {A} h ih v hΓ ↦
+      Classical.byContradiction fun ha ↦ ih v fun f hf ↦ Or.casesOn hf (fun h ↦ Eq.symm h ▸ ha) fun hf ↦ hΓ f hf)
+    (fun {Γ} {A} h ih v hΓ x ↦
+      ih (subst_realize v x 0) fun f hf ↦
+        Exists.casesOn hf fun f' h ↦
+          And.casesOn h fun hf' right ↦
+            right ▸ Eq.mpr (id (congrArg (fun _a ↦ _a) (realize_formula_subst_lift v x 0 f' DVec.nil))) (hΓ f' hf'))
+    (fun {Γ} A t h ih v hΓ ↦
+      Eq.mpr (id (congrArg (fun _a ↦ _a) (Eq.symm (propext (realize_formula_subst0 v A t DVec.nil)))))
+        (ih v hΓ (realize_term v t DVec.nil)))
+    (fun Γ t v a ↦ of_eq_true (eq_self (realize_term v t DVec.nil)))
+    (fun {Γ} s t f h₁ h₂ ih₁ ih₂ v hΓ ↦
+      have h' := ih₁ v hΓ;
+      Eq.mpr (id (congrArg (fun _a ↦ _a) (Eq.symm (propext (realize_formula_subst0 v f t DVec.nil)))))
+        (Eq.mpr (id (congrArg (fun _a ↦ realize_formula (subst_realize v _a 0) f DVec.nil) (Eq.symm h')))
+          (Eq.mpr (id (congrArg (fun _a ↦ _a) (propext (realize_formula_subst0 v f s DVec.nil)))) (ih₂ v hΓ))))
+    H
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:50:0: inductive Fol.prf.{u} : {L : Language} → Set (formula L) → formula L → Type u
+number of parameters: 1
+constructors:
+Fol.prf.axm : {L : Language} → {Γ : Set (formula L)} → {A : formula L} → A ∈ Γ → Γ ⊢ A
+Fol.prf.impI : {L : Language} → {Γ : Set (formula L)} → {A B : formula L} → insert A Γ ⊢ B → Γ ⊢ A ⟹ B
+Fol.prf.impE : {L : Language} →
+  {Γ : Set (formula L)} → (A : preformula 0) → {B : preformula 0} → Γ ⊢ A ⟹ B → Γ ⊢ A → Γ ⊢ B
+Fol.prf.falsumE : {L : Language} → {Γ : Set (formula L)} → {A : formula L} → insert (∼A) Γ ⊢ ⊥' → Γ ⊢ A
+Fol.prf.allI : {L : Language} → {Γ : Set (preformula 0)} → {A : formula L} → lift_formula1 '' Γ ⊢ A → Γ ⊢ ∀'A
+Fol.prf.allE₂ : {L : Language} → {Γ : Set (formula L)} → (A : preformula 0) → (t : term L) → Γ ⊢ ∀'A → Γ ⊢ A [t // 0]f
+Fol.prf.ref : {L : Language} → (Γ : Set (formula L)) → (t : term L) → Γ ⊢ t ≃ t
+Fol.prf.subst₂ : {L : Language} →
+  {Γ : Set (formula L)} → (s t : term L) → (f : formula L) → Γ ⊢ s ≃ t → Γ ⊢ f [s // 0]f → Γ ⊢ f [t // 0]f
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:53:0: def Fol.provable.{u} : {L : Language} → Set (formula L) → formula L → Prop :=
+fun {L} T f ↦ Nonempty (T ⊢ f)
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:56:0: def Fol.is_consistent.{u} : {L : Language} → Theory L → Prop :=
+fun {L} T ↦ ¬T ⊢' ⊥'
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:60:0: inductive PSet.{u} : Type (u + 1)
+number of parameters: 0
+constructors:
+PSet.mk : (α : Type u) → (α → PSet.{u}) → PSet.{u}
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:63:0: inductive bSet.{u} : (𝔹 : Type u) → [CompleteBooleanAlgebra 𝔹] → Type (u + 1)
+number of parameters: 2
+constructors:
+bSet.mk : {𝔹 : Type u} → [inst : CompleteBooleanAlgebra 𝔹] → (α : Type u) → (α → bSet 𝔹) → (α → 𝔹) → bSet 𝔹
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:66:0: def L_ZFC : Language :=
+{ functions := ZFC_func, relations := ZFC_rel }
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:69:0: def ZFC : SentTheory L_ZFC :=
+{axiom_of_emptyset, axiom_of_ordered_pairs, axiom_of_extensionality, axiom_of_union, axiom_of_powerset,
+    axiom_of_infinity, axiom_of_regularity, zorns_lemma} ∪
+  ⋃ n, axiom_of_collection '' Set.univ
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:72:0: (∀x1,¬ x1 ∈ ∅)
+
+(∀x1,(∀x2,(∀x3,(∀x4,(((pair(x1)(x2) = pair(x3)(x4)) ⟹ ((x1 = x3) ∧ (x2 = x4))) ∧ (((x1 = x3) ⟹ ¬ (x2 = x4)) ∨ (pair(x1)(x2) = pair(x3)(x4))))))))
+
+(∀x1,(∀x2,((∀x3,((x3 ∈ x1 ⟹ x3 ∈ x2) ∧ (x3 ∈ x2 ⟹ x3 ∈ x1))) ⟹ (x1 = x2))))
+
+(∀x1,(∀x2,((x2 ∈ ⋃(x1) ⟹ ∃x3,(x3 ∈ x1 ∧ x2 ∈ x3)) ∧ ((∀x3,((x3 ∈ x1 ⟹ ¬ x2 ∈ x3) ∨ ⊥)) ∨ x2 ∈ ⋃(x1)))))
+
+(∀x1,(∀x2,((x2 ∈ 𝒫(x1) ⟹ (∀x3,(x3 ∈ x2 ⟹ x3 ∈ x1))) ∧ ((∀x3,(x3 ∈ x2 ⟹ x3 ∈ x1)) ⟹ x2 ∈ 𝒫(x1)))))
+
+(((∅ ∈ ω ∧ (∀x1,(x1 ∈ ω ⟹ ∃x2,(x2 ∈ ω ∧ x1 ∈ x2)))) ∧ ∃x1,((((∀x2,(x2 ∈ x1 ⟹ (∀x3,(x3 ∈ x1 ⟹ (((x2 = x3) ∨ x2 ∈ x3) ∨ x3 ∈ x2))))) ∧ (∀x2,((∀x3,(x3 ∈ x2 ⟹ x3 ∈ x1)) ⟹ ((x2 = ∅) ∨ ∃x3,(x3 ∈ x2 ∧ (∀x4,(x4 ∈ x2 ⟹ ¬ x4 ∈ x3))))))) ∧ (∀x2,(x2 ∈ x1 ⟹ (∀x3,(x3 ∈ x2 ⟹ x3 ∈ x1))))) ∧ (ω = x1))) ∧ (∀x1,((((∀x2,(x2 ∈ x1 ⟹ (∀x3,(x3 ∈ x1 ⟹ (((x2 = x3) ∨ x2 ∈ x3) ∨ x3 ∈ x2))))) ⟹ ¬ (∀x2,((∀x3,(x3 ∈ x2 ⟹ x3 ∈ x1)) ⟹ ((x2 = ∅) ∨ ∃x3,(x3 ∈ x2 ∧ (∀x4,(x4 ∈ x2 ⟹ ¬ x4 ∈ x3))))))) ∨ ¬ (∀x2,(x2 ∈ x1 ⟹ (∀x3,(x3 ∈ x2 ⟹ x3 ∈ x1))))) ∨ ((∅ ∈ x1 ⟹ ¬ (∀x2,(x2 ∈ x1 ⟹ ∃x3,(x3 ∈ x1 ∧ x2 ∈ x3)))) ∨ (∀x2,(x2 ∈ ω ⟹ x2 ∈ x1))))))
+
+(∀x1,((x1 = ∅) ∨ ∃x2,(x2 ∈ x1 ∧ (∀x3,(x3 ∈ x1 ⟹ ¬ x3 ∈ x2)))))
+
+(∀x1,((x1 = ∅) ∨ ((∀x2,(((∀x3,(x3 ∈ x2 ⟹ x3 ∈ x1)) ⟹ ¬ (∀x3,(∀x4,((x3 ∈ x2 ⟹ ¬ x4 ∈ x2) ∨ ((∀x5,(x5 ∈ x3 ⟹ x5 ∈ x4)) ∨ (∀x5,(x5 ∈ x4 ⟹ x5 ∈ x3))))))) ∨ ⋃(x2) ∈ x1)) ⟹ ∃x2,(x2 ∈ x1 ∧ (∀x3,(x3 ∈ x1 ⟹ ((∀x4,(x4 ∈ x2 ⟹ x4 ∈ x3)) ⟹ (x2 = x3))))))))
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:86:0: def CH_f : sentence L_ZFC :=
+(bd_imp Ord_f (substmax_bounded_formula at_most_f ω' ⊔ᵇ subst0_bounded_formula at_most_f (P' ω'))).bd_all
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:89:0: def 𝔹_cohen : Type :=
+Flypitch.RegularOpens (Set (PSet.pSet_aleph2.Type × ℕ))
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:92:0: def collapse_algebra.𝔹_collapse.{u} : Type u :=
+Flypitch.CollapseAlgebra pSet_aleph1.Type PSet.omega.powerset.Type
+info: ErdosProblems/Erdos501/Flypitch4/Summary.lean:138:0: 'independence_of_CH' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3079/3109] Built ErdosProblems.Erdos501.FOL.Collection (5.6s)
+✔ [3080/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.ColRandom (4.5s)
+✔ [3081/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.RandomForcing (6.7s)
+✔ [3082/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.StdSemantics (8.1s)
+✔ [3083/3109] Built ErdosProblems.Erdos501.FOL.Axioms (5.4s)
+✔ [3084/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.HomogeneousReading (6.6s)
+✔ [3085/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.BorelNames (7.9s)
+✔ [3086/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.ZFSetCOF (6.5s)
+✔ [3087/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.Semantics (13s)
+✔ [3088/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.RealsInZFSet (6.5s)
+✔ [3089/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.OmegaClosed (3.1s)
+✔ [3090/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.ZFCCore (6.7s)
+✔ [3091/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.Bridge (5.9s)
+✔ [3092/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.InternalField (11s)
+✔ [3093/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.InternalReals (12s)
+✔ [3094/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.BinaryExpansion (8.6s)
+✔ [3095/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.CheckReals (12s)
+✔ [3096/3109] Built ErdosProblems.Erdos501.FOL.Sentence (6.5s)
+✔ [3097/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.RealReading (8.2s)
+✔ [3098/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.Envelopes (4.2s)
+✔ [3099/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.InternalIso (7.2s)
+✔ [3100/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.Selection (3.9s)
+✔ [3101/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.Recursion (3.8s)
+✔ [3102/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.Assembly (4.0s)
+✔ [3103/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.Transfer (5.1s)
+✔ [3104/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.Main (2.3s)
+✔ [3105/3109] Built ErdosProblems.Erdos501.Flypitch4.Erdos501.Hechler (5.1s)
+✔ [3106/3109] Built ErdosProblems.Erdos501.Independence (2.3s)
+✔ [3107/3109] Built ErdosProblems.Erdos501.FOL.Independence (2.3s)
+✔ [3108/3109] Built ErdosProblems.Erdos501.Development (2.1s)
+✔ [3109/3109] Built ErdosProblems.Erdos501 (2.3s)
+Build completed successfully (3109 jobs).
