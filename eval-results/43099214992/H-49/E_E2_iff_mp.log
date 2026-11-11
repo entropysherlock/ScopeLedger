@@ -1,0 +1,7 @@
+E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos780.erdos_780
+of type
+  1 ≤ ?m.5 →
+    1 ≤ ?m.6 →
+      ?m.4 * ?m.5 + (?m.6 - 1) * (?m.4 - 1) ≤ ?m.3 →
+        ∀ (c : Erdos780.Edge ?m.3 ?m.5 → Fin ?m.6), Erdos780.HasMonoMatching c ?m.4

@@ -1,0 +1,62 @@
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side
+  ∀ (n k r t : ℕ),
+    1 ≤ r →
+      1 ≤ t →
+        k * r + (t - 1) * (k - 1) ≤ n →
+          ∀ (c : { e // e.card = r } → Fin t),
+            ∃ i e, (∀ (j : Fin k), c (e j) = i) ∧ Pairwise fun a b => Disjoint ↑(e a) ↑(e b)
+is not definitionally equal to the right-hand side
+  1 ≤ ?convert_3 →
+    1 ≤ ?convert_4 →
+      ?convert_2 * ?convert_3 + (?convert_4 - 1) * (?convert_2 - 1) ≤ ?convert_1 →
+        ∀ (c : Erdos780.Edge ?convert_1 ?convert_3 → Fin ?convert_4), Erdos780.HasMonoMatching c ?convert_2
+
+h :
+  ∀ {n k r t : ℕ},
+    1 ≤ r → 1 ≤ t → k * r + (t - 1) * (k - 1) ≤ n → ∀ (c : Erdos780.Edge n r → Fin t), Erdos780.HasMonoMatching c k
+⊢ (∀ (n k r t : ℕ),
+      1 ≤ r →
+        1 ≤ t →
+          k * r + (t - 1) * (k - 1) ≤ n →
+            ∀ (c : { e // e.card = r } → Fin t),
+              ∃ i e, (∀ (j : Fin k), c (e j) = i) ∧ Pairwise fun a b => Disjoint ↑(e a) ↑(e b)) ↔
+    1 ≤ ?convert_3 →
+      1 ≤ ?convert_4 →
+        ?convert_2 * ?convert_3 + (?convert_4 - 1) * (?convert_2 - 1) ≤ ?convert_1 →
+          ∀ (c : Erdos780.Edge ?convert_1 ?convert_3 → Fin ?convert_4), Erdos780.HasMonoMatching c ?convert_2
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: Expected the goal to be a binary relation
+
+Hint: Reflexivity tactics can only be used on goals of the form `x ~ x` or `R x x`
+
+case convert_1
+h :
+  ∀ {n k r t : ℕ},
+    1 ≤ r → 1 ≤ t → k * r + (t - 1) * (k - 1) ≤ n → ∀ (c : Erdos780.Edge n r → Fin t), Erdos780.HasMonoMatching c k
+⊢ ℕ
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: Expected the goal to be a binary relation
+
+Hint: Reflexivity tactics can only be used on goals of the form `x ~ x` or `R x x`
+
+case convert_2
+h :
+  ∀ {n k r t : ℕ},
+    1 ≤ r → 1 ≤ t → k * r + (t - 1) * (k - 1) ≤ n → ∀ (c : Erdos780.Edge n r → Fin t), Erdos780.HasMonoMatching c k
+⊢ ℕ
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: Expected the goal to be a binary relation
+
+Hint: Reflexivity tactics can only be used on goals of the form `x ~ x` or `R x x`
+
+case convert_3
+h :
+  ∀ {n k r t : ℕ},
+    1 ≤ r → 1 ≤ t → k * r + (t - 1) * (k - 1) ≤ n → ∀ (c : Erdos780.Edge n r → Fin t), Erdos780.HasMonoMatching c k
+⊢ ℕ
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: Expected the goal to be a binary relation
+
+Hint: Reflexivity tactics can only be used on goals of the form `x ~ x` or `R x x`
+
+case convert_4
+h :
+  ∀ {n k r t : ℕ},
+    1 ≤ r → 1 ≤ t → k * r + (t - 1) * (k - 1) ≤ n → ∀ (c : Erdos780.Edge n r → Fin t), Erdos780.HasMonoMatching c k
+⊢ ℕ

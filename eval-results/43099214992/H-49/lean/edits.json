@@ -1,0 +1,10 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_780 (n k r t : ℕ) (hr : 1 ≤ r) (ht : 1 ≤ t)",
+ "removed declaration: theorem erdos_780.variants.sharp (k r t : ℕ) (hk : 1 ≤ k) (hr : 1 ≤ r)",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

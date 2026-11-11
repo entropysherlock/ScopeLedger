@@ -1,0 +1,48 @@
+def SL003FC.Erdos780.SL003.targetProp : Prop :=
+∀ (n k r t : ℕ),
+  (1 : ℕ) ≤ r →
+    (1 : ℕ) ≤ t →
+      k * r + (t - (1 : ℕ)) * (k - (1 : ℕ)) ≤ n →
+        ∀ (c : { e // e.card = r } → Fin t),
+          ∃ i e, (∀ (j : Fin k), c (e j) = i) ∧ Pairwise fun a b => Disjoint ↑(e a) ↑(e b)
+@Erdos780.erdos_780 : ∀ {n k r t : ℕ},
+  (1 : ℕ) ≤ r →
+    (1 : ℕ) ≤ t →
+      k * r + (t - (1 : ℕ)) * (k - (1 : ℕ)) ≤ n → ∀ (c : Erdos780.Edge n r → Fin t), Erdos780.HasMonoMatching c k
+def Disjoint.{u_1} : {α : Type u_1} → [inst : PartialOrder α] → [OrderBot α] → α → α → Prop :=
+fun {α} [PartialOrder α] [OrderBot α] a b => ∀ ⦃x : α⦄, x ≤ a → x ≤ b → x ≤ ⊥
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos780.Disjoint`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `Erdos780.Disjoint`
+@[reducible] def Erdos780.Edge : ℕ → ℕ → Type :=
+fun n r => { s // s.card = r }
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `Edge`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos780.Edge`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos780.Fin`
+structure Fin (n : ℕ) : Type
+number of parameters: 1
+fields:
+  Fin.val : ℕ
+  Fin.isLt : ↑self < n
+constructor:
+  Fin.mk {n : ℕ} (val : ℕ) (isLt : val < n) : Fin n
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `Erdos780.Fin`
+def Erdos780.HasMonoMatching : {n r t : ℕ} → (Erdos780.Edge n r → Fin t) → ℕ → Prop :=
+fun {n r t} c k => ∃ color e, (∀ (i : Fin k), c (e i) = color) ∧ ∀ (i j : Fin k), i ≠ j → Disjoint ↑(e i) ↑(e j)
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `HasMonoMatching`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos780.HasMonoMatching`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `Erdos780.Pairwise`
+def Pairwise.{u_1} : {α : Type u_1} → (α → α → Prop) → Prop :=
+fun {α} r => ∀ ⦃i j : α⦄, i ≠ j → r i j
+Z_explore.lean:20:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos780.Pairwise`
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `Erdos780.e.card`
+Z_explore.lean:22:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos780.e.card`
+Z_explore.lean:23:7: error(lean.unknownIdentifier): Unknown constant `e.card`
+Z_explore.lean:24:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos780.hn`
+Z_explore.lean:25:7: error(lean.unknownIdentifier): Unknown constant `hn`
+Z_explore.lean:26:7: error(lean.unknownIdentifier): Unknown constant `Erdos780.hn`
+Z_explore.lean:27:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos780.hr`
+Z_explore.lean:28:7: error(lean.unknownIdentifier): Unknown constant `Erdos780.hr`
+Z_explore.lean:29:7: error(lean.unknownIdentifier): Unknown constant `hr`
+Z_explore.lean:30:7: error(lean.unknownIdentifier): Unknown constant `Erdos780.ht`
+Z_explore.lean:31:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos780.ht`
+Z_explore.lean:32:7: error(lean.unknownIdentifier): Unknown constant `ht`

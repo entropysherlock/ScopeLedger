@@ -1,0 +1,264 @@
+{
+ "case_id": "H-49",
+ "cited": "Erdos780.erdos_780",
+ "module": "ErdosProblems.Erdos780",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 113
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 117
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos780.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": true,
+   "seconds": 5,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side\n  ∀ (n k r t : ℕ),\n    1 ≤ r →\n      1 ≤ t →\n        k * r + (t - 1) * (k - 1) ≤ n →\n          ∀ (c : { e // e.card = r } → Fin t),\n            ∃ i e, (∀ (j : Fin k), c (e j) = i) ∧ Pairwise fun a b => Disjoint ↑(e a) ↑(e b)\n"
+  },
+  "X_B3_aesop.lean": {
+   "ok": true,
+   "seconds": 7,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 18,
+   "first_error": "X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions."
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": true,
+   "seconds": 5,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos780.erdos_780\nof type\n  1 ≤ ?m.5 →\n    1 ≤ ?m.6 →\n      ?m.4 * ?m.5 + (?m.6 - 1) * (?m.4 - 1) ≤ ?m.3 →\n      "
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (n k r t : ℕ),\n      1 ≤ r →\n        1 ≤ t →\n          k * r + (t - 1) * (k - 1) ≤ n →\n            ∀ (c : { e // e.card = r } → Fin t),\n              ∃ i e, (∀ (j : F"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p0_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (n k r t : ℕ),\n      1 ≤ r →\n        1 ≤ t →\n          k * r + (t - 1) * (k - 1) ≤ n →\n            ∀ (c : { e // e.card = r } → Fin t),\n              ∃ i e, (∀ (j : F"
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p0_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (n k r t : ℕ),\n      1 ≤ r →\n        1 ≤ t →\n          k * r + (t - 1) * (k - 1) ≤ n →\n            ∀ (c : { e // e.card = r } → Fin t),\n              ∃ i e, (∀ (j : F"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p0_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (n k r t : ℕ),\n      1 ≤ r →\n        1 ≤ t →\n          k * r + (t - 1) * (k - 1) ≤ n →\n            ∀ (c : { e // e.card = r } → Fin t),\n              ∃ i e, (∀ (j : F"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p0.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c ?m.5"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c ?m.5"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c ?m.5"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c ?m.5"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c ?m.5"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos780.erdos_780\nhas function type\n  1 ≤ ?m.6 →\n    1 ≤ ?m.7 →\n      ?m.5 * ?m.6 + (?m.7 - 1) * (?m.5 - 1) ≤ ?m.4 →\n        ∀ (c : Erdos780.Edge ?m.4 ?m.6 → Fin ?m.7), Erdos780.HasMonoMatching c ?m.5"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 541,
+ "status": "ok"
+}
