@@ -1,0 +1,49 @@
+{
+ "anchor_line": null,
+ "case_id": "H-26",
+ "certifies": "nothing; deterministic observations only",
+ "cited_decl": "erdos_987.variants.sup_limsup_infty",
+ "cited_file_sha256": "2201303ab97881d35c1d9a791fdb0fe6e8fa99589498420487a9934c85386dc4",
+ "cited_has_sorry_text": false,
+ "cited_module": "FormalConjectures.ErdosProblems.987",
+ "cited_path": "FormalConjectures/ErdosProblems/987.lean",
+ "cited_qualified": "Erdos987.erdos_987.variants.sup_limsup_infty",
+ "cited_statement": "(x : ℕ → ℝ) (hx : ∀ j : ℕ, x j ∈ Set.Ioo (0 : ℝ) 1) : atTop.limsup (fun k : ℕ => ⨆ n : ℕ, ((‖∑ j ∈ range n, e ((k : ℝ) * x j)‖ : ℝ) : EReal)) = ⊤",
+ "cited_statement_sha256": "9f2348d47ba2aa31a7ca06efa5d424a5bd605e67d73b4b8249c5dbbfa5f4f039",
+ "core_identical": true,
+ "environment": {
+  "depends_on_formal_conjectures": false,
+  "packages": {
+   "Cli": "55c37290ff6186e2e965d68cf853a57c0702db82",
+   "LeanSearchClient": "5ce7f0a355f522a952a3d678d696bd563bb4fd28",
+   "Qq": "bd58c9efe2086d56ca361807014141a860ddbf8c",
+   "aesop": "cb837cc26236ada03c81837bebe0acd9c70ced7d",
+   "batteries": "b25b36a7caf8e237e7d1e6121543078a06777c8a",
+   "importGraph": "8f497d55985a189cea8020d9dc51260af1e41ad2",
+   "mathlib": "a3a10db0e9d66acbebf76c5e6a135066525ac900",
+   "plausible": "009dc1e6f2feb2c96c081537d80a0905b2c6498f",
+   "proofwidgets": "c04225ee7c0585effbd933662b3151f01b600e40"
+  },
+  "root": "",
+  "src_dirs": [
+   "scripts"
+  ],
+  "toolchain": "leanprover/lean4:v4.27.0"
+ },
+ "fc_path": "FormalConjectures/ErdosProblems/987.lean",
+ "locate_method": "name",
+ "module_path_in_env": "FormalConjectures/ErdosProblems/987.lean",
+ "outcome": "ready_for_stage_b",
+ "pin_method": "url_sha",
+ "pinned_commit": "19c63d48acce3099c242b059518c49bf8dc0eab8",
+ "ref": "19c63d48acce3099c242b059518c49bf8dc0eab8",
+ "repo": "Marti2203/formal-conjectures",
+ "source_kind": "github",
+ "stage": "A",
+ "target": "erdos_987.variants.sup_limsup_infty",
+ "target_statement": "(x : ℕ → ℝ) (hx : ∀ j : ℕ, x j ∈ Set.Ioo (0 : ℝ) 1) : atTop.limsup (fun k : ℕ => ⨆ n : ℕ, ((‖∑ j ∈ range n, e ((k : ℝ) * x j)‖ : ℝ) : EReal)) = ⊤",
+ "target_statement_raw": "(x : ℕ → ℝ) (hx : ∀ j : ℕ, x j ∈ Set.Ioo (0 : ℝ) 1) :\n    atTop.limsup (fun k : ℕ =>\n      ⨆ n : ℕ, ((‖∑ j ∈ range n, e ((k : ℝ) * x j)‖ : ℝ) : EReal)) = ⊤",
+ "target_statement_sha256": "9f2348d47ba2aa31a7ca06efa5d424a5bd605e67d73b4b8249c5dbbfa5f4f039",
+ "text_identical": true,
+ "url": "https://github.com/Marti2203/formal-conjectures/blob/19c63d48acce3099c242b059518c49bf8dc0eab8/FormalConjectures/ErdosProblems/987.lean"
+}

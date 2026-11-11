@@ -1,0 +1,16 @@
+{
+ "case_id": "H-51",
+ "cause": "retrieval",
+ "certifies": "nothing; deterministic observations only",
+ "detail": "palomar_unreachable: URLError(OSError('Tunnel connection failed: 403 Forbidden'))",
+ "fc_path": "FormalConjectures/ErdosProblems/393.lean",
+ "outcome": "infrastructure_blocked",
+ "palomar": "palomar_unreachable: URLError(OSError('Tunnel connection failed: 403 Forbidden'))",
+ "source_kind": "palomar",
+ "stage": "A",
+ "target": "erdos_393.variants.luca",
+ "target_statement": "(habc : type_of% ABC.abc) : Tendsto f atTop atTop",
+ "target_statement_raw": "(habc : type_of% ABC.abc) : Tendsto f atTop atTop",
+ "target_statement_sha256": "ebb18c8b831b9daf924414d00b6da8d3d44286200b7a4591c51b006d80575674",
+ "url": "https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-02-000011"
+}

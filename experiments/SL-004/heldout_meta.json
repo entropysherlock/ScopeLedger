@@ -1,0 +1,7 @@
+{
+ "seed": "ea1712a8a206bc311e1bf74b3b91cf8ec94fdce2",
+ "method": "random.Random(seed).sample(range(937), 60) over SL-003 population minus SL-003 sample",
+ "python": "3.13.18",
+ "population_sha256": "cae3af687166f72cbd3e03555c89a8ab5569b1917ebfad0a7a672a6dff7e12f0",
+ "repos_in_sample": 30
+}

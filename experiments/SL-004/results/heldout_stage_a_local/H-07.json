@@ -1,0 +1,16 @@
+{
+ "case_id": "H-07",
+ "cause": "retrieval",
+ "certifies": "nothing; deterministic observations only",
+ "detail": "palomar_unreachable: URLError(OSError('Tunnel connection failed: 403 Forbidden'))",
+ "fc_path": "FormalConjectures/Arxiv/math.0608009/PoissonConjecture.lean",
+ "outcome": "infrastructure_blocked",
+ "palomar": "palomar_unreachable: URLError(OSError('Tunnel connection failed: 403 Forbidden'))",
+ "source_kind": "palomar",
+ "stage": "A",
+ "target": "poisson_conjecture.variants.jacobian_implication",
+ "target_statement": "(n : ℕ) (h : JacobianConjectureProp K (Fin (2 * n))) : PoissonConjectureFor K n",
+ "target_statement_raw": "(n : ℕ)\n    (h : JacobianConjectureProp K (Fin (2 * n))) : PoissonConjectureFor K n",
+ "target_statement_sha256": "7980e95c236f6b78375e0c1ff4df94c64844cd2fdd0412b69c48276fcf25edfb",
+ "url": "https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-03-000028"
+}
