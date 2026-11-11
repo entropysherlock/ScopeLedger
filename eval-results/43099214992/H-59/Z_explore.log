@@ -1,0 +1,30 @@
+def SL003FC.SL003.targetProp : Prop :=
+∀ (n : ℕ), ∀ M ∈ doublyStochastic ℝ (Fin n), ∃ σ, ↑n ^ (-↑n) ≤ ∏ i, M i (σ i)
+Erdos499.erdos_499 : ∀ (n : ℕ), ∀ M ∈ doublyStochastic ℝ (Fin n), ∃ σ, ↑n ^ (-↑n) ≤ ∏ i, M i (σ i)
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `Erdos499.Equiv.Perm`
+@[reducible] def Equiv.Perm.{u_1} : Sort u_1 → Sort (max 1 u_1) :=
+fun α => α ≃ α
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Equiv.Perm`
+structure Fin (n : ℕ) : Type
+number of parameters: 1
+fields:
+  Fin.val : ℕ
+  Fin.isLt : ↑self < n
+constructor:
+  Fin.mk {n : ℕ} (val : ℕ) (isLt : val < n) : Fin n
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `Erdos499.Fin`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Fin`
+def doublyStochastic.{u_3, u_4} : (R : Type u_3) →
+  (n : Type u_4) →
+    [inst : Fintype n] →
+      [inst_1 : DecidableEq n] →
+        [inst_2 : Semiring R] → [inst_3 : PartialOrder R] → [IsOrderedRing R] → Submonoid (Matrix n n R) :=
+fun R n [Fintype n] [DecidableEq n] [Semiring R] [PartialOrder R] [IsOrderedRing R] =>
+  {
+    carrier :=
+      {M |
+        (∀ (i j : n), (0 : R) ≤ M i j) ∧
+          M.mulVec (1 : n → R) = (1 : n → R) ∧ Matrix.vecMul (1 : n → R) M = (1 : n → R)},
+    mul_mem' := ⋯, one_mem' := ⋯ }
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.doublyStochastic`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `Erdos499.doublyStochastic`

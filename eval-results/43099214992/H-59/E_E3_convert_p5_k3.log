@@ -1,0 +1,6 @@
+E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos499.erdos_499
+has function type
+  ∀ (n : ℕ), ∀ M ∈ doublyStochastic ℝ (Fin n), ∃ σ, ↑n ^ (-↑n) ≤ ∏ i, M i (σ i)
+E_E3_convert_p5_k3.lean:4:68: error: unsolved goals
+⊢ ∀ (n : ℕ), ∀ M ∈ doublyStochastic ℝ (Fin n), ∃ σ, ↑n ^ (-↑n) ≤ ∏ i, M i (σ i)

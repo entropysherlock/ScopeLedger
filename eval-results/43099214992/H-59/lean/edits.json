@@ -1,0 +1,10 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: lemma erdos_499 :",
+ "removed declaration: lemma vanDerWaerden (n : ℕ) (M : Matrix (Fin n) (Fin n) ℝ) (hM : M ∈ d",
+ "removed declaration: lemma erdos_499.variants.one_le :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]
