@@ -1,0 +1,25 @@
+def MonochromaticQuantumGraph.pmSumList : {α : Type} →
+  [Semiring α] →
+    {N D : ℕ} →
+      MonochromaticQuantumGraph.WeightsN N D α →
+        (MonochromaticQuantumGraph.V N → Fin D) → List (MonochromaticQuantumGraph.V N) → α :=
+fun {α} [Semiring α] {N D} W ι L => MonochromaticQuantumGraph.pmSumListAux W ι L.length L
+def SL003FC.MonochromaticQuantumGraph.pmSumList : {α : Type} →
+  [Semiring α] →
+    {N D : ℕ} →
+      SL003FC.MonochromaticQuantumGraph.WeightsN N D α →
+        (SL003FC.MonochromaticQuantumGraph.V N → Fin D) → List (SL003FC.MonochromaticQuantumGraph.V N) → α :=
+fun {α} [Semiring α] {N D} W ι L => SL003FC.MonochromaticQuantumGraph.pmSumListAux W ι L.length L
+def MonochromaticQuantumGraph.vertices : (N : ℕ) → List (MonochromaticQuantumGraph.V N) :=
+fun x =>
+  Nat.brecOn x fun x f =>
+    (match (motive := (x : ℕ) → Nat.below x → List (MonochromaticQuantumGraph.V x)) x with
+      | 0 => fun x => []
+      | N.succ => fun x => 0 :: List.map Fin.succ x.1)
+      f
+A01_explore.lean:5:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+def MonochromaticQuantumGraph.allEqualList : {N D : ℕ} →
+  (MonochromaticQuantumGraph.V N → Fin D) → List (MonochromaticQuantumGraph.V N) → Prop :=
+fun {N D} ι L => List.IsChain (fun v w => ι v = ι w) L

@@ -1,0 +1,16 @@
+Erdos581.erdos_581 : ∃ c₁ c₂,
+  (0 : ℝ) < c₁ ∧
+    (0 : ℝ) < c₂ ∧
+      ∀ (m : ℕ),
+        ↑m / (2 : ℝ) + c₁ * ↑m ^ (4 / 5 : ℝ) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / (2 : ℝ) + c₂ * ↑m ^ (4 / 5 : ℝ)
+def SL003FC.Erdos581.SL003.targetProp : Prop :=
+∃ c₁ c₂,
+  (0 : ℝ) < c₁ ∧
+    (0 : ℝ) < c₂ ∧
+      ∀ (m : ℕ),
+        ↑m / (2 : ℝ) + c₁ * ↑m ^ (4 / 5 : ℝ) ≤ ↑(SL003FC.Erdos581.f m) ∧
+          ↑(SL003FC.Erdos581.f m) ≤ ↑m / (2 : ℝ) + c₂ * ↑m ^ (4 / 5 : ℝ)
+def Erdos581.Guarantees : ℕ → ℕ → Prop :=
+fun m k =>
+  ∀ (V : Type) [Fintype V] (G : SimpleGraph V),
+    G.CliqueFree (3 : ℕ) → G.edgeSet.ncard = m → ∃ H ≤ G, H.IsBipartite ∧ k ≤ H.edgeSet.ncard

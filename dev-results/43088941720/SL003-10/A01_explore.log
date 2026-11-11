@@ -1,0 +1,8 @@
+def SL003FC.Erdos525.SL003.targetProp : Prop :=
+(fun n => ↑(SL003FC.Erdos525.exceptional n).ncard) =o[Filter.atTop] fun n => 2 ^ n
+def Erdos525.exceptionalFamily : (N : ℕ) → Finset (Erdos525.SignVector N) :=
+fun N => {ε | 1 ≤ Erdos525.minModulus ε}
+def Erdos525.minModulus : {N : ℕ} → Erdos525.SignVector N → ℝ :=
+fun {N} ε => sInf (Erdos525.modulusRange ε)
+@[reducible] def Erdos525.SignVector : ℕ → Type :=
+fun N => Fin (N + 1) → Bool

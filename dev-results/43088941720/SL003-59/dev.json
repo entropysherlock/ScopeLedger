@@ -1,0 +1,77 @@
+{
+ "case_id": "SL003-59",
+ "cited": "A397588.a_three_dvd",
+ "module": "LeanOeisProofs.NewFormalization.A397588",
+ "toolchain": "leanprover/lean4:v4.34.0-rc2",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 92
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 11
+  }
+ },
+ "files": {
+  "B01_regression.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  },
+  "B02_twin.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.OeisA397588.SL003.targetProp",
+ "bridges": {
+  "SL004.bridge_regression59": {
+   "file": "B01_regression.lean",
+   "kind": "bridge_regression",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  },
+  "SL004.corr59_twin": {
+   "file": "B02_twin.lean",
+   "kind": "corr59_twin",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": false
+  },
+  "SL004.bridge59_twin": {
+   "file": "B02_twin.lean",
+   "kind": "bridge59_twin",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 166,
+ "status": "ok"
+}

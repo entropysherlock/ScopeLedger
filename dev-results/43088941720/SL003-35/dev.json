@@ -1,0 +1,43 @@
+{
+ "case_id": "SL003-35",
+ "cited": "Erdos737.eventually_cycles_through_fixed_edge",
+ "module": "ErdosProblems.Erdos737",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 112
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 5
+  }
+ },
+ "files": {
+  "B01_chromatic.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos737.SL003.targetProp",
+ "bridges": {
+  "SL004.bridge35": {
+   "file": "B01_chromatic.lean",
+   "kind": "bridge",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 145,
+ "status": "ok"
+}

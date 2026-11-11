@@ -1,0 +1,61 @@
+{
+ "case_id": "SL003-14",
+ "cited": "QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int",
+ "module": "QuantumLean.FormalConjecturesWrappers",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 87
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 128
+  }
+ },
+ "files": {
+  "A01_explore.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "B01_twin_structure.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.MonochromaticQuantumGraph.SL003.targetProp",
+ "bridges": {
+  "SL004.corr14_eqSystem": {
+   "file": "B01_twin_structure.lean",
+   "kind": "corr14_eqSystem",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": null,
+   "uses_cited": false
+  },
+  "SL004.bridge14": {
+   "file": "B01_twin_structure.lean",
+   "kind": "bridge",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": null,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 249,
+ "status": "ok"
+}

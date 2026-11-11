@@ -1,0 +1,12 @@
+def Erdos841.t : ℕ → ℕ :=
+fun n => Nat.find (Erdos841.exists_admissible n)
+def Erdos841.pellBalanceConstant : ℝ :=
+40 * ↑(Erdos841.pellHeightDegree + 4)
+def SL003FC.Erdos841.SL003.targetProp : Prop :=
+∃ C,
+  0 < C ∧
+    ∀ᶠ (n : ℕ) in Filter.atTop,
+      ¬IsSquare n →
+        C * (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-1 / 5)) ≤ ↑(SL003FC.Erdos841.t n)
+Erdos841.pellLowerBoundConstant_pos : 0 < pellLowerBoundConstant
+Erdos841.pellBalanceConstant_pos : 0 < pellBalanceConstant

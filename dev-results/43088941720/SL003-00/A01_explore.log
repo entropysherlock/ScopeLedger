@@ -1,0 +1,16 @@
+def SL003FC.Erdos235.SL003.targetProp : Prop :=
+∃ f,
+  ContinuousOn f (Set.Ici 0) ∧
+    ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (f c))
+def Erdos235.gapCDF : ℕ → ℝ → ℝ :=
+fun k c =>
+  ↑(Erdos235.internalShortGaps (Erdos235.primeProduct k)
+          (Erdos235.normalizedThreshold (Erdos235.primeProduct k) c)).card /
+    ↑(Erdos235.primeProduct k).totient
+def Erdos235.internalShortGaps : ℕ → ℕ → Finset (ℕ × ℕ) :=
+fun N T =>
+  {ab ∈ (Finset.range N).product (Finset.range N) | Erdos235.IsInternalConsecutive N ab.1 ab.2 ∧ ab.2 - ab.1 ≤ T}
+def Erdos235.normalizedThreshold : ℕ → ℝ → ℕ :=
+fun N c => ⌊c * ↑N / ↑N.totient⌋₊
+def Erdos235.primeProduct : ℕ → ℕ :=
+fun k => ∏ i ∈ Finset.range k, Erdos235.nthPrime i

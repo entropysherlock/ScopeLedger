@@ -1,0 +1,4 @@
+ℹ [8708/8708] Replayed ErdosProblems.Erdos235
+info: ErdosProblems/Erdos235.lean:4272:0: 'Erdos235.erdos_235_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos235.lean:4273:0: 'Erdos235.erdos_235' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8708 jobs).

@@ -1,0 +1,12 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_525.parts.i :",
+ "removed declaration: theorem erdos_525.parts.ii (ε : ℝ) (hε : 0 < ε) :",
+ "removed declaration: theorem erdos_525.variants.kashin (δ : ℝ) (hδ : 0 < δ) :",
+ "removed declaration: theorem erdos_525.variants.konyagin (δ : ℝ) (hδ : 0 < δ) :",
+ "removed declaration: theorem erdos_525.variants.konyagin_schlag :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

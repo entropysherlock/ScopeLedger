@@ -1,0 +1,13 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_441 :",
+ "removed declaration: theorem erdos_441.variants.chen_dai_infinitely_often :",
+ "removed declaration: theorem erdos_441.variants.lower_bound :",
+ "removed declaration: theorem erdos_441.variants.erdos_upper_bound :",
+ "removed declaration: theorem erdos_441.variants.chen :",
+ "removed declaration: theorem erdos_441.variants.chen_dai_upper_bound :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

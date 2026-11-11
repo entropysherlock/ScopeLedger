@@ -1,0 +1,15 @@
+def SL003FC.Erdos690.SL003.targetProp : Prop :=
+∀ (k : ℕ),
+  1 ≤ k →
+    k ≤ 3 →
+      ∀ (d : ℕ → ℝ),
+        (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet k p).HasDensity (d p)) →
+          SL003FC.Erdos690.IsUnimodalOnPrimes d
+def Erdos690.IsKthSmallestPrimeFactor : ℕ → ℕ → ℕ → Prop :=
+fun k p n => 0 < k ∧ p ∈ n.primeFactors ∧ {q ∈ n.primeFactors | q < p}.card = k - 1
+def Erdos690.UnimodalOnPrimes.{u_1} : {α : Type u_1} → [Preorder α] → (ℕ → α) → Prop :=
+fun {α} [Preorder α] f =>
+  ∃ m,
+    Nat.Prime m ∧
+      (∀ (p q : ℕ), Nat.Prime p → Nat.Prime q → p ≤ q → q ≤ m → f p ≤ f q) ∧
+        ∀ (p q : ℕ), Nat.Prime p → Nat.Prime q → m ≤ p → p ≤ q → f q ≤ f p

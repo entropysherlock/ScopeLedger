@@ -1,0 +1,43 @@
+{
+ "case_id": "SL003-15",
+ "cited": "borwein_sine_series",
+ "module": "BorweinSineSeries.solution",
+ "toolchain": "leanprover/lean4:v4.28.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 100
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 17
+  }
+ },
+ "files": {
+  "B01_conditional.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.BorweinSineSeries.SL003.targetProp",
+ "bridges": {
+  "SL004.relation15": {
+   "file": "B01_conditional.lean",
+   "kind": "relation",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 144,
+ "status": "ok"
+}

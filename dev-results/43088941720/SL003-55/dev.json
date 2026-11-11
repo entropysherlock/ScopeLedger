@@ -1,0 +1,28 @@
+{
+ "case_id": "SL003-55",
+ "cited": "Erdos841.erdos841_lower_bound_explicit",
+ "module": "ErdosProblems.Erdos841.LowerBound",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 114
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 4
+  }
+ },
+ "files": {
+  "A01_explore.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos841.SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 128,
+ "status": "ok"
+}

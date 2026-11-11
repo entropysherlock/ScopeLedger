@@ -1,0 +1,57 @@
+{
+ "case_id": "SL003-45",
+ "cited": "Erdos1195.erdos_1195",
+ "module": "ErdosProblems.Erdos1195",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 125
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 2
+  }
+ },
+ "files": {
+  "B01_set.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos1195.SL003.targetProp",
+ "bridges": {
+  "SL004.corr45_HasSet": {
+   "file": "B01_set.lean",
+   "kind": "corr45_HasSet",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": false
+  },
+  "SL004.bridge45": {
+   "file": "B01_set.lean",
+   "kind": "bridge",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 181,
+ "status": "ok"
+}

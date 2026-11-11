@@ -1,0 +1,6 @@
+ℹ [8709/8741] Replayed ErdosProblems.Erdos358
+info: ErdosProblems/Erdos358.lean:9123:0: 'Erdos358.erdos_358' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos358.lean:9124:0: 'Erdos358.erdos_358_part_ii' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8741/8741] Replayed ErdosProblems.Erdos525
+info: ErdosProblems/Erdos525.lean:133:0: 'Erdos525.erdos_525' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8741 jobs).
