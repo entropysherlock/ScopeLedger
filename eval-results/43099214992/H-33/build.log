@@ -1,0 +1,1796 @@
+⚠ [3032/3033] Built LeanOeisProofs.NewFormalization.A003161 (7.0s)
+warning: LeanOeisProofs/NewFormalization/A003161.lean:17:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:0: * 'Copyright 2026 T':
+Copyright line should start with 'Copyright (c) YYYY'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:24: * 'l Conjectures Authors.':
+Copyright line should end with '. All rights reserved.'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:4:0: * 'Authors: Wentao Li
+
+The original statements and Wentao Li's contributions are licensed under Apache 2.0.
+The binomial helper and its refinement are adapted from Epoch Research's
+LeanOpenProblems-results; their provenance is recorded at the relevant sections
+and in the accompanying SOURCE.md. No new license is asserted for those portions.':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:23: * ' and ':
+Please, do not use 'and'; use ',' instead.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:81: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:3:0: * 'Copyright (c) 2026 Wentao Li.':
+Second copyright line should be "Released under Apache 2.0 license as described in the file LICENSE."
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:18:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `namespace OeisA3161`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: LeanOeisProofs/NewFormalization/A003161.lean:19:0: linter.style.header:511:65: error: unexpected token ':='; expected term
+
+linter.style.header:516:48: error: unexpected token '!'; expected ':=', 'where' or '|'
+
+linter.style.header:549:42: error: unexpected token '!'; expected command
+warning: LeanOeisProofs/NewFormalization/A003161.lean:17:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:0: * 'Copyright 2026 T':
+Copyright line should start with 'Copyright (c) YYYY'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:24: * 'l Conjectures Authors.':
+Copyright line should end with '. All rights reserved.'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:4:0: * 'Authors: Wentao Li
+
+The original statements and Wentao Li's contributions are licensed under Apache 2.0.
+The binomial helper and its refinement are adapted from Epoch Research's
+LeanOpenProblems-results; their provenance is recorded at the relevant sections
+and in the accompanying SOURCE.md. No new license is asserted for those portions.':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:23: * ' and ':
+Please, do not use 'and'; use ',' instead.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:81: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:3:0: * 'Copyright (c) 2026 Wentao Li.':
+Second copyright line should be "Released under Apache 2.0 license as described in the file LICENSE."
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:18:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `/-- A binomial coefficient sum:
+$a(n) = \sum_{k=0}^{\lfloor n/2 \rfloor} (\binom{n}{k} - \binom{n}{k-1})^3$. -/
+def a (n : ℕ) : ℕ :=
+  ∑ k ∈ Finset.range (n / 2 + 1),
+    let diff : ℤ := (n.choose k : ℤ) - (if k = 0 then 0 else (n.choose (k - 1) : ℤ))
+    (diff ^ 3).toNat`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: LeanOeisProofs/NewFormalization/A003161.lean:21:0: linter.style.header:511:65: error: unexpected token ':='; expected term
+
+linter.style.header:516:48: error: unexpected token '!'; expected ':=', 'where' or '|'
+
+linter.style.header:549:42: error: unexpected token '!'; expected command
+warning: LeanOeisProofs/NewFormalization/A003161.lean:17:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:0: * 'Copyright 2026 T':
+Copyright line should start with 'Copyright (c) YYYY'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:24: * 'l Conjectures Authors.':
+Copyright line should end with '. All rights reserved.'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:4:0: * 'Authors: Wentao Li
+
+The original statements and Wentao Li's contributions are licensed under Apache 2.0.
+The binomial helper and its refinement are adapted from Epoch Research's
+LeanOpenProblems-results; their provenance is recorded at the relevant sections
+and in the accompanying SOURCE.md. No new license is asserted for those portions.':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:23: * ' and ':
+Please, do not use 'and'; use ',' instead.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:81: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:3:0: * 'Copyright (c) 2026 Wentao Li.':
+Second copyright line should be "Released under Apache 2.0 license as described in the file LICENSE."
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:18:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `/-- Auxiliary sequence $b(n) = a(2n-1)$. -/
+def b (n : ℕ) : ℕ :=
+  a (2 * n - 1)`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: LeanOeisProofs/NewFormalization/A003161.lean:28:0: linter.style.header:511:65: error: unexpected token ':='; expected term
+
+linter.style.header:516:48: error: unexpected token '!'; expected ':=', 'where' or '|'
+
+linter.style.header:549:42: error: unexpected token '!'; expected command
+warning: LeanOeisProofs/NewFormalization/A003161.lean:17:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:0: * 'Copyright 2026 T':
+Copyright line should start with 'Copyright (c) YYYY'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:24: * 'l Conjectures Authors.':
+Copyright line should end with '. All rights reserved.'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:4:0: * 'Authors: Wentao Li
+
+The original statements and Wentao Li's contributions are licensed under Apache 2.0.
+The binomial helper and its refinement are adapted from Epoch Research's
+LeanOpenProblems-results; their provenance is recorded at the relevant sections
+and in the accompanying SOURCE.md. No new license is asserted for those portions.':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:23: * ' and ':
+Please, do not use 'and'; use ',' instead.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:81: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:3:0: * 'Copyright (c) 2026 Wentao Li.':
+Second copyright line should be "Released under Apache 2.0 license as described in the file LICENSE."
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:18:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `end OeisA3161`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: LeanOeisProofs/NewFormalization/A003161.lean:32:0: linter.style.header:511:65: error: unexpected token ':='; expected term
+
+linter.style.header:516:48: error: unexpected token '!'; expected ':=', 'where' or '|'
+
+linter.style.header:549:42: error: unexpected token '!'; expected command
+warning: LeanOeisProofs/NewFormalization/A003161.lean:17:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:0: * 'Copyright 2026 T':
+Copyright line should start with 'Copyright (c) YYYY'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:24: * 'l Conjectures Authors.':
+Copyright line should end with '. All rights reserved.'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:4:0: * 'Authors: Wentao Li
+
+The original statements and Wentao Li's contributions are licensed under Apache 2.0.
+The binomial helper and its refinement are adapted from Epoch Research's
+LeanOpenProblems-results; their provenance is recorded at the relevant sections
+and in the accompanying SOURCE.md. No new license is asserted for those portions.':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:23: * ' and ':
+Please, do not use 'and'; use ',' instead.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:81: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:3:0: * 'Copyright (c) 2026 Wentao Li.':
+Second copyright line should be "Released under Apache 2.0 license as described in the file LICENSE."
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:18:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `section`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+info: LeanOeisProofs/NewFormalization/A003161.lean:34:0: linter.style.header:511:65: error: unexpected token ':='; expected term
+
+linter.style.header:516:48: error: unexpected token '!'; expected ':=', 'where' or '|'
+
+linter.style.header:549:42: error: unexpected token '!'; expected command
+warning: LeanOeisProofs/NewFormalization/A003161.lean:17:7: Files in mathlib cannot import the whole `Mathlib.Tactic` folder. Doing so would cause imports to be unnecessarily slow.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:0: * 'Copyright 2026 T':
+Copyright line should start with 'Copyright (c) YYYY'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:2:24: * 'l Conjectures Authors.':
+Copyright line should end with '. All rights reserved.'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:4:0: * 'Authors: Wentao Li
+
+The original statements and Wentao Li's contributions are licensed under Apache 2.0.
+The binomial helper and its refinement are adapted from Epoch Research's
+LeanOpenProblems-results; their provenance is recorded at the relevant sections
+and in the accompanying SOURCE.md. No new license is asserted for those portions.':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:23: * ' and ':
+Please, do not use 'and'; use ',' instead.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:6:81: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:3:0: * 'Copyright (c) 2026 Wentao Li.':
+Second copyright line should be "Released under Apache 2.0 license as described in the file LICENSE."
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:19:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `/-!# Cubic ballot-sum normalization
+
+Known identities of Miana–Ohtsuka–Romero (2016), Theorem 4.1, reduced to
+Ohtsuka–Tauraso's Monthly Problem 11844. The telescoping certificates follow
+Amdeberhan and Ekhad's published solution, with their evident typographical errors
+resolved by direct polynomial identities.
+
+References:
+* https://arxiv.org/abs/1602.04347
+* https://www.math.tulane.edu/~tamdeberhan/solutions/11844.PDF
+
+Lean development: Wentao Li, with AI assistance.
+-/
+`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:369:24: missing space in the source
+
+This part of the code
+  '{M:Type*}[CommMonoid'
+should be written as
+  '{M : Type*}'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:369:31: missing space in the source
+
+This part of the code
+  '{M:Type*}[CommMonoid'
+should be written as
+  'Type*} [CommMonoid'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:369:45: missing space in the source
+
+This part of the code
+  'M](u:Mˣ)(x:M):'
+should be written as
+  'M] (u :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:369:47: missing space in the source
+
+This part of the code
+  'M](u:Mˣ)(x:M):'
+should be written as
+  '(u : Mˣ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:369:51: missing space in the source
+
+This part of the code
+  'M](u:Mˣ)(x:M):'
+should be written as
+  'Mˣ) (x :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:369:53: missing space in the source
+
+This part of the code
+  'M](u:Mˣ)(x:M): IsUnit'
+should be written as
+  '(x : M)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:369:56: missing space in the source
+
+This part of the code
+  'M](u:Mˣ)(x:M): IsUnit'
+should be written as
+  'M) : IsUnit'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:402:21: missing space in the source
+
+This part of the code
+  '(m:ℕ)(u:(ZMod'
+should be written as
+  '(m : ℕ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:402:24: missing space in the source
+
+This part of the code
+  '(m:ℕ)(u:(ZMod'
+should be written as
+  'ℕ) (u :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:402:26: missing space in the source
+
+This part of the code
+  '(m:ℕ)(u:(ZMod'
+should be written as
+  '(u : (ZMod'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:402:37: missing space in the source
+
+This part of the code
+  'm)ˣ)(x:ZMod'
+should be written as
+  'm)ˣ) (x :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:402:39: missing space in the source
+
+This part of the code
+  'm)ˣ)(x:ZMod'
+should be written as
+  '(x : ZMod'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:402:47: missing space in the source
+
+This part of the code
+  'm)(hx:IsUnit'
+should be written as
+  'm) (hx'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:402:50: missing space in the source
+
+This part of the code
+  'm)(hx:IsUnit'
+should be written as
+  '(hx : IsUnit'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:402:60: missing space in the source
+
+This part of the code
+  'x):
+  '
+should be written as
+  'x) : ((u'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:409:15: missing space in the source
+
+This part of the code
+  '(m:ℕ)[NeZero'
+should be written as
+  '(m : ℕ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:409:18: missing space in the source
+
+This part of the code
+  '(m:ℕ)[NeZero'
+should be written as
+  'ℕ) [NeZero'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:409:28: missing space in the source
+
+This part of the code
+  'm](hu2:IsUnit'
+should be written as
+  'm] (hu2'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:409:32: missing space in the source
+
+This part of the code
+  'm](hu2:IsUnit'
+should be written as
+  '(hu2 : IsUnit'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:409:42: missing space in the source
+
+This part of the code
+  '(2:ZMod'
+should be written as
+  '(2 : ZMod'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:423:16: missing space in the source
+
+This part of the code
+  '(m:ℕ)[NeZero'
+should be written as
+  '(m : ℕ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:423:19: missing space in the source
+
+This part of the code
+  '(m:ℕ)[NeZero'
+should be written as
+  'ℕ) [NeZero'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:423:29: missing space in the source
+
+This part of the code
+  'm](hu2:IsUnit'
+should be written as
+  'm] (hu2'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:423:33: missing space in the source
+
+This part of the code
+  'm](hu2:IsUnit'
+should be written as
+  '(hu2 : IsUnit'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:423:43: missing space in the source
+
+This part of the code
+  '(2:ZMod'
+should be written as
+  '(2 : ZMod'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:423:52: missing space in the source
+
+This part of the code
+  'm))(hu3:IsUnit'
+should be written as
+  'm)) (hu3'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:423:56: missing space in the source
+
+This part of the code
+  'm))(hu3:IsUnit'
+should be written as
+  '(hu3 : IsUnit'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:423:66: missing space in the source
+
+This part of the code
+  '(3:ZMod'
+should be written as
+  '(3 : ZMod'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:471:30: missing space in the source
+
+This part of the code
+  '(n:ℕ)[NeZero'
+should be written as
+  '(n : ℕ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:471:33: missing space in the source
+
+This part of the code
+  '(n:ℕ)[NeZero'
+should be written as
+  'ℕ) [NeZero'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:471:43: missing space in the source
+
+This part of the code
+  'n](H:ZMod'
+should be written as
+  'n] (H :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:471:45: missing space in the source
+
+This part of the code
+  'n](H:ZMod'
+should be written as
+  '(H : ZMod'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:471:62: missing space in the source
+
+This part of the code
+  'n):
+  '
+should be written as
+  'n) :
+ '
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:480:32: missing space in the source
+
+This part of the code
+  '(p^s)] (hp'
+should be written as
+  '(p ^ s)]'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:480:74: missing space in the source
+
+This part of the code
+  'p^s ∣ N)'
+should be written as
+  'p ^ s'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:481:16: missing space in the source
+
+This part of the code
+  '(p^s) →'
+should be written as
+  '(p ^ s)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:481:29: missing space in the source
+
+This part of the code
+  '(p^s)) :'
+should be written as
+  '(p ^ s))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:577:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:606:26: missing space in the source
+
+This part of the code
+  's:ℕ)[NeZero'
+should be written as
+  's : ℕ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:606:29: missing space in the source
+
+This part of the code
+  's:ℕ)[NeZero'
+should be written as
+  'ℕ) [NeZero'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:606:39: missing space in the source
+
+This part of the code
+  '(p^s)](hp:p.Prime)(hp5:5≤p)'
+should be written as
+  '(p ^ s)]'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:606:43: missing space in the source
+
+This part of the code
+  '(p^s)](hp:p.Prime)(hp5:5≤p)'
+should be written as
+  's)] (hp'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:606:46: missing space in the source
+
+This part of the code
+  '(p^s)](hp:p.Prime)(hp5:5≤p)'
+should be written as
+  '(hp : p.Prime)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:606:55: missing space in the source
+
+This part of the code
+  '(p^s)](hp:p.Prime)(hp5:5≤p)'
+should be written as
+  'p.Prime) (hp5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:606:59: missing space in the source
+
+This part of the code
+  '(p^s)](hp:p.Prime)(hp5:5≤p) :'
+should be written as
+  '(hp5 : 5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:611:28: missing space in the source
+
+This part of the code
+  's:ℕ)[NeZero'
+should be written as
+  's : ℕ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:611:31: missing space in the source
+
+This part of the code
+  's:ℕ)[NeZero'
+should be written as
+  'ℕ) [NeZero'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:611:41: missing space in the source
+
+This part of the code
+  '(p^s)](hp:p.Prime)(hp5:5≤p)'
+should be written as
+  '(p ^ s)]'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:611:45: missing space in the source
+
+This part of the code
+  '(p^s)](hp:p.Prime)(hp5:5≤p)'
+should be written as
+  's)] (hp'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:611:48: missing space in the source
+
+This part of the code
+  '(p^s)](hp:p.Prime)(hp5:5≤p)'
+should be written as
+  '(hp : p.Prime)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:611:57: missing space in the source
+
+This part of the code
+  '(p^s)](hp:p.Prime)(hp5:5≤p)'
+should be written as
+  'p.Prime) (hp5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:611:61: missing space in the source
+
+This part of the code
+  '(p^s)](hp:p.Prime)(hp5:5≤p) :'
+should be written as
+  '(hp5 : 5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:616:36: missing space in the source
+
+This part of the code
+  '(p^s)] (hp'
+should be written as
+  '(p ^ s)]'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:616:60: missing space in the source
+
+This part of the code
+  '(hp5:5≤p) (hs'
+should be written as
+  '(hp5 : 5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:616:88: missing space in the source
+
+This part of the code
+  'p^s ∣ N)'
+should be written as
+  'p ^ s'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:621:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:620:37: missing space in the source
+
+This part of the code
+  '(p^s)] (hp'
+should be written as
+  '(p ^ s)]'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:620:61: missing space in the source
+
+This part of the code
+  '(hp5:5≤p) (hs'
+should be written as
+  '(hp5 : 5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:620:89: missing space in the source
+
+This part of the code
+  'p^s ∣ N)'
+should be written as
+  'p ^ s'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:626:22: missing space in the source
+
+This part of the code
+  '(m:ℕ)(a'
+should be written as
+  '(m : ℕ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:626:25: missing space in the source
+
+This part of the code
+  '(m:ℕ)(a b:ZMod'
+should be written as
+  'ℕ) (a b'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:626:29: missing space in the source
+
+This part of the code
+  'b:ZMod'
+should be written as
+  'b : ZMod'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:626:37: missing space in the source
+
+This part of the code
+  'm)(ha:IsUnit'
+should be written as
+  'm) (ha'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:626:40: missing space in the source
+
+This part of the code
+  'm)(ha:IsUnit'
+should be written as
+  '(ha : IsUnit'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:626:50: missing space in the source
+
+This part of the code
+  'a)(hb:IsUnit'
+should be written as
+  'a) (hb'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:626:53: missing space in the source
+
+This part of the code
+  'a)(hb:IsUnit'
+should be written as
+  '(hb : IsUnit'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:626:63: missing space in the source
+
+This part of the code
+  'b): (a*b)⁻¹'
+should be written as
+  'b) : (a'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:632:22: missing space in the source
+
+This part of the code
+  '(m:ℕ)(t:Finset'
+should be written as
+  '(m : ℕ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:632:25: missing space in the source
+
+This part of the code
+  '(m:ℕ)(t:Finset'
+should be written as
+  'ℕ) (t :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:632:27: missing space in the source
+
+This part of the code
+  '(m:ℕ)(t:Finset'
+should be written as
+  '(t : Finset'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:632:37: missing space in the source
+
+This part of the code
+  'ℕ)(f:ℕ→ZMod'
+should be written as
+  'ℕ) (f :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:632:39: missing space in the source
+
+This part of the code
+  'ℕ)(f:ℕ→ZMod'
+should be written as
+  '(f : ℕ'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:632:49: missing space in the source
+
+This part of the code
+  'm)(hf:∀a∈t,'
+should be written as
+  'm) (hf'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:632:52: missing space in the source
+
+This part of the code
+  'm)(hf:∀a∈t, IsUnit'
+should be written as
+  '(hf : ∀'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:632:72: missing space in the source
+
+This part of the code
+  'a)):
+  '
+should be written as
+  'a)) :
+ '
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:649:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:645:13: missing space in the source
+
+This part of the code
+  '{R:Type*}[CommRing'
+should be written as
+  '{R : Type*}'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:645:20: missing space in the source
+
+This part of the code
+  '{R:Type*}[CommRing'
+should be written as
+  'Type*} [CommRing'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:645:32: missing space in the source
+
+This part of the code
+  'R](s:Finset'
+should be written as
+  'R] (s :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:645:34: missing space in the source
+
+This part of the code
+  'R](s:Finset'
+should be written as
+  '(s : Finset'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:645:44: missing space in the source
+
+This part of the code
+  'ℕ)(x:ℕ→R):'
+should be written as
+  'ℕ) (x :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:645:46: missing space in the source
+
+This part of the code
+  'ℕ)(x:ℕ→R):
+'
+should be written as
+  '(x : ℕ'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:645:51: missing space in the source
+
+This part of the code
+  'ℕ)(x:ℕ→R):
+  '
+should be written as
+  'R) :
+ '
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:676:26: missing space in the source
+
+This part of the code
+  '(m:ℕ)(b:ZMod'
+should be written as
+  '(m : ℕ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:676:29: missing space in the source
+
+This part of the code
+  '(m:ℕ)(b:ZMod'
+should be written as
+  'ℕ) (b :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:676:31: missing space in the source
+
+This part of the code
+  '(m:ℕ)(b:ZMod'
+should be written as
+  '(b : ZMod'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:676:39: missing space in the source
+
+This part of the code
+  'm)(hb:IsUnit'
+should be written as
+  'm) (hb'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:676:42: missing space in the source
+
+This part of the code
+  'm)(hb:IsUnit'
+should be written as
+  '(hb : IsUnit'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:676:52: missing space in the source
+
+This part of the code
+  'b): b*b⁻¹=1'
+should be written as
+  'b) : b'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:679:22: missing space in the source
+
+This part of the code
+  '(m:ℕ)(𝒜'
+should be written as
+  '(m : ℕ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:679:25: missing space in the source
+
+This part of the code
+  '(m:ℕ)(𝒜 t:Finset'
+should be written as
+  'ℕ) (𝒜 t'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:679:29: missing space in the source
+
+This part of the code
+  't:Finset'
+should be written as
+  't : Finset'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:679:39: missing space in the source
+
+This part of the code
+  'ℕ)(f:ℕ→ZMod'
+should be written as
+  'ℕ) (f :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:679:41: missing space in the source
+
+This part of the code
+  'ℕ)(f:ℕ→ZMod'
+should be written as
+  '(f : ℕ'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:679:51: missing space in the source
+
+This part of the code
+  'm)(ht:t⊆𝒜)'
+should be written as
+  'm) (ht'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:679:54: missing space in the source
+
+This part of the code
+  'm)(ht:t⊆𝒜)
+ '
+should be written as
+  '(ht : t'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:680:10: missing space in the source
+
+This part of the code
+  '(hunit:∀a∈t, IsUnit'
+should be written as
+  '(hunit : ∀'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:691:35: missing space in the source
+
+This part of the code
+  '(p^s)] (hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  '(p ^ s)]'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:691:43: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  '(hp : p.Prime)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:691:52: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  'p.Prime) (hp5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:691:56: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  '(hp5 : 5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:691:61: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  'p) (hs'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:691:64: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  '(hs : 1'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:691:69: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  's) (hdvd'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:691:74: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s ∣ L*p)'
+should be written as
+  '(hdvd : p'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:691:82: missing space in the source
+
+This part of the code
+  'L*p) :'
+should be written as
+  'L * p)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:729:21: missing space in the source
+
+This part of the code
+  '(m:ℕ)(y:ZMod'
+should be written as
+  '(m : ℕ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:729:24: missing space in the source
+
+This part of the code
+  '(m:ℕ)(y:ZMod'
+should be written as
+  'ℕ) (y :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:729:26: missing space in the source
+
+This part of the code
+  '(m:ℕ)(y:ZMod'
+should be written as
+  '(y : ZMod'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:729:34: missing space in the source
+
+This part of the code
+  'm)(hy:IsUnit'
+should be written as
+  'm) (hy'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:729:37: missing space in the source
+
+This part of the code
+  'm)(hy:IsUnit'
+should be written as
+  '(hy : IsUnit'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:729:47: missing space in the source
+
+This part of the code
+  'y): (-y)⁻¹'
+should be written as
+  'y) : (-y)⁻¹'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:737:35: missing space in the source
+
+This part of the code
+  '(p^s)] (hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  '(p ^ s)]'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:737:43: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  '(hp : p.Prime)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:737:52: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  'p.Prime) (hp5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:737:56: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  '(hp5 : 5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:737:61: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  'p) (hs'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:737:64: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  '(hs : 1'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:737:69: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s'
+should be written as
+  's) (hdvd'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:737:74: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hs:1≤s)(hdvd:p^s ∣ L*p)'
+should be written as
+  '(hdvd : p'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:737:82: missing space in the source
+
+This part of the code
+  'L*p) :'
+should be written as
+  'L * p)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:852:30: missing space in the source
+
+This part of the code
+  '(s:Finset'
+should be written as
+  '(s : Finset'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:852:40: missing space in the source
+
+This part of the code
+  'ℕ)(y:ℤ):'
+should be written as
+  'ℕ) (y :'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:852:42: missing space in the source
+
+This part of the code
+  'ℕ)(y:ℤ):
+'
+should be written as
+  '(y : ℤ)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:852:45: missing space in the source
+
+This part of the code
+  'ℕ)(y:ℤ):
+  '
+should be written as
+  'ℤ) :
+ '
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:863:31: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)'
+should be written as
+  '(hp : p.Prime)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:863:40: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)'
+should be written as
+  'p.Prime) (hp5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:863:44: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p) :'
+should be written as
+  '(hp5 : 5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:987:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:915:27: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hBA:B≤A)'
+should be written as
+  '(hp : p.Prime)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:915:36: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hBA:B≤A)'
+should be written as
+  'p.Prime) (hp5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:915:40: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hBA:B≤A)'
+should be written as
+  '(hp5 : 5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:915:45: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hBA:B≤A)'
+should be written as
+  'p) (hBA'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:915:49: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hBA:B≤A) :'
+should be written as
+  '(hBA : B'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1016:41: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)'
+should be written as
+  '(hp : p.Prime)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1016:50: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)'
+should be written as
+  'p.Prime) (hp5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1016:54: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)
+ '
+should be written as
+  '(hp5 : 5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1141:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1068:40: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hBA:B≤A)'
+should be written as
+  '(hp : p.Prime)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1068:49: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hBA:B≤A)'
+should be written as
+  'p.Prime) (hp5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1068:53: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hBA:B≤A)'
+should be written as
+  '(hp5 : 5'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1068:58: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hBA:B≤A)'
+should be written as
+  'p) (hBA'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1068:62: missing space in the source
+
+This part of the code
+  '(hp:p.Prime)(hp5:5≤p)(hBA:B≤A)
+ '
+should be written as
+  '(hBA : B'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1364:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1385:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1553:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: LeanOeisProofs/NewFormalization/A003161.lean:1556:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [3033/3033] Built LeanOeisProofs.NewFormalization.A003162 (1.9s)
+warning: LeanOeisProofs/NewFormalization/A003162.lean:2:0: * 'Copyright 2026 T':
+Copyright line should start with 'Copyright (c) YYYY'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:2:24: * 'l Conjectures Authors.':
+Copyright line should end with '. All rights reserved.'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:4:0: * 'Authors: Wentao Li
+
+The original statements and Wentao Li's contributions are licensed under Apache 2.0.
+The binomial helper and its refinement are adapted from Epoch Research's
+LeanOpenProblems-results; their provenance is recorded at the relevant sections
+and in the accompanying SOURCE.md. No new license is asserted for those portions.':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:6:23: * ' and ':
+Please, do not use 'and'; use ',' instead.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:6:81: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:3:0: * 'Copyright (c) 2026 Wentao Li.':
+Second copyright line should be "Released under Apache 2.0 license as described in the file LICENSE."
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:13:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `namespace OeisA3162`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:2:0: * 'Copyright 2026 T':
+Copyright line should start with 'Copyright (c) YYYY'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:2:24: * 'l Conjectures Authors.':
+Copyright line should end with '. All rights reserved.'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:4:0: * 'Authors: Wentao Li
+
+The original statements and Wentao Li's contributions are licensed under Apache 2.0.
+The binomial helper and its refinement are adapted from Epoch Research's
+LeanOpenProblems-results; their provenance is recorded at the relevant sections
+and in the accompanying SOURCE.md. No new license is asserted for those portions.':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:6:23: * ' and ':
+Please, do not use 'and'; use ',' instead.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:6:81: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:3:0: * 'Copyright (c) 2026 Wentao Li.':
+Second copyright line should be "Released under Apache 2.0 license as described in the file LICENSE."
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:13:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `/-- A binomial coefficient summation: $a(n) = S(3, n) / S(1, n)$. -/
+def a (n : ℕ) : ℚ :=
+  let numerator : ℚ :=
+    ∑ k ∈ Finset.range (n / 2 + 1),
+      let diff : ℚ := (n.choose k : ℚ) - (if k = 0 then 0 else (n.choose (k - 1) : ℚ))
+      diff ^ 3
+  let denominator : ℚ := (n.choose (n / 2) : ℚ)
+  numerator / denominator`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:2:0: * 'Copyright 2026 T':
+Copyright line should start with 'Copyright (c) YYYY'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:2:24: * 'l Conjectures Authors.':
+Copyright line should end with '. All rights reserved.'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:4:0: * 'Authors: Wentao Li
+
+The original statements and Wentao Li's contributions are licensed under Apache 2.0.
+The binomial helper and its refinement are adapted from Epoch Research's
+LeanOpenProblems-results; their provenance is recorded at the relevant sections
+and in the accompanying SOURCE.md. No new license is asserted for those portions.':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:6:23: * ' and ':
+Please, do not use 'and'; use ',' instead.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:6:81: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:3:0: * 'Copyright (c) 2026 Wentao Li.':
+Second copyright line should be "Released under Apache 2.0 license as described in the file LICENSE."
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:13:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `/-- Auxiliary sequence $b(n) = a(2n-1)$. -/
+def b (n : ℕ) : ℚ :=
+  a (2 * n - 1)`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:2:0: * 'Copyright 2026 T':
+Copyright line should start with 'Copyright (c) YYYY'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:2:24: * 'l Conjectures Authors.':
+Copyright line should end with '. All rights reserved.'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:4:0: * 'Authors: Wentao Li
+
+The original statements and Wentao Li's contributions are licensed under Apache 2.0.
+The binomial helper and its refinement are adapted from Epoch Research's
+LeanOpenProblems-results; their provenance is recorded at the relevant sections
+and in the accompanying SOURCE.md. No new license is asserted for those portions.':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:6:23: * ' and ':
+Please, do not use 'and'; use ',' instead.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:6:81: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:3:0: * 'Copyright (c) 2026 Wentao Li.':
+Second copyright line should be "Released under Apache 2.0 license as described in the file LICENSE."
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:13:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `end OeisA3162`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:2:0: * 'Copyright 2026 T':
+Copyright line should start with 'Copyright (c) YYYY'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:2:24: * 'l Conjectures Authors.':
+Copyright line should end with '. All rights reserved.'
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:4:0: * 'Authors: Wentao Li
+
+The original statements and Wentao Li's contributions are licensed under Apache 2.0.
+The binomial helper and its refinement are adapted from Epoch Research's
+LeanOpenProblems-results; their provenance is recorded at the relevant sections
+and in the accompanying SOURCE.md. No new license is asserted for those portions.':
+If an authors line spans multiple lines, each line but the last must end with a trailing comma
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:6:23: * ' and ':
+Please, do not use 'and'; use ',' instead.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:6:81: * '.':
+Please, do not end the authors' line with a period.
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:3:0: * 'Copyright (c) 2026 Wentao Li.':
+Second copyright line should be "Released under Apache 2.0 license as described in the file LICENSE."
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: LeanOeisProofs/NewFormalization/A003162.lean:13:0: The module doc-string for a file should be the first command after the imports.
+Please, add a module doc-string before `/-!# A003162: exact supercongruence and integrality
+
+The identity is due to Miana, Ohtsuka and Romero (2016), with the underlying
+binomial identity of Ohtsuka and Tauraso proved by Amdeberhan and Ekhad's
+certificates. This file uses no upstream admitted integrality theorem.
+The full supercongruence uses the proved arithmetic towers shared with A003161.
+
+Lean development: Wentao Li, with AI assistance.
+-/
+`.
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+Build completed successfully (3033 jobs).

@@ -1,0 +1,7 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "STOP: unrecognized top-level construct: macro \"eval_a\" : tactic =>\n  `(tactic| (dsimp [a]\n             norm_num [Finset."
+]

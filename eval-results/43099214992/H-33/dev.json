@@ -1,0 +1,18 @@
+{
+ "case_id": "H-33",
+ "cited": "B02R2A003162.a_is_integer",
+ "module": "LeanOeisProofs.NewFormalization.A003162",
+ "toolchain": "leanprover/lean4:v4.34.0-rc2",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 99
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 11
+  }
+ },
+ "files": {},
+ "status": "transport_failed"
+}
