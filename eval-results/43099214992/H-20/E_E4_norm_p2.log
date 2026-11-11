@@ -1,0 +1,5 @@
+E_E4_norm_p2.lean:7:111: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+E_E4_norm_p2.lean:7:2: error: `simp` made no progress
+E_E4_norm_p2.lean:13:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

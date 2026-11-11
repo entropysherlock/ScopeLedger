@@ -1,0 +1,35 @@
+import SL003Target
+
+set_option pp.numericTypes true
+#print SL003FC.Erdos522.SL003.targetProp
+#check @E522.erdos_522_zero_one_solved
+#print E522.Erdos522.KacCoefficients
+#print SL003FC.Erdos522.Erdos522.KacCoefficients
+#print Erdos522.KacCoefficients
+#print IsProbabilityMeasure
+#print SL003FC.Erdos522.IsProbabilityMeasure
+#print E522.IsProbabilityMeasure
+#print KacCoefficients
+#print SL003FC.Erdos522.KacCoefficients
+#print E522.KacCoefficients
+#print SL003FC.Erdos522.Measure
+#print Measure
+#print E522.Measure
+#print SL003FC.Erdos522.MeasureSpace
+#print MeasureSpace
+#print E522.MeasureSpace
+#print E522.True
+#print True
+#print SL003FC.Erdos522.True
+#print SL003FC.Erdos522.answer
+#print E522.answer
+#print answer
+#print E522.atTop.Tendsto
+#print atTop.Tendsto
+#print SL003FC.Erdos522.atTop.Tendsto
+#print f.numRootsInUnitDisk
+#print SL003FC.Erdos522.f.numRootsInUnitDisk
+#print E522.f.numRootsInUnitDisk
+#print E522.hn
+#print SL003FC.Erdos522.hn
+#print hn
