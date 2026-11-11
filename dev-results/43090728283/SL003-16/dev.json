@@ -1,0 +1,227 @@
+{
+ "case_id": "SL003-16",
+ "cited": "Erdos690.erdos_690",
+ "module": "ErdosProblems.Erdos690",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 142
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 5
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 5,
+   "first_error": "SL004Lib.lean:25:19: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined"
+  },
+  "B00_corr.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 5,
+   "first_error": "B00_corr.lean:15:39: error: Application type mismatch: The argument\n  hp\nhas type\n  p ∈ n.primeFactors\nbut is expected to have type\n  n ∈ Nat.primeFactors ?m.65\nin the application\n  Nat.pos_of_mem_primeFactors hp"
+  },
+  "B01_bridge.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 0,
+   "first_error": "B01_bridge.lean:1:0: error: unknown module prefix 'B00_corr'\n\nNo directory 'B00_corr' or file 'B00_corr.olean' in the search path entries:\n/home/runner/work/_temp/out/SL003-16/lean\n/home/runner/work/_temp/target/src/latest/.lake/packages/lean4export/.lake/build/lib/lean\n/home/runner/work/_temp/target/src/latest/.lake/packages/Cli/.lake/build/lib/lean\n/home/runner/work/_temp/target/src/latest/.lake/packages/Comparator/.lake/build/lib/lean\n/home/runner/work/_temp/target/src/latest/.lake/packages/checkdecls/.lake/build/lib/lean\n/home/runner/work/_temp/target/src/latest/.lake/packages/AddCombi/.lake/build/lib/lean\n/home/runner/work/_temp/target/src/latest/.lake/packages/batteries/.lake/build/lib"
+  }
+ },
+ "target_prop": "SL003FC.Erdos690.SL003.targetProp",
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  Erdos690.erdos_690\nhas type\n  (∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)) ∧\n    (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.De"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `And.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos690.erdos_690\nof type\n  (∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k1.lean:4:77: error: unsolved goals\nh :\n  (∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)) ∧\n    (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k2.lean:4:77: error: unsolved goals\nh :\n  (∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)) ∧\n    (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x"
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k3.lean:4:77: error: unsolved goals\nh :\n  (∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)) ∧\n    (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k4.lean:4:77: error: unsolved goals\nh :\n  (∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)) ∧\n    (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p0.lean:4:71: error: unsolved goals\nh :\n  (∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)) ∧\n    (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x,\n    "
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k1.lean:4:77: error: unsolved goals\nh : ∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 "
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k2.lean:4:77: error: unsolved goals\nh : ∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 "
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k3.lean:4:77: error: unsolved goals\nh : ∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 "
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:4:77: error: unsolved goals\nh : ∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 "
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p1.lean:4:71: error: unsolved goals\nh : ∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k1.lean:4:77: error: unsolved goals\nh : (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 "
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k2.lean:4:77: error: unsolved goals\nh : (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 "
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:4:77: error: unsolved goals\nh : (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 "
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k4.lean:4:77: error: unsolved goals\nh : (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 "
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p2.lean:4:71: error: unsolved goals\nh : (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k1.lean:4:77: error: unsolved goals\nh : ∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1) "
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k2.lean:4:77: error: unsolved goals\nh : ∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1) "
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k3.lean:4:77: error: unsolved goals\nh : ∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1) "
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k4.lean:4:77: error: unsolved goals\nh : ∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1) "
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p3.lean:4:71: error: unsolved goals\nh : ∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1) ↔\n    "
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k1.lean:4:77: error: unsolved goals\nh : ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k2.lean:4:77: error: unsolved goals\nh : ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k3.lean:4:77: error: unsolved goals\nh : ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:4:77: error: unsolved goals\nh : ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p4.lean:4:71: error: unsolved goals\nh : ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k\n⊢ (∃ x,\n      1 ≤ x ∧\n        ∃ x_1,\n          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧\n            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1) ↔\n  "
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos690.erdos_690.right.right\nhas function type\n  ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos690.erdos_690.right.right\nhas function type\n  ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos690.erdos_690.right.right\nhas function type\n  ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos690.erdos_690.right.right\nhas function type\n  ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos690.erdos_690.right.right\nhas function type\n  ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos690.erdos_690.right.right\nhas function type\n  ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos690.erdos_690.right.right\nhas function type\n  ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos690.erdos_690.right.right\nhas function type\n  ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos690.erdos_690.right.right\nhas function type\n  ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos690.erdos_690.right.right\nhas function type\n  ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 335,
+ "status": "ok"
+}

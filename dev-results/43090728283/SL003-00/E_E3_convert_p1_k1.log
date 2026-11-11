@@ -1,0 +1,10 @@
+E_E3_convert_p1_k1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type
+  ℝ → ℝ
+from the expression
+  Erdos235.erdos_235
+which has propositional type
+  ∃ f, Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))
+E_E3_convert_p1_k1.lean:4:77: error: unsolved goals
+⊢ ∃ f,
+    ContinuousOn f (Set.Ici 0) ∧
+      ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (f c))

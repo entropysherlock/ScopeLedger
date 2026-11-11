@@ -1,0 +1,172 @@
+⚠ [8026/8026] Built BorweinSineSeries.solution (8.4s)
+warning: BorweinSineSeries/solution.lean:3:12: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+warning: BorweinSineSeries/solution.lean:299:82: missing space in the source
+
+This part of the code
+  '(2^j) (2^(j+1)))'
+should be written as
+  '(2 ^ j)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:299:88: missing space in the source
+
+This part of the code
+  '(2^(j+1)))'
+should be written as
+  '(2 ^ (j'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:299:91: missing space in the source
+
+This part of the code
+  '(2^(j+1)))'
+should be written as
+  '(j + 1)))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:425:6: 'simp at h' is a flexible tactic modifying 'h'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: BorweinSineSeries/solution.lean:426:6: 'push_cast [h]' uses 'h'!
+warning: BorweinSineSeries/solution.lean:437:4: 'simp [Finset.not_nonempty_iff_eq_empty.mp hT]' is a flexible tactic modifying '⊢'. Try 'simp?' and use the suggested 'simp only [...]'. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: BorweinSineSeries/solution.lean:438:4: 'positivity' uses '⊢'!
+warning: BorweinSineSeries/solution.lean:450:31: missing space in the source
+
+This part of the code
+  '(2^j) (2^(j+1)))'
+should be written as
+  '(2 ^ j)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:450:37: missing space in the source
+
+This part of the code
+  '(2^(j+1)))'
+should be written as
+  '(2 ^ (j'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:450:40: missing space in the source
+
+This part of the code
+  '(2^(j+1)))'
+should be written as
+  '(j + 1)))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:496:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: BorweinSineSeries/solution.lean:504:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: BorweinSineSeries/solution.lean:506:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: BorweinSineSeries/solution.lean:488:31: missing space in the source
+
+This part of the code
+  '(2^j) (2^(j+1)))'
+should be written as
+  '(2 ^ j)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:488:37: missing space in the source
+
+This part of the code
+  '(2^(j+1)))'
+should be written as
+  '(2 ^ (j'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:488:40: missing space in the source
+
+This part of the code
+  '(2^(j+1)))'
+should be written as
+  '(j + 1)))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:525:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: BorweinSineSeries/solution.lean:521:31: missing space in the source
+
+This part of the code
+  '(2^j) (2^(j+1)))'
+should be written as
+  '(2 ^ j)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:521:37: missing space in the source
+
+This part of the code
+  '(2^(j+1)))'
+should be written as
+  '(2 ^ (j'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:521:40: missing space in the source
+
+This part of the code
+  '(2^(j+1)))'
+should be written as
+  '(j + 1)))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:549:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: BorweinSineSeries/solution.lean:593:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: BorweinSineSeries/solution.lean:623:72: missing space in the source
+
+This part of the code
+  '(2^j) (2^(j+1)))'
+should be written as
+  '(2 ^ j)'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:623:78: missing space in the source
+
+This part of the code
+  '(2^(j+1)))'
+should be written as
+  '(2 ^ (j'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:623:81: missing space in the source
+
+This part of the code
+  '(2^(j+1)))'
+should be written as
+  '(j + 1)))'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+warning: BorweinSineSeries/solution.lean:803:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+Build completed successfully (8026 jobs).

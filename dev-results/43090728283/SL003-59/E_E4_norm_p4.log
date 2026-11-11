@@ -1,0 +1,5 @@
+E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  A397588.a_three_dvd
+has function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`
+E_E4_norm_p4.lean:4:74: error: unsolved goals
+⊢ ∀ (n : ℕ), 1 < n → 3 ∣ SL003FC.OeisA397588.a n

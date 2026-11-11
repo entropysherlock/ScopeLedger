@@ -1,0 +1,12 @@
+E_E3_convert_p0_k1.lean:4:77: error: unsolved goals
+h :
+  (∀ (τ : ℝ),
+      0 < τ → Filter.Tendsto (fun N => Erdos525.minimumTail N τ) Filter.atTop (nhds (Real.exp (-Erdos525.rate * τ)))) ∧
+    ((fun N => ↑(Erdos525.exceptionalFamily N).card) =o[Filter.atTop] fun N => 2 ^ N) ∧
+      Filter.Tendsto (fun N => Erdos525.uniformProbability fun ε => Erdos525.HasSmallValue ε) Filter.atTop (nhds 1)
+⊢ ((fun n => ↑(SL003FC.Erdos525.exceptional n).ncard) =o[Filter.atTop] fun n => 2 ^ n) ↔
+    (∀ (τ : ℝ),
+        0 < τ →
+          Filter.Tendsto (fun N => Erdos525.minimumTail N τ) Filter.atTop (nhds (Real.exp (-(Erdos525.rate * τ))))) ∧
+      ((fun N => ↑(Erdos525.exceptionalFamily N).card) =o[Filter.atTop] fun N => 2 ^ N) ∧
+        Filter.Tendsto (fun N => Erdos525.uniformProbability fun ε => Erdos525.HasSmallValue ε) Filter.atTop (nhds 1)

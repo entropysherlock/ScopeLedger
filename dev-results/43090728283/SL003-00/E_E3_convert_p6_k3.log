@@ -1,0 +1,8 @@
+E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos235.erdos_235.2.right
+has function type
+  ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (Erdos235.erdos_235.1 c))
+E_E3_convert_p6_k3.lean:4:77: error: unsolved goals
+⊢ ∃ f,
+    ContinuousOn f (Set.Ici 0) ∧
+      ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (f c))

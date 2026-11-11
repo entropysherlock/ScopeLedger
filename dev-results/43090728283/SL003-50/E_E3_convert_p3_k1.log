@@ -1,0 +1,12 @@
+E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  LeanGallery.NumberTheory.Erdos482.Statement.statement_erdos_482_verbatim
+has function type
+  ∀ (n : ℕ),
+    1 ≤ n →
+      ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n + 1)) - 2 * ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n - 1)) =
+        ↑(⌊√2 * 2 ^ (n - 1)⌋₊ % 2)
+E_E3_convert_p3_k1.lean:4:77: error: unsolved goals
+⊢ (∀ (n : ℕ),
+      1 ≤ n →
+        ↑(SL003FC.Erdos482.a (2 * n + 1)) - 2 * ↑(SL003FC.Erdos482.a (2 * n - 1)) = ↑↑((√2 / 2).digits 2 (n - 1))) ∧
+    Real.ofDigits ((√2 / 2).digits 2) = √2 / 2

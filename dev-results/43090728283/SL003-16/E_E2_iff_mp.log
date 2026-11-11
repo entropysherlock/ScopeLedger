@@ -1,0 +1,5 @@
+E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `And.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos690.erdos_690
+of type
+  (∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)) ∧
+    (∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k) ∧ ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k

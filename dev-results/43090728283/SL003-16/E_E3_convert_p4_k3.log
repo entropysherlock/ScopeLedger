@@ -1,0 +1,8 @@
+E_E3_convert_p4_k3.lean:4:77: error: unsolved goals
+h : ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k
+⊢ (∃ x,
+      1 ≤ x ∧
+        ∃ x_1,
+          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧
+            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1) ↔
+    ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k

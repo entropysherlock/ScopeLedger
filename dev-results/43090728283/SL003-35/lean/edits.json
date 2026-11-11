@@ -1,0 +1,10 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem not_chromaticNumberAlephOne_bot : ¬ ChromaticNumberAlephOne (⊥",
+ "removed declaration: theorem erdos_737 :",
+ "removed declaration: theorem erdos_737.variants.uncountable :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

@@ -1,0 +1,14 @@
+E_E3_convert_p0_k2.lean:4:77: error: unsolved goals
+h :
+  ∀ (n : ℕ),
+    1 ≤ n →
+      ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n + 1)) - 2 * ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n - 1)) =
+        ↑(⌊√2 * 2 ^ (n - 1)⌋₊ % 2)
+⊢ (∀ (n : ℕ),
+        1 ≤ n →
+          ↑(SL003FC.Erdos482.a (2 * n + 1)) - 2 * ↑(SL003FC.Erdos482.a (2 * n - 1)) = ↑↑((√2 / 2).digits 2 (n - 1))) ∧
+      Real.ofDigits ((√2 / 2).digits 2) = √2 / 2 ↔
+    ∀ (n : ℕ),
+      1 ≤ n →
+        ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n + 1)) - 2 * ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n - 1)) =
+          ↑⌊√2 * 2 ^ (n - 1)⌋₊ % 2

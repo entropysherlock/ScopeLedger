@@ -1,0 +1,21 @@
+E_E3_convert_p2_k1.lean:4:77: error: unsolved goals
+h :
+  ∃ c₂,
+    0 < Erdos581.erdos_581.1 ∧
+      0 < c₂ ∧
+        ∀ (m : ℕ),
+          ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)
+⊢ (fun c₁ =>
+      0 < c₁ ∧
+        ∃ x,
+          0 < x ∧
+            ∀ (m : ℕ),
+              ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧
+                ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + x * ↑m ^ (4 / 5)) =
+    fun c₂ =>
+    0 < Erdos581.erdos_581.1 ∧
+      0 < c₂ ∧
+        ∀ (m : ℕ),
+          ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)
+E_E3_convert_p2_k1.lean:4:8: error: (kernel) invalid projection
+  Erdos581.erdos_581.1

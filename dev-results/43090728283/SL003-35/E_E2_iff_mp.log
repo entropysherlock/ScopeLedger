@@ -1,0 +1,5 @@
+E_E2_iff_mp.lean:6:152: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos737.eventually_cycles_through_fixed_edge
+of type
+  Erdos594.IsUncountablyChromatic ?m.4 →
+    ∃ a r, SimpleGraph.Adj ?m.4 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges

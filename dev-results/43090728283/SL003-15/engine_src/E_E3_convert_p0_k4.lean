@@ -1,0 +1,7 @@
+import SL003Target
+
+set_option maxHeartbeats 400000 in
+theorem SL004.bridge_E3_convert_p0_k4 : SL003FC.BorweinSineSeries.SL003.targetProp := by
+  unfold SL003FC.BorweinSineSeries.SL003.targetProp
+  have h := @borwein_sine_series
+  convert h using 4 <;> (first | rfl | with_unfolding_all rfl | simp | (with_unfolding_all simp))

@@ -1,0 +1,9 @@
+B00_corr.lean:10:39: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+B00_corr.lean:15:39: error: Application type mismatch: The argument
+  hp
+has type
+  p ∈ n.primeFactors
+but is expected to have type
+  n ∈ Nat.primeFactors ?m.65
+in the application
+  Nat.pos_of_mem_primeFactors hp

@@ -1,0 +1,6 @@
+E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos581.erdos_581
+of type
+  ∃ c₁ c₂,
+    0 < c₁ ∧
+      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)

@@ -1,0 +1,72 @@
+E_E4_norm_p3.lean:7:111: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+E_E4_norm_p3.lean:4:71: error: unsolved goals
+h : ∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k
+⊢ (∃ x,
+      1 ≤ x ∧
+        ∃ x_1,
+          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧
+            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1) ↔
+    ∀ (k : ℕ), 1 ≤ k → k ≤ 3 → Erdos690.DensityUnimodal k
+E_E4_norm_p3.lean:7:13: warning: This simp argument is unused:
+  true_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop, and_imp, not_not,
+    Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p3.lean:7:23: warning: This simp argument is unused:
+  iff_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [true_iff, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop, and_imp, not_not,
+    Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p3.lean:7:33: warning: This simp argument is unused:
+  Filter.eventually_atTop
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [true_iff, iff_true, ge_iff_le, gt_iff_lt, exists_prop, and_imp, not_not, Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p3.lean:7:69: warning: This simp argument is unused:
+  gt_iff_lt
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, exists_prop, and_imp, not_not,
+    Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p3.lean:7:80: warning: This simp argument is unused:
+  exists_prop
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, and_imp, not_not,
+    Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p3.lean:7:93: warning: This simp argument is unused:
+  and_imp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop, not_not,
+    Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p3.lean:7:102: warning: This simp argument is unused:
+  not_not
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop, and_imp,
+    Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p3.lean:7:111: warning: This simp argument is unused:
+  Set.mem_setOf_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop, and_imp,
+    not_not] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,18 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem a_succ_succ (n : ℕ) :",
+ "removed declaration: theorem a_of_gt_one {n : ℕ} (hn : 1 < n) :",
+ "removed declaration: theorem a_0 : a 0 = 0 := by",
+ "removed declaration: theorem a_1 : a 1 = 1 := by",
+ "removed declaration: theorem a_2 : a 2 = 3 := by",
+ "removed declaration: theorem a_3 : a 3 = 24 := by",
+ "removed declaration: theorem a_4 : a 4 = 285 := by",
+ "removed declaration: theorem a_5 : a 5 = 4284 := by",
+ "removed declaration: theorem conjecture_parity (n : ℕ) (hn : 1 ≤ n) :",
+ "removed declaration: theorem three_dvd_a (n : ℕ) (hn : 1 < n) : 3 ∣ a n := by",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

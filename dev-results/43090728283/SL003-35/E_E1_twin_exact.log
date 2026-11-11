@@ -1,0 +1,10 @@
+E_E1_twin_exact.lean:6:21: error: Type mismatch
+  @Erdos737.eventually_cycles_through_fixed_edge
+has type
+  ∀ {V : Type ?u.2} {G : SimpleGraph V},
+    Erdos594.IsUncountablyChromatic G →
+      ∃ (a : V), ∃ r, G.Adj a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges
+but is expected to have type
+  ∀ (V : Type) (G : SimpleGraph V),
+    IsEmpty (G.Coloring ℕ) →
+      ∃ (e : Sym2 V), e ∈ G.edgeSet ∧ ∃ N, ∀ (n : ℕ), N ≤ n → SL003FC.Erdos737.CycleThroughEdgeOfLength G e n

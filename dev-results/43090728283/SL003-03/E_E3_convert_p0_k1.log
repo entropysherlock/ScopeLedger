@@ -1,0 +1,15 @@
+E_E3_convert_p0_k1.lean:4:77: error: unsolved goals
+h :
+  ∃ c₁ c₂,
+    0 < c₁ ∧
+      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)
+⊢ (fun c₁ =>
+      0 < c₁ ∧
+        ∃ x,
+          0 < x ∧
+            ∀ (m : ℕ),
+              ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧
+                ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + x * ↑m ^ (4 / 5)) =
+    fun c₁ =>
+    0 < c₁ ∧
+      ∃ x, 0 < x ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + x * ↑m ^ (4 / 5)

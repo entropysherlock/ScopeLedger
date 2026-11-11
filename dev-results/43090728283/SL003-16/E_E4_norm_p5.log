@@ -1,0 +1,9 @@
+E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos690.erdos_690.right.right
+has function type
+  ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k
+E_E4_norm_p5.lean:4:71: error: unsolved goals
+⊢ ¬∀ k ≥ 1,
+      ∀ (d : ℕ → ℝ),
+        (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet k p).HasDensity (d p)) →
+          SL003FC.Erdos690.IsUnimodalOnPrimes d

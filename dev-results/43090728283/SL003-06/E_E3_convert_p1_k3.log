@@ -1,0 +1,4 @@
+E_E3_convert_p1_k3.lean:4:77: error: unsolved goals
+h : ∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)
+⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔
+    ∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)

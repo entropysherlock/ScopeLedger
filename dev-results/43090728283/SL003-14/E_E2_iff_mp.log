@@ -1,0 +1,13 @@
+E_E2_iff_mp.lean:6:126: error: Type mismatch
+  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mp trivial
+has type
+  ¬∃ (W : MonochromaticQuantumGraph.WeightsN 6 3 ℤ),
+      (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧
+        MonochromaticQuantumGraph.EqSystemN 6 3 W
+but is expected to have type
+  ¬∃ (W : SL003FC.MonochromaticQuantumGraph.WeightsN 6 3 ℤ),
+      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧
+        SL003FC.MonochromaticQuantumGraph.EqSystemN 6 3 W
+E_E2_iff_mp.lean:7:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

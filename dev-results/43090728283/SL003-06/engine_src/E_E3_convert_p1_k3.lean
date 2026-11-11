@@ -1,0 +1,7 @@
+import SL003Target
+
+set_option maxHeartbeats 400000 in
+theorem SL004.bridge_E3_convert_p1_k3 : SL003FC.Erdos441.SL003.targetProp := by
+  unfold SL003FC.Erdos441.SL003.targetProp
+  have h := (@Erdos441.not_erdos_441).1
+  convert h using 3 <;> (first | rfl | with_unfolding_all rfl | simp | (with_unfolding_all simp))

@@ -1,0 +1,11 @@
+E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos1195.erdos_1195
+has function type
+  ∀ (F : ℝ → ℝ),
+    (∀ x ∈ Set.Ici 1, 0 ≤ F x) →
+      MonotoneOn F (Set.Ici 1) →
+        Filter.Tendsto F Filter.atTop Filter.atTop →
+          (Erdos1195.HasErdos1195Witness F ↔
+            MeasureTheory.IntegrableOn (fun x => F x / x ^ 2) (Set.Ici 1) MeasureTheory.volume)
+E_E4_norm_p4.lean:4:72: error: unsolved goals
+⊢ {F | SL003FC.Erdos1195.IsGrowthRate F ∧ SL003FC.Erdos1195.HasSet F} = SL003FC.Erdos1195.erdos_1195.answer

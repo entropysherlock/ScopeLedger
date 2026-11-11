@@ -1,0 +1,4 @@
+E_E3_convert_p3_k2.lean:4:77: error: unsolved goals
+h : (fun N => ↑(Erdos525.exceptionalFamily N).card) =o[Filter.atTop] fun N => 2 ^ N
+x✝ : ℕ
+⊢ (SL003FC.Erdos525.exceptional x✝).ncard = (Erdos525.exceptionalFamily x✝).card

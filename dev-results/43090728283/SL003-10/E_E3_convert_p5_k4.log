@@ -1,0 +1,7 @@
+E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos525.erdos_525.right.right
+has function type
+  ∀ ⦃U : Set ℝ⦄,
+    U ∈ nhds 1 → U ∈ Filter.map (fun N => Erdos525.uniformProbability fun ε => Erdos525.HasSmallValue ε) Filter.atTop
+E_E3_convert_p5_k4.lean:4:77: error: unsolved goals
+⊢ (fun n => ↑(SL003FC.Erdos525.exceptional n).ncard) =o[Filter.atTop] fun n => 2 ^ n

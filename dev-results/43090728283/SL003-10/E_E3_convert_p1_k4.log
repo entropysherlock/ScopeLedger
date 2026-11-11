@@ -1,0 +1,7 @@
+E_E3_convert_p1_k4.lean:4:77: error: unsolved goals
+h :
+  ∀ (τ : ℝ),
+    0 < τ → Filter.Tendsto (fun N => Erdos525.minimumTail N τ) Filter.atTop (nhds (Real.exp (-Erdos525.rate * τ)))
+⊢ ((fun n => ↑(SL003FC.Erdos525.exceptional n).ncard) =o[Filter.atTop] fun n => 2 ^ n) ↔
+    ∀ (τ : ℝ),
+      0 < τ → Filter.Tendsto (fun N => Erdos525.minimumTail N τ) Filter.atTop (nhds (Real.exp (-(Erdos525.rate * τ))))

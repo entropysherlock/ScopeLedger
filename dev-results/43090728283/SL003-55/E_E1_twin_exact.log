@@ -1,0 +1,15 @@
+E_E1_twin_exact.lean:6:21: error: Type mismatch
+  Erdos841.erdos841_lower_bound_explicit
+has type
+  ∀ᶠ (n : ℕ) in Filter.atTop,
+    ¬IsSquare n →
+      Erdos841.pellLowerBoundConstant *
+          (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤
+        ↑(Erdos841.t n)
+but is expected to have type
+  ∃ C,
+    0 < C ∧
+      ∀ᶠ (n : ℕ) in Filter.atTop,
+        ¬IsSquare n →
+          C * (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-1 / 5)) ≤
+            ↑(SL003FC.Erdos841.t n)

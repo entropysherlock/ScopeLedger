@@ -1,0 +1,31 @@
+SL004Lib.lean:25:19: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+SL004Lib.lean:45:17: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+SL004Lib.lean:47:16: error(lean.unknownIdentifier): Unknown constant `Nat.sSup_empty`
+SL004Lib.lean:54:2: error: Type mismatch
+  Nat.sInf_def h
+has type
+  sInf P = @Nat.find (fun n => n ∈ P) (fun a => Classical.propDecidable (a ∈ P)) h
+but is expected to have type
+  sInf {n | P n} = @Nat.find P inst✝ h
+SL004Lib.lean:62:13: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+SL004Lib.lean:62:31: warning: This simp argument is unused:
+  Set.mem_sep_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Set.mem_setOf_eq, Finset.coe_filter, Finset.mem_coe, Finset.mem_filter, Finset.mem_range]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SL004Lib.lean:62:67: warning: This simp argument is unused:
+  Finset.mem_coe
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Set.mem_setOf_eq, Set.mem_sep_iff, Finset.coe_filter, Finset.mem_filter, Finset.mem_range]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SL004Lib.lean:62:83: warning: This simp argument is unused:
+  Finset.mem_filter
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Set.mem_setOf_eq, Set.mem_sep_iff, Finset.coe_filter, Finset.mem_coe, Finset.mem_range]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
