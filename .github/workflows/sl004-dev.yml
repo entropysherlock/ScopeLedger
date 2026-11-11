@@ -1,0 +1,118 @@
+name: SL-004 dev
+
+# Compiles candidate Lean files in each cited project's own environment and commits every log to the
+# `sl004-ci` branch (dev-results/<run id>/<case>/). Launched by a new line in experiments/SL-004/dev/RUN.
+on:
+  push:
+    branches: ["main"]
+    paths: ["experiments/SL-004/dev/RUN"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FC_URL: https://github.com/google-deepmind/formal-conjectures
+  FC_COMMIT: da703a5f239f734a47ede2f4e99b9ccc9e644cb5
+
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - id: plan
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          inc = []
+          for c in [l.split()[0] for l in open("experiments/SL-004/dev/CASES") if l.strip() and not l.startswith("#")]:
+              r = json.load(open(f"experiments/SL-003/results/stage_a/{c}.json"))
+              repo = r["repo"]
+              url = f"https://gist.github.com/{repo.split(':')[1]}.git" if repo.startswith("gist:") else f"https://github.com/{repo}"
+              inc.append({"case": c, "clone": url, "commit": r["pinned_commit"],
+                          "root": r["environment"]["root"] or ".", "fc_path": r["fc_path"]})
+          print("matrix=" + json.dumps({"include": inc}))
+          PY
+
+  dev:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o elan-init.sh
+          sh elan-init.sh -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Sources at the pinned commits
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone -q --filter=blob:none --no-checkout "$FC_URL" "$RUNNER_TEMP/fc"
+          git -C "$RUNNER_TEMP/fc" sparse-checkout set --no-cone "/${{ matrix.fc_path }}"
+          git -C "$RUNNER_TEMP/fc" checkout -q "$FC_COMMIT"
+          git clone -q --filter=blob:none --no-checkout "${{ matrix.clone }}" "$RUNNER_TEMP/target"
+          cd "$RUNNER_TEMP/target"
+          if [ "${{ matrix.root }}" != "." ]; then git sparse-checkout set --no-cone "/${{ matrix.root }}/**" "/*"; fi
+          git checkout -q "${{ matrix.commit }}"
+          test "$(git rev-parse HEAD)" = "${{ matrix.commit }}"
+      - name: Project build cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/target/${{ matrix.root }}/.lake/build
+          key: sl004-build-${{ matrix.case }}-${{ matrix.commit }}
+      - name: Compile candidates
+        shell: bash
+        run: |
+          set +e
+          cd "$RUNNER_TEMP/target/${{ matrix.root }}"
+          python "$GITHUB_WORKSPACE/experiments/SL-004/dev_run.py" \
+            "$GITHUB_WORKSPACE/experiments/SL-003/results/stage_a/${{ matrix.case }}.json" . "$RUNNER_TEMP/fc" \
+            "$GITHUB_WORKSPACE/experiments/SL-004/dev/${{ matrix.case }}" "$RUNNER_TEMP/out/${{ matrix.case }}"
+          find "$RUNNER_TEMP/out" -type f \( -name '*.olean' -o -name '*.ilean' -o -name '*.c' -o -name '*.olean.*' \) -delete
+          find "$RUNNER_TEMP/out" -type f -name '*.log' -size +300k -exec sh -c 'tail -c 300000 "$1" > "$1.t" && mv "$1.t" "$1"' _ {} \;
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sl004-dev-${{ matrix.case }}
+          path: ${{ runner.temp }}/out/
+
+  collect:
+    needs: dev
+    if: always()
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: sl004-dev-*
+          path: ${{ runner.temp }}/arts
+          merge-multiple: true
+      - name: Commit logs to the sl004-ci branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "scopeledger-ci"
+          git config user.email "scopeledger-ci@users.noreply.github.com"
+          if git fetch -q origin sl004-ci; then git checkout -q -B sl004-ci origin/sl004-ci; else git checkout -q --orphan sl004-ci && git rm -rqf . ; fi
+          dest="dev-results/${{ github.run_id }}"
+          mkdir -p "$dest"
+          cp -r "$RUNNER_TEMP/arts/." "$dest/" 2>/dev/null || true
+          echo "${{ github.sha }}" > "$dest/SOURCE_COMMIT"
+          git add -A dev-results
+          git commit -q -m "SL-004 dev results, run ${{ github.run_id }} (source ${{ github.sha }})"
+          for i in 1 2 3 4 5; do git push -q origin sl004-ci && break; git pull -q --rebase origin sl004-ci; done
