@@ -68,6 +68,8 @@ jobs:
   eval:
     needs: stage_a
     if: ${{ needs.stage_a.outputs.matrix != '' && fromJSON(needs.stage_a.outputs.matrix).include[0] != null }}
+    permissions:
+      contents: write
     runs-on: ubuntu-24.04
     timeout-minutes: 300
     strategy:
@@ -117,8 +119,26 @@ jobs:
           cp "$RUNNER_TEMP/stage_a/${{ matrix.case }}.json" "$RUNNER_TEMP/out/${{ matrix.case }}/stage_a.json"
           find "$RUNNER_TEMP/out" -type f \( -name '*.olean' -o -name '*.ilean' -o -name '*.c' -o -name '*.olean.*' \) -delete
           find "$RUNNER_TEMP/out" -type f -name '*.log' -size +300k -exec sh -c 'tail -c 300000 "$1" > "$1.t" && mv "$1.t" "$1"' _ {} \;
+      - name: Push this case's logs to the sl004-ci branch (primary record)
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          d="$RUNNER_TEMP/push"
+          git clone -q --depth 1 --branch sl004-ci "https://x-access-token:$GH_TOKEN@github.com/${{ github.repository }}.git" "$d" || exit 0
+          cd "$d"
+          git config user.name "scopeledger-ci"; git config user.email "scopeledger-ci@users.noreply.github.com"
+          dest="eval-results/${{ github.run_id }}/${{ matrix.case }}"
+          mkdir -p "$dest"; cp -r "$RUNNER_TEMP/out/${{ matrix.case }}/." "$dest/" 2>/dev/null
+          echo "${{ github.sha }}" > "eval-results/${{ github.run_id }}/SOURCE_COMMIT"
+          git add -A "eval-results"; git commit -q -m "SL-004 eval-results ${{ github.run_id }} ${{ matrix.case }}"
+          for i in 1 2 3 4 5 6 7 8 9 10; do git push -q origin sl004-ci && break; sleep $((RANDOM % 10 + 2)); git pull -q --rebase origin sl004-ci; done
       - uses: actions/upload-artifact@v4
         if: always()
+        continue-on-error: true
+        timeout-minutes: 5
         with:
           name: sl004-eval-${{ matrix.case }}
           path: ${{ runner.temp }}/out/
