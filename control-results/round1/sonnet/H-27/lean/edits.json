@@ -1,0 +1,11 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_865 :",
+ "removed declaration: theorem erdos_865.variants.k2 (N : ℕ) :",
+ "removed declaration: theorem erdos_865.variants.sos :",
+ "removed declaration: theorem erdos_865.variants.upper_bound (k : ℕ) (hk : 3 ≤ k) :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]
