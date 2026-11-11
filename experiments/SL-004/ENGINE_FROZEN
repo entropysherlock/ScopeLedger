@@ -1,0 +1,25 @@
+SL-004 ENGINE FROZEN, 2026-11-11.
+
+The engine below (Layer A: engine.py; Layer B: TRANSPORT_PROCEDURE.md, budget 2 rounds x 3 files) is
+frozen by the commit that adds this file. The held-out seed is that commit's SHA. Nothing listed here
+changes afterwards; a defect found later is reported, not fixed, for the held-out evaluation.
+
+Development status at freeze:
+  certified bridges: SL003-03, 06, 14, 35, 43, 45, 55 (Layer B); SL003-59 twin regression (Layer A + B)
+  scoped relation:  SL003-15 (PiIrrBound -> target), not a bridge
+  UNRESOLVED:       SL003-16, SL003-40. Round 5 candidates (commit 04194d0) compiled on GitHub
+                    (20:18-20:20 UTC) but the run's logs and summaries were lost to a GitHub Actions
+                    stall (run 43094411580); no verification evidence exists, so no claim is made.
+  undecided:        SL003-00, 10, 50
+
+sha256 of frozen files:
+  eb301d388dd1a4f0fdffc0ba870ed668a7007c1cfc10ddec6e506b2d432b91aa  experiments/SL-004/engine.py
+  5827c01796f906bbebcef2d87634a7ece1236b78d0a784df635fd15e0281357f  experiments/SL-004/dev_run.py
+  3bce5971375d1ed4238d5db5f07025096dea27a28d02d95de220b1d57d057b23  experiments/SL-004/heldout.py
+  7d0890b4d01a03c3fdb500662c05b0690c851e6fb03ff49deaf79927d27e0f1b  experiments/SL-004/TRANSPORT_PROCEDURE.md
+  a83262e3de49e6f05cbbdfb9fe0cb0872ebb92ef732688f6005dd8b59b9d7bf4  experiments/SL-004/PROTOCOL.md
+  8c42388a903e85edf2176ca8cebde9aea1a56cc92086bd8a566acddb92958431  experiments/SL-004/lib/SL004Lib.lean
+  649443bf72c49fe05c75e3c2034a2e69cf96ed7015615e292337ce76c4ad2f70  experiments/SL-004/../SL-003/transport.py
+  328db3e64e08a21e99f868da43f3e884a521d71b1f6ffa1c613d03d27e36200b  experiments/SL-004/../SL-003/stage_a.py
+  3c5b0c93d1ca86adb7225864f422b37e79c13e767252f5bcdca01ba4f7318ad6  experiments/SL-004/../SL-003/stage_b.py
+  4bdea74ee2d20b51bfc6d9e1ee4b31c8a48f8fdda9a11c18b0804fe17b733153  experiments/SL-004/../../.github/workflows/sl004-eval.yml
