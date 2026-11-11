@@ -1,0 +1,11 @@
+E_E3_convert_p1_k4.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type
+  ℕ
+from the expression
+  Erdos865.erdos865
+which has propositional type
+  ∃ C, ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + C
+E_E3_convert_p1_k4.lean:4:77: error: unsolved goals
+⊢ ∃ C > 0,
+    ∀ᶠ (N : ℕ) in Filter.atTop,
+      ∀ A ⊆ Finset.Icc 1 N,
+        ↑A.card ≥ 5 / 8 * ↑N + C → ∃ a ∈ A, ∃ b ∈ A, ∃ c ∈ A, a ≠ b ∧ a ≠ c ∧ b ≠ c ∧ a + b ∈ A ∧ a + c ∈ A ∧ b + c ∈ A

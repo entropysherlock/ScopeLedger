@@ -1,0 +1,11 @@
+E_E1_twin_exact.lean:6:21: error: Type mismatch
+  Erdos865.erdos865
+has type
+  ∃ (C : ℕ), ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + C
+but is expected to have type
+  ∃ (C : ℝ),
+    C > 0 ∧
+      ∀ᶠ (N : ℕ) in Filter.atTop,
+        ∀ A ⊆ Finset.Icc 1 N,
+          ↑A.card ≥ 5 / 8 * ↑N + C →
+            ∃ a ∈ A, ∃ b ∈ A, ∃ c ∈ A, a ≠ b ∧ a ≠ c ∧ b ≠ c ∧ a + b ∈ A ∧ a + c ∈ A ∧ b + c ∈ A
