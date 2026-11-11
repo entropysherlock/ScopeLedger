@@ -1,0 +1,18 @@
+X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side
+  ∃ (C : ℝ),
+    C > 0 ∧
+      ∀ᶠ (N : ℕ) in Filter.atTop,
+        ∀ A ⊆ Finset.Icc 1 N,
+          ↑A.card ≥ 5 / 8 * ↑N + C →
+            ∃ a ∈ A, ∃ b ∈ A, ∃ c ∈ A, a ≠ b ∧ a ≠ c ∧ b ≠ c ∧ a + b ∈ A ∧ a + c ∈ A ∧ b + c ∈ A
+is not definitionally equal to the right-hand side
+  ∃ (C : ℕ), ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + C
+
+case a
+h : ∃ C, ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + C
+⊢ (∃ C > 0,
+      ∀ᶠ (N : ℕ) in Filter.atTop,
+        ∀ A ⊆ Finset.Icc 1 N,
+          ↑A.card ≥ 5 / 8 * ↑N + C →
+            ∃ a ∈ A, ∃ b ∈ A, ∃ c ∈ A, a ≠ b ∧ a ≠ c ∧ b ≠ c ∧ a + b ∈ A ∧ a + c ∈ A ∧ b + c ∈ A) ↔
+    ∃ C, ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + C

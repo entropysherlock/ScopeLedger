@@ -1,0 +1,60 @@
+E_E4_norm_p0.lean:4:71: error: unsolved goals
+case a
+h : ∃ C, ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + C
+⊢ (∃ C,
+      0 < C ∧
+        ∃ a,
+          ∀ (b : ℕ),
+            a ≤ b →
+              ∀ A ⊆ Finset.Icc 1 b,
+                5 / 8 * ↑b + C ≤ ↑A.card →
+                  ∃ a ∈ A, ∃ b ∈ A, ∃ c ∈ A, ¬a = b ∧ ¬a = c ∧ ¬b = c ∧ a + b ∈ A ∧ a + c ∈ A ∧ b + c ∈ A) ↔
+    ∃ C, ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + C
+E_E4_norm_p0.lean:7:13: warning: This simp argument is unused:
+  true_iff
+
+Hint: Omit it from the simp argument list.
+  simp only [t̵r̵u̵e̵_̵iff,̵ ̵i̵f̵f̵_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop, and_imp, not_not,
+  ̲  ̲ ̲ ̲Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:23: warning: This simp argument is unused:
+  iff_true
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, i̵f̵f̵_̵t̵r̵u̵e̵,̵ ̵Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop, and_imp, not_not,
+  ̲  ̲ ̲ ̲Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:80: warning: This simp argument is unused:
+  exists_prop
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, e̵x̵i̵s̵t̵s̵_̵p̵r̵o̵p̵,̵ ̵and_imp, not_not,
+  ̲  ̲ ̲ ̲Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:93: warning: This simp argument is unused:
+  and_imp
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop,
+  ̲ a̵n̵d̵_̵i̵m̵p̵,̵  ̲ ̲not_not, Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:102: warning: This simp argument is unused:
+  not_not
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop,
+  ̲  ̲ ̲ ̲and_imp, n̵o̵t̵_̵n̵o̵t̵,̵ ̵Set.mem_setOf_eq] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+E_E4_norm_p0.lean:7:111: warning: This simp argument is unused:
+  Set.mem_setOf_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [true_iff, iff_true, Filter.eventually_atTop, ge_iff_le, gt_iff_lt, exists_prop,
+  ̲  ̲ ̲ ̲and_imp, not_not,̵ ̵S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

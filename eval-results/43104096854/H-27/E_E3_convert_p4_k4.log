@@ -1,0 +1,9 @@
+E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos865.erdos865.2
+has function type
+  ∀ (N : ℕ), ∀ A ⊆ Finset.Icc 1 N, Erdos865.IsTripleFree A → 8 * A.card ≤ 5 * N + Erdos865.erdos865.1
+E_E3_convert_p4_k4.lean:4:77: error: unsolved goals
+⊢ ∃ C > 0,
+    ∀ᶠ (N : ℕ) in Filter.atTop,
+      ∀ A ⊆ Finset.Icc 1 N,
+        ↑A.card ≥ 5 / 8 * ↑N + C → ∃ a ∈ A, ∃ b ∈ A, ∃ c ∈ A, a ≠ b ∧ a ≠ c ∧ b ≠ c ∧ a + b ∈ A ∧ a + c ∈ A ∧ b + c ∈ A

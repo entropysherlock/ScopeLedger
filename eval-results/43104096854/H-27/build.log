@@ -1,0 +1,127 @@
+✔ [8026/8032] Built RequestProject.Defs (3.8s)
+✔ [8027/8032] Built RequestProject.Sharpness (4.9s)
+⚠ [8028/8032] Built RequestProject.FoldedAux (32s)
+warning: RequestProject/FoldedAux.lean:103:33: This simp argument is unused:
+  Finset.subset_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵b̵s̵e̵t̵_̵i̵f̵f̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RequestProject/FoldedAux.lean:133:108: This simp argument is unused:
+  ← ZMod.natCast_eq_natCast_iff'
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵←̵ ̵Z̵M̵o̵d̵.̵n̵a̵t̵C̵a̵s̵t̵_̵e̵q̵_̵n̵a̵t̵C̵a̵s̵t̵_̵i̵f̵f̵'̵ ̵]̵
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RequestProject/FoldedAux.lean:157:45: This simp argument is unused:
+  Nat.mod_eq_of_lt
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵N̵a̵t̵.̵m̵o̵d̵_̵e̵q̵_̵o̵f̵_̵l̵t̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RequestProject/FoldedAux.lean:181:70: This simp argument is unused:
+  Nat.mod_eq_of_lt
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵N̵a̵t̵.̵m̵o̵d̵_̵e̵q̵_̵o̵f̵_̵l̵t̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RequestProject/FoldedAux.lean:209:49: This simp argument is unused:
+  Nat.mod_eq_of_lt
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵N̵a̵t̵.̵m̵o̵d̵_̵e̵q̵_̵o̵f̵_̵l̵t̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RequestProject/FoldedAux.lean:236:130: 'skip' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8029/8032] Built RequestProject.FoldedMain (17s)
+warning: RequestProject/FoldedMain.lean:30:33: unused variable `hm`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RequestProject/FoldedMain.lean:63:107: This simp argument is unused:
+  Nat.mod_eq_of_lt
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵N̵a̵t̵.̵m̵o̵d̵_̵e̵q̵_̵o̵f̵_̵l̵t̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RequestProject/FoldedMain.lean:67:57: This simp argument is unused:
+  Nat.cast_sub (show a ≤ m from by linarith [hB.1 a ha])
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵←̵[̲←̲ ZMod.natCast_eq_natCast_iff',
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲Nat.cast_sub (̵ ̵s̵h̵o̵w̵ ̵a̵ ̵≤̵ ̵m̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵l̵i̵n̵a̵r̵i̵t̵h̵ ̵[̵ ̵h̵B̵.̵1̵ ̵a̵ ̵h̵a̵ ̵]̵ ̵)̵,̵ ̵N̵a̵t̵.̵c̵a̵s̵t̵_̵s̵u̵b̵ ̵(̵ ̵s̵h̵o̵w̵(̲s̲h̲o̲w̲ b ≤ m from by linarith [̵ ̵h̵B̵.̵1̵[̲h̲B̲.̲1̲ b h̵b̵ ̵]̵ ̵)̵ ̵]̵h̲b̲]̲)̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RequestProject/FoldedMain.lean:67:117: This simp argument is unused:
+  Nat.cast_sub (show b ≤ m from by linarith [hB.1 b hb])
+
+Hint: Omit it from the simp argument list.
+  simp +decide [̵ ̵←̵[̲←̲ ZMod.natCast_eq_natCast_iff',
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲Nat.cast_sub (̵ ̵s̵h̵o̵w̵(̲s̲h̲o̲w̲ a ≤ m from by linarith [̵ ̵h̵B̵.̵1̵[̲h̲B̲.̲1̲ a h̵a̵ ̵]̵ ̵)̵,̵ ̵N̵a̵t̵.̵c̵a̵s̵t̵_̵s̵u̵b̵ ̵(̵ ̵s̵h̵o̵w̵ ̵b̵ ̵≤̵ ̵m̵ ̵f̵r̵o̵m̵ ̵b̵y̵ ̵l̵i̵n̵a̵r̵i̵t̵h̵ ̵[̵ ̵h̵B̵.̵1̵ ̵b̵ ̵h̵b̵ ̵]̵ ̵)̵ ̵]̵h̲a̲]̲)̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RequestProject/FoldedMain.lean:73:31: unused variable `hm`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RequestProject/FoldedMain.lean:85:85: This simp argument is unused:
+  Nat.sub_sub
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵N̵a̵t̵.̵s̵u̵b̵_̵s̵u̵b̵,̵ ̵a̵d̵d̵_̵c̵o̵m̵m̵ ̵]̵[̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8030/8032] Built RequestProject.Folding (13s)
+warning: RequestProject/Folding.lean:13:5: unused variable `hh2`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8031/8032] Built RequestProject.UpperBound (11s)
+warning: RequestProject/UpperBound.lean:27:46: unused variable `hqlo`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RequestProject/UpperBound.lean:35:48: unused variable `hqlo`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RequestProject/UpperBound.lean:51:38: unused variable `hp`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RequestProject/UpperBound.lean:51:51: unused variable `hplo`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RequestProject/UpperBound.lean:54:68: This simp argument is unused:
+  Finset.card_image_of_injective
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵i̵m̵a̵g̵e̵_̵o̵f̵_̵i̵n̵j̵e̵c̵t̵i̵v̵e̵,̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵I̵n̵j̵e̵c̵t̵i̵v̵e̵ ̵]̵[̲F̲u̲n̲c̲t̲i̲o̲n̲.̲I̲n̲j̲e̲c̲t̲i̲v̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RequestProject/UpperBound.lean:54:100: This simp argument is unused:
+  Function.Injective
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide [̵ ̵F̵i̵n̵s̵e̵t̵.̵c̵a̵r̵d̵_̵i̵m̵a̵g̵e̵_̵o̵f̵_̵i̵n̵j̵e̵c̵t̵i̵v̵e̵,̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵I̵n̵j̵e̵c̵t̵i̵v̵e̵ ̵]̵[̲F̲i̲n̲s̲e̲t̲.̲c̲a̲r̲d̲_̲i̲m̲a̲g̲e̲_̲o̲f̲_̲i̲n̲j̲e̲c̲t̲i̲v̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RequestProject/UpperBound.lean:56:57: This simp argument is unused:
+  Nat.card_Ico
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵N̵a̵t̵.̵c̵a̵r̵d̵_̵I̵c̵o̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RequestProject/UpperBound.lean:76:33: This simp argument is unused:
+  Finset.subset_iff
+
+Hint: Omit it from the simp argument list.
+  simp_all +decide ̵[̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵b̵s̵e̵t̵_̵i̵f̵f̵ ̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8032/8032] Built RequestProject.Main (3.9s)
+Build completed successfully (8032 jobs).
