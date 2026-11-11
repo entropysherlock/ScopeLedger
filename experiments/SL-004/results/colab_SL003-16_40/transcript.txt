@@ -1,0 +1,113 @@
+$ curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o /tmp/elan-init.sh
+$ sh /tmp/elan-init.sh -y --default-toolchain none
+$ git clone -q https://github.com/entropysherlock/ScopeLedger /content/sl004_verify/ScopeLedger
+$ git -C /content/sl004_verify/ScopeLedger fetch -q origin ea1712a8a206bc311e1bf74b3b91cf8ec94fdce2 || true
+$ git -C /content/sl004_verify/ScopeLedger checkout -q ea1712a8a206bc311e1bf74b3b91cf8ec94fdce2
+$ git -C /content/sl004_verify/ScopeLedger rev-parse HEAD
+ea1712a8a206bc311e1bf74b3b91cf8ec94fdce2
+
+
+===== SL003-16: plby/lean-proofs @ 8822f7ddef30fadbd92e1c6ab4ed897af356af5e, root src/latest, FC FormalConjectures/ErdosProblems/690.lean
+$ git clone -q --filter=blob:none --no-checkout https://github.com/google-deepmind/formal-conjectures /content/sl004_verify/fc_SL003-16
+$ git -C /content/sl004_verify/fc_SL003-16 sparse-checkout set --no-cone /FormalConjectures/ErdosProblems/690.lean
+$ git -C /content/sl004_verify/fc_SL003-16 checkout -q da703a5f239f734a47ede2f4e99b9ccc9e644cb5
+$ git clone -q --filter=blob:none --no-checkout https://github.com/plby/lean-proofs /content/sl004_verify/target_plby__lean-proofs_8822f7ddef30
+$ git -C /content/sl004_verify/target_plby__lean-proofs_8822f7ddef30 sparse-checkout set --no-cone "/src/latest/**" "/*"
+$ git -C /content/sl004_verify/target_plby__lean-proofs_8822f7ddef30 checkout -q 8822f7ddef30fadbd92e1c6ab4ed897af356af5e
+$ git -C /content/sl004_verify/target_plby__lean-proofs_8822f7ddef30 rev-parse HEAD
+8822f7ddef30fadbd92e1c6ab4ed897af356af5e
+
+::notice title=SL-004 dev SL003-16::{"status": "ok", "files": {"SL004Lib.lean": true, "B00_corr.lean": true, "B01_bridge.lean": false}, "bridges": {"SL004.corr690_kth": {"file": "B00_corr.lean", "kind": "corr690_kth", "statement": null, "proves_target": null, "axioms": ["Classical.choice", "Quot.sound", "propext"], "standard_axioms": true, "leanchecker": true, "uses_cited": false}}}
+ 
+
+===== SL003-40: plby/lean-proofs @ 8822f7ddef30fadbd92e1c6ab4ed897af356af5e, root src/latest, FC FormalConjectures/ErdosProblems/690.lean
+$ git clone -q --filter=blob:none --no-checkout https://github.com/google-deepmind/formal-conjectures /content/sl004_verify/fc_SL003-40
+$ git -C /content/sl004_verify/fc_SL003-40 sparse-checkout set --no-cone /FormalConjectures/ErdosProblems/690.lean
+$ git -C /content/sl004_verify/fc_SL003-40 checkout -q da703a5f239f734a47ede2f4e99b9ccc9e644cb5
+$ git -C /content/sl004_verify/target_plby__lean-proofs_8822f7ddef30 rev-parse HEAD
+8822f7ddef30fadbd92e1c6ab4ed897af356af5e
+
+::notice title=SL-004 dev SL003-40::{"status": "ok", "files": {"SL004Lib.lean": true, "B00_corr.lean": true, "B01_bridge.lean": true}, "bridges": {"SL004.corr690_kth": {"file": "B00_corr.lean", "kind": "corr690_kth", "statement": null, "proves_target": null, "axioms": ["Classical.choice", "Quot.sound", "propext"], "standard_axioms": true, "leanchecker": true, "uses_cited": false}, "SL004.bridge40": {"file": "B01_bridge.lean", "kind": "bridge", "statement": null, "proves_target": true, "axioms": ["Classical.choice", "Quot.sound", "propext"], "standard_axioms": true, "leanchecker": true, "uses_cited": true}}}
+ 
+
+
+================ SL-004 Colab verification: SL003-16 and SL003-40 ================
+
+SL003-16: runner status = ok, toolchain = leanprover/lean4:v4.33.0, target = SL003FC.Erdos690.SL003.targetProp
+  file SL004Lib.lean: compiled = True
+  file B00_corr.lean: compiled = True
+  file B01_bridge.lean: compiled = False
+    first error: B01_bridge.lean:19:42: error: mod_cast has type
+  (fun p => ↑(Erdos690.primeFactorDensity 4 p)) p ≤ (fun p => ↑(Erdos690.primeFactorDensity 4 p)) q
+but is expected to have type
+  Erdos690.primeFactorDensity 4 p ≤ Erdos690.primeFactorDensity 4 q
+  SL004.corr690_kth: proves_target = None, standard_axioms = True ['Classical.choice', 'Quot.sound', 'propext'], leanchecker = True, uses_cited = False
+  CERTIFIED BRIDGE: none
+  sha256 74427c9e21eccca83e9c6942fa83115b77137b4d1e60d49bda028d731a07f19d  B00_corr.lean
+  sha256 dd2c8975a4f875ca0c0c37a58d23b5241d295dc841fc3d7b4bcbe6aecf2b6953  B01_bridge.lean
+
+SL003-40: runner status = ok, toolchain = leanprover/lean4:v4.33.0, target = SL003FC.Erdos690.SL003.targetProp
+  file SL004Lib.lean: compiled = True
+  file B00_corr.lean: compiled = True
+  file B01_bridge.lean: compiled = True
+  SL004.corr690_kth: proves_target = None, standard_axioms = True ['Classical.choice', 'Quot.sound', 'propext'], leanchecker = True, uses_cited = False
+  SL004.bridge40: proves_target = True, standard_axioms = True ['Classical.choice', 'Quot.sound', 'propext'], leanchecker = True, uses_cited = True
+  CERTIFIED BRIDGE: SL004.bridge40
+  sha256 74427c9e21eccca83e9c6942fa83115b77137b4d1e60d49bda028d731a07f19d  B00_corr.lean
+  sha256 a38252e97fea3e0c2ccdb384dc39ebfe16467a5ace9fce22924a43ad426bfbb7  B01_bridge.lean
+
+All logs: /content/sl004_colab_SL003-16_40.zip (download it from the Colab file panel). Total time: 24 min.
+{
+ "SL003-16": {
+  "status": "ok",
+  "bridges": {
+   "SL004.corr690_kth": {
+    "file": "B00_corr.lean",
+    "kind": "corr690_kth",
+    "statement": null,
+    "proves_target": null,
+    "axioms": [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ],
+    "standard_axioms": true,
+    "leanchecker": true,
+    "uses_cited": false
+   }
+  }
+ },
+ "SL003-40": {
+  "status": "ok",
+  "bridges": {
+   "SL004.corr690_kth": {
+    "file": "B00_corr.lean",
+    "kind": "corr690_kth",
+    "statement": null,
+    "proves_target": null,
+    "axioms": [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ],
+    "standard_axioms": true,
+    "leanchecker": true,
+    "uses_cited": false
+   },
+   "SL004.bridge40": {
+    "file": "B01_bridge.lean",
+    "kind": "bridge",
+    "statement": null,
+    "proves_target": true,
+    "axioms": [
+     "Classical.choice",
+     "Quot.sound",
+     "propext"
+    ],
+    "standard_axioms": true,
+    "leanchecker": true,
+    "uses_cited": true
+   }
+  }
+ }
+}
