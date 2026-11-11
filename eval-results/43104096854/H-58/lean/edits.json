@@ -1,0 +1,11 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_274 : ∃ (G : Type*) (_ : Group G),",
+ "removed declaration: theorem erdos_274.variants.abelian {G : Type*} [Fintype G] [CommGroup ",
+ "removed declaration: theorem herzog_schonheim {G : Type*} [Group G] (hG : 1 < ENat.card G) ",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]
