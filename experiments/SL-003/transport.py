@@ -32,6 +32,7 @@ def blocks(src: str):
         joined = "\n".join(cur)
         open_attr = joined.lstrip().startswith("@[") and joined.count("[") > joined.count("]")
         cont = prev.endswith((",", "(", "→", "↔", ":=", "∧", "∨", "∀", "∃"))
+        cont = cont or bool(re.match(r'(deriving|termination_by|decreasing_by|where|\|)\b|\|', l))
         if starts and cur and not in_doc and not open_attr and not cont:
             out.append(cur)
             cur = []
@@ -58,7 +59,8 @@ def build(stage_a: dict, fc: str, module: str, cited_qualified: str):
             continue
         is_attr_only = text.lstrip().startswith("@[") and text.count("[") == text.count("]") \
             and re.fullmatch(r'\s*(@\[.*?\]\s*)+', text, re.S) is not None
-        if head.startswith("/--") or is_attr_only or re.fullmatch(r'set_option\s+\S+\s+\S+\s+in', text.strip()):
+        if head.startswith("/--") or is_attr_only or re.fullmatch(r'set_option\s+\S+\s+\S+\s+in', text.strip()) \
+                or re.fullmatch(r'open\s+(?:scoped\s+)?[\w.\s]+?\s+in', text.strip()):
             pending.append(text)
             continue
         if head.startswith(("import ", "public import ")) or head == "module":
@@ -71,7 +73,8 @@ def build(stage_a: dict, fc: str, module: str, cited_qualified: str):
             pending = []
             continue
         full = "\n".join(pending + [text])
-        core = re.sub(r'^(?:\s*(?:/--.*?-/|@\[.*?\]|set_option\s+\S+\s+\S+\s+in))*\s*', '', full, flags=re.S)
+        core = re.sub(r'^(?:\s*(?:/--.*?-/|@\[.*?\]|set_option\s+\S+\s+\S+\s+in|open\s+(?:scoped\s+)?[\w.\s]+?\s+in\b))*\s*',
+                      '', full, flags=re.S)
         if DROP.match(core):
             edits.append(f"removed declaration: {core.split(chr(10))[0][:70]}")
             pending = []
@@ -84,7 +87,7 @@ def build(stage_a: dict, fc: str, module: str, cited_qualified: str):
             pending = []
             continue
         return None, edits + [f"STOP: unrecognized top-level construct: {core[:80]}"]
-    stmt = stage_a["target_statement"]
+    stmt = stage_a.get("target_statement_raw") or stage_a["target_statement"]
     binders, colon_body = split_binders(stmt or "")
     if colon_body is None:
         return None, edits + ["STOP: could not find the statement's top-level ':'"]
@@ -101,11 +104,17 @@ def build(stage_a: dict, fc: str, module: str, cited_qualified: str):
         edits.append("binders before ':' written as a leading ∀ (the theorem's elaborated type)")
     ns = namespace_at_target(src, stage_a["target"])
     header = "import Mathlib\nimport " + module + "\n\n"
-    target = (header + "\n".join(kept).strip() + "\n\n"
+    # Amendment 3: the Formal Conjectures text lives under `SL003FC`, so a cited project that copied
+    # FC's definitions under the same names does not collide with them, and FC's statement keeps FC's
+    # own definitions. Scopes left open by the FC text are closed before `end SL003FC`.
+    body_txt = "\n".join(kept).strip()
+    closers = "".join(f"end{(' ' + n) if n else ''}\n" for n in reversed(open_scopes(body_txt)))
+    target = (header + f"namespace {ISO}\n\n" + body_txt + "\n\n"
               + (f"namespace {ns}\n\n" if ns else "")
               + f"/-- SL-003 transported target: {stage_a['fc_path']} `{stage_a['target']}`. -/\n"
               + f"def SL003.targetProp : Prop :=\n  {body}\n\n"
-              + (f"end {ns}\n" if ns else ""))
+              + (f"end {ns}\n" if ns else "") + closers + f"end {ISO}\n")
+    edits.append(f"Formal Conjectures text placed in namespace {ISO} (amendment 3)")
     return target, edits
 
 
@@ -121,6 +130,47 @@ def namespace_at_target(src, target):
         if re.match(r'^\s*(?:@\[[^\]]*\]\s*)*theorem\s+' + re.escape(target) + r'\b', l):
             break
     return ".".join(stack)
+
+
+ISO = "SL003FC"
+
+
+def open_scopes(text):
+    """Namespaces/sections opened and not closed in `text`, innermost last (names; '' for a section)."""
+    stack = []
+    for l in text.split("\n"):
+        m = re.match(r'^\s*(?:noncomputable\s+)?(namespace|section)\b\s*(\S*)', l)
+        if m and not l.rstrip().endswith(" in"):
+            if m.group(1) == "namespace":
+                stack.extend(m.group(2).split("."))
+            else:
+                stack.append(m.group(2) or "")
+            continue
+        m = re.match(r'^\s*end\b\s*(\S*)\s*$', l)
+        if m and stack:
+            n = m.group(1)
+            k = len(n.split(".")) if n else 1
+            del stack[-k:]
+    return stack
+
+
+def fc_definitions(target_text):
+    """Fully qualified names of the defs/abbrevs the transported FC text declares (inside SL003FC)."""
+    names, stack = [], []
+    for l in target_text.split("\n"):
+        m = re.match(r'^\s*(?:noncomputable\s+)?(namespace|section)\b\s*(\S*)', l)
+        if m and not l.rstrip().endswith(" in"):
+            stack.extend(m.group(2).split(".") if m.group(1) == "namespace" else [None])
+            continue
+        m = re.match(r'^\s*end\b\s*(\S*)\s*$', l)
+        if m and stack:
+            n = m.group(1)
+            del stack[-(len(n.split(".")) if n else 1):]
+            continue
+        m = re.match(r'^(?:@\[[^\]]*\]\s*)*(?:noncomputable\s+|private\s+|protected\s+)*(?:def|abbrev)\s+([^\s:({\[]+)', l)
+        if m and "SL003.targetProp" not in m.group(1):
+            names.append(".".join([x for x in stack if x] + [m.group(1)]))
+    return names
 
 
 OPEN, CLOSE = "([{⦃⟨", ")]}⦄⟩"
@@ -153,7 +203,16 @@ def main():
         return 3
     (out / "SL003Target.lean").write_text(target)
     ns = namespace_at_target(Path(fc, sa["fc_path"]).read_text(encoding="utf-8"), sa["target"])
-    tp = (ns + "." if ns else "") + "SL003.targetProp"
+    tp = ISO + "." + (ns + "." if ns else "") + "SL003.targetProp"
+    # Definition alignment (amendment 3, diagnostic): for every FC definition, does the cited environment
+    # declare the same name, and is it definitionally equal to FC's? One file per definition.
+    aligns = []
+    for q in fc_definitions(target):
+        short = q[len(ISO) + 1:]
+        aligns.append(short)
+        (out / f"Align{len(aligns) - 1}.lean").write_text(
+            f"import SL003Target\n\nexample : @{q} = @_root_.{short} := rfl\n")
+    (out / "aligns.json").write_text(json.dumps(aligns) + "\n")
     defs = ", ".join(sorted(set(re.findall(r'^(?:noncomputable\s+)?def\s+(\S+)', target, re.M)) - {"SL003.targetProp"}))
     (out / "Direct.lean").write_text(f"import SL003Target\n\ntheorem SL003.direct : {tp} := by\n  unfold {tp}\n  exact @{cited}\n")
     for k, t in enumerate(CASCADE):

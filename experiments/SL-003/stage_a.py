@@ -18,7 +18,35 @@ sys.path.insert(0, str(HERE.parent / "SL-001"))
 import sl001  # noqa: E402  (theorem_statement, core, norm)
 
 CUTOFF = "2026-11-11T09:09:17Z"
-DECL = re.compile(r'^\s*(?:@\[[^\]]*\]\s*)*(?:private\s+|protected\s+|noncomputable\s+)*(?:theorem|lemma|alias)\s+(\S+)', re.M)
+DECL = re.compile(r'^\s*(?:@\[[^\]]*\]\s*)*(?:public\s+|private\s+|protected\s+|noncomputable\s+)*(?:theorem|lemma|alias)\s+(\S+)', re.M)
+
+
+def theorem_statement(src, name, raw=False):
+    """Text between `theorem NAME` and the `:=` that starts the proof (amendment 3).
+
+    SL-001's helper cut at the first `:=`, which truncates statements containing `letI x := ...`.
+    Here the proof's `:=` is the first one at bracket depth 0 followed by `by`, `sorry`, or a line end;
+    if there is none, the first depth-0 `:=`.
+    """
+    m = re.search(r'^\s*(?:@\[[^\]]*\]\s*)*(?:private\s+|protected\s+)*(?:theorem|lemma)\s+' + re.escape(name)
+                  + r'(?=[\s:({\[])', src, re.M)
+    if not m:
+        return None
+    rest = src[m.end():m.end() + 20000]
+    depth, first = 0, None
+    for i, ch in enumerate(rest):
+        if ch in "([{⦃⟨":
+            depth += 1
+        elif ch in ")]}⦄⟩":
+            depth -= 1
+        elif ch == ":" and rest[i + 1:i + 2] == "=" and depth == 0:
+            if first is None:
+                first = i
+            if re.match(r'\s*(by\b|sorry\b|\n|$)', rest[i + 2:i + 40]):
+                return rest[:i].strip() if raw else sl001.norm(rest[:i])
+    if first is None:
+        return None
+    return rest[:first].strip() if raw else sl001.norm(rest[:first])
 
 
 def sh(*a, cwd=None, check=True):
@@ -107,7 +135,13 @@ def environment(d: Path, commit: str, path: str):
                 pk = json.loads(mf.stdout).get("packages", [])
             except json.JSONDecodeError:
                 return {"root": base, "error": "manifest_unparseable"}
-            return {"root": base, "toolchain": tc.stdout.strip(),
+            src_dirs = []
+            for lf in ("lakefile.toml", "lakefile.lean"):
+                t = subprocess.run(["git", "-C", str(d), "show", f"{commit}:{pre}{lf}"], capture_output=True,
+                                   text=True)
+                if t.returncode == 0:
+                    src_dirs += re.findall(r'srcDir\s*(?::=|=)\s*"([^"]*)"', t.stdout)
+            return {"root": base, "toolchain": tc.stdout.strip(), "src_dirs": sorted(set(src_dirs)),
                     "packages": {p.get("name"): p.get("rev") for p in pk},
                     "depends_on_formal_conjectures": any("formal" in (p.get("name") or "").lower()
                                                          and "conjecture" in (p.get("name") or "").lower() for p in pk)}
@@ -129,7 +163,8 @@ def run_case(c: dict, fc: str, work: Path) -> dict:
     r = {"case_id": c["case_id"], "url": c["url"], "fc_path": c["fc_path"], "target": c["target"],
          "stage": "A", "certifies": "nothing; deterministic observations only"}
     fc_src = Path(fc, c["fc_path"]).read_text(encoding="utf-8")
-    tgt = sl001.theorem_statement(fc_src, c["target"])
+    tgt = theorem_statement(fc_src, c["target"])
+    r["target_statement_raw"] = theorem_statement(fc_src, c["target"], raw=True)
     r["target_statement"] = tgt
     r["target_statement_sha256"] = sha(tgt)
     u = parse_url(c["url"])
@@ -165,7 +200,7 @@ def run_case(c: dict, fc: str, work: Path) -> dict:
     if not name:
         return {**r, "outcome": "infrastructure_blocked", "cause": "locate",
                 "detail": "file exists at pin; the link names no declaration that the anchor or name rules identify"}
-    st = sl001.theorem_statement(src.stdout, name)
+    st = theorem_statement(src.stdout, name)
     r["cited_statement"] = st
     r["cited_statement_sha256"] = sha(st)
     r["text_identical"] = bool(st and tgt and sl001.norm(st) == sl001.norm(tgt))
@@ -177,11 +212,19 @@ def run_case(c: dict, fc: str, work: Path) -> dict:
     if not env or env.get("error"):
         return {**r, "outcome": "infrastructure_blocked", "cause": "environment",
                 "detail": (env or {}).get("error", "no lean-toolchain + lake-manifest.json above the cited file")}
-    hdr = next((i for i, l in enumerate(src.stdout.split("\n"), 1)
-                if re.search(r'\b(?:theorem|lemma|alias)\s+' + re.escape(name) + r'(?=[\s:({\[])', l)), None)
+    # Header line of the declaration itself (amendment 3): a declaration line outside block comments,
+    # not a mention of the name in a docstring above the enclosing namespace.
+    nc = re.sub(r'/-.*?-/', lambda mm: "\n" * mm.group(0).count("\n"), src.stdout, flags=re.S)
+    hdr = next((i for i, l in enumerate(nc.split("\n"), 1)
+                if re.match(r'^\s*(?:@\[[^\]]*\]\s*)*(?:public\s+|private\s+|protected\s+|noncomputable\s+)*'
+                            r'(?:theorem|lemma|alias)\s+' + re.escape(name) + r'(?=[\s:({\[]|$)', l)), None)
     r["cited_qualified"] = sl001.qualified_name(src.stdout, hdr, name) if hdr else name
     rel = u["path"][len(env["root"]) + 1:] if env["root"] else u["path"]
-    r["cited_module"] = rel[:-len(".lean")].replace("/", ".")
+    # Module name relative to the longest library srcDir containing the file (amendment 3); Lake names
+    # modules from the srcDir, not from the package root.
+    sd = max((x.strip("./") for x in env.get("src_dirs", []) if x.strip("./")
+              and rel.startswith(x.strip("./") + "/")), key=len, default="")
+    r["cited_module"] = (rel[len(sd) + 1:] if sd else rel)[:-len(".lean")].replace("/", ".")
     r["module_path_in_env"] = rel
     return {**r, "outcome": "ready_for_stage_b"}
 

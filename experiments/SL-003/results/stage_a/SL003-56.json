@@ -18,6 +18,7 @@
  "stage": "A",
  "target": "erdos_199",
  "target_statement": ": ¬ ∀ A : Set ℝ, ThreeAPFree A → ∃ S : Set ℝ, S.IsAPOfLength ⊤ ∧ S ⊆ Aᶜ",
+ "target_statement_raw": ":\n    ¬ ∀ A : Set ℝ, ThreeAPFree A →\n      ∃ S : Set ℝ, S.IsAPOfLength ⊤ ∧ S ⊆ Aᶜ",
  "target_statement_sha256": "a1b0b36048eb994e49219553c46a83d303c38eb47e34efba20767ff72e9af7c9",
  "url": "https://github.com/plby/lean-proofs/blob/main/src/v4.29.1/ErdosProblems/Erdos199.lean"
 }

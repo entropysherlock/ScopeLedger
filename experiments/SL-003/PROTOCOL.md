@@ -185,3 +185,33 @@ cited proof, and the case is reported as "link not exercised" next to its outcom
 (e) Each attempt's first Lean error is published as a second annotation.
 The sample, outcome definitions, thresholds and budgets are unchanged. Launch 2 re-runs Stage B on every
 ready case.
+
+**Amendment 3, 2026-11-11, after Stage B launch 2 outcomes were seen (run 43065022015).** This
+amendment is made with outcomes in view, so launch 2 is kept and reported as the result of the frozen
+v1.0 transport (`results/launch2_v1_transport/`). Launch 2 is the baseline; Amendment 3 is reported
+separately against it. Launch 2 gave 0 directly verified, 11 undecided, 25 transport-blocked and 8
+build-blocked cases. Its errors show that most blocks came from the harness, not the links:
+(a) **Name collisions, 15 cases.** The cited projects copy Formal Conjectures' definitions under the
+same names, so the transported FC text re-declared them. The FC text and the target now live under the
+namespace `SL003FC`. FC's statement keeps FC's own definitions, and a cited theorem about the project's
+copies can close it only if those copies are definitionally equal to FC's. Each FC definition is also
+checked against the same-named definition in the cited environment with `rfl`, recorded as `rfl`,
+`not_rfl` or `absent` (diagnostic only). This keeps the transport strictly no stronger than v1.0: names
+are never identified, only definitions that the kernel shows are equal.
+(b) **Parser fixes.** `open … in` prefixes travel with their declaration, and `deriving`,
+`termination_by`, `decreasing_by`, `where` and `|` lines continue a block.
+(c) **Statement extraction.** The SL-001 helper cut a statement at its first `:=`, which truncated
+`letI x := …` statements (SL003-09). SL-003 now uses a bracket-aware extractor that stops at the
+proof's `:=`. Transport takes the raw text; identity comparisons take the normalised text.
+(d) **Header and module location.** A mention of the cited name in a docstring above the namespace was
+taken as the declaration, which lost the namespace (SL003-02, SL003-45). Declarations are now matched
+on declaration lines outside block comments, and `public` declarations are recognised. As a result
+SL003-34 (two theorems, no anchor, no matching name) is correctly `infrastructure_blocked: locate`.
+Module names are computed relative to the library's `srcDir` (SL003-38, SL003-41).
+(e) **Replay.** In launch 2, leanchecker started `lean` through elan and failed. The toolchain directory
+is now first on PATH. SL003-11 and SL003-13 (direct) and SL003-25 (cascade) had compiled with standard
+axioms and were rejected only at that replay.
+Stage A is re-run in full; the ready set changes only by SL003-34. Outcome definitions, thresholds,
+budgets and the sample are unchanged. AI attempts (step d) are written by Claude for every case that
+remains `undecided`, from the two statements, the definitions and the CI errors, with at most two
+compiled attempts and no human edits.

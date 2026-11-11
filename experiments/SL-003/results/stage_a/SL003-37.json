@@ -58,6 +58,7 @@
    "«tempered-fundamental-groups»": "2006651f52b70ea2fe3388238c7d9db14d21748f"
   },
   "root": "lean",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.34.1"
  },
  "fc_path": "FormalConjectures/Wikipedia/BorsukConjecture.lean",
@@ -72,6 +73,7 @@
  "stage": "A",
  "target": "borsuk_conjecture",
  "target_statement": ": ¬ ∀ n, 4 ≤ n → n ≤ 62 → BorsukConjecture n",
+ "target_statement_raw": ": ¬ ∀ n, 4 ≤ n → n ≤ 62 → BorsukConjecture n",
  "target_statement_sha256": "731e7993c9dcc7a0051ce518785eb8842c7b7732079fa589d9c6fc0d786eada6",
  "text_identical": false,
  "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/Geometry/Borsuk/Main.lean#L117"

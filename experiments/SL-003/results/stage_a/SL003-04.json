@@ -23,6 +23,7 @@
  "stage": "A",
  "target": "conjecture",
  "target_statement": ": ¬ ∀ (n : ℕ), 2 < n → ((n : ℤ) ∣ a (n - 2) ↔ n.Prime)",
+ "target_statement_raw": ": ¬ ∀ (n : ℕ), 2 < n → ((n : ℤ) ∣ a (n - 2) ↔ n.Prime)",
  "target_statement_sha256": "ea2708208eec790429aa9069bb211dac7dd5b6ee76a59aacc7bf09d1d3986fe3",
  "text_identical": false,
  "url": "https://github.com/epoch-research/LeanOpenProblems-results/blob/f02efd9a8c5fc6a735d2a90c33e24f7278ce0ffc/runs/oeis-full-50usd-ant-j0j0g4uzligm1k41/oeis_64169_conjecture_0/Submission/Spec.lean#L514"

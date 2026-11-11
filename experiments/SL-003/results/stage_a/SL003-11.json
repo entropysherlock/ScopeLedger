@@ -25,6 +25,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.1"
  },
  "fc_path": "FormalConjectures/ErdosProblems/1050.lean",
@@ -39,6 +40,7 @@
  "stage": "A",
  "target": "erdos_1050.variants.two_pow_sub_one",
  "target_statement": ": Irrational (∑' n : ℕ, (1 : ℝ) / ((2 : ℝ) ^ (n + 1) - 1))",
+ "target_statement_raw": ":\n    Irrational (∑' n : ℕ, (1 : ℝ) / ((2 : ℝ) ^ (n + 1) - 1))",
  "target_statement_sha256": "390cdf2a78e5da16ac65f544e141f7628f2636db8968054c397b4da678e94470",
  "text_identical": true,
  "url": "https://github.com/gotrevor/lean-gallery/blob/main/LeanGallery/NumberTheory/Erdos1050/Variants.lean"

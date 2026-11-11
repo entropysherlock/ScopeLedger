@@ -25,6 +25,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.1"
  },
  "fc_path": "FormalConjectures/ErdosProblems/482.lean",
@@ -39,6 +40,7 @@
  "stage": "A",
  "target": "erdos_482",
  "target_statement": ": (∀ n : ℕ, 1 ≤ n → (a (2 * n + 1) : ℤ) - 2 * a (2 * n - 1) = (Real.digits (√2 / 2) 2 (n - 1) : ℕ)) ∧ Real.ofDigits (Real.digits (√2 / 2) 2) = √2 / 2",
+ "target_statement_raw": ":\n    (∀ n : ℕ, 1 ≤ n →\n      (a (2 * n + 1) : ℤ) - 2 * a (2 * n - 1) = (Real.digits (√2 / 2) 2 (n - 1) : ℕ)) ∧\n      Real.ofDigits (Real.digits (√2 / 2) 2) = √2 / 2",
  "target_statement_sha256": "0a9b9d4daa19c8b032edafe41666158555223a451af0e5988857371ca680e026",
  "text_identical": false,
  "url": "https://github.com/gotrevor/lean-gallery/blob/a28a487968d989b24c9dde9b1958aa5b92c6fccb/LeanGallery/NumberTheory/Erdos482/Statement.lean#L46-L49"

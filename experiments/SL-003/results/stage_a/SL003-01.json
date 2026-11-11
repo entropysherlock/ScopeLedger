@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/253.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_253",
  "target_statement": ": ¬ ∀ a : ℕ → ℕ, 0 < a 0 → RepresentsAPs a → (Filter.atTop.Tendsto (fun n ↦ (a <| n + 1 : ℝ) / a n) (𝓝 1)) → subsetSums (Set.range a) ∈ Filter.cofinite",
+ "target_statement_raw": ": ¬ ∀ a : ℕ → ℕ, 0 < a 0 →\n    RepresentsAPs a → (Filter.atTop.Tendsto (fun n ↦ (a <| n + 1 : ℝ) / a n) (𝓝 1)) →\n      subsetSums (Set.range a) ∈ Filter.cofinite",
  "target_statement_sha256": "c5599dac0174a3887af8ca48b589737124cf4cefd30435602b02cd6955607a11",
  "text_identical": true,
  "url": "https://github.com/plby/lean-proofs/blob/1268917deaaaa0d674f651287027baa26cea9920/src/latest/ErdosProblems/Erdos253.lean#L699"

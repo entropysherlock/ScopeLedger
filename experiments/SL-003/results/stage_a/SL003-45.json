@@ -7,7 +7,7 @@
  "cited_has_sorry_text": false,
  "cited_module": "ErdosProblems.Erdos1195",
  "cited_path": "src/latest/ErdosProblems/Erdos1195.lean",
- "cited_qualified": "erdos_1195",
+ "cited_qualified": "Erdos1195.erdos_1195",
  "cited_statement": "(F : ℝ → ℝ) (hF0 : ∀ x ∈ Ici (1 : ℝ), 0 ≤ F x) (hmono : MonotoneOn F (Ici (1 : ℝ))) (hFtop : Tendsto F atTop atTop) : HasErdos1195Witness F ↔ IntegrableOn (fun x => F x / x ^ 2) (Ici (1 : ℝ))",
  "cited_statement_sha256": "98624d20df190b8883a597e57b2132fb8128886ab8e77f886613a6aadd4902d1",
  "core_identical": false,
@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/1195.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_1195",
  "target_statement": ": {F : ℝ → ℝ | IsGrowthRate F ∧ HasSet F} = erdos_1195.answer",
+ "target_statement_raw": ":\n    {F : ℝ → ℝ | IsGrowthRate F ∧ HasSet F} = erdos_1195.answer",
  "target_statement_sha256": "a7080cd90d637137a7744638216abb5d11d19f09709c249a9aa4f5ed6521659c",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1195.lean#L1933"

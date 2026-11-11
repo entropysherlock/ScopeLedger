@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/441.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_441",
  "target_statement": ": ¬ ∀ N : ℕ, 1 ≤ N → g N = (erdosConstruction N).card",
+ "target_statement_raw": ":\n    ¬ ∀ N : ℕ, 1 ≤ N → g N = (erdosConstruction N).card",
  "target_statement_sha256": "94a9fa6c862d0520988e6e9e817762767322b920e7bbb1fa0cfd1b74754f2ced",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos441.lean#L453"

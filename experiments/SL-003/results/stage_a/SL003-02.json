@@ -7,7 +7,7 @@
  "cited_has_sorry_text": false,
  "cited_module": "FormalConjectures.ErdosProblems.987",
  "cited_path": "FormalConjectures/ErdosProblems/987.lean",
- "cited_qualified": "erdos_987.variants.sqrt_lower_bound",
+ "cited_qualified": "Erdos987.erdos_987.variants.sqrt_lower_bound",
  "cited_statement": "(x : ℕ → ℝ) (hx : ∀ j : ℕ, x j ∈ Set.Ioo (0 : ℝ) 1) : ∃ c > 0, ∃ᶠ k : ℕ in atTop, ((c * Real.sqrt k : ℝ) : EReal) ≤ A x k",
  "cited_statement_sha256": "ad22ee336a06692494077741db9799b0876270ea430e7ad671e10e37ee603e28",
  "core_identical": true,
@@ -25,6 +25,9 @@
    "proofwidgets": "c04225ee7c0585effbd933662b3151f01b600e40"
   },
   "root": "",
+  "src_dirs": [
+   "scripts"
+  ],
   "toolchain": "leanprover/lean4:v4.27.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/987.lean",
@@ -39,6 +42,7 @@
  "stage": "A",
  "target": "erdos_987.variants.sqrt_lower_bound",
  "target_statement": "(x : ℕ → ℝ) (hx : ∀ j : ℕ, x j ∈ Set.Ioo (0 : ℝ) 1) : ∃ c > 0, ∃ᶠ k : ℕ in atTop, ((c * Real.sqrt k : ℝ) : EReal) ≤ A x k",
+ "target_statement_raw": "(x : ℕ → ℝ) (hx : ∀ j : ℕ, x j ∈ Set.Ioo (0 : ℝ) 1) :\n    ∃ c > 0, ∃ᶠ k : ℕ in atTop, ((c * Real.sqrt k : ℝ) : EReal) ≤ A x k",
  "target_statement_sha256": "ad22ee336a06692494077741db9799b0876270ea430e7ad671e10e37ee603e28",
  "text_identical": true,
  "url": "https://github.com/Marti2203/formal-conjectures/blob/19c63d48acce3099c242b059518c49bf8dc0eab8/FormalConjectures/ErdosProblems/987.lean"

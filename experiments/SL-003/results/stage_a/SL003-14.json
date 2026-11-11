@@ -26,6 +26,7 @@
    "proofwidgets": "c04225ee7c0585effbd933662b3151f01b600e40"
   },
   "root": "lean",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.27.0"
  },
  "fc_path": "FormalConjectures/Paper/MonochromaticQuantumGraph.lean",
@@ -40,6 +41,7 @@
  "stage": "A",
  "target": "eqSystem6_no_solution_d3_trinary_int",
  "target_statement": ": ¬ ∃ W : WeightsN 6 3 ℤ, (∀ e, W e = (-1 : ℤ) ∨ W e = 0 ∨ W e = 1) ∧ EqSystemN 6 3 W",
+ "target_statement_raw": ":\n    ¬ ∃ W : WeightsN 6 3 ℤ,\n        (∀ e, W e = (-1 : ℤ) ∨ W e = 0 ∨ W e = 1) ∧\n          EqSystemN 6 3 W",
  "target_statement_sha256": "b6971f706ca8cf0fc329ca1a55c6749116ccf6ad9cb590e06b652e0e74acf76b",
  "text_identical": false,
  "url": "https://github.com/KitaKen1/monochromatic-quantum-graphs-lean/blob/d3ed1892ef181f5f5f5d61d9b5817f05b53a6675/lean/QuantumLean/FormalConjecturesWrappers.lean#L88-L97"

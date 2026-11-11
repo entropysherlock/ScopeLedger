@@ -38,6 +38,33 @@ def axioms(log, name):
     return sorted(a.strip() for a in (m.group(2) or "").split(",") if a.strip())
 
 
+USES = """import Lean
+import {mod}
+open Lean in
+#eval show CoreM Unit from do
+  let env ← getEnv
+  let target := "{cited}".toName
+  let modIdx := env.getModuleIdx? `{mod}
+  let mut seen : NameSet := {{}}
+  let mut stack : List Name := [`{thm}]
+  let mut found := false
+  while !stack.isEmpty do
+    let n := stack.head!
+    stack := stack.tail!
+    if seen.contains n then continue
+    seen := seen.insert n
+    if n == target then
+      found := true
+      break
+    let some ci := env.find? n | continue
+    unless n == `{thm} || (modIdx.isSome && env.getModuleIdxFor? n == modIdx) do continue
+    let used := ci.type.getUsedConstants ++ ((ci.value? (allowOpaque := true)).map Expr.getUsedConstants |>.getD #[])
+    for c in used do
+      stack := c :: stack
+  IO.println s!"USES_CITED {{found}}"
+"""
+
+
 def first_error(log):
     """The first Lean error message, including its continuation lines, up to the next diagnostic."""
     m = re.search(r'^\S+:\d+:\d+: error.*?(?=^\S+:\d+:\d+: |\Z)', log, re.S | re.M)
@@ -65,7 +92,7 @@ def main():
         R.update(outcome=outcome, **kw)
         (out / "result.json").write_text(json.dumps(R, indent=1, ensure_ascii=False) + "\n")
         short = {k: R.get(k) for k in ("case_id", "outcome", "cause", "detail", "method", "cited_axioms",
-                                       "proof_axioms", "replay", "control_without_cited", "toolchain")}
+                                       "proof_axioms", "replay", "control_without_cited", "def_alignment", "toolchain")}
         short["seconds"] = {k: v.get("seconds") for k, v in R["steps"].items()}
         print(f"::notice title=SL-003 {case}::" + json.dumps(short, ensure_ascii=False)[:3500])
         # Second annotation: first error of each attempt (results are read from annotations, not artifacts).
@@ -107,7 +134,9 @@ def main():
     bindir = Path(which.stdout.strip()).parent
     LEAN, CHECKER = str(bindir / "lean"), bindir / "leanchecker"
     R["lean_binary"] = LEAN
-    env = {**os.environ, "LEAN_PATH": f"{work}:{lean_path}"}
+    # leanchecker starts `lean` itself; launch 2 showed it reached elan's proxy (no toolchain) and failed,
+    # so the toolchain's bin directory goes first on PATH.
+    env = {**os.environ, "LEAN_PATH": f"{work}:{lean_path}", "PATH": f"{bindir}:{os.environ.get('PATH', '')}"}
     # 3. axioms of the cited declaration
     (work / "CitedAxioms.lean").write_text(f"import {sa['cited_module']}\n#print axioms {sa['cited_qualified']}\n")
     rc, log, s = run([LEAN, "CitedAxioms.lean"], work, 1200, env)
@@ -126,6 +155,8 @@ def main():
     R["transport_edits"] = json.loads((work / "edits.json").read_text()) if (work / "edits.json").exists() else None
     if rc_t.returncode != 0:
         return finish("infrastructure_blocked", cause="transport", detail=(rc_t.stdout + rc_t.stderr)[-400:])
+    tp = re.search(r'TRANSPORT_OK (\S+)', rc_t.stdout).group(1)
+    R["target_prop"] = tp
     rc, log, s = run([LEAN, "-o", "SL003Target.olean", "SL003Target.lean"], work, 1200, env)
     R["steps"]["transport_elaborate"] = {"rc": rc, "seconds": s}
     if rc != 0 or re.search(r':\d+:\d+: error', log):
@@ -133,6 +164,15 @@ def main():
         return finish("infrastructure_blocked", cause="transport",
                       detail="transported target does not elaborate: " + " | ".join(
                           [l for l in log.splitlines() if "error" in l][:3])[:600])
+    # 4b. definition alignment (amendment 3, diagnostic): is each FC definition the same as the cited
+    # environment's definition of that name? rfl = definitionally equal; absent = the name is not declared.
+    align = {}
+    names = json.loads((work / "aligns.json").read_text()) if (work / "aligns.json").exists() else []
+    for i, n in enumerate(names):
+        rc_a, alog, _ = run([LEAN, f"Align{i}.lean"], work, 300, env)
+        align[n] = ("rfl" if rc_a == 0 and not re.search(r':\d+:\d+: error', alog)
+                    else "absent" if re.search(r"[Uu]nknown (constant|identifier)", alog) else "not_rfl")
+    R["def_alignment"] = align
     # 5. attempts, in fixed order
     attempts = [("directly_verified", "Direct")] + \
         [("auto_bridged_deterministic", f.stem) for f in sorted(work.glob("Cascade*.lean"))]
@@ -150,8 +190,13 @@ def main():
         (out / f"{mod}.log").write_text(log)
         if rc == 0 and not re.search(r':\d+:\d+: error', log) and "sorry" not in log:
             thm = re.search(r'theorem\s+(\S+)', (work / f"{mod}.lean").read_text()).group(1)
-            (work / "ProofAxioms.lean").write_text(f"import {mod}\n#print axioms {thm}\n")
+            # Type guard: the attempt must prove exactly the transported target, whatever it states.
+            (work / "ProofAxioms.lean").write_text(
+                f"import {mod}\n\nexample : {tp} := @{thm}\n\n#print axioms {thm}\n")
             _, alog, _ = run([LEAN, "ProofAxioms.lean"], work, 600, env)
+            if re.search(r':\d+:\d+: error', alog):
+                R["steps"][mod]["rejected"] = "does not prove the transported target: " + (first_error(alog) or "")[:300]
+                continue
             pax = axioms(alog, thm)
             R["proof_axioms"] = pax
             if pax is None or [a for a in pax if a not in ALLOWED]:
@@ -165,19 +210,15 @@ def main():
                     continue
             else:
                 R["replay"] = {"tool": None, "note": "leanchecker not present in this toolchain"}
-            # Control (diagnostic, does not change the outcome): same proof with the cited theorem replaced by
-            # `trivial`. If that also succeeds, the target fell without the cited proof and the link is
-            # reported as not exercised.
-            src = (work / f"{mod}.lean").read_text()
-            cited_ref = f"@{sa['cited_qualified']}"
-            if cited_ref in src:
-                (work / "Control.lean").write_text(src.replace(cited_ref, "(trivial : True)")
-                                                   .replace(f"theorem {thm}", "theorem SL003.control"))
-                crc, clog2, _ = run([LEAN, "Control.lean"], work, 600, env)
-                R["control_without_cited"] = {"proved": crc == 0 and not re.search(r':\d+:\d+: error', clog2)
-                                              and "sorry" not in clog2}
-            else:
-                R["control_without_cited"] = {"proved": None, "note": "proof does not name the cited theorem"}
+            # Dependency check (diagnostic, does not change the outcome): does the accepted proof term depend
+            # on the cited theorem, following the attempt module's own auxiliary declarations? If not, the
+            # target fell without the cited proof and the link was not exercised (amendment 2 d, 3).
+            (work / "Uses.lean").write_text(USES.format(mod=mod, thm=thm, cited=sa["cited_qualified"]))
+            _, ulog, _ = run([LEAN, "Uses.lean"], work, 300, env)
+            um = re.search(r'USES_CITED (true|false)', ulog)
+            R["uses_cited"] = (um.group(1) == "true") if um else None
+            R["control_without_cited"] = {"proved": (not R["uses_cited"]) if um else None,
+                                          "method": "transitive constant dependency"}
             return finish(outcome, method=mod)
     return finish("undecided", detail="target elaborates; direct, cascade" +
                   (" and AI attempts" if ai_dir.exists() else "") + " did not prove it within budget")

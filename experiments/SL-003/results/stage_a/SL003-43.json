@@ -26,6 +26,7 @@
    "proofwidgets": "c04225ee7c0585effbd933662b3151f01b600e40"
   },
   "root": "lean",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.27.0"
  },
  "fc_path": "FormalConjectures/Paper/MonochromaticQuantumGraph.lean",
@@ -40,6 +41,7 @@
  "stage": "A",
  "target": "eqSystem8_no_solution_d3_trinary_int",
  "target_statement": ": ¬ ∃ W : WeightsN 8 3 ℤ, (∀ e, W e = (-1 : ℤ) ∨ W e = 0 ∨ W e = 1) ∧ EqSystemN 8 3 W",
+ "target_statement_raw": ":\n    ¬ ∃ W : WeightsN 8 3 ℤ,\n        (∀ e, W e = (-1 : ℤ) ∨ W e = 0 ∨ W e = 1) ∧\n          EqSystemN 8 3 W",
  "target_statement_sha256": "337c886a6941de09cee9cced27e9924d0f74e711c44f3f059ad0b8c7fb862e56",
  "text_identical": false,
  "url": "https://github.com/KitaKen1/monochromatic-quantum-graphs-lean/blob/d3ed1892ef181f5f5f5d61d9b5817f05b53a6675/lean/QuantumLean/FormalConjecturesWrappers.lean#L122-L131"

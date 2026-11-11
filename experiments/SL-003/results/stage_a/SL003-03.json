@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/581.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_581",
  "target_statement": ": ∃ c₁ c₂ : ℝ, 0 < c₁ ∧ 0 < c₂ ∧ ∀ m : ℕ, (m : ℝ) / 2 + c₁ * (m : ℝ) ^ (4 / 5 : ℝ) ≤ f m ∧ (f m : ℝ) ≤ (m : ℝ) / 2 + c₂ * (m : ℝ) ^ (4 / 5 : ℝ)",
+ "target_statement_raw": ": ∃ c₁ c₂ : ℝ, 0 < c₁ ∧ 0 < c₂ ∧ ∀ m : ℕ,\n    (m : ℝ) / 2 + c₁ * (m : ℝ) ^ (4 / 5 : ℝ) ≤ f m ∧\n      (f m : ℝ) ≤ (m : ℝ) / 2 + c₂ * (m : ℝ) ^ (4 / 5 : ℝ)",
  "target_statement_sha256": "0ea08f38dba4491ba3cb627ee031f05ba98ebd3d9b5c7fdf3774ad165b5d3ac5",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos581.lean#L31"

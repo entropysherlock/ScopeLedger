@@ -46,7 +46,11 @@ jobs:
           python experiments/SL-003/stage_a.py "$RUNNER_TEMP/fc" "$RUNNER_TEMP/work" | tee "$RUNNER_TEMP/stage_a.txt"
           if [ -d "$RUNNER_TEMP/stage_a_committed" ]; then
             for f in experiments/SL-003/results/stage_a/*.json; do
-              cmp -s "$f" "$RUNNER_TEMP/stage_a_committed/$(basename "$f")" || echo "::warning title=SL-003 Stage A differs from committed::$(basename "$f")"
+              if ! cmp -s "$f" "$RUNNER_TEMP/stage_a_committed/$(basename "$f")"; then
+                echo "::warning title=SL-003 Stage A differs from committed::$(basename "$f")"
+                # publish CI's record so it can be committed (artifacts are not readable from the audit host)
+                echo "::notice title=SL-003 stage_a_ci $(basename "$f")::$(python -c 'import json,sys;print(json.dumps(json.load(open(sys.argv[1])),ensure_ascii=False,separators=(",",":"))[:3800])' "$f")"
+              fi
             done
           fi
           echo "::notice title=SL-003 Stage A summary::$(tr -d '\n ' < experiments/SL-003/results/stage_a/summary.json)"

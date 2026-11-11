@@ -25,6 +25,7 @@
    "proofwidgets": "4dd0959c44d1af0462bd604d0f87c5781307d709"
   },
   "root": "src/v4.29.1",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.29.1"
  },
  "fc_path": "FormalConjectures/ErdosProblems/497.lean",
@@ -39,6 +40,7 @@
  "stage": "A",
  "target": "erdos_497",
  "target_statement": ": ∃ (o : ℕ → ℝ) (_ : o =o[atTop] (1 : ℕ → ℝ)), ∀ n : ℕ, (DedekindNumber.M' n : ℝ) = 2 ^ ((1 + o n) * (n.choose (n / 2) : ℝ))",
+ "target_statement_raw": ":\n    ∃ (o : ℕ → ℝ) (_ : o =o[atTop] (1 : ℕ → ℝ)),\n      ∀ n : ℕ, (DedekindNumber.M' n : ℝ) = 2 ^ ((1 + o n) * (n.choose (n / 2) : ℝ))",
  "target_statement_sha256": "933188a85dc8a3d55d69d4c1dca91979d12040d98055edb67522c103663b301f",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/1d7b3f00780b85ed0462e79a1cd5650ee9055655/src/v4.29.1/ErdosProblems/Erdos497.lean"

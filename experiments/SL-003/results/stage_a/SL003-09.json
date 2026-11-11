@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/477.lean",
@@ -48,8 +49,9 @@
  "source_kind": "github",
  "stage": "A",
  "target": "erdos_477.variants.monomial",
- "target_statement": ": ¬ ∀ (k : ℕ), 2 ≤ k → letI f",
- "target_statement_sha256": "9ae497a37d575335fdc52dd3ae684f68571e2c07b581df74fed46923f2ef5bd6",
+ "target_statement": ": ¬ ∀ (k : ℕ), 2 ≤ k → letI f := X ^ k ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2",
+ "target_statement_raw": ":\n    ¬ ∀ (k : ℕ), 2 ≤ k →\n      letI f := X ^ k\n      ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2",
+ "target_statement_sha256": "69b1be2906d5af72b9bcfde4f130fa25b3d051097602fdb27052d9fa054ca00f",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos477.lean#L42"
 }

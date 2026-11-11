@@ -25,6 +25,9 @@
    "proofwidgets": "4c70ac059693669e5756e32a7a94b57ee1e99dc5"
   },
   "root": "erdos-1180",
+  "src_dirs": [
+   "Proofs"
+  ],
   "toolchain": "leanprover/lean4:v4.35.0-rc2"
  },
  "fc_path": "FormalConjectures/ErdosProblems/1180.lean",
@@ -39,6 +42,7 @@
  "stage": "A",
  "target": "erdos_1180.variants.glibichuk",
  "target_statement": ": ∃ K : ℝ, ∀ ε : ℝ, 0 < ε → ε ≤ 1 → ∃ P : ℕ, ∀ p : ℕ, P ≤ p → p.Prime → ∀ a : ZMod p, ∃ s : Multiset ℕ, (s.card : ℝ) ≤ K * ε⁻¹ ^ 2 ∧ Represents ε p a s",
+ "target_statement_raw": ": ∃ K : ℝ, ∀ ε : ℝ, 0 < ε → ε ≤ 1 →\n    ∃ P : ℕ, ∀ p : ℕ, P ≤ p → p.Prime → ∀ a : ZMod p,\n      ∃ s : Multiset ℕ, (s.card : ℝ) ≤ K * ε⁻¹ ^ 2 ∧ Represents ε p a s",
  "target_statement_sha256": "e65ceedc5bc6da92301ff14dc4eaa7afac3a9d7261a3d92df199ed7cfe18600a",
  "text_identical": true,
  "url": "https://github.com/linrock/math-proofs/blob/ba96303b34a95ac458958c1eb0bbdee54733484a/erdos-1180/Solution.lean#L83"

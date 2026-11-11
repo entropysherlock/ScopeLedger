@@ -26,6 +26,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.1"
  },
  "fc_path": "FormalConjectures/ErdosProblems/263.lean",
@@ -40,6 +41,7 @@
  "stage": "A",
  "target": "erdos_263.variants.super_doubly_exponential_eventual",
  "target_statement": "(a : ℕ → ℕ) (ha : ∀ n : ℕ, a n > 0) (ha' : StrictMono a) (ha'' : ∃ ε c : ℝ, 0 < ε ∧ 0 < c ∧ ∀ᶠ n in atTop, c * (a n : ℝ) ^ (2 + ε) ≤ (a (n + 1) : ℝ)) : IsIrrationalitySequence a",
+ "target_statement_raw": "(a : ℕ → ℕ)\n    (ha : ∀ n : ℕ, a n > 0)\n    (ha' : StrictMono a)\n    (ha'' : ∃ ε c : ℝ, 0 < ε ∧ 0 < c ∧\n      ∀ᶠ n in atTop, c * (a n : ℝ) ^ (2 + ε) ≤ (a (n + 1) : ℝ)) :\n    IsIrrationalitySequence a",
  "target_statement_sha256": "f8c1b6f7e541269e79bd08c2f623d648cfbcecfa46d3a5bd543e08fc6407900a",
  "text_identical": true,
  "url": "https://github.com/anatoliiohorodnyk/lean-fc-proofs/blob/5da9642575b26c2c816a49bcb56b33fed5456619/Proofs/T_Erdos263_erdos_263_variants_super_doubly_exponential_eventual.lean#L515"

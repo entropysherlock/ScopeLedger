@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/95.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_95",
  "target_statement": ": ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧ ∀ P : Finset ℝ², ∑ u ∈ distanceSet P, (distanceMultiplicity P u : ℝ) ^ 2 ≤ C * (P.card : ℝ) ^ (3 + ε)",
+ "target_statement_raw": ": ∀ ε : ℝ, 0 < ε → ∃ C : ℝ, 0 < C ∧ ∀ P : Finset ℝ²,\n    ∑ u ∈ distanceSet P, (distanceMultiplicity P u : ℝ) ^ 2 ≤\n      C * (P.card : ℝ) ^ (3 + ε)",
  "target_statement_sha256": "0836bcbba550c6e726e6844ef63283ce1a110ae5cda597d197b24071ffcdced7",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95.lean#L1005"

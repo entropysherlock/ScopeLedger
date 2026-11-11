@@ -18,6 +18,7 @@
  "stage": "A",
  "target": "erdos_314",
  "target_statement": ": atTop.liminf (fun n : ℕ => (n : ℝ) ^ 2 * epsilon n) = 0",
+ "target_statement_raw": ":\n    atTop.liminf (fun n : ℕ => (n : ℝ) ^ 2 * epsilon n) = 0",
  "target_statement_sha256": "2bf536e2a22def92899a10dd5e1176d8b9a90a2934baf82e853892a7df0ae555",
  "url": "https://github.com/plby/lean-proofs/blob/1d7b3f00780b85ed0462e79a1cd5650ee9055655/src/v4.29.1/ErdosProblems/Erdos314.lean"
 }

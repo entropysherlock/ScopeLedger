@@ -26,6 +26,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.1"
  },
  "fc_path": "FormalConjectures/ErdosProblems/10.lean",
@@ -40,6 +41,7 @@
  "stage": "A",
  "target": "erdos_10.variants.two_pows",
  "target_statement": ": Set.Infinite <| {n : ℕ | Even n} \\ sumPrimeAndTwoPows 2",
+ "target_statement_raw": ":\n    Set.Infinite <| {n : ℕ | Even n} \\ sumPrimeAndTwoPows 2",
  "target_statement_sha256": "61aeb384643a6f2567294f1a1b8a645b0073cdb571c7f2971be6cc5ecbafddcd",
  "text_identical": true,
  "url": "https://github.com/anatoliiohorodnyk/lean-fc-proofs/blob/5da9642575b26c2c816a49bcb56b33fed5456619/Proofs/T_Erdos10_erdos_10_variants_two_pows.lean#L340"

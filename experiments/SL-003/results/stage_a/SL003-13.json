@@ -25,6 +25,7 @@
    "proofwidgets": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f"
   },
   "root": "",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.34.0-rc2"
  },
  "fc_path": "FormalConjectures/OEIS/98275.lean",
@@ -39,6 +40,7 @@
  "stage": "A",
  "target": "conjecture_1",
  "target_statement": "(n : ℕ) : n + 1 ∣ a n",
+ "target_statement_raw": "(n : ℕ) : n + 1 ∣ a n",
  "target_statement_sha256": "a6c2b9ace7f6d2869868a7d643866414d131b449522846e7b5b3644bc6658e38",
  "text_identical": false,
  "url": "https://github.com/VictorLiwentao/lean-oeis-proofs/blob/0a23974e54b90afd1453ef02c27cf8f617bad940/LeanOeisProofs/NewProofs/A098275.lean#L166"

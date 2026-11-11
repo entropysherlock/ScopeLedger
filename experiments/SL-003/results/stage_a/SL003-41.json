@@ -5,7 +5,7 @@
  "cited_decl": "erdos_1049_variants_geq_2_integer",
  "cited_file_sha256": "402321bc485917ad3860e63834db0b6899f9d12a074fb1518cfb8d90529aea07",
  "cited_has_sorry_text": false,
- "cited_module": "research.adapters.FormalConjecturesAdapter",
+ "cited_module": "FormalConjecturesAdapter",
  "cited_path": "verification/FCMergedIntegerAdapters/research/adapters/FormalConjecturesAdapter.lean",
  "cited_qualified": "Erdos249257.FormalConjecturesAdapter.erdos_1049_variants_geq_2_integer",
  "cited_statement": ": ∀ t : ℤ, t ≥ 2 → Irrational (∑' n : ℕ+, 1 / ((t : ℝ) ^ (n : ℕ) - 1))",
@@ -25,6 +25,15 @@
    "proofwidgets": "4dd0959c44d1af0462bd604d0f87c5781307d709"
   },
   "root": "verification/FCMergedIntegerAdapters",
+  "src_dirs": [
+   "lean",
+   "research",
+   "research/adapters",
+   "research/examples",
+   "research/residualbench",
+   "verification",
+   "verification/Erdos251LargeCertificate"
+  ],
   "toolchain": "leanprover/lean4:v4.29.1"
  },
  "fc_path": "FormalConjectures/ErdosProblems/1049.lean",
@@ -39,6 +48,7 @@
  "stage": "A",
  "target": "erdos_1049.variants.geq_2_integer",
  "target_statement": ": ∀ t : ℤ, t ≥ 2 → Irrational (∑' n : ℕ+, 1 / ((t : ℝ) ^ (n : ℕ) - 1))",
+ "target_statement_raw": ":\n     ∀ t : ℤ, t ≥ 2 → Irrational (∑' n : ℕ+, 1 / ((t : ℝ) ^ (n : ℕ) - 1))",
  "target_statement_sha256": "598e92ee2572c48149ca8d9ef909c126b1240818c12a7fec07fc85a826e859b3",
  "text_identical": true,
  "url": "https://github.com/wcook04/plectis-erdos-lean/blob/c4eab2571b4692ee9c08d3ec138176f7fbfa09a9/verification/FCMergedIntegerAdapters/research/adapters/FormalConjecturesAdapter.lean#L96-L107"

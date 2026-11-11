@@ -1,1 +1,1 @@
-launch 2 2026-11-11 SL-003 Stage B re-run of every ready case after amendment 2 (launch 1 Stage B invalid: harness defect)
+launch 3 2026-11-11 SL-003 amendment 3: transport v1.1 (namespace isolation, parser and locator fixes, replay PATH, type guard, dependency check); Stage B on every ready case with AI attempt 1 for SL003-12, 24, 27, 32

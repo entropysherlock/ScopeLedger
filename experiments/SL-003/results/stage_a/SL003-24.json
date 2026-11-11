@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/440.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_440.parts.i",
  "target_statement": ": ∀ a : ℕ → ℕ, StrictMono a → (∀ i, 0 < a i) → (fun x : ℕ ↦ (count a x : ℝ)) =O[atTop] fun x : ℕ ↦ √x",
+ "target_statement_raw": ":\n    ∀ a : ℕ → ℕ, StrictMono a → (∀ i, 0 < a i) →\n      (fun x : ℕ ↦ (count a x : ℝ)) =O[atTop] fun x : ℕ ↦ √x",
  "target_statement_sha256": "c328e160a08c5e2204f72af2c7d8b33dfe254b221f511c0b92fd8a4f5cc25d89",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos440.lean#L602"

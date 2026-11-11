@@ -26,6 +26,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.1"
  },
  "fc_path": "FormalConjectures/ErdosProblems/1167.lean",
@@ -40,6 +41,7 @@
  "stage": "A",
  "target": "finite_targets",
  "target_statement": "(r : ℕ) (hr : 2 ≤ r) (lam : Cardinal.{u}) (hlam : ℵ₀ ≤ lam) (γ : Ordinal.{u}) (hγ : 2 ≤ γ) (n : γ.ToType → ℕ) : cardinalPartitionRel ((2 : Cardinal.{u}) ^ lam) (r + 1) γ (fun α => (n α : Cardinal.{u}) + 1) → cardinalPartitionRel lam r γ (fun α => (n α : Cardinal.{u}))",
+ "target_statement_raw": "(r : ℕ) (hr : 2 ≤ r) (lam : Cardinal.{u}) (hlam : ℵ₀ ≤ lam)\n    (γ : Ordinal.{u}) (hγ : 2 ≤ γ) (n : γ.ToType → ℕ) :\n    cardinalPartitionRel ((2 : Cardinal.{u}) ^ lam) (r + 1) γ\n        (fun α => (n α : Cardinal.{u}) + 1) →\n    cardinalPartitionRel lam r γ (fun α => (n α : Cardinal.{u}))",
  "target_statement_sha256": "f269f0eb6cda3308f75e44f7def53be554c9e1327010288f3ffda4b0101fb2f7",
  "text_identical": false,
  "url": "https://github.com/mnn31/erdos-lean/blob/5cb725981b3ad137103ef908eb6ecff9e7ed9bdf/ErdosLean/Erdos1167.lean#L990"

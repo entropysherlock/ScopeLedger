@@ -9,6 +9,7 @@
  "stage": "A",
  "target": "erdos_692.parts.i",
  "target_statement": ": ¬ ∀ δ : ℕ → ℕ → ℝ, (∀ a b, IsDelta₁ a b (δ a b)) → ∀ n, UnimodularOn (δ n) (n + 1)",
+ "target_statement_raw": ":\n    ¬ ∀ δ : ℕ → ℕ → ℝ, (∀ a b, IsDelta₁ a b (δ a b)) → ∀ n, UnimodularOn (δ n) (n + 1)",
  "target_statement_sha256": "e50d86ebcf933f8dd8efbcf343f0e6dbdc2cac2b3c1ef2f86800a9ef3271b6a0",
  "url": "https://gist.githubusercontent.com/pitmonticone/96516af9100a37a1da81908dc0b0410c/raw/a1d6ca7f3835c58b257e5e715c8fdf3a224e1bd0/Erdos692.lean"
 }

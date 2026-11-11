@@ -5,7 +5,7 @@
  "cited_decl": "Erdos257.erdos_257.variants.summable_reciprocal_support_subtype",
  "cited_file_sha256": "40ab6c9e43e53aabc2319880a8e54f2d1dad043b2395255b10904086a25e45e7",
  "cited_has_sorry_text": false,
- "cited_module": "verification.Solutions.FC257Subtype",
+ "cited_module": "Solutions.FC257Subtype",
  "cited_path": "verification/FC257ReciprocalSupport/verification/Solutions/FC257Subtype.lean",
  "cited_qualified": "Erdos257.erdos_257.variants.summable_reciprocal_support_subtype",
  "cited_statement": "(b : ℕ) (A : Set ℕ) (hb : 2 ≤ b) (hA : A.Infinite) (hsum : Summable fun a : A => 1 / (a : ℝ)) : Irrational (∑' n : A, 1 / ((b : ℝ) ^ (n : ℕ) - 1))",
@@ -25,6 +25,15 @@
    "proofwidgets": "4dd0959c44d1af0462bd604d0f87c5781307d709"
   },
   "root": "verification/FC257ReciprocalSupport",
+  "src_dirs": [
+   "lean",
+   "research",
+   "research/adapters",
+   "research/examples",
+   "research/residualbench",
+   "verification",
+   "verification/Erdos251LargeCertificate"
+  ],
   "toolchain": "leanprover/lean4:v4.29.1"
  },
  "fc_path": "FormalConjectures/ErdosProblems/257.lean",
@@ -39,6 +48,7 @@
  "stage": "A",
  "target": "erdos_257.variants.summable_reciprocal_support",
  "target_statement": "(b : ℕ) (A : Set ℕ) (hb : 2 ≤ b) (hA : A.Infinite) (hsum : Summable fun a : A => 1 / (a : ℝ)) : Irrational (∑' n : A, 1 / ((b : ℝ) ^ (n : ℕ) - 1))",
+ "target_statement_raw": "(b : ℕ) (A : Set ℕ) (hb : 2 ≤ b) (hA : A.Infinite)\n    (hsum : Summable fun a : A => 1 / (a : ℝ)) :\n    Irrational (∑' n : A, 1 / ((b : ℝ) ^ (n : ℕ) - 1))",
  "target_statement_sha256": "d5cf676d7bdc87253de715e8da6be992c9fd6916ae3d655d127c515bb16277c5",
  "text_identical": true,
  "url": "https://github.com/wcook04/plectis-erdos-lean/blob/ec92e5ce12c6117a24e4b532ea565ba332a1df7b/verification/FC257ReciprocalSupport/verification/Solutions/FC257Subtype.lean#L10-L17"

@@ -25,6 +25,9 @@
    "proofwidgets": "4c70ac059693669e5756e32a7a94b57ee1e99dc5"
   },
   "root": "erdos-306",
+  "src_dirs": [
+   "Proofs"
+  ],
   "toolchain": "leanprover/lean4:v4.35.0-rc2"
  },
  "fc_path": "FormalConjectures/ErdosProblems/306.lean",
@@ -39,6 +42,7 @@
  "stage": "A",
  "target": "erdos_306",
  "target_statement": ": ∀ (q : ℚ), 0 < q → Squarefree q.den → ∃ k : ℕ, ∃ (n : Fin (k + 1) → ℕ), n 0 = 1 ∧ StrictMono n ∧ (∀ i ∈ Finset.Icc 1 (Fin.last k), ω (n i) = 2 ∧ Ω (n i) = 2) ∧ q = ∑ i ∈ Finset.Icc 1 (Fin.last k), (1 : ℚ) / (n i)",
+ "target_statement_raw": ": ∀ (q : ℚ), 0 < q → Squarefree q.den →\n    ∃ k : ℕ, ∃ (n : Fin (k + 1) → ℕ), n 0 = 1 ∧ StrictMono n ∧\n    (∀ i ∈ Finset.Icc 1 (Fin.last k), ω (n i) = 2 ∧ Ω (n i) = 2) ∧\n    q = ∑ i ∈ Finset.Icc 1 (Fin.last k), (1 : ℚ) / (n i)",
  "target_statement_sha256": "1493dc08cc49feeda5b24e6a63f67b5583e974239e4056a335ef036a4c627da3",
  "text_identical": false,
  "url": "https://github.com/linrock/math-proofs/blob/e1a5e2a3317007f0e31b98bf2e80383187b31238/erdos-306/Solution.lean#L34"

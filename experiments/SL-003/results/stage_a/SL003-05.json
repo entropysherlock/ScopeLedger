@@ -25,6 +25,9 @@
    "proofwidgets": "4c70ac059693669e5756e32a7a94b57ee1e99dc5"
   },
   "root": "erdos-958",
+  "src_dirs": [
+   "Proofs"
+  ],
   "toolchain": "leanprover/lean4:v4.35.0-rc2"
  },
  "fc_path": "FormalConjectures/ErdosProblems/958.lean",
@@ -39,6 +42,7 @@
  "stage": "A",
  "target": "erdos_958",
  "target_statement": ": ¬ ∃ N : ℕ, ∀ n ≥ N, ∀ A : Finset ℝ², #A = n → ((#(distanceSet A) = n - 1 ∧ (distanceSet A).image (distanceMultiplicity A) = Finset.Icc 1 (n - 1)) → (IsEquidistantOnLine A ∨ IsEquidistantOnCircle A))",
+ "target_statement_raw": ":\n    ¬ ∃ N : ℕ, ∀ n ≥ N, ∀ A : Finset ℝ², #A = n →\n      ((#(distanceSet A) = n - 1 ∧\n            (distanceSet A).image (distanceMultiplicity A) = Finset.Icc 1 (n - 1)) →\n        (IsEquidistantOnLine A ∨ IsEquidistantOnCircle A))",
  "target_statement_sha256": "0cd210511f299818a8badeb55bcf71a202c0fd04af29c550f1027c2650799899",
  "text_identical": false,
  "url": "https://github.com/linrock/math-proofs/blob/08152671ab394392fd941b18654daba734c26518/erdos-958/Solution.lean#L60"

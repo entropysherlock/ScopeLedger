@@ -30,6 +30,7 @@
    "proofwidgets": "24b0d9dc081c5423f8eec7e866c441e5184f29d9"
   },
   "root": "lean",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.31.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/979.lean",
@@ -44,6 +45,7 @@
  "stage": "A",
  "target": "erdos_979.variants.k3",
  "target_statement": ": Filter.limsup (fun n => (solutionSet n 3).encard) Filter.atTop = ⊤",
+ "target_statement_raw": ":\n    Filter.limsup (fun n => (solutionSet n 3).encard) Filter.atTop = ⊤",
  "target_statement_sha256": "71d0f55b5c8bebdfbdd1fcfb4b371404becc5421f4fd00dfb52799abd95ff1c8",
  "text_identical": true,
  "url": "https://github.com/KitaKen1/erdos-979-k3/blob/930fcc877fa4a2b4fc7c59614cbbab04a6d834ca/lean/K3Lean/Erdos979K3Final.lean#L46-L47"

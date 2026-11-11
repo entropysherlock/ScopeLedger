@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/237.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_237",
  "target_statement": ": ∀ A : Set ℕ, (fun N : ℕ ↦ Real.log N) =O[atTop] (fun N ↦ ((A ∩ .Icc 1 N).ncard : ℝ)) → limsup (fun n ↦ (f A n : ℕ∞)) atTop = ⊤",
+ "target_statement_raw": ": ∀ A : Set ℕ,\n    (fun N : ℕ ↦ Real.log N) =O[atTop] (fun N ↦ ((A ∩ .Icc 1 N).ncard : ℝ)) →\n    limsup (fun n ↦ (f A n : ℕ∞)) atTop = ⊤",
  "target_statement_sha256": "399ac71e051a0f4a95e0fb873a742e4af22dc0b07a485a256e64188e3365dbd2",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos237b.lean#L55"

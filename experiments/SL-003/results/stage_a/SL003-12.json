@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/83.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_83",
  "target_statement": "(n : ℕ) (F : Finset (Finset (Fin (4 * n)))) (hF : ∀ A ∈ F, A.card = 2 * n) (hinter : ∀ A ∈ F, ∀ B ∈ F, 2 ≤ (A ∩ B).card) : F.card ≤ ((4 * n).choose (2 * n) - (2 * n).choose n ^ 2) / 2",
+ "target_statement_raw": "(n : ℕ) (F : Finset (Finset (Fin (4 * n)))) (hF : ∀ A ∈ F, A.card = 2 * n)\n    (hinter : ∀ A ∈ F, ∀ B ∈ F, 2 ≤ (A ∩ B).card) :\n    F.card ≤ ((4 * n).choose (2 * n) - (2 * n).choose n ^ 2) / 2",
  "target_statement_sha256": "1b3d2cd27a72e654aa6686b87e7ec5b05084e60320af0d6649db1d9b59dbaf2e",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos83.lean#L36"

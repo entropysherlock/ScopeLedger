@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/981.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_981",
  "target_statement": "(ε : ℝ) (hε : 0 < ε) : ∃ c > (0 : ℝ), Tendsto (fun x ↦ (∑ p : Nat.primesBelow ⌈x⌉₊, f ε p) * log x / x) atTop (𝓝 c)",
+ "target_statement_raw": "(ε : ℝ) (hε : 0 < ε) :\n    ∃ c > (0 : ℝ), Tendsto (fun x ↦ (∑ p : Nat.primesBelow ⌈x⌉₊, f ε p) * log x / x) atTop (𝓝 c)",
  "target_statement_sha256": "1b015b0407a7e8b3e2d931cecf58c80ae78a974819575bcfa4ff9288e1c0431a",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos981.lean#L42"

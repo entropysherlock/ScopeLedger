@@ -25,6 +25,7 @@
    "proofwidgets": "4dd0959c44d1af0462bd604d0f87c5781307d709"
   },
   "root": "src/v4.29.1",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.29.1"
  },
  "fc_path": "FormalConjectures/ErdosProblems/537.lean",
@@ -39,6 +40,7 @@
  "stage": "A",
  "target": "erdos_537",
  "target_statement": ": ¬ ∀ ε : ℝ, 0 < ε → ∀ᶠ N : ℕ in atTop, ∀ A ⊆ Finset.Icc 1 N, (A.card : ℝ) ≥ ε * N → ∃ a₁ ∈ A, ∃ a₂ ∈ A, ∃ a₃ ∈ A, ∃ p₁ p₂ p₃ : ℕ, p₁.Prime ∧ p₂.Prime ∧ p₃.Prime ∧ p₁ ≠ p₂ ∧ p₁ ≠ p₃ ∧ p₂ ≠ p₃ ∧ a₁ * p₁ = a₂ * p₂ ∧ a₂ * p₂ = a₃ * p₃",
+ "target_statement_raw": ":\n    ¬ ∀ ε : ℝ, 0 < ε → ∀ᶠ N : ℕ in atTop,\n      ∀ A ⊆ Finset.Icc 1 N, (A.card : ℝ) ≥ ε * N →\n        ∃ a₁ ∈ A, ∃ a₂ ∈ A, ∃ a₃ ∈ A, ∃ p₁ p₂ p₃ : ℕ,\n          p₁.Prime ∧ p₂.Prime ∧ p₃.Prime ∧\n          p₁ ≠ p₂ ∧ p₁ ≠ p₃ ∧ p₂ ≠ p₃ ∧\n          a₁ * p₁ = a₂ * p₂ ∧ a₂ * p₂ = a₃ * p₃",
  "target_statement_sha256": "c0fe975057dedad978e2038973b024bd9e04648fd9a576ad4e45c0b594c7479b",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/1d7b3f00780b85ed0462e79a1cd5650ee9055655/src/v4.29.1/ErdosProblems/Erdos537.lean"

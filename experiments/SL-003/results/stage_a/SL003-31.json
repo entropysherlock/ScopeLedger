@@ -25,6 +25,7 @@
    "proofwidgets": "4dd0959c44d1af0462bd604d0f87c5781307d709"
   },
   "root": "src/v4.29.1",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.29.1"
  },
  "fc_path": "FormalConjectures/ErdosProblems/31.lean",
@@ -39,6 +40,7 @@
  "stage": "A",
  "target": "erdos_31",
  "target_statement": ": ∀ A : Set ℕ, A.Infinite → ∃ B : Set ℕ, B.HasDensity 0 ∧ ∀ᶠ n in atTop, n ∈ A + B",
+ "target_statement_raw": ": ∀ A : Set ℕ, A.Infinite →\n    ∃ B : Set ℕ, B.HasDensity 0 ∧ ∀ᶠ n in atTop, n ∈ A + B",
  "target_statement_sha256": "8a2f64a9bd3ed90f036c4fb9fed67f1bad3be352a6ae5bca6509c85cf60b9f8f",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/main/src/v4.29.1/ErdosProblems/Erdos31.lean"

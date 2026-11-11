@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/21.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_21",
  "target_statement": ": ∃ C : ℕ, ∀ᶠ n : ℕ in atTop, f n ≤ C * n",
+ "target_statement_raw": ": ∃ C : ℕ, ∀ᶠ n : ℕ in atTop, f n ≤ C * n",
  "target_statement_sha256": "511fa09a3853d12ee11a759414bb7bf56d1389c4e2d0ceef105248a0293f5307",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos21.lean#L13036"

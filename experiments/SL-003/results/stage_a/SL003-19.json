@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/438.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_438",
  "target_statement": ": Tendsto (fun N : ℕ ↦ (extremalSize N : ℝ) / (N : ℝ)) atTop (𝓝 ((11 : ℝ) / 32))",
+ "target_statement_raw": ":\n    Tendsto (fun N : ℕ ↦ (extremalSize N : ℝ) / (N : ℝ)) atTop (𝓝 ((11 : ℝ) / 32))",
  "target_statement_sha256": "24233d112ea503b6658cbc12f6b390853ff3187f8741d609f41ddd5ec71e1007",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos438.lean#L46"

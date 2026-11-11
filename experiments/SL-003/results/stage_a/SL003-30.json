@@ -23,6 +23,7 @@
  "stage": "A",
  "target": "conjecture314",
  "target_statement": "[Nontrivial α] (G : SimpleGraph α) [DecidableRel G.Adj] (hG : G.Connected) (hTriFree : ∀ a b c : α, G.Adj a b → G.Adj b c → G.Adj c a → False) (hPath : largestInducedPathSize G ≤ 4) : IsWellTotallyDominated G",
+ "target_statement_raw": "[Nontrivial α] (G : SimpleGraph α) [DecidableRel G.Adj]\n    (hG : G.Connected)\n    (hTriFree : ∀ a b c : α, G.Adj a b → G.Adj b c → G.Adj c a → False)\n    (hPath : largestInducedPathSize G ≤ 4) :\n    IsWellTotallyDominated G",
  "target_statement_sha256": "c4a5d1162f3e71eaa903e8c507a8069fc6dcf2077283fec1fb489dce0712476e",
  "text_identical": true,
  "url": "https://github.com/glyaea/wow-ii-314/blob/7b35f1252e4aaae3c787faf8091f9c7cd4edc41f/solution.lean"

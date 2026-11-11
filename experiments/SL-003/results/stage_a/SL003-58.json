@@ -18,6 +18,7 @@
  "stage": "A",
  "target": "erdos_666",
  "target_statement": ": ¬ ∀ ε : ℝ, 0 < ε → ∀ᶠ n : ℕ in atTop, ∀ H : SimpleGraph (Fin n → Bool), H ≤ hypercube n → ε * n * 2 ^ (n - 1 : ℕ) ≤ (H.edgeSet.ncard : ℝ) → (cycleGraph 6 ⊑ H)",
+ "target_statement_raw": ":\n    ¬ ∀ ε : ℝ, 0 < ε → ∀ᶠ n : ℕ in atTop, ∀ H : SimpleGraph (Fin n → Bool), H ≤ hypercube n →\n      ε * n * 2 ^ (n - 1 : ℕ) ≤ (H.edgeSet.ncard : ℝ) → (cycleGraph 6 ⊑ H)",
  "target_statement_sha256": "a2ac98e19279753fca266cb013820bce0b2a268a6b77050d7ca5e5d1cf5910a8",
  "url": "https://github.com/plby/lean-proofs/blob/main/src/v4.29.1/ErdosProblems/Erdos666.lean"
 }

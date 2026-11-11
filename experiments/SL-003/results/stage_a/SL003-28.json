@@ -26,6 +26,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "lean",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.1"
  },
  "fc_path": "FormalConjectures/Paper/WeakTiling.lean",
@@ -40,6 +41,7 @@
  "stage": "A",
  "target": "problem_4_1",
  "target_statement": ": ∀ (Ω : Set ℝ) (_ : IsFiniteUnionOfIntervals Ω) (ν : Measure ℝ) (_ : IsWeakTilingMeasure Ω ν), HasBoundedDensity ν.support",
+ "target_statement_raw": ":\n    ∀ (Ω : Set ℝ) (_ : IsFiniteUnionOfIntervals Ω)\n      (ν : Measure ℝ) (_ : IsWeakTilingMeasure Ω ν), HasBoundedDensity ν.support",
  "target_statement_sha256": "521a69f07eca20f4ff9e73b3845706e959ba9e4b6f51825c2856a40db0be6a93",
  "text_identical": false,
  "url": "https://github.com/KitaKen1/weak-tiling-bounded-density/blob/5d10499e1932cc017b7aaf8e931926dc969bd8f7/lean/WeakTilingProblem41FC.lean#L11484-L11487"

@@ -25,6 +25,7 @@
    "proofwidgets": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f"
   },
   "root": "",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.34.0-rc2"
  },
  "fc_path": "FormalConjectures/OEIS/397588.lean",
@@ -39,6 +40,7 @@
  "stage": "A",
  "target": "three_dvd_a",
  "target_statement": "(n : ℕ) (hn : 1 < n) : 3 ∣ a n",
+ "target_statement_raw": "(n : ℕ) (hn : 1 < n) : 3 ∣ a n",
  "target_statement_sha256": "7d1f6e5ada6504e5764363875be58328e9b9fa5a7829e60d0d8de13f2f9b4235",
  "text_identical": false,
  "url": "https://github.com/VictorLiwentao/lean-oeis-proofs/blob/0a23974e54b90afd1453ef02c27cf8f617bad940/LeanOeisProofs/NewFormalization/A397588.lean#L325"

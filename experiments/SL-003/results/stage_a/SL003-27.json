@@ -35,6 +35,7 @@
    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
   },
   "root": "src/latest",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.33.0"
  },
  "fc_path": "FormalConjectures/ErdosProblems/310.lean",
@@ -49,6 +50,7 @@
  "stage": "A",
  "target": "erdos_310",
  "target_statement": ": ∀ α : ℝ, 0 < α → ∃ C : ℕ, ∀ N : ℕ, 1 ≤ N → ∀ A ⊆ Finset.Icc 1 N, α * N ≤ A.card → ∃ S ⊆ A, ∃ a b : ℕ, 0 < a ∧ a ≤ b ∧ b ≤ C ∧ ∑ n ∈ S, (1 / n : ℚ) = a / b",
+ "target_statement_raw": ": ∀ α : ℝ, 0 < α → ∃ C : ℕ, ∀ N : ℕ, 1 ≤ N →\n    ∀ A ⊆ Finset.Icc 1 N, α * N ≤ A.card →\n      ∃ S ⊆ A, ∃ a b : ℕ, 0 < a ∧ a ≤ b ∧ b ≤ C ∧ ∑ n ∈ S, (1 / n : ℚ) = a / b",
  "target_statement_sha256": "b9d82f32250e5f452db932934a49c7b11e8dab35ddd9bad16b438d929ddf5f2b",
  "text_identical": false,
  "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos310.lean#L240"

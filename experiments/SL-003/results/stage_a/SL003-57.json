@@ -18,6 +18,7 @@
  "stage": "A",
  "target": "erdos_394.parts.i",
  "target_statement": ": ∃ c > (0 : ℝ), (fun x ↦ ∑ n ∈ Icc 1 ⌊x⌋₊, (t 2 n : ℝ)) ≪ (fun x ↦ x ^ 2 / (Real.log x) ^ c)",
+ "target_statement_raw": ":\n    ∃ c > (0 : ℝ), (fun x ↦ ∑ n ∈ Icc 1 ⌊x⌋₊,\n    (t 2 n : ℝ)) ≪ (fun x ↦ x ^ 2 / (Real.log x) ^ c)",
  "target_statement_sha256": "8b1a603bda5ea9198e141abcbb3dafb34fb5a7bda72f8c64df2d18bbee884a5a",
  "url": "https://github.com/williamjblair/lean-proofs/blob/4f915a323443bfb1709a6805a013812016dca88a/starfleet/erdos-394/Research/FirstQuestion.lean"
 }

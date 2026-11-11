@@ -25,6 +25,7 @@
    "proofwidgets": "be3b2e63b1bbf496c478cef98b86972a37c1417d"
   },
   "root": "",
+  "src_dirs": [],
   "toolchain": "leanprover/lean4:v4.28.0"
  },
  "fc_path": "FormalConjectures/Books/BorweinSineSeries.lean",
@@ -39,6 +40,7 @@
  "stage": "A",
  "target": "borwein_sine_series",
  "target_statement": ": Summable fun n : ℕ+ ↦ ((2 / 3 + 1 / 3 * Real.sin (n : ℝ)) ^ (n : ℕ)) / (n : ℝ)",
+ "target_statement_raw": ":\n    Summable fun n : ℕ+ ↦ ((2 / 3 + 1 / 3 * Real.sin (n : ℝ)) ^ (n : ℕ)) / (n : ℝ)",
  "target_statement_sha256": "8f389d35a2a3019a9c7c802b6a6356f78e3eacbd4ffec2989d04869ed64a8b9d",
  "text_identical": false,
  "url": "https://github.com/AxiomMath/gdm-formal-conjectures/blob/main/BorweinSineSeries/solution.lean"

@@ -10,6 +10,7 @@
  "stage": "A",
  "target": "erdos_654.variants.feng",
  "target_statement": "(m : ℕ) (hm : 10 ≤ m) : ∃ A : Finset ℝ², #A = 4 * m ∧ NoFourConcyclic A ∧ ∀ x ∈ A, distinctDistancesFrom A x < 3 * m",
+ "target_statement_raw": "(m : ℕ) (hm : 10 ≤ m) :\n    ∃ A : Finset ℝ², #A = 4 * m ∧ NoFourConcyclic A ∧\n      ∀ x ∈ A, distinctDistancesFrom A x < 3 * m",
  "target_statement_sha256": "68b31a7606557385ed8eda26510ec9fe6296056a39ffe0b72426c742a10f6475",
  "url": "https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-02-000006"
 }
