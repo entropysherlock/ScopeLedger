@@ -1,0 +1,23 @@
+⚠ [2043/2043] Built ErdosProblems.Erdos1077 (3.2s)
+warning: ErdosProblems/Erdos1077.lean:141:2: `simp [hv]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: ErdosProblems/Erdos1077.lean:141:2: Try this:
+  [apply] simp only [top_adj, ne_eq, SetLike.mem_coe, Set.mem_compl_iff, mem_compl]
+info: ErdosProblems/Erdos1077.lean:142:2: `intro hw hvw`
+modifies the current goal, which was modified by the flexible tactic `simp` on line 141!
+warning: ErdosProblems/Erdos1077.lean:141:2: `simp [hv]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: ErdosProblems/Erdos1077.lean:141:2: Try this:
+  [apply] simp only [top_adj, ne_eq, SetLike.mem_coe, Set.mem_compl_iff, mem_compl]
+info: ErdosProblems/Erdos1077.lean:144:2: `exact hw hv`
+modifies the current goal, which was modified by the flexible tactic `simp` on line 141!
+warning: ErdosProblems/Erdos1077.lean:223:0: `balanced_subgraph_vertex_bound` does not use the following hypothesis in its type:
+  • [DecidableRel G.Adj] (#4)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+info: ErdosProblems/Erdos1077.lean:331:0: 'Erdos1077.not_erdos_1077' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2043 jobs).

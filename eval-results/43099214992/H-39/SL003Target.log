@@ -1,0 +1,4 @@
+SL003Target.lean:19:10: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype ↑H.verts
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
