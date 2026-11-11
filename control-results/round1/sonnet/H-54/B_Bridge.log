@@ -1,0 +1,16 @@
+B_Bridge.lean:1:0: error: unknown module prefix 'A_Infra'
+
+No directory 'A_Infra' or file 'A_Infra.olean' in the search path entries:
+/home/runner/work/_temp/out/H-54/lean
+/home/runner/work/_temp/target/.lake/packages/Cli/.lake/build/lib/lean
+/home/runner/work/_temp/target/.lake/packages/batteries/.lake/build/lib/lean
+/home/runner/work/_temp/target/.lake/packages/Qq/.lake/build/lib/lean
+/home/runner/work/_temp/target/.lake/packages/aesop/.lake/build/lib/lean
+/home/runner/work/_temp/target/.lake/packages/proofwidgets/.lake/build/lib/lean
+/home/runner/work/_temp/target/.lake/packages/importGraph/.lake/build/lib/lean
+/home/runner/work/_temp/target/.lake/packages/LeanSearchClient/.lake/build/lib/lean
+/home/runner/work/_temp/target/.lake/packages/plausible/.lake/build/lib/lean
+/home/runner/work/_temp/target/.lake/packages/mathlib/.lake/build/lib/lean
+/home/runner/work/_temp/target/.lake/build/lib/lean
+/home/runner/.elan/toolchains/leanprover--lean4---v4.28.0/lib/lean
+/home/runner/.elan/toolchains/leanprover--lean4---v4.28.0/lib/lean

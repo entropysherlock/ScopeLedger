@@ -1,0 +1,40 @@
+{
+ "case_id": "H-54",
+ "cited": "KourovkaNotebook.Solution21_149.kourovka_21_149",
+ "module": "Kourovka.Problem_21_149",
+ "toolchain": "leanprover/lean4:v4.28.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 92
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 92
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "A_Infra.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 5,
+   "first_error": "A_Infra.lean:116:2: error: Type mismatch\n  Subtype.ext h1\nhas type\n  f ⟨↑a, ⋯⟩ = g ⟨↑a, ⋯⟩\nbut is expected to have type\n  ↑(f a) = ↑(g a)"
+  },
+  "B_Bridge.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 2,
+   "first_error": "B_Bridge.lean:1:0: error: unknown module prefix 'A_Infra'\n\nNo directory 'A_Infra' or file 'A_Infra.olean' in the search path entries:\n/home/runner/work/_temp/out/H-54/lean\n/home/runner/work/_temp/target/.lake/packages/Cli/.lake/build/lib/lean\n/home/runner/work/_temp/target/.lake/packages/batteries/.lake/build/lib/lean\n/home/runner/work/_temp/target/.lake/packages/Qq/.lake/build/lib/lean\n/home/runner/work/_temp/target/.lake/packages/aesop/.lake/build/lib/lean\n/home/runner/work/_temp/target/.lake/packages/proofwidgets/.lake/build/lib/lean\n/home/runner/work/_temp/target/.lake/packages/importGraph/.lake/build/lib/lean\n/home/runner/work/_temp/target/.lake/packages/LeanSearchClient/.lake/build/lib"
+  }
+ },
+ "target_prop": "SL003FC.Kourovka.«21.149».SL003.targetProp",
+ "bridges": {},
+ "seconds_total": 201,
+ "status": "ok"
+}

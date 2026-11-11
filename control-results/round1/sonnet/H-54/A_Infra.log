@@ -1,0 +1,20 @@
+A_Infra.lean:116:2: error: Type mismatch
+  Subtype.ext h1
+has type
+  f ⟨↑a, ⋯⟩ = g ⟨↑a, ⋯⟩
+but is expected to have type
+  ↑(f a) = ↑(g a)
+A_Infra.lean:129:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+A_Infra.lean:129:6: warning: 'exact Subgroup.coe_equivMapOfInjective_apply _ _ _ _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+A_Infra.lean:168:14: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+A_Infra.lean:168:14: warning: '(
+  show p < 1
+  exact hp1)' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
