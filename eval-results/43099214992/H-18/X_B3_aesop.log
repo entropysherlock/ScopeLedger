@@ -1,0 +1,11 @@
+X_B3_aesop.lean:7:2: warning: aesop: failed to prove the goal after exhaustive search.
+X_B3_aesop.lean:4:69: error: unsolved goals
+h :
+  ∀ (α β : ℝ),
+    0 < α →
+      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \ {0})
+α β : ℝ
+a : 0 < α
+a_1 : 0 < β
+a_2 : Irrational (α / β)
+⊢ IsAddCompleteNatSeq' (SL003FC.Erdos354.FloorMultiples.interleave α β 2)

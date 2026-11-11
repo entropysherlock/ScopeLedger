@@ -1,0 +1,237 @@
+{
+ "case_id": "H-18",
+ "cited": "Dyadic354.UpstreamBridge.erdos354_strong_upstream",
+ "module": "Dyadic354.UpstreamBridge",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 88
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 117
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos354.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B1_exact.lean:6:2: error: Type mismatch\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas type\n  ∀ (α : ℝ) (β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \\ {0})\nbut is expected to have type\n  ∀ α > 0, ∀ β > "
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side\n  a✝ > 0 → ∀ β > 0, Irrational (a✝ / β) → IsAddCompleteNatSeq' (SL003FC.Erdos354.FloorMultiples.interleave a✝ β 2)\nis not definitionally equal to the right-hand side\n  ∀ (β : ℝ),\n    0 < a✝ →\n      0 < β → Irrational (a✝ / β)"
+  },
+  "X_B3_aesop.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "X_B3_aesop.lean:4:69: error: unsolved goals\nh :\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \\ {0})\nα β : ℝ\na : 0 < α\na_1 : 0 < β\na_2 : Irrational (α / β)\n⊢ IsAddCompleteNatSeq' (SL003FC.Erdos354.FloorMultip"
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 13,
+   "first_error": "X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions."
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas type\n  ∀ (α : ℝ) (β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \\ {0})\nbut is expected to have type\n  ∀ α > 0, "
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E2_iff_mp.lean:6:160: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nof type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α "
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k1.lean:4:77: error: unsolved goals\ncase h.a\nh :\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \\ {0})\na✝ : ℝ\n⊢ (0 < a✝ →\n      ∀ (β : ℝ),\n        0 < β → Irrational (a✝ / β) → IsAddCompleteNat"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k2.lean:4:77: error: unsolved goals\ncase h.a\nh :\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \\ {0})\na✝ : ℝ\n⊢ (0 < a✝ →\n      ∀ (β : ℝ),\n        0 < β → Irrational (a✝ / β) → IsAddCompleteNat"
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k3.lean:4:77: error: unsolved goals\ncase h.a\nh :\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \\ {0})\na✝ : ℝ\n⊢ (0 < a✝ →\n      ∀ (β : ℝ),\n        0 < β → Irrational (a✝ / β) → IsAddCompleteNat"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k4.lean:4:77: error: unsolved goals\ncase h.a\nh :\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β 2) \\ {0})\na✝ : ℝ\n⊢ (0 < a✝ →\n      ∀ (β : ℝ),\n        0 < β → Irrational (a✝ / β) → IsAddCompleteNat"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p0.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (0 < a✝ →\n      ∀ (β : ℝ),\n        0 < β → Irrational (a✝ / β) → IsAddCompleteNatSeq' (SL003FC.Erdos354.FloorMultiples.interleave a✝ β 2)) ↔\n    ∀ (β : ℝ),\n      0 < a✝ →\n   "
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interlea"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Dyadic354.UpstreamBridge.erdos354_strong_upstream\nhas function type\n  ∀ (α β : ℝ),\n    0 < α →\n      0 < β → Irrational (α / β) → IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 385,
+ "status": "ok"
+}

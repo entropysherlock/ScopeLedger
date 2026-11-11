@@ -1,0 +1,44 @@
+def SL003FC.Erdos354.SL003.targetProp : Prop :=
+∀ α > (0 : ℝ),
+  ∀ β > (0 : ℝ), Irrational (α / β) → IsAddCompleteNatSeq' (SL003FC.Erdos354.FloorMultiples.interleave α β (2 : ℝ))
+Dyadic354.UpstreamBridge.erdos354_strong_upstream : ∀ (α β : ℝ),
+  (0 : ℝ) < α →
+    (0 : ℝ) < β →
+      Irrational (α / β) →
+        IsAddStronglyComplete (Set.range (Erdos354.FloorMultiples.interleave α β (2 : ℝ)) \ {(0 : ℤ)})
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `Dyadic354.UpstreamBridge.Erdos354.FloorMultiples.interleave`
+def Erdos354.FloorMultiples.interleave : ℝ → ℝ → ℝ → ℕ → ℤ :=
+fun a b γ n =>
+  if n % (2 : ℕ) = (0 : ℕ) then Erdos354.FloorMultiples a γ (n / (2 : ℕ)) else Erdos354.FloorMultiples b γ (n / (2 : ℕ))
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos354.Erdos354.FloorMultiples.interleave`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `FloorMultiples.interleave`
+def SL003FC.Erdos354.FloorMultiples.interleave : ℝ → ℝ → ℝ → ℕ → ℤ :=
+fun a b γ n =>
+  if n % (2 : ℕ) = (0 : ℕ) then SL003FC.Erdos354.FloorMultiples a γ (n / (2 : ℕ))
+  else SL003FC.Erdos354.FloorMultiples b γ (n / (2 : ℕ))
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `Dyadic354.UpstreamBridge.FloorMultiples.interleave`
+def Irrational : ℝ → Prop :=
+fun x => x ∉ Set.range Rat.cast
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos354.Irrational`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `Dyadic354.UpstreamBridge.Irrational`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos354.IsAddCompleteNatSeq'`
+def IsAddCompleteNatSeq'.{u_1} : {M : Type u_1} → [AddCommMonoid M] → [Preorder M] → (ℕ → M) → Prop :=
+fun {M} [AddCommMonoid M] [Preorder M] A => ∀ᶠ (k : M) in Filter.atTop, k ∈ subseqSums' A
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `Dyadic354.UpstreamBridge.IsAddCompleteNatSeq'`
+Z_explore.lean:18:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos354.IsAddStronglyComplete`
+Z_explore.lean:19:7: error(lean.unknownIdentifier): Unknown constant `Dyadic354.UpstreamBridge.IsAddStronglyComplete`
+def IsAddStronglyComplete.{u_1} : {M : Type u_1} → [AddCommMonoid M] → [Preorder M] → Set M → Prop :=
+fun {M} [AddCommMonoid M] [Preorder M] A => ∀ ⦃B : Set M⦄, B.Finite → IsAddComplete (A \ B)
+Z_explore.lean:21:7: error(lean.unknownIdentifier): Unknown constant `Dyadic354.UpstreamBridge.Set.range`
+Z_explore.lean:22:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos354.Set.range`
+def Set.range.{u, u_1} : {α : Type u} → {ι : Sort u_1} → (ι → α) → Set α :=
+fun {α} {ι} f => {x | ∃ y, f y = x}
+Z_explore.lean:24:7: error(lean.unknownIdentifier): Unknown constant `hirr`
+Z_explore.lean:25:7: error(lean.unknownIdentifier): Unknown constant `Dyadic354.UpstreamBridge.hirr`
+Z_explore.lean:26:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos354.hirr`
+Z_explore.lean:27:7: error(lean.unknownIdentifier): Unknown constant `hα`
+Z_explore.lean:28:7: error(lean.unknownIdentifier): Unknown constant `Dyadic354.UpstreamBridge.hα`
+Z_explore.lean:29:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos354.hα`
+Z_explore.lean:30:7: error(lean.unknownIdentifier): Unknown constant `hβ`
+Z_explore.lean:31:7: error(lean.unknownIdentifier): Unknown constant `Dyadic354.UpstreamBridge.hβ`
+Z_explore.lean:32:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos354.hβ`
