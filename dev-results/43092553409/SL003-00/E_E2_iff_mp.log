@@ -1,0 +1,4 @@
+E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos235.erdos_235
+of type
+  ∃ f, Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))

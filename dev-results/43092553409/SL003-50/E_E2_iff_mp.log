@@ -1,0 +1,7 @@
+E_E2_iff_mp.lean:6:206: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  LeanGallery.NumberTheory.Erdos482.Statement.statement_erdos_482_verbatim
+of type
+  ∀ (n : ℕ),
+    1 ≤ n →
+      ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n + 1)) - 2 * ↑(LeanGallery.NumberTheory.Erdos482.a (2 * n - 1)) =
+        ↑(⌊√2 * 2 ^ (n - 1)⌋₊ % 2)

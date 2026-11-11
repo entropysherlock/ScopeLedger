@@ -1,0 +1,18 @@
+E_E3_convert_p4_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (∃ f,
+      ContinuousOn f (Set.Ici 0) ∧
+        ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (f c))) ↔
+    ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (Erdos235.erdos_235.1 c))
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h : ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (Erdos235.erdos_235.1 c))
+⊢ (∃ f,
+      ContinuousOn f (Set.Ici 0) ∧
+        ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (f c))) ↔
+    ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (Erdos235.erdos_235.1 c))
+E_E3_convert_p4_k2.lean:4:8: error: (kernel) invalid projection
+  Erdos235.erdos_235.1

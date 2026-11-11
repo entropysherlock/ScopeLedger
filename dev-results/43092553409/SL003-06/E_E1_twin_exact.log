@@ -1,0 +1,7 @@
+E_E1_twin_exact.lean:6:21: error: Type mismatch
+  Erdos441.not_erdos_441
+has type
+  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧
+    ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N
+but is expected to have type
+  ¬∀ (N : ℕ), 1 ≤ N → SL003FC.Erdos441.g N = (SL003FC.Erdos441.erdosConstruction N).card

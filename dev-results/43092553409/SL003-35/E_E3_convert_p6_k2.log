@@ -1,0 +1,8 @@
+E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos737.eventually_cycles_through_fixed_edge
+has function type
+  Erdos594.IsUncountablyChromatic ?m.5 →
+    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges
+E_E3_convert_p6_k2.lean:4:77: error: unsolved goals
+⊢ ∀ (V : Type) (G : SimpleGraph V),
+    IsEmpty (G.Coloring ℕ) → ∃ e ∈ G.edgeSet, ∃ N, ∀ (n : ℕ), N ≤ n → SL003FC.Erdos737.CycleThroughEdgeOfLength G e n

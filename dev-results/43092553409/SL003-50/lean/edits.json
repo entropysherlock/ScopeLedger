@@ -1,0 +1,11 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_482 :",
+ "removed declaration: theorem erdos_482.variants.stoll_general (g : ℕ) [NeZero g] (hg : 2 ≤ ",
+ "removed declaration: theorem erdos_482.variants.binary_explicit (t : ℝ) (ht1 : 1 ≤ t) (ht2 ",
+ "removed declaration: theorem erdos_482.variants.stoll_explicit (g : ℕ) (hg : 2 ≤ g) (t : ℝ)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

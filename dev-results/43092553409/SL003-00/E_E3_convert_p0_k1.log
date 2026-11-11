@@ -1,0 +1,15 @@
+E_E3_convert_p0_k1.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`
+  sInf ?s = ?a
+with the goal
+  (ContinuousOn x✝ (Set.Ici 0) ∧
+      ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (x✝ c))) =
+    (Continuous x✝ ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (x✝ c)))
+
+Note: The full type of `@IsLeast.csInf_eq` is
+  ∀ {α : Type ?u.7} [inst : ConditionallyCompletePartialOrderInf α] {s : Set α} {a : α}, IsLeast s a → sInf s = a
+
+h : ∃ f, Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))
+x✝ : ℝ → ℝ
+⊢ (ContinuousOn x✝ (Set.Ici 0) ∧
+      ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (x✝ c))) =
+    (Continuous x✝ ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (x✝ c)))

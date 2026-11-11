@@ -1,0 +1,16 @@
+E_E3_convert_p3_k1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type
+  ℝ
+from the expression
+  Erdos581.erdos_581.2
+which has propositional type
+  ∃ c₂,
+    0 < Erdos581.erdos_581.1 ∧
+      0 < c₂ ∧
+        ∀ (m : ℕ),
+          ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)
+E_E3_convert_p3_k1.lean:4:77: error: unsolved goals
+⊢ ∃ c₁ c₂,
+    0 < c₁ ∧
+      0 < c₂ ∧
+        ∀ (m : ℕ),
+          ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧ ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)

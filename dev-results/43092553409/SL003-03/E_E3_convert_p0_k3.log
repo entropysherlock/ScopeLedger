@@ -1,0 +1,26 @@
+E_E3_convert_p0_k3.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`
+  sInf ?s = ?a
+with the goal
+  (0 < x✝¹ ∧
+      0 < x✝ ∧
+        ∀ (m : ℕ),
+          ↑m / 2 + x✝¹ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧
+            ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + x✝ * ↑m ^ (4 / 5)) =
+    (0 < x✝¹ ∧
+      0 < x✝ ∧ ∀ (m : ℕ), ↑m / 2 + x✝¹ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + x✝ * ↑m ^ (4 / 5))
+
+Note: The full type of `@IsLeast.csInf_eq` is
+  ∀ {α : Type ?u.11} [inst : ConditionallyCompletePartialOrderInf α] {s : Set α} {a : α}, IsLeast s a → sInf s = a
+
+h :
+  ∃ c₁ c₂,
+    0 < c₁ ∧
+      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)
+x✝¹ x✝ : ℝ
+⊢ (0 < x✝¹ ∧
+      0 < x✝ ∧
+        ∀ (m : ℕ),
+          ↑m / 2 + x✝¹ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧
+            ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + x✝ * ↑m ^ (4 / 5)) =
+    (0 < x✝¹ ∧
+      0 < x✝ ∧ ∀ (m : ℕ), ↑m / 2 + x✝¹ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + x✝ * ↑m ^ (4 / 5))

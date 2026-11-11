@@ -1,0 +1,20 @@
+E_E3_convert_p0_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (∀ (n : ℕ), 1 < n → 3 ∣ SL003FC.OeisA397588.a n) ↔ 1 < ?m.7 → 3 ∣ A397588.a ?m.7
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h : ∀ {n : ℕ}, 1 < n → 3 ∣ A397588.a n
+⊢ (∀ (n : ℕ), 1 < n → 3 ∣ SL003FC.OeisA397588.a n) ↔ 1 < ?m.7 → 3 ∣ A397588.a ?m.7
+E_E3_convert_p0_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  ℕ
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h : ∀ {n : ℕ}, 1 < n → 3 ∣ A397588.a n
+⊢ ℕ

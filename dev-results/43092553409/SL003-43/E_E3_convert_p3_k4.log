@@ -1,0 +1,14 @@
+E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  QuantumLean.FormalConjecturesWrappers.eqSystem8_no_solution_d3_trinary_int.mpr
+has function type
+  (¬∃ W,
+        (∀ (e : MonochromaticQuantumGraph.EdgeN 8 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧
+          MonochromaticQuantumGraph.EqSystemN 8 3 W) →
+    True
+E_E3_convert_p3_k4.lean:4:94: error: unsolved goals
+⊢ ¬∃ W,
+      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 8 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧
+        SL003FC.MonochromaticQuantumGraph.EqSystemN 8 3 W
+E_E3_convert_p3_k4.lean:4:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

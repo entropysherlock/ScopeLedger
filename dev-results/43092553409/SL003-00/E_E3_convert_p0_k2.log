@@ -1,0 +1,15 @@
+E_E3_convert_p0_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (ContinuousOn x✝ (Set.Ici 0) ∧
+      ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (x✝ c))) ↔
+    Continuous x✝ ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (x✝ c))
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.8} {β : α → Sort ?u.7} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h : ∃ f, Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))
+x✝ : ℝ → ℝ
+⊢ (ContinuousOn x✝ (Set.Ici 0) ∧
+      ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (x✝ c))) ↔
+    Continuous x✝ ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (x✝ c))

@@ -1,0 +1,14 @@
+E_E1_twin_exact.lean:6:21: error: Type mismatch
+  QuantumLean.FormalConjecturesWrappers.eqSystem8_no_solution_d3_trinary_int
+has type
+  True ↔
+    ¬∃ W,
+        (∀ (e : MonochromaticQuantumGraph.EdgeN 8 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧
+          MonochromaticQuantumGraph.EqSystemN 8 3 W
+but is expected to have type
+  ¬∃ W,
+      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 8 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧
+        SL003FC.MonochromaticQuantumGraph.EqSystemN 8 3 W
+E_E1_twin_exact.lean:4:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

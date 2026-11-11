@@ -1,0 +1,8 @@
+E_E3_convert_p1_k1.lean:4:77: error: unsolved goals
+h : ∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)
+⊢ (∃ x,
+      1 ≤ x ∧
+        ∃ x_1,
+          (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet x p).HasDensity (x_1 p)) ∧
+            ¬SL003FC.Erdos690.IsUnimodalOnPrimes x_1) ↔
+    ∀ (k p : ℕ), 0 < k → Nat.Prime p → (Erdos690.kthPrimeFactorSet k p).HasDensity ↑(Erdos690.primeFactorDensity k p)

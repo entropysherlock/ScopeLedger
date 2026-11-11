@@ -1,0 +1,32 @@
+E_E3_convert_p0_k1.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`
+  sInf ?s = ?a
+with the goal
+  (¬x✝) = (True ↔ x✝)
+
+Note: The full type of `@IsLeast.csInf_eq` is
+  ∀ {α : Type ?u.670} [inst : ConditionallyCompleteLattice α] {s : Set α} {a : α}, IsLeast s a → sInf s = a
+
+case h.e.h
+h :
+  True ↔
+    ¬∃ W,
+        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧
+          MonochromaticQuantumGraph.EqSystemN 6 3 W
+x✝ : Prop
+⊢ (¬x✝) = (True ↔ x✝)
+E_E3_convert_p0_k1.lean:4:94: error: unsolved goals
+case h.e'_1.a
+h :
+  True ↔
+    ¬∃ W,
+        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧
+          MonochromaticQuantumGraph.EqSystemN 6 3 W
+⊢ (∃ W,
+      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧
+        SL003FC.MonochromaticQuantumGraph.EqSystemN 6 3 W) ↔
+    ∀ (x : MonochromaticQuantumGraph.WeightsN 6 3 ℤ),
+      (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), x e = -1 ∨ x e = 0 ∨ x e = 1) →
+        ¬MonochromaticQuantumGraph.EqSystemN 6 3 x
+E_E3_convert_p0_k1.lean:8:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`

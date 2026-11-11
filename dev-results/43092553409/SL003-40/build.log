@@ -1,0 +1,3 @@
+ℹ [8714/8714] Replayed ErdosProblems.Erdos690
+info: ErdosProblems/Erdos690.lean:2179:0: 'Erdos690.erdos_690' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8714 jobs).

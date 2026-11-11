@@ -1,0 +1,9 @@
+E_E1_twin_exact.lean:6:21: error: Type mismatch
+  Erdos525.erdos_525
+has type
+  (∀ (τ : ℝ),
+      0 < τ → Filter.Tendsto (fun N => Erdos525.minimumTail N τ) Filter.atTop (nhds (Real.exp (-Erdos525.rate * τ)))) ∧
+    ((fun N => ↑(Erdos525.exceptionalFamily N).card) =o[Filter.atTop] fun N => 2 ^ N) ∧
+      Filter.Tendsto (fun N => Erdos525.uniformProbability fun ε => Erdos525.HasSmallValue ε) Filter.atTop (nhds 1)
+but is expected to have type
+  (fun n => ↑(SL003FC.Erdos525.exceptional n).ncard) =o[Filter.atTop] fun n => 2 ^ n

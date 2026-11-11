@@ -1,0 +1,236 @@
+{
+ "case_id": "SL003-35",
+ "cited": "Erdos737.eventually_cycles_through_fixed_edge",
+ "module": "ErdosProblems.Erdos737",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 118
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 6
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "B01_chromatic.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos737.SL003.targetProp",
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  @Erdos737.eventually_cycles_through_fixed_edge\nhas type\n  ∀ {V : Type ?u.2} {G : SimpleGraph V},\n    Erdos594.IsUncountablyChromatic G →\n      ∃ (a : V), ∃ r, G.Adj a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges\nbut i"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E2_iff_mp.lean:6:152: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos737.eventually_cycles_through_fixed_edge\nof type\n  Erdos594.IsUncountablyChromatic ?m.4 →\n    ∃ a r, SimpleG"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (V : Type) (G : SimpleGraph V),\n      IsEmpty (G.Coloring ℕ) →\n        ∃ e ∈ G.edgeSet, ∃ N, ∀ (n : ℕ), N ≤ n → SL003FC.Erdos737.CycleThroughEdgeOfLength G e n) ↔\n   "
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (V : Type) (G : SimpleGraph V),\n      IsEmpty (G.Coloring ℕ) →\n        ∃ e ∈ G.edgeSet, ∃ N, ∀ (n : ℕ), N ≤ n → SL003FC.Erdos737.CycleThroughEdgeOfLength G e n) ↔\n   "
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (V : Type) (G : SimpleGraph V),\n      IsEmpty (G.Coloring ℕ) →\n        ∃ e ∈ G.edgeSet, ∃ N, ∀ (n : ℕ), N ≤ n → SL003FC.Erdos737.CycleThroughEdgeOfLength G e n) ↔\n   "
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (V : Type) (G : SimpleGraph V),\n      IsEmpty (G.Coloring ℕ) →\n        ∃ e ∈ G.edgeSet, ∃ N, ∀ (n : ℕ), N ≤ n → SL003FC.Erdos737.CycleThroughEdgeOfLength G e n) ↔\n   "
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p0.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos737.eventually_cycles_through_fixed_edge\nhas function type\n  Erdos594.IsUncountablyChromatic ?m.5 →\n    ∃ a r, SimpleGraph.Adj ?m.5 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a"
+  }
+ },
+ "bridges": {
+  "SL004.bridge35": {
+   "file": "B01_chromatic.lean",
+   "kind": "bridge",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 350,
+ "status": "ok"
+}

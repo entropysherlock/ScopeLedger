@@ -1,0 +1,26 @@
+B01_bridge.lean:1:0: error: unknown module prefix 'B00_corr'
+
+No directory 'B00_corr' or file 'B00_corr.olean' in the search path entries:
+/home/runner/work/_temp/out/SL003-40/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/lean4export/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/Cli/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/Comparator/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/checkdecls/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/AddCombi/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/batteries/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/Qq/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/aesop/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/proofwidgets/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/importGraph/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/LeanSearchClient/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/plausible/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/leancert/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/ComparatorChallenges/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/APAP/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/AINTLIB/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/Waring/Warning/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/packages/mathlib/.lake/build/lib/lean
+/home/runner/work/_temp/target/src/latest/.lake/build/lib/lean
+/home/runner/.elan/toolchains/leanprover--lean4---v4.33.0/lib/lean
+/home/runner/.elan/toolchains/leanprover--lean4---v4.33.0/lib/lean

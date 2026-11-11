@@ -1,0 +1,12 @@
+E_E1_twin_exact.lean:6:21: error: Type mismatch
+  Erdos581.erdos_581
+has type
+  ∃ c₁ c₂,
+    0 < c₁ ∧
+      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)
+but is expected to have type
+  ∃ c₁ c₂,
+    0 < c₁ ∧
+      0 < c₂ ∧
+        ∀ (m : ℕ),
+          ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧ ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)

@@ -1,0 +1,20 @@
+E_E3_convert_p4_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (∀ (d : ℕ → ℝ),
+      (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet a✝² p).HasDensity (d p)) →
+        SL003FC.Erdos690.IsUnimodalOnPrimes d) ↔
+    ¬Erdos690.DensityUnimodal a✝²
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.16} {β : α → Sort ?u.15} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case h'.h'
+h : ∀ (k : ℕ), 4 ≤ k → k ≤ 20 → ¬Erdos690.DensityUnimodal k
+a✝² : ℕ
+a✝¹ : 4 ≤ a✝²
+a✝ : a✝² ≤ 20
+⊢ (∀ (d : ℕ → ℝ),
+      (∀ (p : ℕ), Nat.Prime p → (SL003FC.Erdos690.kthPrimeFactorSet a✝² p).HasDensity (d p)) →
+        SL003FC.Erdos690.IsUnimodalOnPrimes d) ↔
+    ¬Erdos690.DensityUnimodal a✝²

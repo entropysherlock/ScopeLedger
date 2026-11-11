@@ -1,0 +1,35 @@
+E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (∀ (V : Type) (G : SimpleGraph V),
+      IsEmpty (G.Coloring ℕ) →
+        ∃ e ∈ G.edgeSet, ∃ N, ∀ (n : ℕ), N ≤ n → SL003FC.Erdos737.CycleThroughEdgeOfLength G e n) ↔
+    Erdos594.IsUncountablyChromatic ?convert_2 →
+      ∃ a r, SimpleGraph.Adj ?convert_2 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.5} {β : α → Sort ?u.4} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h :
+  ∀ {V : Type ?u.3} {G : SimpleGraph V},
+    Erdos594.IsUncountablyChromatic G →
+      ∃ a r, G.Adj a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges
+⊢ (∀ (V : Type) (G : SimpleGraph V),
+      IsEmpty (G.Coloring ℕ) →
+        ∃ e ∈ G.edgeSet, ∃ N, ∀ (n : ℕ), N ≤ n → SL003FC.Erdos737.CycleThroughEdgeOfLength G e n) ↔
+    Erdos594.IsUncountablyChromatic ?convert_2 →
+      ∃ a r, SimpleGraph.Adj ?convert_2 a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges
+E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  Type ?u.3
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.5} {β : α → Sort ?u.4} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case convert_1
+h :
+  ∀ {V : Type ?u.3} {G : SimpleGraph V},
+    Erdos594.IsUncountablyChromatic G →
+      ∃ a r, G.Adj a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges
+⊢ Type ?u.3

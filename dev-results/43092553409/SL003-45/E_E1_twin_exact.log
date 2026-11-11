@@ -1,0 +1,11 @@
+E_E1_twin_exact.lean:6:21: error: Type mismatch
+  Erdos1195.erdos_1195
+has type
+  ∀ (F : ℝ → ℝ),
+    (∀ x ∈ Set.Ici 1, 0 ≤ F x) →
+      MonotoneOn F (Set.Ici 1) →
+        Filter.Tendsto F Filter.atTop Filter.atTop →
+          (Erdos1195.HasErdos1195Witness F ↔
+            MeasureTheory.IntegrableOn (fun x => F x / x ^ 2) (Set.Ici 1) MeasureTheory.volume)
+but is expected to have type
+  {F | SL003FC.Erdos1195.IsGrowthRate F ∧ SL003FC.Erdos1195.HasSet F} = SL003FC.Erdos1195.erdos_1195.answer

@@ -1,0 +1,8 @@
+E_E1_twin_exact.lean:6:21: error: Type mismatch
+  Erdos235.erdos_235
+has type
+  ∃ f, Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))
+but is expected to have type
+  ∃ f,
+    ContinuousOn f (Set.Ici 0) ∧
+      ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k c) Filter.atTop (nhds (f c))

@@ -1,0 +1,27 @@
+E_E3_convert_p0_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  ContinuousOn x✝ (Set.Ici 0) ↔ Continuous x✝
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.12} {β : α → Sort ?u.11} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case e'_1
+h : ∃ f, Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))
+x✝ : ℝ → ℝ
+⊢ ContinuousOn x✝ (Set.Ici 0) ↔ Continuous x✝
+E_E3_convert_p0_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  0 ≤ a✝ → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k a✝) Filter.atTop (nhds (x✝ a✝)) ↔
+    0 ≤ a✝ → Filter.Tendsto (fun k => Erdos235.gapCDF k a✝) Filter.atTop (nhds (x✝ a✝))
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.12} {β : α → Sort ?u.11} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case e'_2
+h : ∃ f, Continuous f ∧ ∀ (c : ℝ), 0 ≤ c → Filter.Tendsto (fun k => Erdos235.gapCDF k c) Filter.atTop (nhds (f c))
+x✝ : ℝ → ℝ
+a✝ : ℝ
+⊢ 0 ≤ a✝ → Filter.Tendsto (fun k => SL003FC.Erdos235.proportion k a✝) Filter.atTop (nhds (x✝ a✝)) ↔
+    0 ≤ a✝ → Filter.Tendsto (fun k => Erdos235.gapCDF k a✝) Filter.atTop (nhds (x✝ a✝))

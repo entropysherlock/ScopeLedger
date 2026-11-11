@@ -1,0 +1,13 @@
+E_E2_iff_mp.lean:6:141: error: Application type mismatch: The argument
+  trivial
+has type
+  True
+but is expected to have type
+  ∀ᶠ (x : ℕ) in Filter.atTop,
+    (¬IsSquare x →
+        Erdos841.pellLowerBoundConstant *
+            (Real.log (Real.log ↑x) ^ (6 / 5) * Real.log (Real.log (Real.log ↑x)) ^ (-(1 / 5))) ≤
+          ↑(Erdos841.t x)) →
+      ?m.5 x
+in the application
+  Filter.Eventually.mp Erdos841.erdos841_lower_bound_explicit trivial

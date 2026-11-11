@@ -1,0 +1,248 @@
+{
+ "case_id": "SL003-14",
+ "cited": "QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int",
+ "module": "QuantumLean.FormalConjecturesWrappers",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 100
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 99
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  },
+  "B01_twin_structure.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.MonochromaticQuantumGraph.SL003.targetProp",
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int\nhas type\n  True ↔\n    ¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W\nbut is ex"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E2_iff_mp.lean:6:126: error: Type mismatch\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mp trivial\nhas type\n  ¬∃ (W : MonochromaticQuantumGraph.WeightsN 6 3 ℤ),\n      (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n        Monochromatic"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k1.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`\n  sInf ?s = ?a\nwith the goal\n  (¬x✝) = (True ↔ x✝)\n\nNote: The full type of `@IsLeast.csInf_eq` is\n  ∀ {α : Type ?u.670} [inst : ConditionallyCompleteLattice α] {s : Set α} {a : α}, IsLe"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k2.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`\n  sInf ?s = ?a\nwith the goal\n  (¬x✝) = (True ↔ x✝)\n\nNote: The full type of `@IsLeast.csInf_eq` is\n  ∀ {α : Type ?u.1316} [inst : ConditionallyCompleteLattice α] {s : Set α} {a : α}, IsL"
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k3.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`\n  sInf ?s = ?a\nwith the goal\n  (¬x✝) = (True ↔ x✝)\n\nNote: The full type of `@IsLeast.csInf_eq` is\n  ∀ {α : Type ?u.1316} [inst : ConditionallyCompleteLattice α] {s : Set α} {a : α}, IsL"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k4.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`\n  sInf ?s = ?a\nwith the goal\n  (¬x✝) = (True ↔ x✝)\n\nNote: The full type of `@IsLeast.csInf_eq` is\n  ∀ {α : Type ?u.1316} [inst : ConditionallyCompleteLattice α] {s : Set α} {a : α}, IsL"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p0.lean:12:294: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∃ W,\n      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n        SL003FC.MonochromaticQuantumGraph.EqSystemN 6 3 W) ↔\n    ∃ W,\n      "
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:4:94: error: unsolved goals\ncase h.a\nh :\n  True →\n    ¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W\n⊢ ∃ W,\n    (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W "
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:4:94: error: unsolved goals\ncase h.a\nh :\n  True →\n    ¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W\n⊢ ∃ W,\n    (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W "
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:4:94: error: unsolved goals\ncase h.a\nh :\n  True →\n    ¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W\n⊢ ∃ W,\n    (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W "
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k4.lean:4:94: error: unsolved goals\ncase h.a\nh :\n  True →\n    ¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W\n⊢ ∃ W,\n    (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W "
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:4:88: error: unsolved goals\ncase h.a\nh :\n  True →\n    ¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W\n⊢ ∃ W,\n    (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 "
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:4:94: error: unsolved goals\ncase h.a\nh :\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W) →\n    True\n⊢ (∃ W,\n      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k2.lean:4:94: error: unsolved goals\ncase h.a\nh :\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W) →\n    True\n⊢ (∃ W,\n      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k3.lean:4:94: error: unsolved goals\ncase h.a\nh :\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W) →\n    True\n⊢ (∃ W,\n      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:4:94: error: unsolved goals\ncase h.a\nh :\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W) →\n    True\n⊢ (∃ W,\n      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:4:88: error: unsolved goals\ncase h.a\nh :\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          MonochromaticQuantumGraph.EqSystemN 6 3 W) →\n    True\n⊢ (∃ W,\n      (∀ (e : SL003FC.MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          "
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          "
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          "
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n    "
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  QuantumLean.FormalConjecturesWrappers.eqSystem6_no_solution_d3_trinary_int.mpr\nhas function type\n  (¬∃ W,\n        (∀ (e : MonochromaticQuantumGraph.EdgeN 6 3), W e = -1 ∨ W e = 0 ∨ W e = 1) ∧\n          "
+  }
+ },
+ "bridges": {
+  "SL004.corr14_eqSystem": {
+   "file": "B01_twin_structure.lean",
+   "kind": "corr14_eqSystem",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": null,
+   "uses_cited": false
+  },
+  "SL004.bridge14": {
+   "file": "B01_twin_structure.lean",
+   "kind": "bridge",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": null,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 384,
+ "status": "ok"
+}

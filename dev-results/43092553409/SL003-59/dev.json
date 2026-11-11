@@ -1,0 +1,279 @@
+{
+ "case_id": "SL003-59",
+ "cited": "A397588.a_three_dvd",
+ "module": "LeanOeisProofs.NewFormalization.A397588",
+ "toolchain": "leanprover/lean4:v4.34.0-rc2",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 94
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 11
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  },
+  "B01_regression.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  },
+  "B02_twin.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 4,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.OeisA397588.SL003.targetProp",
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": true,
+   "seconds": 4,
+   "first_error": "",
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "uses_cited": true,
+   "leanchecker": true
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E2_iff_mp.lean:6:100: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression\n  A397588.a_three_dvd\nof type `1 < ?m.3 → 3 ∣ A397588.a ?m.3`"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k1.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (n : ℕ), 1 < n → 3 ∣ SL003FC.OeisA397588.a n) ↔ 1 < ?m.7 → 3 ∣ A397588.a ?m.7\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x :"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (n : ℕ), 1 < n → 3 ∣ SL003FC.OeisA397588.a n) ↔ 1 < ?m.7 → 3 ∣ A397588.a ?m.7\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x :"
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k3.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (n : ℕ), 1 < n → 3 ∣ SL003FC.OeisA397588.a n) ↔ 1 < ?m.7 → 3 ∣ A397588.a ?m.7\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x :"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  (∀ (n : ℕ), 1 < n → 3 ∣ SL003FC.OeisA397588.a n) ↔ 1 < ?m.7 → 3 ∣ A397588.a ?m.7\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.4} {β : α → Sort ?u.3} {f g : (x :"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p0.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.4 → 3 ∣ A397588.a ?m.4`"
+  }
+ },
+ "bridges": {
+  "SL004.bridge_regression59": {
+   "file": "B01_regression.lean",
+   "kind": "bridge_regression",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  },
+  "SL004.corr59_twin": {
+   "file": "B02_twin.lean",
+   "kind": "corr59_twin",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": false
+  },
+  "SL004.bridge59_twin": {
+   "file": "B02_twin.lean",
+   "kind": "bridge59_twin",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 333,
+ "status": "ok"
+}

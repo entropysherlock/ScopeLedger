@@ -1,0 +1,6 @@
+E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos441.not_erdos_441.right
+has function type
+  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N
+E_E3_convert_p5_k2.lean:4:77: error: unsolved goals
+⊢ ¬∀ (N : ℕ), 1 ≤ N → SL003FC.Erdos441.g N = (SL003FC.Erdos441.erdosConstruction N).card

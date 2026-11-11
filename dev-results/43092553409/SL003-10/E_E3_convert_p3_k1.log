@@ -1,0 +1,11 @@
+E_E3_convert_p3_k1.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`
+  sInf ?s = ?a
+with the goal
+  ↑(SL003FC.Erdos525.exceptional x✝).ncard = ↑(Erdos525.exceptionalFamily x✝).card
+
+Note: The full type of `@IsLeast.csInf_eq` is
+  ∀ {α : Type ?u.7} [inst : ConditionallyCompletePartialOrderInf α] {s : Set α} {a : α}, IsLeast s a → sInf s = a
+
+h : (fun N => ↑(Erdos525.exceptionalFamily N).card) =o[Filter.atTop] fun N => 2 ^ N
+x✝ : ℕ
+⊢ ↑(SL003FC.Erdos525.exceptional x✝).ncard = ↑(Erdos525.exceptionalFamily x✝).card

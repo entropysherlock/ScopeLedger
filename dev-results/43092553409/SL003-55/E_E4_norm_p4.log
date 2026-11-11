@@ -1,0 +1,19 @@
+E_E4_norm_p4.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression
+  Erdos841.erdos841_lower_bound_explicit
+has type
+  Filter.atTop.1
+    {x |
+      (fun n =>
+          ¬IsSquare n →
+            Erdos841.pellLowerBoundConstant *
+                (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤
+              ↑(Erdos841.t n))
+        x}
+which does not have the necessary form.
+E_E4_norm_p4.lean:4:71: error: unsolved goals
+⊢ ∃ C,
+    0 < C ∧
+      ∀ᶠ (n : ℕ) in Filter.atTop,
+        ¬IsSquare n →
+          C * (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-1 / 5)) ≤
+            ↑(SL003FC.Erdos841.t n)

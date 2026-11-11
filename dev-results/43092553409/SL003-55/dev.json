@@ -1,0 +1,270 @@
+{
+ "case_id": "SL003-55",
+ "cited": "Erdos841.erdos841_lower_bound_explicit",
+ "module": "ErdosProblems.Erdos841.LowerBound",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 133
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 5
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "B01_least.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "B02_lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos841.SL003.targetProp",
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  ∀ᶠ (n : ℕ) in Filter.atTop,\n    ¬IsSquare n →\n      Erdos841.pellLowerBoundConstant *\n          (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤\n        ↑(Erdos841"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E2_iff_mp.lean:6:141: error: Application type mismatch: The argument\n  trivial\nhas type\n  True\nbut is expected to have type\n  ∀ᶠ (x : ℕ) in Filter.atTop,\n    (¬IsSquare x →\n        Erdos841.pellLowerBoundConstant *\n            (Real.log (Real.log ↑x) ^ (6 / 5) * Real.log (Real.log (Real.log ↑x)) ^"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k1.lean:4:77: error: unsolved goals\nh :\n  ∀ᶠ (n : ℕ) in Filter.atTop,\n    ¬IsSquare n →\n      Erdos841.pellLowerBoundConstant *\n          (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤\n        ↑(Erdos841.t n)\n⊢ (∃ C,\n      0 < C ∧\n        ∃ a,\n "
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k2.lean:4:77: error: unsolved goals\nh :\n  ∀ᶠ (n : ℕ) in Filter.atTop,\n    ¬IsSquare n →\n      Erdos841.pellLowerBoundConstant *\n          (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤\n        ↑(Erdos841.t n)\n⊢ (∃ C,\n      0 < C ∧\n        ∃ a,\n "
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p0_k3.lean:4:77: error: unsolved goals\nh :\n  ∀ᶠ (n : ℕ) in Filter.atTop,\n    ¬IsSquare n →\n      Erdos841.pellLowerBoundConstant *\n          (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤\n        ↑(Erdos841.t n)\n⊢ (∃ C,\n      0 < C ∧\n        ∃ a,\n "
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k4.lean:4:77: error: unsolved goals\nh :\n  ∀ᶠ (n : ℕ) in Filter.atTop,\n    ¬IsSquare n →\n      Erdos841.pellLowerBoundConstant *\n          (Real.log (Real.log ↑n) ^ (6 / 5) * Real.log (Real.log (Real.log ↑n)) ^ (-(1 / 5))) ≤\n        ↑(Erdos841.t n)\n⊢ (∃ C,\n      0 < C ∧\n        ∃ a,\n "
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p0.lean:4:71: error: unsolved goals\nh :\n  ∃ a,\n    ∀ (b : ℕ),\n      a ≤ b →\n        ¬IsSquare b →\n          Erdos841.pellLowerBoundConstant *\n              (Real.log (Real.log ↑b) ^ (6 / 5) * Real.log (Real.log (Real.log ↑b)) ^ (-(1 / 5))) ≤\n            ↑(Erdos841.t b)\n⊢ (∃ C,\n      0 < C "
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p1.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConstant *\n"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E3_convert_p2_k2.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k4.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p2.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConstant *\n"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConstant *\n"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 4,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConstant *\n"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConstant *\n"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConst"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projection operates on types of the form `C ...` where C is a constant. The expression\n  Erdos841.erdos841_lower_bound_explicit\nhas type\n  Filter.atTop.1\n    {x |\n      (fun n =>\n          ¬IsSquare n →\n            Erdos841.pellLowerBoundConstant *\n"
+  }
+ },
+ "bridges": {
+  "SL004.corr55_t": {
+   "file": "B01_least.lean",
+   "kind": "corr55_t",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": false
+  },
+  "SL004.bridge55": {
+   "file": "B01_least.lean",
+   "kind": "bridge",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  },
+  "SL004.corr55_lib": {
+   "file": "B02_lib.lean",
+   "kind": "corr55_lib",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": false
+  }
+ },
+ "seconds_total": 393,
+ "status": "ok"
+}

@@ -1,0 +1,12 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_841 (c : ℝ) (hc : c ∈ Set.Ioc 0 1) :",
+ "removed declaration: theorem erdos_841.variants.selfridge_large_prime (n : ℕ) (hn : 1 < n)",
+ "removed declaration: theorem erdos_841.variants.selfridge_sqrt :",
+ "removed declaration: theorem erdos_841.variants.many_small_values : ∃ K : ℝ,",
+ "removed declaration: theorem erdos_841.variants.lower_bound : ∃ C : ℝ, 0 < C ∧",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

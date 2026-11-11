@@ -1,0 +1,5 @@
+E_E2_iff_mp.lean:6:106: error(lean.invalidField): Invalid field `mp`: The environment does not contain `And.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos441.not_erdos_441
+of type
+  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧
+    ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N

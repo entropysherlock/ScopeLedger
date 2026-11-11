@@ -1,0 +1,250 @@
+{
+ "case_id": "SL003-03",
+ "cited": "Erdos581.erdos_581",
+ "module": "ErdosProblems.Erdos581",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 122
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 3
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "B01_greatest.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos581.SL003.targetProp",
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  Erdos581.erdos_581\nhas type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)\nbut is expected to have type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧\n        ∀ (m"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos581.erdos_581\nof type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k1.lean:4:77: error: unsolved goals\nh :\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)\n⊢ (fun c₁ =>\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n            ∀ (m : ℕ),\n              ↑m / 2"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k2.lean:4:77: error: unsolved goals\nh :\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)\nx✝ : ℝ\n⊢ 0 < x✝ →\n    ((∃ x,\n        0 < x ∧\n          ∀ (m : ℕ),\n            ↑m / 2 + x✝ * ↑m ^ (4 / "
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k3.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`\n  sInf ?s = ?a\nwith the goal\n  (0 < x✝¹ ∧\n      0 < x✝ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + x✝¹ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧\n            ↑(SL003FC.Erdos581.f m) ≤ ↑m / "
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k4.lean:4:77: error: unsolved goals\nh :\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)\nx✝¹ x✝ : ℝ\n⊢ 0 < x✝¹ →\n    0 < x✝ →\n      ((∀ (m : ℕ),\n          ↑m / 2 + x✝¹ * ↑m ^ (4 / 5) ≤ ↑(SL003"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p0.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos581.erdos_581\nwhich has propositional type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m)"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos581.erdos_581\nwhich has propositional type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m)"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos581.erdos_581\nwhich has propositional type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m)"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos581.erdos_581\nwhich has propositional type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m)"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos581.erdos_581\nwhich has propositional type\n  ∃ c₁ c₂,\n    0 < c₁ ∧\n      0 < c₂ ∧ ∀ (m : ℕ), ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(E"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k1.lean:4:77: error: unsolved goals\nh :\n  ∃ c₂,\n    0 < Erdos581.erdos_581.1 ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)\n⊢ (fun c₁ =>\n      0 < c₁ ∧\n        ∃ x,\n          "
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k2.lean:4:77: error: unsolved goals\nh :\n  ∃ c₂,\n    0 < Erdos581.erdos_581.1 ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)\nx✝ : ℝ\n⊢ (0 < x✝ ∧\n      ∃ x,\n        0 < x ∧\n     "
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:4:77: error: unsolved goals\nh :\n  ∃ c₂,\n    0 < Erdos581.erdos_581.1 ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)\nx✝ : ℝ\n⊢ (0 < x✝ ∧\n      ∃ x,\n        0 < x ∧\n     "
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k4.lean:4:77: error: unsolved goals\nh :\n  ∃ c₂,\n    0 < Erdos581.erdos_581.1 ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + c₂ * ↑m ^ (4 / 5)\nx✝ : ℝ\n⊢ (0 < x✝ ∧\n      ∃ x,\n        0 < x ∧\n     "
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p2.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos581.erdos_581.2\nwhich has propositional type\n  ∃ c₂,\n    0 < Erdos581.erdos_581.1 ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + "
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos581.erdos_581.2\nwhich has propositional type\n  ∃ c₂,\n    0 < Erdos581.erdos_581.1 ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + "
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos581.erdos_581.2\nwhich has propositional type\n  ∃ c₂,\n    0 < Erdos581.erdos_581.1 ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + "
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos581.erdos_581.2\nwhich has propositional type\n  ∃ c₂,\n    0 < Erdos581.erdos_581.1 ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + "
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p3.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type\n  ℝ\nfrom the expression\n  Erdos581.erdos_581.2\nwhich has propositional type\n  ∃ c₂,\n    0 < Erdos581.erdos_581.1 ∧\n      0 < c₂ ∧\n        ∀ (m : ℕ),\n          ↑m / 2 + Erdos5"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k1.lean:4:77: error: unsolved goals\nh :\n  0 < Erdos581.erdos_581.1 ∧\n    0 < ⋯.1 ∧\n      ∀ (m : ℕ),\n        ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + ⋯.1 * ↑m ^ (4 / 5)\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n          "
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k2.lean:4:77: error: unsolved goals\nh :\n  0 < Erdos581.erdos_581.1 ∧\n    0 < ⋯.1 ∧\n      ∀ (m : ℕ),\n        ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + ⋯.1 * ↑m ^ (4 / 5)\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n          "
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k3.lean:4:77: error: unsolved goals\nh :\n  0 < Erdos581.erdos_581.1 ∧\n    0 < ⋯.1 ∧\n      ∀ (m : ℕ),\n        ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + ⋯.1 * ↑m ^ (4 / 5)\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n          "
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:4:77: error: unsolved goals\nh :\n  0 < Erdos581.erdos_581.1 ∧\n    0 < ⋯.1 ∧\n      ∀ (m : ℕ),\n        ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + ⋯.1 * ↑m ^ (4 / 5)\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n          "
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p4.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k1.lean:4:77: error: unsolved goals\nh : 0 < Erdos581.erdos_581.1\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n            ∀ (m : ℕ),\n              ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧\n                ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + x * ↑m ^ (4 / 5)) ↔\n "
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k2.lean:4:77: error: unsolved goals\nh : 0 < Erdos581.erdos_581.1\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n            ∀ (m : ℕ),\n              ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧\n                ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + x * ↑m ^ (4 / 5)) ↔\n "
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k3.lean:4:77: error: unsolved goals\nh : 0 < Erdos581.erdos_581.1\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n            ∀ (m : ℕ),\n              ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧\n                ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + x * ↑m ^ (4 / 5)) ↔\n "
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k4.lean:4:77: error: unsolved goals\nh : 0 < Erdos581.erdos_581.1\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n            ∀ (m : ℕ),\n              ↑m / 2 + c₁ * ↑m ^ (4 / 5) ≤ ↑(SL003FC.Erdos581.f m) ∧\n                ↑(SL003FC.Erdos581.f m) ≤ ↑m / 2 + x * ↑m ^ (4 / 5)) ↔\n "
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p5.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k1.lean:4:77: error: unsolved goals\nh :\n  0 < ⋯.1 ∧\n    ∀ (m : ℕ),\n      ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + ⋯.1 * ↑m ^ (4 / 5)\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n            ∀ (m : ℕ),\n              ↑m / 2 +"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k2.lean:4:77: error: unsolved goals\nh :\n  0 < ⋯.1 ∧\n    ∀ (m : ℕ),\n      ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + ⋯.1 * ↑m ^ (4 / 5)\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n            ∀ (m : ℕ),\n              ↑m / 2 +"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k3.lean:4:77: error: unsolved goals\nh :\n  0 < ⋯.1 ∧\n    ∀ (m : ℕ),\n      ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + ⋯.1 * ↑m ^ (4 / 5)\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n            ∀ (m : ℕ),\n              ↑m / 2 +"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k4.lean:4:77: error: unsolved goals\nh :\n  0 < ⋯.1 ∧\n    ∀ (m : ℕ),\n      ↑m / 2 + Erdos581.erdos_581.1 * ↑m ^ (4 / 5) ≤ ↑(Erdos581.f m) ∧ ↑(Erdos581.f m) ≤ ↑m / 2 + ⋯.1 * ↑m ^ (4 / 5)\n⊢ (∃ c₁,\n      0 < c₁ ∧\n        ∃ x,\n          0 < x ∧\n            ∀ (m : ℕ),\n              ↑m / 2 +"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p6.lean:7:2: error: `simp` made no progress"
+  }
+ },
+ "bridges": {
+  "SL004.corr03_f": {
+   "file": "B01_greatest.lean",
+   "kind": "corr03_f",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": false
+  },
+  "SL004.bridge03": {
+   "file": "B01_greatest.lean",
+   "kind": "bridge",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 376,
+ "status": "ok"
+}

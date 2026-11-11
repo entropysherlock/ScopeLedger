@@ -1,0 +1,256 @@
+{
+ "case_id": "SL003-06",
+ "cited": "Erdos441.not_erdos_441",
+ "module": "ErdosProblems.Erdos441",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 124
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 6
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "B01_extremal.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 5,
+   "first_error": null
+  },
+  "B02_lib.lean": {
+   "ok": false,
+   "rc": 1,
+   "seconds": 5,
+   "first_error": "B02_lib.lean:7:74: error: unsolved goals\ncase e'_3\nN : ℕ\nthis :\n  IsGreatest {k | ∃ b, (b ⊆ Finset.Icc 1 N ∧ ∀ a ∈ b, ∀ b_1 ∈ b, a.lcm b_1 ≤ N) ∧ b.card = k}\n    ((Erdos441.candidates N).sup Finset.card)\n⊢ {k | ∃ A ⊆ Finset.Icc 1 N, (∀ a ∈ A, ∀ b ∈ A, a.lcm b ≤ N) ∧ A.card = k} =\n    {k | ∃ b, (b ⊆ Finset.Icc 1 N ∧ ∀ a ∈ b, ∀ b_1 ∈ b, a.lcm b_1 ≤ N) ∧ b.card = k}"
+  }
+ },
+ "target_prop": "SL003FC.Erdos441.SL003.targetProp",
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  Erdos441.not_erdos_441\nhas type\n  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧\n    ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\nbut is expected to have type\n  ¬∀ (N : ℕ), 1 ≤ N → SL003FC.Erdos441.g N ="
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E2_iff_mp.lean:6:106: error(lean.invalidField): Invalid field `mp`: The environment does not contain `And.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos441.not_erdos_441\nof type\n  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧\n    ∀ (M : ℕ), ∃ "
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k1.lean:4:77: error: unsolved goals\nh :\n  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧\n    ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    (∀ (N : "
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k2.lean:4:77: error: unsolved goals\nh :\n  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧\n    ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    (∀ (N : "
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k3.lean:4:77: error: unsolved goals\nh :\n  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧\n    ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    (∀ (N : "
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k4.lean:4:77: error: unsolved goals\nh :\n  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧\n    ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    (∀ (N : "
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p0.lean:4:71: error: unsolved goals\nh :\n  (∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)) ∧\n    ∀ (M : ℕ), ∃ N, M ≤ N ∧ (Erdos441.erdosConstruction N).card < Erdos441.g N\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    (∀ (N : ℕ)"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k1.lean:4:77: error: unsolved goals\nh : ∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    ∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k2.lean:4:77: error: unsolved goals\nh : ∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    ∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k3.lean:4:77: error: unsolved goals\nh : ∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    ∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:4:77: error: unsolved goals\nh : ∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    ∀ (N : ℕ), Erdos441.LcmBounded N (Erdos441.erdosConstruction N)"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p1.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k1.lean:4:77: error: unsolved goals\nh : ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    ∀ (M : ℕ), ∃ N, M ≤ N ∧ (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k2.lean:4:77: error: unsolved goals\nh : ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    ∀ (M : ℕ), ∃ N, M ≤ N ∧ (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:4:77: error: unsolved goals\nh : ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    ∀ (M : ℕ), ∃ N, M ≤ N ∧ (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k4.lean:4:77: error: unsolved goals\nh : ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    ∀ (M : ℕ), ∃ N, M ≤ N ∧ (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p2.lean:4:71: error: unsolved goals\nh : ∀ (M : ℕ), ∃ N, M ≤ N ∧ (Erdos441.erdosConstruction N).card < Erdos441.g N\n⊢ (∃ x, 1 ≤ x ∧ ¬SL003FC.Erdos441.g x = (SL003FC.Erdos441.erdosConstruction x).card) ↔\n    ∀ (M : ℕ), ∃ N, M ≤ N ∧ (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos441.not_erdos_441.right\nhas function type\n  ∀ (M : ℕ), ∃ N ≥ M, (Erdos441.erdosConstruction N).card < Erdos441.g N"
+  }
+ },
+ "bridges": {
+  "SL004.corr06_g": {
+   "file": "B01_extremal.lean",
+   "kind": "corr06_g",
+   "statement": null,
+   "proves_target": null,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": false
+  },
+  "SL004.bridge06": {
+   "file": "B01_extremal.lean",
+   "kind": "bridge",
+   "statement": null,
+   "proves_target": true,
+   "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+   ],
+   "standard_axioms": true,
+   "leanchecker": true,
+   "uses_cited": true
+  }
+ },
+ "seconds_total": 388,
+ "status": "ok"
+}

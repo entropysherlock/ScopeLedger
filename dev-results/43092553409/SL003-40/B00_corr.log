@@ -1,0 +1,2 @@
+B00_corr.lean:10:39: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+B00_corr.lean:15:31: error(lean.unknownIdentifier): Unknown constant `Nat.ne_zero_of_mem_primeFactors`

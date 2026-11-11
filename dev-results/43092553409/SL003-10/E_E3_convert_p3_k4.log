@@ -1,0 +1,11 @@
+E_E3_convert_p3_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  (SL003FC.Erdos525.exceptional x✝).ncard = (Erdos525.exceptionalFamily x✝).card
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.10} {β : α → Sort ?u.9} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h : (fun N => ↑(Erdos525.exceptionalFamily N).card) =o[Filter.atTop] fun N => 2 ^ N
+x✝ : ℕ
+⊢ (SL003FC.Erdos525.exceptional x✝).ncard = (Erdos525.exceptionalFamily x✝).card
