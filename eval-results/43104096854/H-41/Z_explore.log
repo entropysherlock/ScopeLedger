@@ -1,0 +1,28 @@
+def SL003FC.MonochromaticQuantumGraph.SL003.targetProp : Prop :=
+¬∃ W, SL003FC.MonochromaticQuantumGraph.EqSystemN (8 : ℕ) (3 : ℕ) W
+QuantumLean.FormalConjecturesWrappers.eqSystem8_no_solution_d3_int : True ↔
+  ¬∃ W, MonochromaticQuantumGraph.EqSystemN (8 : ℕ) (3 : ℕ) W
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `EqSystemN`
+Z_explore.lean:6:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `QuantumLean.FormalConjecturesWrappers.EqSystemN`
+def SL003FC.MonochromaticQuantumGraph.EqSystemN : {α : Type} →
+  [Semiring α] → (N D : ℕ) → SL003FC.MonochromaticQuantumGraph.WeightsN N D α → Prop :=
+fun {α} [Semiring α] N D W =>
+  ∀ (ι : SL003FC.MonochromaticQuantumGraph.V N → Fin D),
+    SL003FC.MonochromaticQuantumGraph.pmSumN N D W ι =
+      if SL003FC.MonochromaticQuantumGraph.allEqual ι then (1 : α) else (0 : α)
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.MonochromaticQuantumGraph.True`
+inductive True : Prop
+number of parameters: 0
+constructors:
+True.intro : True
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `QuantumLean.FormalConjecturesWrappers.True`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `QuantumLean.FormalConjecturesWrappers.WeightsN`
+@[reducible] def SL003FC.MonochromaticQuantumGraph.WeightsN : ℕ → ℕ → Type → Type :=
+fun N D α => SL003FC.MonochromaticQuantumGraph.EdgeN N D → α
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `WeightsN`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.MonochromaticQuantumGraph.answer`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `QuantumLean.FormalConjecturesWrappers.answer`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `answer`
