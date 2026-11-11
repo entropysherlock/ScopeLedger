@@ -1,0 +1,11 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem conjecture144 (G : SimpleGraph α) (h : G.Connected) :",
+ "removed declaration: example (G : SimpleGraph (Fin 3)) : 0 ≤ largestInducedTreeSize G := Na",
+ "removed declaration: example (G : SimpleGraph (Fin 3)) : 0 ≤ G.girth := Nat.zero_le _",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]
