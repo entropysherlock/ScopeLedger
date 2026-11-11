@@ -1,0 +1,237 @@
+{
+ "case_id": "H-31",
+ "cited": "Erdos136.erdos_136",
+ "module": "ErdosProblems.Erdos136",
+ "toolchain": "leanprover/lean4:v4.33.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 122
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 700
+  }
+ },
+ "files": {
+  "SL004Lib.lean": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 6,
+   "first_error": null
+  }
+ },
+ "target_prop": "SL003FC.Erdos136.SL003.targetProp",
+ "baselines": {
+  "X_B1_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "X_B1_exact.lean:6:2: error: Type mismatch\n  Erdos136.erdos_136\nhas type\n  Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6))\nbut is expected to have type\n  Filter.Tendsto (fun n => ↑(SL003FC.Erdos136.f n) / ↑n) Filter.atTop (nhds (5 / 6))"
+  },
+  "X_B2_convert_rfl.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "X_B2_convert_rfl.lean:7:24: error: Tactic `rfl` failed: The left-hand side\n  ↑(SL003FC.Erdos136.f x✝)\nis not definitionally equal to the right-hand side\n  ↑(Erdos136.erdos136Fun x✝)\n\nh : Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6))\nx✝ : ℕ\n⊢ ↑(SL003FC.Erdos136."
+  },
+  "X_B3_aesop.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "X_B3_aesop.lean:7:2: error: Tactic `aesop` failed, made no progress\nInitial goal:\n  h : Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6))\n  ⊢ Filter.Tendsto (fun n => ↑(SL003FC.Erdos136.f n) / ↑n) Filter.atTop (nhds (5 / 6))"
+  },
+  "X_B4_exact_q.lean": {
+   "ok": false,
+   "seconds": 135,
+   "first_error": "X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions."
+  }
+ },
+ "engine": {
+  "E_E1_twin_exact.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E1_twin_exact.lean:6:21: error: Type mismatch\n  Erdos136.erdos_136\nhas type\n  Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6))\nbut is expected to have type\n  Filter.Tendsto (fun n => ↑(SL003FC.Erdos136.f n) / ↑n) Filter.atTop (nhds (5 / 6))"
+  },
+  "E_E2_iff_mp.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E2_iff_mp.lean:6:98: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression\n  Erdos136.erdos_136\nof type\n  ?m.3 ∈ nhds (5 / 6) → ?m.3 ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Fil"
+  },
+  "E_E3_convert_p0_k1.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p0_k1.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`\n  sInf ?s = ?a\nwith the goal\n  ↑(SL003FC.Erdos136.f x✝) / ↑x✝ = ↑(Erdos136.erdos136Fun x✝) / ↑x✝\n\nNote: The full type of `@IsLeast.csInf_eq` is\n  ∀ {α : Type ?u.7} [inst : Conditionally"
+  },
+  "E_E3_convert_p0_k2.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p0_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  ↑(SL003FC.Erdos136.f x✝) / ↑x✝ = ↑(Erdos136.erdos136Fun x✝) / ↑x✝\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.8} {β : α → Sort ?u.7} {f g : (x : α) → β x}, (∀ "
+  },
+  "E_E3_convert_p0_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p0_k3.lean:4:77: error: unsolved goals\nh : Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6))\nx✝ : ℕ\n⊢ SL003FC.Erdos136.f x✝ = Erdos136.erdos136Fun x✝"
+  },
+  "E_E3_convert_p0_k4.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p0_k4.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`\n  ?f = ?g\nwith the goal\n  SL003FC.Erdos136.f x✝ = Erdos136.erdos136Fun x✝\n\nNote: The full type of `@funext` is\n  ∀ {α : Sort ?u.12} {β : α → Sort ?u.11} {f g : (x : α) → β x}, (∀ (x : α), f x = g"
+  },
+  "E_E4_norm_p0.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E4_norm_p0.lean:7:2: error: `simp` made no progress"
+  },
+  "E_E3_convert_p1_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p1_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p1_k3.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p1_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p1_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p1_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E4_norm_p1.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E4_norm_p1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p2_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p2_k2.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p2_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p2_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p2_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p2_k4.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p2_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E4_norm_p2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p3_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p3_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p3_k3.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p3_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p3_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p3_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E4_norm_p3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p4_k1.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p4_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p4_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p4_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p4_k4.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p4_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E4_norm_p4.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E4_norm_p4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p5_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p5_k2.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p5_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p5_k3.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p5_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p5_k4.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p5_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E4_norm_p5.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E4_norm_p5.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p6_k1.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p6_k2.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E3_convert_p6_k2.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p6_k3.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p6_k3.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E3_convert_p6_k4.lean": {
+   "ok": false,
+   "seconds": 6,
+   "first_error": "E_E3_convert_p6_k4.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  },
+  "E_E4_norm_p6.lean": {
+   "ok": false,
+   "seconds": 5,
+   "first_error": "E_E4_norm_p6.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos136.erdos_136\nhas function type\n  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop"
+  }
+ },
+ "bridges": {},
+ "seconds_total": 1196,
+ "status": "ok"
+}

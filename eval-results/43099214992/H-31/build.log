@@ -1,0 +1,27 @@
+✔ [8706/8725] Built ErdosProblems.Erdos136.Definitions (12s)
+ℹ [8707/8725] Built ErdosProblems.Erdos136.LocalLemma (19s)
+info: ErdosProblems/Erdos136/LocalLemma.lean:355:0: 'Erdos136.LocalLemma.exists_avoiding_of_four_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8708/8725] Built ErdosProblems.Erdos136.UpperParameters (25s)
+✔ [8709/8725] Built ErdosProblems.Erdos136.McDiarmid (17s)
+✔ [8710/8725] Built ErdosProblems.Erdos136.Freedman (13s)
+✔ [8711/8725] Built ErdosProblems.Erdos136.Hypergraph (13s)
+ℹ [8712/8725] Built ErdosProblems.Erdos136.LowerBound (21s)
+info: ErdosProblems/Erdos136/LowerBound.lean:880:0: 'Erdos136.erdos136Fun_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos136/LowerBound.lean:881:0: 'Erdos136.erdos136Fun_lower_bound_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8713/8725] Built ErdosProblems.Erdos136.Completion (23s)
+✔ [8714/8725] Built ErdosProblems.Erdos136.Asymptotics (16s)
+✔ [8715/8725] Built ErdosProblems.Erdos136.CFMTrajectories (88s)
+✔ [8716/8725] Built ErdosProblems.Erdos136.CFMRegularization (131s)
+✔ [8717/8725] Built ErdosProblems.Erdos136.ConflictFreeMatching (335s)
+✔ [8718/8725] Built ErdosProblems.Erdos136.PartialConstruction (36s)
+ℹ [8719/8725] Built ErdosProblems.Erdos136.LeaveCompletion (27s)
+info: ErdosProblems/Erdos136/LeaveCompletion.lean:2130:0: 'Erdos136.LeaveCompletion.colorable_of_partialGood_jmLeaveBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [8720/8725] Built ErdosProblems.Erdos136.UpperReduction (7.8s)
+✔ [8721/8725] Built ErdosProblems.Erdos136.AuxConcentration (67s)
+✔ [8722/8725] Built ErdosProblems.Erdos136.ConflictCounts (40s)
+✔ [8723/8725] Built ErdosProblems.Erdos136.TrackedTests (20s)
+✔ [8724/8725] Built ErdosProblems.Erdos136.UpperConstruction (20s)
+✔ [8725/8725] Built ErdosProblems.Erdos136 (4.3s)
+Build completed successfully (8725 jobs).
