@@ -1,0 +1,642 @@
+✔ [3706/3717] Built PrimeNumberTheoremAnd.Mathlib.Algebra.Notation.Support (1.0s)
+✔ [3708/3733] Built PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Log.Basic (2.0s)
+✔ [3710/3733] Built PrimeNumberTheoremAnd.Mathlib.Analysis.Asymptotics.Asymptotics (1.9s)
+✔ [3713/3735] Built PrimeNumberTheoremAnd.SmoothExistence (3.6s)
+✔ [3714/3735] Built BoundedGaps.BombieriVinogradov.Statement (2.0s)
+⚠ [3715/3735] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveConductorFibers (3.3s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/PrimitiveConductorFibers.lean:38:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/PrimitiveConductorFibers.lean:77:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/PrimitiveConductorFibers.lean:153:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3716/3735] Built PrimeNumberTheoremAnd.Sobolev (6.5s)
+✔ [3717/3735] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanPrimitiveMeanPowers (2.6s)
+✔ [3718/3735] Built BoundedGaps.BombieriVinogradov.Analytic.WeightedStatement (2.5s)
+✔ [3719/3736] Built BoundedGaps.BombieriVinogradov.Analytic.PositiveDivisorPairReindex (3.2s)
+✔ [3720/3739] Built PrimeNumberTheoremAnd.Fourier (3.7s)
+✔ [3721/3746] Built BoundedGaps.BombieriVinogradov.Analytic.CharacterOrthogonality (3.0s)
+✔ [3722/3746] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanPrimitiveMeanAbelIntegrals (3.1s)
+✔ [3724/3746] Built BoundedGaps.Arithmetic.SquarefreeReciprocalCoefficient (3.4s)
+✔ [3726/3746] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveCharacterReduction (2.7s)
+✔ [3727/3752] Built PrimeNumberTheoremAnd.Defs (4.8s)
+✔ [3728/3755] Built BoundedGaps.Arithmetic.ReciprocalTotientPrefix (3.7s)
+✔ [3729/3758] Built BoundedGaps.BombieriVinogradov.Analytic.PrimePowerCorrection (3.3s)
+✔ [3730/3760] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanConvolutionIdentity (2.0s)
+✔ [3731/3760] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveGaussSum (4.8s)
+✔ [3732/3760] Built BoundedGaps.BombieriVinogradov.Analytic.StandardAddCharInterval (3.9s)
+✔ [3733/3760] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanSourceReindex (3.3s)
+✔ [3734/3760] Built BoundedGaps.BombieriVinogradov.Analytic.PrimePowerCorrectionBound (7.1s)
+✔ [3735/3764] Built BoundedGaps.BombieriVinogradov.Analytic.ReciprocalSineAggregate (5.5s)
+✔ [3736/3764] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveCharacterInterval (4.5s)
+✔ [3737/3764] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanTwistedDecomposition (4.9s)
+⚠ [3738/3764] Built BoundedGaps.BombieriVinogradov.Analytic.CenteredCharacterReduction (5.1s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/CenteredCharacterReduction.lean:151:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/CenteredCharacterReduction.lean:197:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/CenteredCharacterReduction.lean:262:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3739/3764] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitivePolyaVinogradov (4.3s)
+✔ [3740/3764] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanThirdCoefficient (4.7s)
+✔ [3741/3769] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanFirstTermBound (5.5s)
+✔ [3742/3770] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanSecondTermReindex (5.0s)
+✖ [3743/3789] Building BoundedGaps.BombieriVinogradov.Analytic.CenteredPrimitiveMaxima (4.2s)
+trace: .> LEAN_PATH=/home/runner/work/_temp/target/src/latest/.lake/packages/lean4export/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Comparator/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/checkdecls/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AddCombi/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/leancert/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/ComparatorChallenges/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/APAP/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AINTLIB/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Waring/Warning/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/BoundedGaps/BombieriVinogradov/Analytic/CenteredPrimitiveMaxima.lean -o /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/CenteredPrimitiveMaxima.olean -i /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/CenteredPrimitiveMaxima.ilean -c /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/CenteredPrimitiveMaxima.c --setup /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/CenteredPrimitiveMaxima.setup.json --json
+warning: BoundedGaps/BombieriVinogradov/Analytic/CenteredPrimitiveMaxima.lean:45:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+error: BoundedGaps/BombieriVinogradov/Analytic/CenteredPrimitiveMaxima.lean:71:4: Type mismatch: After simplification, term
+  Finset.le_sup' (fun z => ‖centeredTwistedChebyshevSum z χ.conductor χ.primitiveCharacter‖) hy
+ has type
+  ‖centeredTwistedChebyshevSum y χ.conductor χ.primitiveCharacter‖ ≤
+    (Finset.Icc 2 x).sup' ⋯ fun z => ‖centeredTwistedChebyshevSum z χ.conductor χ.primitiveCharacter‖
+but is expected to have type
+  ∃ b,
+    (2 ≤ b ∧ b ≤ x) ∧
+      ‖centeredTwistedChebyshevSum y χ.conductor χ.primitiveCharacter‖ ≤
+        ‖centeredTwistedChebyshevSum b χ.conductor χ.primitiveCharacter‖
+warning: BoundedGaps/BombieriVinogradov/Analytic/CenteredPrimitiveMaxima.lean:165:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+error: Lean exited with code 1
+✔ [3794/3815] Built BoundedGaps.BombieriVinogradov.Analytic.CosecantHilbert.Basic (3.5s)
+✔ [3795/3815] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanSecondTermReduction (5.4s)
+✔ [3796/3816] Built BoundedGaps.BombieriVinogradov.Analytic.CosecantHilbert.Spectral (3.6s)
+✔ [3798/3816] Built BoundedGaps.BombieriVinogradov.Analytic.CircleReciprocalSquarePacking (6.0s)
+✔ [3799/3816] Built BoundedGaps.BombieriVinogradov.Analytic.CosecantHilbert.FiniteExpansion (3.3s)
+⚠ [3800/3816] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanSecondTermPolyaVinogradov (4.4s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/VaughanSecondTermPolyaVinogradov.lean:23:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/VaughanSecondTermPolyaVinogradov.lean:77:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3801/3820] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanThirdTermReindex (3.2s)
+✔ [3802/3820] Built BoundedGaps.BombieriVinogradov.Analytic.AdditiveLargeSieve.FiniteDuality (2.3s)
+✔ [3803/3820] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanSecondTermTrivial (4.1s)
+✔ [3804/3825] Built PrimeNumberTheoremAnd.Wiener (40s)
+✔ [3805/3825] Built BoundedGaps.BombieriVinogradov.Analytic.CosecantHilbert.FiniteCancellation (3.0s)
+✔ [3806/3825] Built BoundedGaps.BombieriVinogradov.Analytic.CosecantPointwise (3.9s)
+✔ [3807/3825] Built BoundedGaps.BombieriVinogradov.Analytic.ReducedFractionFrequencies (3.9s)
+✔ [3808/3825] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanThirdTermSmall (4.5s)
+✖ [3809/3825] Building BoundedGaps.BombieriVinogradov.Analytic.VaughanSecondTermAggregate (3.6s)
+trace: .> LEAN_PATH=/home/runner/work/_temp/target/src/latest/.lake/packages/lean4export/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Comparator/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/checkdecls/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AddCombi/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/leancert/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/ComparatorChallenges/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/APAP/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AINTLIB/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Waring/Warning/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/BoundedGaps/BombieriVinogradov/Analytic/VaughanSecondTermAggregate.lean -o /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/VaughanSecondTermAggregate.olean -i /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/VaughanSecondTermAggregate.ilean -c /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/VaughanSecondTermAggregate.c --setup /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/VaughanSecondTermAggregate.setup.json --json
+error: BoundedGaps/BombieriVinogradov/Analytic/VaughanSecondTermAggregate.lean:54:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  @LT.lt ?m.50 instDistribLatticeOfLinearOrder.toSemilatticeInf.toLT (Finset.sup' ?m.53 ?H ?f) ?a
+in the target expression
+  @LT.lt ℝ Real.instLT ((Finset.Icc 1 x).sup' ⋯ fun y => ‖vaughanTwistedSumTwo V y 1 chi‖) (↑x * Real.log (↑x * V) ^ 2)
+
+V : ℝ
+x : ℕ
+hx : 4 ≤ x
+hV : 1 ≤ V
+chi : DirichletCharacter ℂ 1
+⊢ ((Finset.Icc 1 x).sup' ⋯ fun y => ‖vaughanTwistedSumTwo V y 1 chi‖) < ↑x * Real.log (↑x * V) ^ 2
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    vaughanTwistedSumTwoEndpointMaximum._proof_1 x
+      (Decidable.byContradiction fun a =>
+        vaughanTwistedSumTwoEndpointMaximum_level_one_lt_endpoint_mul_log_sq._proof_1_1 hx a)
+  has type
+    ∃ x_1, x_1 ∈ Finset.Icc 1 x
+  but is expected to have type
+    (Finset.Icc 1 x).Nonempty
+  in the application
+    (Finset.Icc 1 x).sup' ⋯
+error: BoundedGaps/BombieriVinogradov/Analytic/VaughanSecondTermAggregate.lean:72:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  @LT.lt ?m.61 instDistribLatticeOfLinearOrder.toSemilatticeInf.toLT (Finset.sup' ?m.64 ?H ?f) ?a
+in the target expression
+  @LT.lt ℝ Real.instLT ((Finset.Icc 1 x).sup' ⋯ fun y => ‖vaughanTwistedSumTwo V y q chi‖)
+    (√↑q * V * Real.log (↑x * V) ^ 2)
+
+Q V : ℝ
+x q : ℕ
+hx : 4 ≤ x
+hV : 1 ≤ V
+hq : 1 < q
+hqQ : ↑q ≤ Q
+hQsqrt : Q ≤ √↑x
+chi : DirichletCharacter ℂ q
+hchi : chi.IsPrimitive
+⊢ ((Finset.Icc 1 x).sup' ⋯ fun y => ‖vaughanTwistedSumTwo V y q chi‖) < √↑q * V * Real.log (↑x * V) ^ 2
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    vaughanTwistedSumTwoEndpointMaximum._proof_1 x
+      (Decidable.byContradiction fun a =>
+        vaughanTwistedSumTwoEndpointMaximum_lt_sqrt_mul_cutoff_mul_log_sq._proof_1_1 hx a)
+  has type
+    ∃ x_1, x_1 ∈ Finset.Icc 1 x
+  but is expected to have type
+    (Finset.Icc 1 x).Nonempty
+  in the application
+    (Finset.Icc 1 x).sup' ⋯
+error: Lean exited with code 1
+✔ [3810/3825] Built BoundedGaps.BombieriVinogradov.Analytic.CosecantHilbert.TrigonometricIdentity (2.9s)
+✔ [3811/3825] Built BoundedGaps.BombieriVinogradov.Analytic.MultiplicativeCharacterParseval (4.3s)
+✔ [3812/3825] Built BoundedGaps.BombieriVinogradov.Analytic.CosecantHilbert.EigenvectorCancellation (3.3s)
+✖ [3813/3825] Building BoundedGaps.BombieriVinogradov.Analytic.AdditiveLargeSieve.ConsecutiveIntervalKernel (3.9s)
+trace: .> LEAN_PATH=/home/runner/work/_temp/target/src/latest/.lake/packages/lean4export/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Comparator/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/checkdecls/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AddCombi/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/leancert/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/ComparatorChallenges/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/APAP/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AINTLIB/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Waring/Warning/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/BoundedGaps/BombieriVinogradov/Analytic/AdditiveLargeSieve/ConsecutiveIntervalKernel.lean -o /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/AdditiveLargeSieve/ConsecutiveIntervalKernel.olean -i /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/AdditiveLargeSieve/ConsecutiveIntervalKernel.ilean -c /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/AdditiveLargeSieve/ConsecutiveIntervalKernel.c --setup /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/AdditiveLargeSieve/ConsecutiveIntervalKernel.setup.json --json
+error: BoundedGaps/BombieriVinogradov/Analytic/AdditiveLargeSieve/ConsecutiveIntervalKernel.lean:116:6: `dsimp` made no progress
+error: BoundedGaps/BombieriVinogradov/Analytic/AdditiveLargeSieve/ConsecutiveIntervalKernel.lean:121:6: `dsimp` made no progress
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    fun ⦃a b⦄ hab => Decidable.byContradiction fun a_1 => sum_Ioc_nat_eq_sum_range_succ._proof_1_1 m0 hab a_1
+  has type
+    ∀ ⦃a b : ℕ⦄, (fun k => m0 + k + 1) a = (fun k => m0 + k + 1) b → a = b
+  but is expected to have type
+    Function.Injective fun k => m0 + k + 1
+  in the application
+    { toFun := fun k => m0 + k + 1, inj' := ⋯ }
+error: BoundedGaps/BombieriVinogradov/Analytic/AdditiveLargeSieve/ConsecutiveIntervalKernel.lean:108:46: unsolved goals
+A : Type u_1
+inst✝ : AddCommMonoid A
+f : ℕ → A
+m0 N : ℕ
+e : ℕ ↪ ℕ := { toFun := fun k => m0 + k + 1, inj' := ⋯ }
+hset : Finset.Ioc m0 (m0 + N) = Finset.map e (Finset.range N)
+⊢ ∑ x ∈ Finset.range N, f ({ toFun := fun k => m0 + k + 1, inj' := ⋯ } x) = ∑ k ∈ Finset.range N, f (m0 + k + 1)
+error: Lean exited with code 1
+⚠ [3814/3836] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveCharacterAdditiveReduction (4.3s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/PrimitiveCharacterAdditiveReduction.lean:24:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✖ [3816/3839] Building BoundedGaps.BombieriVinogradov.Analytic.VaughanThirdTermSmallAggregate (5.8s)
+trace: .> LEAN_PATH=/home/runner/work/_temp/target/src/latest/.lake/packages/lean4export/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Comparator/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/checkdecls/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AddCombi/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/leancert/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/ComparatorChallenges/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/APAP/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AINTLIB/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Waring/Warning/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/BoundedGaps/BombieriVinogradov/Analytic/VaughanThirdTermSmallAggregate.lean -o /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/VaughanThirdTermSmallAggregate.olean -i /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/VaughanThirdTermSmallAggregate.ilean -c /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/VaughanThirdTermSmallAggregate.c --setup /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/VaughanThirdTermSmallAggregate.setup.json --json
+error: BoundedGaps/BombieriVinogradov/Analytic/VaughanThirdTermSmallAggregate.lean:46:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  @LT.lt ?m.50 instDistribLatticeOfLinearOrder.toSemilatticeInf.toLT (Finset.sup' ?m.53 ?H ?f) ?a
+in the target expression
+  @LT.lt ℝ Real.instLT ((Finset.Icc 1 x).sup' ⋯ fun y => ‖vaughanTwistedSumThreeSmall U V y 1 χ‖)
+    (↑x * Real.log (↑x * U) ^ 2)
+
+U V : ℝ
+x : ℕ
+hx : 4 ≤ x
+hU : 1 ≤ U
+χ : DirichletCharacter ℂ 1
+⊢ ((Finset.Icc 1 x).sup' ⋯ fun y => ‖vaughanTwistedSumThreeSmall U V y 1 χ‖) < ↑x * Real.log (↑x * U) ^ 2
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    vaughanTwistedSumThreeSmallEndpointMaximum._proof_1 x
+      (Decidable.byContradiction fun a =>
+        vaughanTwistedSumThreeSmallEndpointMaximum_level_one_lt_endpoint_mul_log_sq._proof_1_1 hx a)
+  has type
+    ∃ x_1, x_1 ∈ Finset.Icc 1 x
+  but is expected to have type
+    (Finset.Icc 1 x).Nonempty
+  in the application
+    (Finset.Icc 1 x).sup' ⋯
+error: BoundedGaps/BombieriVinogradov/Analytic/VaughanThirdTermSmallAggregate.lean:64:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  @LT.lt ?m.61 instDistribLatticeOfLinearOrder.toSemilatticeInf.toLT (Finset.sup' ?m.64 ?H ?f) ?a
+in the target expression
+  @LT.lt ℝ Real.instLT ((Finset.Icc 1 x).sup' ⋯ fun y => ‖vaughanTwistedSumThreeSmall U V y q χ‖)
+    (√↑q * U * Real.log (↑x * U) ^ 2)
+
+Q U V : ℝ
+x q : ℕ
+hx : 4 ≤ x
+hU : 1 ≤ U
+hq : 1 < q
+hqQ : ↑q ≤ Q
+hQsqrt : Q ≤ √↑x
+χ : DirichletCharacter ℂ q
+hχ : χ.IsPrimitive
+⊢ ((Finset.Icc 1 x).sup' ⋯ fun y => ‖vaughanTwistedSumThreeSmall U V y q χ‖) < √↑q * U * Real.log (↑x * U) ^ 2
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    vaughanTwistedSumThreeSmallEndpointMaximum._proof_1 x
+      (Decidable.byContradiction fun a =>
+        vaughanTwistedSumThreeSmallEndpointMaximum_lt_sqrt_mul_cutoff_mul_log_sq._proof_1_1 hx a)
+  has type
+    ∃ x_1, x_1 ∈ Finset.Icc 1 x
+  but is expected to have type
+    (Finset.Icc 1 x).Nonempty
+  in the application
+    (Finset.Icc 1 x).sup' ⋯
+error: Lean exited with code 1
+✔ [3817/3839] Built BoundedGaps.BombieriVinogradov.Analytic.CosecantHilbert.AnalyticEstimate (4.9s)
+✔ [3818/3844] Built BoundedGaps.BombieriVinogradov.Analytic.Dyadic (3.2s)
+✔ [3819/3844] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletSineRemainder (5.0s)
+✔ [3820/3844] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanFourthCoefficient (2.8s)
+✔ [3821/3847] Built BoundedGaps.BombieriVinogradov.Analytic.CosecantHilbert (4.0s)
+✔ [3827/3850] Built BoundedGaps.BombieriVinogradov.Analytic.GranvilleRamareCoprimeMoebius (4.3s)
+✔ [3828/3854] Built BoundedGaps.BombieriVinogradov.Analytic.TwoFrequencyPerronKernel (5.4s)
+✔ [3829/3872] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanFourthTermReindex (5.4s)
+✔ [3835/3874] Built BoundedGaps.BombieriVinogradov.Analytic.GranvilleRamareMoments (5.6s)
+⚠ [3836/3874] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletLZeroDivisor (5.0s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/DirichletLZeroDivisor.lean:59:45: `ENat.map_coe` has been deprecated: Use `ENat.map_natCast` instead
+warning: BoundedGaps/BombieriVinogradov/Analytic/DirichletLZeroDivisor.lean:74:13: `ENat.map_coe` has been deprecated: Use `ENat.map_natCast` instead
+✔ [3837/3876] Built BoundedGaps.BombieriVinogradov.Analytic.GranvilleRamarePairMass (4.9s)
+✔ [3838/3876] Built BoundedGaps.BombieriVinogradov.Analytic.HalfIntegerPerronKernel (10s)
+✔ [3839/3876] Built BoundedGaps.BombieriVinogradov.Analytic.GranvilleRamareLcmMain (5.3s)
+✔ [3840/3876] Built BoundedGaps.BombieriVinogradov.Analytic.InducingEulerProduct (3.6s)
+⚠ [3841/3876] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaCandidateSingularities (4.7s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/DirichletExplicitFormulaCandidateSingularities.lean:70:15: `ENat.map_coe` has been deprecated: Use `ENat.map_natCast` instead
+✔ [3842/3876] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveFunctionalEquation (3.9s)
+✔ [3843/3876] Built BoundedGaps.BombieriVinogradov.Analytic.PerronEnvelope (2.8s)
+✔ [3844/3876] Built BoundedGaps.BombieriVinogradov.Analytic.InducingEulerProductZeroGeometry (3.8s)
+✔ [3845/3876] Built BoundedGaps.BombieriVinogradov.Analytic.GranvilleRamareProposition (4.1s)
+✔ [3846/3876] Built BoundedGaps.BombieriVinogradov.Analytic.PerronEnvelopeIntegral (3.2s)
+✔ [3847/3877] Built PrimeNumberTheoremAnd.Consequences (42s)
+✔ [3848/3877] Built BoundedGaps.BombieriVinogradov.Analytic.FiniteBilinearPerron (3.1s)
+✔ [3849/3877] Built BoundedGaps.BombieriVinogradov.Analytic.GranvilleRamarePrefix (3.2s)
+✔ [3850/3880] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaVerticalEdges (3.4s)
+✔ [3852/3883] Built BoundedGaps.BombieriVinogradov.Analytic.FarRightLFunctionCenter (3.8s)
+✔ [3853/3885] Built BoundedGaps.BombieriVinogradov.Analytic.BilinearProductCutoffMaximum (3.5s)
+✔ [3854/3885] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletLFunctionAbelContinuation (4.0s)
+✔ [3855/3885] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanThirdTermLargeDyadic (3.7s)
+✔ [3856/3885] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanFourthTermDyadic (4.3s)
+✔ [3857/3885] Built ErdosProblems.Erdos387.AnalyticInputs (10s)
+✔ [3858/3885] Built BoundedGaps.BombieriVinogradov.Analytic.FixedStripGammaRatio (6.1s)
+✔ [3859/3885] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaAbel (3.9s)
+✔ [3860/3885] Built BoundedGaps.BombieriVinogradov.Analytic.BilinearPerronAggregate (4.1s)
+✔ [3865/3887] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveLFunctionCentralStrip (4.1s)
+✔ [3867/3917] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanFourthTermScales (3.3s)
+✔ [3899/3922] Built BoundedGaps.BombieriVinogradov.Analytic.VaughanFourthTermMangoldtEnergy (2.0s)
+✔ [3911/3938] Built BoundedGaps.BombieriVinogradov.Analytic.DivisorSupportCardinality (2.3s)
+✔ [3924/3938] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveLFunctionFixedStrip (5.1s)
+✔ [3925/3940] Built BoundedGaps.BombieriVinogradov.Analytic.InducingEulerProductLocalDivisorMass (5.2s)
+✔ [3926/3948] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaRadiusFour (8.1s)
+⚠ [3927/3948] Built BoundedGaps.BombieriVinogradov.Analytic.FixedDiskLogDerivative (5.1s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/FixedDiskLogDerivative.lean:64:43: `ENat.map_coe` has been deprecated: Use `ENat.map_natCast` instead
+warning: BoundedGaps/BombieriVinogradov/Analytic/FixedDiskLogDerivative.lean:112:43: `ENat.map_coe` has been deprecated: Use `ENat.map_natCast` instead
+warning: BoundedGaps/BombieriVinogradov/Analytic/FixedDiskLogDerivative.lean:125:45: `ENat.map_coe` has been deprecated: Use `ENat.map_natCast` instead
+✔ [3928/3948] Built BoundedGaps.BombieriVinogradov.Analytic.InducingEulerProductLocalDivisorSupport (2.9s)
+✔ [3929/3948] Built BoundedGaps.BombieriVinogradov.Analytic.FarRightLogDerivative (2.9s)
+✔ [3930/3948] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveLFunctionRadiusTwelve (5.9s)
+✔ [3931/3948] Built BoundedGaps.BombieriVinogradov.Analytic.ZeroFreeRegionArithmetic (3.2s)
+⚠ [3932/3948] Built BoundedGaps.BombieriVinogradov.Analytic.InducingEulerProductZeroOrdinates (3.2s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/InducingEulerProductZeroOrdinates.lean:49:13: `ENat.map_coe` has been deprecated: Use `ENat.map_natCast` instead
+⚠ [3933/3948] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaHeightPole (3.0s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/RiemannZetaHeightPole.lean:52:47: `ENat.map_coe` has been deprecated: Use `ENat.map_natCast` instead
+✔ [3934/3952] Built BoundedGaps.BombieriVinogradov.Analytic.PrincipalZetaPole (3.5s)
+✔ [3935/3952] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveLFunctionFixedDisk (3.8s)
+✔ [3936/3952] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaKernel (2.8s)
+✔ [3937/3952] Built BoundedGaps.BombieriVinogradov.Analytic.ThreeFourOne (4.5s)
+✔ [3938/3957] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaSelectedSubdivisor (4.8s)
+✔ [3939/3961] Built BoundedGaps.BombieriVinogradov.Analytic.LocalLogarithmicResidue (3.5s)
+✔ [3940/3961] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletLocalDivisorMass (7.6s)
+✔ [3941/3961] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveLFunctionSelectedSubdivisor (4.4s)
+✔ [3942/3963] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaZeroResidue (2.9s)
+✔ [3943/3963] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletPrimitiveShallowZeros (4.5s)
+✔ [3944/3963] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletLocalDivisorSupport (3.1s)
+✔ [3945/3963] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveLFunctionNontrivialSelection (3.2s)
+✔ [3946/3967] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaPrincipalPoleResidue (3.2s)
+✔ [3947/3967] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaZeroCircleIntegral (2.9s)
+✔ [3948/3967] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaPrincipalCircleIntegral (3.7s)
+⚠ [3949/3968] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletTwoSidedBadHeights (6.0s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/DirichletTwoSidedBadHeights.lean:230:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3950/3968] Built BoundedGaps.BombieriVinogradov.Analytic.ImprimitiveLFunctionTransport (5.4s)
+✔ [3951/3970] Built BoundedGaps.BombieriVinogradov.Analytic.RectangleReciprocalWedgeIntegral (3.3s)
+✔ [3952/3972] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaPrincipalZeroCircleIntegral (3.4s)
+✔ [3953/3972] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaZeroFree (19s)
+⚠ [3954/3972] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletGoodHeightSelector (4.4s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/DirichletGoodHeightSelector.lean:70:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3955/3972] Built BoundedGaps.BombieriVinogradov.Analytic.RectangleFinitePrincipalPartSum (2.7s)
+✔ [3956/3977] Built BoundedGaps.BombieriVinogradov.Analytic.FiniteDivisorSubmassBound (1.5s)
+✔ [3957/3980] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaHorizontalKernel (3.2s)
+✔ [3958/3982] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaCandidateCircleContribution (2.9s)
+✔ [3959/3982] Built BoundedGaps.BombieriVinogradov.Analytic.PrincipalLFunctionZeroTransport (2.6s)
+✔ [3960/3984] Built BoundedGaps.BombieriVinogradov.Analytic.FiniteDivisorReciprocalBound (2.1s)
+✔ [3961/3984] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaCandidateCircleSum (2.9s)
+✔ [3962/3986] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaLeftKernel (4.5s)
+✔ [3963/3986] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaRadiusTwelve (6.8s)
+⚠ [3964/3986] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletGoodHeightZeroCoverage (4.5s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/DirichletGoodHeightZeroCoverage.lean:143:13: `ENat.map_coe` has been deprecated: Use `ENat.map_natCast` instead
+✔ [3965/3986] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaPerforatedRegularity (2.8s)
+✔ [3966/3986] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletNontrivialZeroTransport (3.2s)
+⚠ [3967/3986] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaFixedDisk (3.3s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/RiemannZetaFixedDisk.lean:45:45: `ENat.map_coe` has been deprecated: Use `ENat.map_natCast` instead
+warning: BoundedGaps/BombieriVinogradov/Analytic/RiemannZetaFixedDisk.lean:58:13: `ENat.map_coe` has been deprecated: Use `ENat.map_natCast` instead
+✔ [3968/3986] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaCandidateInterior (5.0s)
+✔ [3969/3986] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaRemovableRemainder (3.1s)
+✔ [3970/3986] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveLFunctionHorizontalLogDerivative (11s)
+✔ [3971/3986] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveLFunctionLeftEdge (8.3s)
+✔ [3972/3986] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaZeroShell (3.2s)
+✔ [3973/3989] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaPrimitiveShallowCandidates (3.0s)
+✔ [3974/3989] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaRadiusSixDivisorMass (3.9s)
+✔ [3975/3989] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaRectangleBoundary (3.3s)
+✔ [3976/3989] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaZeroShell (3.4s)
+✔ [3977/3989] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveLFunctionZeroShell (3.7s)
+✔ [3978/3997] Built BoundedGaps.BombieriVinogradov.Analytic.PrimitiveLFunctionHorizontalEdge (8.1s)
+✔ [3979/3997] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletPerronKernel (3.2s)
+✔ [3980/3997] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaShallowCorrection (4.2s)
+✔ [3981/3997] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaLeftEdge (7.3s)
+✔ [3982/3997] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaContourEdges (4.4s)
+✔ [3983/3998] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletPerronLowBase (3.2s)
+✔ [3984/3998] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletPerronCentral (3.8s)
+✔ [3985/3998] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletPerronHighBase (4.4s)
+✔ [3986/4001] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaSelectedHeight (5.3s)
+✔ [3987/4003] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaHorizontalLogDerivative (13s)
+✔ [3988/4005] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletPerronCentralNatural (3.7s)
+✔ [3989/4005] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletLFunctionConjugation (3.4s)
+✔ [3990/4008] Built BoundedGaps.BombieriVinogradov.Analytic.PrincipalLFunctionHeightPole (4.2s)
+✔ [3991/4008] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletPerronOneTerm (3.6s)
+✔ [3992/4008] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaHorizontalEdge (6.5s)
+✔ [3993/4011] Built BoundedGaps.BombieriVinogradov.Analytic.SquarePrincipalRealUniqueness (6.2s)
+✔ [3994/4011] Built BoundedGaps.BombieriVinogradov.Analytic.SquareNonprincipalZeroFreeRegion (16s)
+✔ [3995/4011] Built BoundedGaps.BombieriVinogradov.Analytic.SquarePrincipalNonreal (9.5s)
+✔ [3996/4011] Built BoundedGaps.BombieriVinogradov.Analytic.SquarePrincipalRealMultiplicity (5.8s)
+✔ [3997/4014] Built BoundedGaps.BombieriVinogradov.Analytic.CrossCharacterPositivity (2.0s)
+✔ [3998/4014] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletPerronSeries (3.7s)
+✔ [3999/4014] Built BoundedGaps.BombieriVinogradov.Analytic.RegularizedLFunctionProduct (3.0s)
+✔ [4000/4014] Built BoundedGaps.BombieriVinogradov.Analytic.SquarePrincipalRealSimple (3.0s)
+✔ [4001/4014] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormulaSelectedContour (5.7s)
+✔ [4002/4017] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletZeroWindowMultiplicity (4.0s)
+✔ [4003/4017] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletPerronVonMangoldt (4.4s)
+✔ [4004/4017] Built BoundedGaps.BombieriVinogradov.Analytic.SquarePrincipalFixedCharacter (3.4s)
+✔ [4005/4018] Built BoundedGaps.BombieriVinogradov.Analytic.SquarePrincipalCharacterUniqueness (5.7s)
+✔ [4006/4018] Built BoundedGaps.BombieriVinogradov.Analytic.ExceptionalZeroAbsorption (2.3s)
+✔ [4007/4019] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletZeroReciprocalSum (5.4s)
+⚠ [4008/4020] Built BoundedGaps.BombieriVinogradov.Analytic.GoldfeldCrossLevelCharacters (1.0s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/GoldfeldCrossLevelCharacters.lean:34:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/GoldfeldCrossLevelCharacters.lean:52:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [4009/4022] Built BoundedGaps.BombieriVinogradov.Analytic.NonprincipalExceptionalZero (3.7s)
+⚠ [4010/4030] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletLFunctionClosedStripGrowth (4.3s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/DirichletLFunctionClosedStripGrowth.lean:135:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✖ [4011/4030] Building BoundedGaps.BombieriVinogradov.Analytic.GoldfeldCoefficient (4.1s)
+trace: .> LEAN_PATH=/home/runner/work/_temp/target/src/latest/.lake/packages/lean4export/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Comparator/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/checkdecls/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AddCombi/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/leancert/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/ComparatorChallenges/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/APAP/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AINTLIB/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Waring/Warning/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/BoundedGaps/BombieriVinogradov/Analytic/GoldfeldCoefficient.lean -o /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/GoldfeldCoefficient.olean -i /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/GoldfeldCoefficient.ilean -c /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/GoldfeldCoefficient.c --setup /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/GoldfeldCoefficient.setup.json --json
+error: BoundedGaps/BombieriVinogradov/Analytic/GoldfeldCoefficient.lean:80:42: unsolved goals
+q1 q : ℕ
+inst✝¹ : NeZero q1
+inst✝ : NeZero q
+chi1 : DirichletCharacter ℂ q1
+chi : DirichletCharacter ℂ q
+⊢ (↑zeta * { toFun := fun n => if n = 0 then 0 else chi1 ↑n, map_zero' := ⋯ } *
+          { toFun := fun n => if n = 0 then 0 else chi ↑n, map_zero' := ⋯ } *
+        { toFun := fun n => if n = 0 then 0 else (chi1.mul chi) ↑n, map_zero' := ⋯ })
+      1 =
+    1
+error: Lean exited with code 1
+✔ [4013/4030] Built BoundedGaps.BombieriVinogradov.Analytic.RegularizedProductExceptionalZero (4.4s)
+✔ [4014/4030] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletModifiedPerron (9.8s)
+✔ [4015/4030] Built BoundedGaps.BombieriVinogradov.Analytic.GoldfeldMellinInversion (3.4s)
+✔ [4016/4030] Built BoundedGaps.BombieriVinogradov.Analytic.GoldfeldPlateauMellin (3.7s)
+✔ [4017/4030] Built BoundedGaps.BombieriVinogradov.Analytic.RiemannZetaClosedStripGrowth (3.1s)
+✔ [4018/4040] Built BoundedGaps.BombieriVinogradov.Analytic.ExceptionalZeroDenominator (3.3s)
+✔ [4019/4041] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletPrimitiveExplicitFormula (2.9s)
+✔ [4020/4041] Built BoundedGaps.BombieriVinogradov.Analytic.GoldfeldPlateauMellinDecay (3.5s)
+⚠ [4021/4041] Built BoundedGaps.BombieriVinogradov.Analytic.ImprimitivePolyaVinogradovPrefix (4.2s)
+warning: BoundedGaps/BombieriVinogradov/Analytic/ImprimitivePolyaVinogradovPrefix.lean:272:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [4022/4041] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExplicitFormula (3.6s)
+✔ [4023/4041] Built BoundedGaps.BombieriVinogradov.Analytic.QuadraticLValueCutoff (3.0s)
+✔ [4024/4042] Built BoundedGaps.BombieriVinogradov.Analytic.GoldfeldMellinPositiveLine (3.4s)
+✔ [4030/4051] Built BoundedGaps.BombieriVinogradov.Analytic.GoldfeldMellinStripDecay (4.0s)
+✔ [4034/4058] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletNonexceptionalZeroKernel (12s)
+✔ [4036/4058] Built BoundedGaps.BombieriVinogradov.Analytic.QuadraticZetaEulerMaclaurin (3.1s)
+✔ [4037/4063] Built BoundedGaps.BombieriVinogradov.Analytic.CharacterPartialSummation (5.6s)
+✖ [4039/4069] Building BoundedGaps.BombieriVinogradov.Analytic.QuadraticZetaConvolutionSquare (3.1s)
+trace: .> LEAN_PATH=/home/runner/work/_temp/target/src/latest/.lake/packages/lean4export/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Comparator/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/checkdecls/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AddCombi/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/leancert/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/ComparatorChallenges/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/APAP/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/AINTLIB/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/Waring/Warning/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/_temp/target/src/latest/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.0/bin/lean /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean -o /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.olean -i /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/lib/lean/BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.ilean -c /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.c --setup /home/runner/work/_temp/target/src/latest/.lake/packages/BoundedGaps/BoundedGaps/.lake/build/ir/BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.setup.json --json
+error: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:33:4: `simp` made no progress
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    { toFun := fun n => if n = 0 then 0 else chi ↑n, map_zero' := ⋯ }
+  has type
+    ZeroHom ℕ ℂ
+  but is expected to have type
+    ArithmeticFunction ℂ
+  in the application
+    ↑zeta * { toFun := fun n => if n = 0 then 0 else chi ↑n, map_zero' := ⋯ }
+error: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:34:4: `simp` made no progress
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    { toFun := fun n => if n = 0 then 0 else chi ↑n, map_zero' := ⋯ }
+  has type
+    ZeroHom ℕ ℂ
+  but is expected to have type
+    ArithmeticFunction ℂ
+  in the application
+    ↑zeta * { toFun := fun n => if n = 0 then 0 else chi ↑n, map_zero' := ⋯ }
+error: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:36:4: `simp` made no progress
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    { toFun := fun n => if n = 0 then 0 else chi ↑n, map_zero' := ⋯ }
+  has type
+    ZeroHom ℕ ℂ
+  but is expected to have type
+    ArithmeticFunction ℂ
+  in the application
+    ↑zeta * { toFun := fun n => if n = 0 then 0 else chi ↑n, map_zero' := ⋯ }
+warning: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:29:4: This simp argument is unused:
+  coe_zeta_mul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [DirichletCharacter.zetaMul, toArithmeticFunction, coe_mk, Nat.sum_divisors_prime_pow hp,
+    pow_eq_zero_iff', hp.ne_zero, ne_eq, false_and, ↓reduceIte, Nat.cast_pow, map_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:29:24: This simp argument is unused:
+  coe_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [DirichletCharacter.zetaMul, toArithmeticFunction, coe_zeta_mul_apply,
+    Nat.sum_divisors_prime_pow hp, pow_eq_zero_iff', hp.ne_zero, ne_eq, false_and, ↓reduceIte, Nat.cast_pow, map_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:29:32: This simp argument is unused:
+  Nat.sum_divisors_prime_pow hp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [DirichletCharacter.zetaMul, toArithmeticFunction, coe_zeta_mul_apply, coe_mk, pow_eq_zero_iff',
+    hp.ne_zero, ne_eq, false_and, ↓reduceIte, Nat.cast_pow, map_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:30:4: This simp argument is unused:
+  pow_eq_zero_iff'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [DirichletCharacter.zetaMul, toArithmeticFunction, coe_zeta_mul_apply, coe_mk,
+    Nat.sum_divisors_prime_pow hp, hp.ne_zero, ne_eq, false_and, ↓reduceIte, Nat.cast_pow, map_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:30:22: This simp argument is unused:
+  hp.ne_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [DirichletCharacter.zetaMul, toArithmeticFunction, coe_zeta_mul_apply, coe_mk,
+    Nat.sum_divisors_prime_pow hp, pow_eq_zero_iff', ne_eq, false_and, ↓reduceIte, Nat.cast_pow, map_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:30:34: This simp argument is unused:
+  ne_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [DirichletCharacter.zetaMul, toArithmeticFunction, coe_zeta_mul_apply, coe_mk,
+    Nat.sum_divisors_prime_pow hp, pow_eq_zero_iff', hp.ne_zero, false_and, ↓reduceIte, Nat.cast_pow, map_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:30:41: This simp argument is unused:
+  false_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [DirichletCharacter.zetaMul, toArithmeticFunction, coe_zeta_mul_apply, coe_mk,
+    Nat.sum_divisors_prime_pow hp, pow_eq_zero_iff', hp.ne_zero, ne_eq, ↓reduceIte, Nat.cast_pow, map_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:30:52: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [DirichletCharacter.zetaMul, toArithmeticFunction, coe_zeta_mul_apply, coe_mk,
+    Nat.sum_divisors_prime_pow hp, pow_eq_zero_iff', hp.ne_zero, ne_eq, false_and, Nat.cast_pow, map_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:31:4: This simp argument is unused:
+  Nat.cast_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [DirichletCharacter.zetaMul, toArithmeticFunction, coe_zeta_mul_apply, coe_mk,
+    Nat.sum_divisors_prime_pow hp, pow_eq_zero_iff', hp.ne_zero, ne_eq, false_and, ↓reduceIte, map_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BoundedGaps/BombieriVinogradov/Analytic/QuadraticZetaConvolutionSquare.lean:31:18: This simp argument is unused:
+  map_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [DirichletCharacter.zetaMul, toArithmeticFunction, coe_zeta_mul_apply, coe_mk,
+    Nat.sum_divisors_prime_pow hp, pow_eq_zero_iff', hp.ne_zero, ne_eq, false_and, ↓reduceIte, Nat.cast_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+✔ [4041/4069] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletNonexceptionalZeroSum (3.6s)
+✔ [4046/4072] Built BoundedGaps.BombieriVinogradov.Analytic.GoldfeldMellinPositiveBound (2.8s)
+✔ [4047/4075] Built BoundedGaps.BombieriVinogradov.Analytic.NonprincipalLFunctionAbel (4.2s)
+✔ [4050/4075] Built BoundedGaps.BombieriVinogradov.Analytic.SiegelWalfiszScale (4.5s)
+✔ [4051/4078] Built BoundedGaps.BombieriVinogradov.StandardStatement (2.6s)
+✔ [4052/4085] Built BoundedGaps.BombieriVinogradov.Analytic.DirichletExceptionalZeroKernel (3.5s)
+✔ [4056/4085] Built BoundedGaps.BombieriVinogradov.Analytic.StandardCompatibility (2.8s)
+✔ [4058/4142] Built BoundedGaps.BombieriVinogradov.Analytic.WeightedPrimePower (2.7s)
+✔ [5174/5415] Built BoundedGaps.PrimeNumberTheorem.Analytic.StrongChebyshev (4.2s)
+✔ [5603/5875] Built BoundedGaps.BombieriVinogradov.Analytic.NearOneLFunction (5.1s)
+✔ [7615/7869] Built BoundedGaps.BombieriVinogradov.Analytic.WeightedCutoff (2.1s)
+✔ [8990/8994] Built ErdosProblems.Erdos387.CoverAlgebra (1.2s)
+✔ [8991/8994] Built ErdosProblems.Erdos387.LocalDensity (1.7s)
+✔ [8992/8994] Built ErdosProblems.Erdos473.PrimeCluster (3.0s)
+✔ [8993/8994] Built ErdosProblems.Erdos473.ClusterGadget (4.6s)
+Some required targets logged failures:
+- BoundedGaps.BombieriVinogradov.Analytic.CenteredPrimitiveMaxima
+- BoundedGaps.BombieriVinogradov.Analytic.VaughanSecondTermAggregate
+- BoundedGaps.BombieriVinogradov.Analytic.AdditiveLargeSieve.ConsecutiveIntervalKernel
+- BoundedGaps.BombieriVinogradov.Analytic.VaughanThirdTermSmallAggregate
+- BoundedGaps.BombieriVinogradov.Analytic.GoldfeldCoefficient
+- BoundedGaps.BombieriVinogradov.Analytic.QuadraticZetaConvolutionSquare
+error: build failed
