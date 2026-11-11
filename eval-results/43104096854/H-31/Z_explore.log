@@ -1,0 +1,17 @@
+def SL003FC.Erdos136.SL003.targetProp : Prop :=
+Filter.Tendsto (fun n => ↑(SL003FC.Erdos136.f n) / ↑n) Filter.atTop (nhds (5 / 6 : ℝ))
+Erdos136.erdos_136 : Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6 : ℝ))
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `Tendsto`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos136.Tendsto`
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `Erdos136.Tendsto`
+Z_explore.lean:9:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos136.atTop`
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `Erdos136.atTop`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `atTop`
+def Erdos136.erdos136Fun : ℕ → ℕ :=
+fun n => Nat.find ⋯
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos136.erdos136Fun`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `erdos136Fun`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `Erdos136.nhds`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos136.nhds`
+@[irreducible] def nhds.{u_3} : {X : Type u_3} → [TopologicalSpace X] → X → Filter X :=
+wrapped✝.1

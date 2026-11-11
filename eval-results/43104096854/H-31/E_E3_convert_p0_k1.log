@@ -1,0 +1,11 @@
+E_E3_convert_p0_k1.lean:7:364: error: Tactic `apply` failed: could not unify the conclusion of `@IsLeast.csInf_eq`
+  sInf ?s = ?a
+with the goal
+  ↑(SL003FC.Erdos136.f x✝) / ↑x✝ = ↑(Erdos136.erdos136Fun x✝) / ↑x✝
+
+Note: The full type of `@IsLeast.csInf_eq` is
+  ∀ {α : Type ?u.7} [inst : ConditionallyCompletePartialOrderInf α] {s : Set α} {a : α}, IsLeast s a → sInf s = a
+
+h : Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6))
+x✝ : ℕ
+⊢ ↑(SL003FC.Erdos136.f x✝) / ↑x✝ = ↑(Erdos136.erdos136Fun x✝) / ↑x✝

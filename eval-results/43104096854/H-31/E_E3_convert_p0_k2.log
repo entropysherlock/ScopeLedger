@@ -1,0 +1,11 @@
+E_E3_convert_p0_k2.lean:7:289: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  ↑(SL003FC.Erdos136.f x✝) / ↑x✝ = ↑(Erdos136.erdos136Fun x✝) / ↑x✝
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.8} {β : α → Sort ?u.7} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+h : Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6))
+x✝ : ℕ
+⊢ ↑(SL003FC.Erdos136.f x✝) / ↑x✝ = ↑(Erdos136.erdos136Fun x✝) / ↑x✝

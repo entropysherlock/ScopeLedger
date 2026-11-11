@@ -1,0 +1,6 @@
+E_E4_norm_p1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos136.erdos_136
+has function type
+  ∀ ⦃U : Set ℝ⦄, U ∈ nhds (5 / 6) → U ∈ Filter.map (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop
+E_E4_norm_p1.lean:4:71: error: unsolved goals
+⊢ Filter.Tendsto (fun n => ↑(SL003FC.Erdos136.f n) / ↑n) Filter.atTop (nhds (5 / 6))

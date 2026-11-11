@@ -1,0 +1,4 @@
+E_E3_convert_p0_k3.lean:4:77: error: unsolved goals
+h : Filter.Tendsto (fun n => ↑(Erdos136.erdos136Fun n) / ↑n) Filter.atTop (nhds (5 / 6))
+x✝ : ℕ
+⊢ SL003FC.Erdos136.f x✝ = Erdos136.erdos136Fun x✝
