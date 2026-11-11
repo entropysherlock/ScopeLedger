@@ -1,0 +1,13 @@
+Bridge.lean:10:13: warning: `setOf` has been deprecated: Use `Set.ofPred` instead
+Bridge.lean:35:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:36:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:35:6: warning: Unused tactic linter: `(simp only [h1, h2])` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Bridge.lean:36:6: warning: Unused tactic linter: `(simp [Fin.val_add, h1, h2])` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
