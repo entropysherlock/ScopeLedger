@@ -1,0 +1,10 @@
+E_E3_convert_p0_k1.lean:4:78: error: unsolved goals
+h : OAI.AsymptoticallyMinimalLittlewood.MainStatement
+⊢ (∀ (x : ℝ),
+      0 < x →
+        ∀ (x_1 : ℕ),
+          ∃ x_2,
+            x_1 ≤ x_2.natDegree ∧
+              (∀ i ≤ x_2.natDegree, x_2.coeff i = -1 ∨ x_2.coeff i = 1) ∧
+                ⨆ z, ‖Polynomial.eval (↑z) x_2‖ ≤ (1 + x) * √↑x_2.natDegree) ↔
+    OAI.AsymptoticallyMinimalLittlewood.MainStatement

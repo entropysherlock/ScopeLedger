@@ -1,0 +1,12 @@
+E_E2_iff_mp.lean:6:142: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  OAI.AsymptoticallyMinimalLittlewood.main
+of type
+  ∀ (η : ℝ),
+    0 < η →
+      ∃ N₀,
+        1 ≤ N₀ ∧
+          ∀ (N : ℕ),
+            N₀ ≤ N →
+              ∃ ε,
+                OAI.AsymptoticallyMinimalLittlewood.IsRealSigning ε ∧
+                  ∀ (z : ℂ), ‖z‖ = 1 → ‖OAI.AsymptoticallyMinimalLittlewood.littlewoodValue ε z‖ ≤ (1 + η) * √↑N
