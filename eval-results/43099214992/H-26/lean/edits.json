@@ -1,0 +1,18 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_987.parts.i :",
+ "removed declaration: theorem erdos_987.variants.sup_limsup_infty",
+ "removed declaration: theorem erdos_987.variants.log_lower_bound",
+ "removed declaration: theorem erdos_987.variants.sqrt_lower_bound",
+ "removed declaration: theorem erdos_987.variants.linear_upper_bound_weak :",
+ "removed declaration: theorem erdos_987.variants.linear_upper_bound_clunie :",
+ "removed declaration: theorem erdos_987.variants.linear_upper_bound :",
+ "removed declaration: theorem erdos_987.variants.sqrt_log_upper_bound :",
+ "removed declaration: theorem erdos_987.parts.ii :",
+ "removed declaration: theorem erdos_987.variants.finite_distinct_points",
+ "binders before ':' written as a leading ∀ (the theorem's elaborated type)",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

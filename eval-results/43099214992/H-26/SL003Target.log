@@ -1,0 +1,3 @@
+SL003Target.lean:8:12: error: unknown namespace `ExponentialSum`
+SL003Target.lean:16:45: error(lean.unknownIdentifier): Unknown identifier `e`
+SL003Target.lean:24:33: error(lean.unknownIdentifier): Unknown identifier `e`

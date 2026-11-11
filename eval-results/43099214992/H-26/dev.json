@@ -1,0 +1,19 @@
+{
+ "case_id": "H-26",
+ "cited": "Erdos987.erdos_987.variants.sup_limsup_infty",
+ "module": "FormalConjectures.ErdosProblems.«987»",
+ "toolchain": "leanprover/lean4:v4.27.0",
+ "steps": {
+  "cache": {
+   "rc": 0,
+   "seconds": 102
+  },
+  "build": {
+   "rc": 0,
+   "seconds": 335
+  }
+ },
+ "files": {},
+ "target_prop": "SL003FC.Erdos987.SL003.targetProp",
+ "status": "target_failed"
+}
