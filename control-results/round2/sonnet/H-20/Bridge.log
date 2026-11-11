@@ -1,0 +1,11 @@
+Bridge.lean:3:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+Bridge.lean:14:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:14:6: warning: Unused tactic linter: `(
+  simp only [hcount] at key
+  exact key)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
