@@ -1,0 +1,280 @@
+ℹ [8706/8711] Built ErdosProblems.Erdos1096.Erdos1096Core (13s)
+info: ErdosProblems/Erdos1096/Erdos1096Core.lean:356:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [8707/8711] Built ErdosProblems.Erdos1096.Erdos1096Smyth (14s)
+warning: ErdosProblems/Erdos1096/Erdos1096Smyth.lean:27:21: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.normSq_one, Complex.normSq_mul, Complex.normSq_conj, Complex.mul_re, Complex.one_re,
+    Complex.one_im, Complex.conj_re, Complex.conj_im, zero_mul, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096Smyth.lean:49:38: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.normSq_sub, Complex.normSq_mul, Complex.normSq_conj, Complex.normSq_one, Complex.mul_re,
+    Complex.one_re, Complex.one_im, Complex.conj_re, Complex.conj_im, zero_mul, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096Smyth.lean:435:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ErdosProblems/Erdos1096/Erdos1096Smyth.lean:420:62: This simp argument is unused:
+  map_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.map_sub, Polynomial.map_mul, map_C] at hm
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096Smyth.lean:701:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ErdosProblems/Erdos1096/Erdos1096Smyth.lean:590:61: This simp argument is unused:
+  eval_C_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_mul, eval_sub, eval_one, eval_C, eval_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8708/8711] Built ErdosProblems.Erdos1096.Erdos1096SignedSpectrum (9.0s)
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:64:13: This simp argument is unused:
+  Nat.add_sub_cancel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.succ_sub_succ_eq_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:266:73: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:197:6: `simp [a, hP]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:197:6: Try this:
+  [apply] simp only [inv_pow]
+info: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:198:6: `exact pow_nonneg (by linarith) _`
+modifies the current goal, which was modified by the flexible tactic `simp` on line 197!
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:202:6: `simp [b, hP]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:202:6: Try this:
+  [apply] simp only [inv_pow]
+info: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:203:6: `exact pow_nonneg (by linarith) _`
+modifies the current goal, which was modified by the flexible tactic `simp` on line 202!
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:240:10: `simp [c, hP]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:240:10: Try this:
+  [apply] simp only [inv_pow, norm_mul, Real.norm_eq_abs, norm_inv, norm_pow]
+info: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:241:10: `positivity`
+modifies the current goal, which was modified by the flexible tactic `simp` on line 240!
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:295:34: This simp argument is unused:
+  Nat.add_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [S, Function.comp_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:458:6: `simp [g, hn]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:458:6: Try this:
+  [apply] simp only [inv_pow]
+info: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:459:6: `exact pow_nonneg (by linarith) _`
+modifies the current goal, which was modified by the flexible tactic `simp` on line 458!
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:608:16: This simp argument is unused:
+  mass
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PK, weight, hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:609:16: This simp argument is unused:
+  mass
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PK, weight, hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:916:4: `simp [hi]` is a flexible tactic modifying `⊢`. Try `simp?` and use the suggested `simp only [...]`. Alternatively, use `suffices` to explicitly state the simplified form.
+
+Note: This linter can be disabled with `set_option linter.flexible false`
+info: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:916:4: Try this:
+  [apply] simp only [inv_pow]
+info: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:917:4: `positivity`
+modifies the current goal, which was modified by the flexible tactic `simp` on line 916!
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:930:63: This simp argument is unused:
+  Int.cast_negSucc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.sum_range_one, s, expansionSignedDigits, Int.cast_zero, pow_zero, mul_one, zero_add,
+    Nat.zero_add, Int.cast_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:931:6: This simp argument is unused:
+  Int.cast_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.sum_range_one, s, expansionSignedDigits, Int.cast_negSucc, pow_zero, mul_one, zero_add,
+    Nat.zero_add, Int.cast_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:931:40: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.sum_range_one, s, expansionSignedDigits, Int.cast_negSucc, Int.cast_zero, pow_zero, mul_one,
+    Nat.zero_add, Int.cast_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:931:50: This simp argument is unused:
+  Nat.zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.sum_range_one, s, expansionSignedDigits, Int.cast_negSucc, Int.cast_zero, pow_zero, mul_one,
+    zero_add, Int.cast_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:929:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:931:82: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:1041:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:1058:41: This simp argument is unused:
+  hab.le
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [p, reversedPolynomial_coeff, not_le.mpr hab, s, expansionSignedDigits]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096SignedSpectrum.lean:1111:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8709/8711] Built ErdosProblems.Erdos1096.Erdos1096UnitCircle (17s)
+warning: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:34:19: This simp argument is unused:
+  w
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:56:17: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.sub_re, Complex.one_re]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:76:30: This simp argument is unused:
+  Complex.conj_inv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [z, map_mul, hconjp, hp0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:76:48: This simp argument is unused:
+  hp0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [z, map_mul, hconjp, Complex.conj_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:175:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:176:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:226:8: `Real.tendsto_of_bddBelow_antitone` has been deprecated: Use `tendsto_atTop_ciInf` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Type u_1} {ι : Type u_3} [inst : Preorder ι] [inst_1 : TopologicalSpace α]
+    [inst_2 : ConditionallyCompletePartialOrderInf α] [InfConvergenceClass α] {f : ι → α},
+    Antitone f → BddBelow (range f) → Tendsto f atTop (𝓝 (⨅ i, f i))
+instead of
+  ∀ {f : ℕ → ℝ}, BddBelow (range f) → Antitone f → ∃ r, Tendsto f atTop (𝓝 r)
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.tendsto_of_bddBelow_antitone` to `tendsto_atTop_ciInf x`).
+warning: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:218:15: This simp argument is unused:
+  map_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.add_re]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:292:17: This simp argument is unused:
+  map_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.sub_re] at hre
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:503:52: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:494:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ErdosProblems/Erdos1096/Erdos1096UnitCircle.lean:572:4: Unused tactic linter: `norm_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8710/8711] Built ErdosProblems.Erdos1096.Erdos1096Accumulation (5.9s)
+warning: ErdosProblems/Erdos1096/Erdos1096Accumulation.lean:97:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ErdosProblems/Erdos1096/Erdos1096Accumulation.lean:102:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ErdosProblems/Erdos1096/Erdos1096Accumulation.lean:228:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+ℹ [8711/8711] Built ErdosProblems.Erdos1096 (3.6s)
+info: ErdosProblems/Erdos1096.lean:81:0: 'Erdos1096.erdos_1096' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8711 jobs).

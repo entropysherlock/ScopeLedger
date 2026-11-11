@@ -1,0 +1,31 @@
+def SL003FC.Erdos1096.SL003.targetProp : Prop :=
+∃ ε > (0 : ℝ),
+  ∀ (q : ℝ),
+    (1 : ℝ) < q →
+      q < (1 : ℝ) + ε →
+        ∀ (x : ℕ → ℝ),
+          StrictMono x →
+            Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →
+              Filter.Tendsto (fun k => x (k + (1 : ℕ)) - x k) Filter.atTop (nhds (0 : ℝ))
+Erdos1096.erdos_1096 : ∃ ε > (0 : ℝ),
+  ∀ (q : ℝ),
+    (1 : ℝ) < q →
+      q < (1 : ℝ) + ε →
+        ∀ (x : ℕ → ℝ),
+          StrictMono x →
+            Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →
+              Filter.Tendsto (fun k => x (k + (1 : ℕ)) - x k) Filter.atTop (nhds (0 : ℝ))
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `Erdos1096.Set.range`
+Z_explore.lean:7:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1096.Set.range`
+def Set.range.{u, u_1} : {α : Type u} → {ι : Sort u_1} → (ι → α) → Set α :=
+fun {α} {ι} f => {x | ∃ y, f y = x}
+def StrictMono.{u, v} : {α : Type u} → {β : Type v} → [Preorder α] → [Preorder β] → (α → β) → Prop :=
+fun {α} {β} [Preorder α] [Preorder β] f => ∀ ⦃a b : α⦄, a < b → f a < f b
+Z_explore.lean:10:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1096.StrictMono`
+Z_explore.lean:11:7: error(lean.unknownIdentifier): Unknown constant `Erdos1096.StrictMono`
+Z_explore.lean:12:7: error(lean.unknownIdentifier): Unknown constant `Tendsto`
+Z_explore.lean:13:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1096.Tendsto`
+Z_explore.lean:14:7: error(lean.unknownIdentifier): Unknown constant `Erdos1096.Tendsto`
+Z_explore.lean:15:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1096.atTop`
+Z_explore.lean:16:7: error(lean.unknownIdentifier): Unknown constant `atTop`
+Z_explore.lean:17:7: error(lean.unknownIdentifier): Unknown constant `Erdos1096.atTop`

@@ -1,0 +1,11 @@
+E_E2_iff_mp.lean:6:102: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Exists.mp`, so it is not possible to project the field `mp` from an expression
+  Erdos1096.erdos_1096
+of type
+  ∃ ε > 0,
+    ∀ (q : ℝ),
+      1 < q →
+        q < 1 + ε →
+          ∀ (x : ℕ → ℝ),
+            StrictMono x →
+              Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →
+                Filter.Tendsto (fun k => x (k + 1) - x k) Filter.atTop (nhds 0)

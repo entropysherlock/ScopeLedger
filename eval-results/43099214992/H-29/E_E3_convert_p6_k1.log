@@ -1,0 +1,19 @@
+E_E3_convert_p6_k1.lean:6:12: error: Invalid projection: Projections cannot be used on functions, and
+  Erdos1096.erdos_1096.2.right
+has function type
+  ∀ (q : ℝ),
+    1 < q →
+      q < 1 + Erdos1096.erdos_1096.1 →
+        ∀ (x : ℕ → ℝ),
+          StrictMono x →
+            Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →
+              Filter.Tendsto (fun k => x (k + 1) - x k) Filter.atTop (nhds 0)
+E_E3_convert_p6_k1.lean:4:78: error: unsolved goals
+⊢ ∃ ε > 0,
+    ∀ (q : ℝ),
+      1 < q →
+        q < 1 + ε →
+          ∀ (x : ℕ → ℝ),
+            StrictMono x →
+              Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →
+                Filter.Tendsto (fun k => x (k + 1) - x k) Filter.atTop (nhds 0)

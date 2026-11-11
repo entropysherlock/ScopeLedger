@@ -1,0 +1,27 @@
+E_E3_convert_p4_k3.lean:4:78: error: unsolved goals
+h :
+  ∀ (q : ℝ),
+    1 < q →
+      q < 1 + Erdos1096.erdos_1096.1 →
+        ∀ (x : ℕ → ℝ),
+          StrictMono x →
+            Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →
+              Filter.Tendsto (fun k => x (k + 1) - x k) Filter.atTop (nhds 0)
+⊢ (∃ ε,
+      0 < ε ∧
+        ∀ (q : ℝ),
+          1 < q →
+            q < 1 + ε →
+              ∀ (x : ℕ → ℝ),
+                StrictMono x →
+                  Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →
+                    Filter.Tendsto (fun k => x (k + 1) - x k) Filter.atTop (nhds 0)) ↔
+    ∀ (q : ℝ),
+      1 < q →
+        q < 1 + Erdos1096.erdos_1096.1 →
+          ∀ (x : ℕ → ℝ),
+            StrictMono x →
+              Set.range x = {x | ∃ S, ∑ i ∈ S, q ^ i = x} →
+                Filter.Tendsto (fun k => x (k + 1) - x k) Filter.atTop (nhds 0)
+E_E3_convert_p4_k3.lean:4:8: error: (kernel) invalid projection
+  Erdos1096.erdos_1096.1

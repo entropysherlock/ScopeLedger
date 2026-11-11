@@ -1,0 +1,8 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_1096 :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]
