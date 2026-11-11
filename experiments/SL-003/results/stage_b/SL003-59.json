@@ -8,32 +8,45 @@
   "Cascade4": "Cascade4.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  A397588.a_three_dvd\nhas function type `1 < ?m.3 → 3 ∣ A397588.a ?m.3`"
  },
  "case_id": "SL003-59",
- "outcome": "undecided",
+ "outcome": "auto_bridged_ai",
  "cause": null,
- "detail": "target elaborates; direct, cascade did not prove it within budget",
- "method": null,
+ "detail": null,
+ "method": "Attempt1",
  "cited_axioms": [
   "Classical.choice",
   "Quot.sound",
   "propext"
  ],
- "proof_axioms": null,
- "replay": null,
- "control_without_cited": null,
+ "proof_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "replay": {
+  "tool": "leanchecker",
+  "rc": 0,
+  "seconds": 7,
+  "tail": ""
+ },
+ "control_without_cited": {
+  "proved": false,
+  "method": "transitive constant dependency"
+ },
  "def_alignment": {
   "OeisA397588.a": "absent"
  },
  "toolchain": "leanprover/lean4:v4.34.0-rc2",
  "seconds": {
-  "cache": 80,
-  "build": 8,
-  "cited_axioms": 3,
-  "transport_elaborate": 3,
-  "Direct": 3,
+  "cache": 82,
+  "build": 9,
+  "cited_axioms": 4,
+  "transport_elaborate": 4,
+  "Direct": 4,
   "Cascade0": 3,
-  "Cascade1": 3,
-  "Cascade2": 3,
+  "Cascade1": 4,
+  "Cascade2": 4,
   "Cascade3": 3,
-  "Cascade4": 3
+  "Cascade4": 4,
+  "Attempt1": 4
  }
 }

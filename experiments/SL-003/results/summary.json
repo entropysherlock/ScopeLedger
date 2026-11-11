@@ -1,0 +1,785 @@
+{
+ "n": 60,
+ "outcomes": {
+  "undecided": 13,
+  "infrastructure_blocked": 29,
+  "auto_bridged_ai": 7,
+  "directly_verified": 10,
+  "auto_bridged_deterministic": 1
+ },
+ "blocked_causes": {
+  "transport": 9,
+  "environment": 3,
+  "locate": 12,
+  "build": 3,
+  "retrieval": 2
+ },
+ "sets": {
+  "D": 18,
+  "T": 31,
+  "defects": 0,
+  "not_direct_in_T": 21,
+  "ai_bridged_of_not_direct": 7,
+  "blocked": 29
+ },
+ "decision": {
+  "verdict": "INCONCLUSIVE",
+  "feasibility_failure_condition_met": false
+ },
+ "rates_over_60": {
+  "definite": {
+   "k": 18,
+   "n": 60,
+   "p": 0.3,
+   "clopper_pearson_95": [
+    0.188,
+    0.432
+   ],
+   "cluster_bootstrap_95": [
+    0.182,
+    0.556
+   ]
+  },
+  "certified_any": {
+   "k": 18,
+   "n": 60,
+   "p": 0.3,
+   "clopper_pearson_95": [
+    0.188,
+    0.432
+   ],
+   "cluster_bootstrap_95": [
+    0.182,
+    0.556
+   ]
+  },
+  "directly_verified": {
+   "k": 10,
+   "n": 60,
+   "p": 0.167,
+   "clopper_pearson_95": [
+    0.083,
+    0.285
+   ],
+   "cluster_bootstrap_95": [
+    0.057,
+    0.469
+   ]
+  },
+  "infrastructure_blocked": {
+   "k": 29,
+   "n": 60,
+   "p": 0.483,
+   "clopper_pearson_95": [
+    0.352,
+    0.616
+   ],
+   "cluster_bootstrap_95": [
+    0.314,
+    0.654
+   ]
+  },
+  "locate_blocked": {
+   "k": 12,
+   "n": 60,
+   "p": 0.2,
+   "clopper_pearson_95": [
+    0.108,
+    0.323
+   ],
+   "cluster_bootstrap_95": [
+    0.032,
+    0.27
+   ]
+  },
+  "text_identical": {
+   "k": 12,
+   "n": 60,
+   "p": 0.2,
+   "clopper_pearson_95": [
+    0.108,
+    0.323
+   ],
+   "cluster_bootstrap_95": [
+    0.079,
+    0.541
+   ]
+  }
+ },
+ "rates_over_T": {
+  "certified_any": {
+   "k": 18,
+   "n": 31,
+   "p": 0.581,
+   "clopper_pearson_95": [
+    0.391,
+    0.755
+   ],
+   "cluster_bootstrap_95": [
+    0.423,
+    0.929
+   ]
+  },
+  "directly_verified": {
+   "k": 10,
+   "n": 31,
+   "p": 0.323,
+   "clopper_pearson_95": [
+    0.167,
+    0.514
+   ],
+   "cluster_bootstrap_95": [
+    0.123,
+    0.789
+   ]
+  }
+ },
+ "baselines": {
+  "textual_identity": {
+   "k": 12,
+   "n": 60,
+   "p": 0.2,
+   "clopper_pearson_95": [
+    0.108,
+    0.323
+   ]
+  },
+  "exact_direct": {
+   "k": 10,
+   "n": 60,
+   "p": 0.167,
+   "clopper_pearson_95": [
+    0.083,
+    0.285
+   ]
+  },
+  "exact_plus_cascade": {
+   "k": 11,
+   "n": 60,
+   "p": 0.183,
+   "clopper_pearson_95": [
+    0.095,
+    0.304
+   ]
+  },
+  "full_pipeline_with_ai": {
+   "k": 18,
+   "n": 60,
+   "p": 0.3,
+   "clopper_pearson_95": [
+    0.188,
+    0.432
+   ]
+  },
+  "not_run": [
+   "SemantEq",
+   "BEq+",
+   "Comparator",
+   "AI agent without the pipeline"
+  ]
+ },
+ "link_not_exercised": [],
+ "repos": 21,
+ "cases": [
+  {
+   "case_id": "SL003-00",
+   "repo": "plby/lean-proofs",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-01",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "transport",
+   "text_identical": true,
+   "core_identical": true,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-02",
+   "repo": "Marti2203/formal-conjectures",
+   "outcome": "infrastructure_blocked",
+   "cause": "transport",
+   "text_identical": true,
+   "core_identical": true,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-03",
+   "repo": "plby/lean-proofs",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-04",
+   "repo": "epoch-research/LeanOpenProblems-results",
+   "outcome": "infrastructure_blocked",
+   "cause": "environment",
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-05",
+   "repo": "linrock/math-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "transport",
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-06",
+   "repo": "plby/lean-proofs",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-07",
+   "repo": "plby/lean-proofs",
+   "outcome": "auto_bridged_ai",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": "Attempt1",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-08",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-09",
+   "repo": "plby/lean-proofs",
+   "outcome": "auto_bridged_ai",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": "Attempt1",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-10",
+   "repo": "plby/lean-proofs",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-11",
+   "repo": "gotrevor/lean-gallery",
+   "outcome": "directly_verified",
+   "cause": null,
+   "text_identical": true,
+   "core_identical": true,
+   "method": "Direct",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-12",
+   "repo": "plby/lean-proofs",
+   "outcome": "auto_bridged_ai",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": "Attempt1",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-13",
+   "repo": "VictorLiwentao/lean-oeis-proofs",
+   "outcome": "directly_verified",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": "Direct",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-14",
+   "repo": "KitaKen1/monochromatic-quantum-graphs-lean",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-15",
+   "repo": "AxiomMath/gdm-formal-conjectures",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-16",
+   "repo": "plby/lean-proofs",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-17",
+   "repo": "KitaKen1/erdos-979-k3",
+   "outcome": "directly_verified",
+   "cause": null,
+   "text_identical": true,
+   "core_identical": true,
+   "method": "Direct",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-18",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-19",
+   "repo": "plby/lean-proofs",
+   "outcome": "directly_verified",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": "Direct",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-20",
+   "repo": "gist:96516af9100a37a1da81908dc0b0410c",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-21",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "transport",
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-22",
+   "repo": "mnn31/erdos-lean",
+   "outcome": "infrastructure_blocked",
+   "cause": "transport",
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-23",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "transport",
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-24",
+   "repo": "plby/lean-proofs",
+   "outcome": "auto_bridged_ai",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": "Attempt1",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-25",
+   "repo": "linrock/math-proofs",
+   "outcome": "auto_bridged_deterministic",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": "Cascade0",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-26",
+   "repo": "anatoliiohorodnyk/lean-fc-proofs",
+   "outcome": "directly_verified",
+   "cause": null,
+   "text_identical": true,
+   "core_identical": true,
+   "method": "Direct",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-27",
+   "repo": "plby/lean-proofs",
+   "outcome": "auto_bridged_ai",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": "Attempt1",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-28",
+   "repo": "KitaKen1/weak-tiling-bounded-density",
+   "outcome": "infrastructure_blocked",
+   "cause": "build",
+   "text_identical": false,
+   "core_identical": true,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-29",
+   "repo": "linrock/math-proofs",
+   "outcome": "directly_verified",
+   "cause": null,
+   "text_identical": true,
+   "core_identical": true,
+   "method": "Direct",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-30",
+   "repo": "glyaea/wow-ii-314",
+   "outcome": "infrastructure_blocked",
+   "cause": "environment",
+   "text_identical": true,
+   "core_identical": true,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-31",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "transport",
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-32",
+   "repo": "plby/lean-proofs",
+   "outcome": "auto_bridged_ai",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": "Attempt1",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-33",
+   "repo": "KitaKen1/wowii-graph-conjecture-316-lean",
+   "outcome": "infrastructure_blocked",
+   "cause": "environment",
+   "text_identical": true,
+   "core_identical": true,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-34",
+   "repo": "math-inc/Sphere-Packing-Lean",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-35",
+   "repo": "plby/lean-proofs",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-36",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-37",
+   "repo": "openai/math",
+   "outcome": "infrastructure_blocked",
+   "cause": "transport",
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-38",
+   "repo": "wcook04/plectis-erdos-lean",
+   "outcome": "directly_verified",
+   "cause": null,
+   "text_identical": true,
+   "core_identical": true,
+   "method": "Direct",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-39",
+   "repo": "unresolved:SL003-39",
+   "outcome": "infrastructure_blocked",
+   "cause": "retrieval",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-40",
+   "repo": "plby/lean-proofs",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-41",
+   "repo": "wcook04/plectis-erdos-lean",
+   "outcome": "directly_verified",
+   "cause": null,
+   "text_identical": true,
+   "core_identical": true,
+   "method": "Direct",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-42",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-43",
+   "repo": "KitaKen1/monochromatic-quantum-graphs-lean",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-44",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-45",
+   "repo": "plby/lean-proofs",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-46",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "build",
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-47",
+   "repo": "unresolved:SL003-47",
+   "outcome": "infrastructure_blocked",
+   "cause": "retrieval",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-48",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-49",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-50",
+   "repo": "gotrevor/lean-gallery",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-51",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "build",
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-52",
+   "repo": "anatoliiohorodnyk/lean-fc-proofs",
+   "outcome": "directly_verified",
+   "cause": null,
+   "text_identical": true,
+   "core_identical": true,
+   "method": "Direct",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-53",
+   "repo": "anatoliiohorodnyk/lean-fc-proofs",
+   "outcome": "directly_verified",
+   "cause": null,
+   "text_identical": true,
+   "core_identical": true,
+   "method": "Direct",
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-54",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "transport",
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-55",
+   "repo": "plby/lean-proofs",
+   "outcome": "undecided",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-56",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-57",
+   "repo": "williamjblair/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-58",
+   "repo": "plby/lean-proofs",
+   "outcome": "infrastructure_blocked",
+   "cause": "locate",
+   "text_identical": null,
+   "core_identical": null,
+   "method": null,
+   "link_not_exercised": false
+  },
+  {
+   "case_id": "SL003-59",
+   "repo": "VictorLiwentao/lean-oeis-proofs",
+   "outcome": "auto_bridged_ai",
+   "cause": null,
+   "text_identical": false,
+   "core_identical": false,
+   "method": "Attempt1",
+   "link_not_exercised": false
+  }
+ ]
+}

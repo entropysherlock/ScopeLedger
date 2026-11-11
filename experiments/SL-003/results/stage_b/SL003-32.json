@@ -7,29 +7,41 @@
   "Cascade4": "Cascade4.lean:5:8: error: Invalid projection: Projections cannot be used on functions, and\n  Erdos537.erdos_537\nhas function type\n  (∀ ε > 0,\n      ∃ N₀,\n        ∀ N ≥ N₀,\n          ∀ A ⊆ Finset.range (N + 1),\n            ↑A.card ≥ ε * ↑N →\n              ∃ a₁ ∈ A,\n                ∃ a₂ ∈ A,\n                  ∃ a₃ ∈ A,\n                    ∃ p₁ p₂ p₃,\n                      Nat.Prime p₁ ∧\n                        Nat.Prime p₂ ∧\n                          Nat.Prime p₃ ∧ p₁ ≠ p₂ ∧ p₁ ≠ p₃ ∧ p₂ ≠ p₃ ∧ a₁ * p₁ = a₂ * p₂ ∧ a₂ * p₂ = a₃ * p₃) →\n    False"
  },
  "case_id": "SL003-32",
- "outcome": "undecided",
+ "outcome": "auto_bridged_ai",
  "cause": null,
- "detail": "target elaborates; direct, cascade and AI attempts did not prove it within budget",
- "method": null,
+ "detail": null,
+ "method": "Attempt1",
  "cited_axioms": [
   "Classical.choice",
   "Quot.sound",
   "propext"
  ],
- "proof_axioms": null,
- "replay": null,
- "control_without_cited": null,
+ "proof_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "replay": {
+  "tool": "leanchecker",
+  "rc": 0,
+  "seconds": 7,
+  "tail": ""
+ },
+ "control_without_cited": {
+  "proved": false,
+  "method": "transitive constant dependency"
+ },
  "def_alignment": {},
  "toolchain": "leanprover/lean4:v4.29.1",
  "seconds": {
-  "cache": 78,
-  "build": 65,
+  "cache": 79,
+  "build": 72,
   "cited_axioms": 4,
   "transport_elaborate": 4,
-  "Direct": 3,
+  "Direct": 4,
   "Cascade0": 7,
-  "Cascade1": 3,
-  "Cascade3": 3,
+  "Cascade1": 4,
+  "Cascade3": 4,
   "Cascade4": 4,
   "Attempt1": 4
  }

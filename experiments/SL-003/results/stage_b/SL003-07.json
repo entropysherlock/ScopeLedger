@@ -8,33 +8,46 @@
   "Cascade4": "Cascade4.lean:5:2: error: Type mismatch\n  Erdos21.erdos_21.2\nhas type\n  ∃ N, ∀ (n : ℕ), N ≤ n → Erdos21.erdosLovaszF n ≤ Erdos21.erdos_21.1 * n\nbut is expected to have type\n  ∃ C, ∀ᶠ (n : ℕ) in Filter.atTop, SL003FC.Erdos21.f n ≤ C * n"
  },
  "case_id": "SL003-07",
- "outcome": "undecided",
+ "outcome": "auto_bridged_ai",
  "cause": null,
- "detail": "target elaborates; direct, cascade did not prove it within budget",
- "method": null,
+ "detail": null,
+ "method": "Attempt1",
  "cited_axioms": [
   "Classical.choice",
   "Quot.sound",
   "propext"
  ],
- "proof_axioms": null,
- "replay": null,
- "control_without_cited": null,
+ "proof_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "replay": {
+  "tool": "leanchecker",
+  "rc": 0,
+  "seconds": 14,
+  "tail": ""
+ },
+ "control_without_cited": {
+  "proved": false,
+  "method": "transitive constant dependency"
+ },
  "def_alignment": {
   "Erdos21.IsErdosLovaszFamily": "not_rfl",
   "Erdos21.f": "absent"
  },
  "toolchain": "leanprover/lean4:v4.33.0",
  "seconds": {
-  "cache": 108,
-  "build": 146,
-  "cited_axioms": 2,
+  "cache": 105,
+  "build": 188,
+  "cited_axioms": 3,
   "transport_elaborate": 5,
   "Direct": 5,
   "Cascade0": 5,
   "Cascade1": 5,
   "Cascade2": 5,
   "Cascade3": 5,
-  "Cascade4": 5
+  "Cascade4": 5,
+  "Attempt1": 5
  }
 }

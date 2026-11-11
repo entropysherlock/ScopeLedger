@@ -7,29 +7,42 @@
   "Cascade4": "Cascade4.lean:5:2: error: Type mismatch\n  Erdos477.erdos477_sixth_power.2\nhas type\n  ∀ (n : ℤ), ∃! p, p.1 ∈ Erdos477.erdos477_sixth_power.1 ∧ (p.2 ∈ Set.range fun k => k ^ 6) ∧ p.1 + p.2 = n\nbut is expected to have type\n  ¬∀ (k : ℕ),\n      2 ≤ k →\n        ∀ (A : Set ℤ), ∃ z, ¬∃! a, (a ∈ A ×ˢ Set.range fun x => Polynomial.eval x (Polynomial.X ^ k)) ∧ z = a.1 + a.2"
  },
  "case_id": "SL003-09",
- "outcome": "undecided",
+ "outcome": "auto_bridged_ai",
  "cause": null,
- "detail": "target elaborates; direct, cascade did not prove it within budget",
- "method": null,
+ "detail": null,
+ "method": "Attempt1",
  "cited_axioms": [
   "Classical.choice",
   "Quot.sound",
   "propext"
  ],
- "proof_axioms": null,
- "replay": null,
- "control_without_cited": null,
+ "proof_axioms": [
+  "Classical.choice",
+  "Quot.sound",
+  "propext"
+ ],
+ "replay": {
+  "tool": "leanchecker",
+  "rc": 0,
+  "seconds": 14,
+  "tail": ""
+ },
+ "control_without_cited": {
+  "proved": false,
+  "method": "transitive constant dependency"
+ },
  "def_alignment": {},
  "toolchain": "leanprover/lean4:v4.33.0",
  "seconds": {
-  "cache": 96,
-  "build": 257,
-  "cited_axioms": 4,
-  "transport_elaborate": 4,
-  "Direct": 4,
-  "Cascade0": 4,
-  "Cascade1": 4,
-  "Cascade3": 4,
-  "Cascade4": 5
+  "cache": 103,
+  "build": 336,
+  "cited_axioms": 5,
+  "transport_elaborate": 5,
+  "Direct": 5,
+  "Cascade0": 5,
+  "Cascade1": 5,
+  "Cascade3": 5,
+  "Cascade4": 5,
+  "Attempt1": 5
  }
 }

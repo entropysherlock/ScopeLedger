@@ -5,6 +5,7 @@
 [![tests](https://github.com/entropysherlock/ScopeLedger/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/entropysherlock/ScopeLedger/actions/workflows/tests.yml)
 [![SL-001](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl001-audit.yml/badge.svg?branch=main)](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl001-audit.yml)
 [![SL-002](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl002-bridges.yml/badge.svg?branch=main)](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl002-bridges.yml)
+[![SL-003](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl003-audit.yml/badge.svg?branch=main)](https://github.com/entropysherlock/ScopeLedger/actions/workflows/sl003-audit.yml)
 ![license](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![maturity](https://img.shields.io/badge/maturity-research%20prototype%2C%20unreviewed-orange)
 
@@ -148,6 +149,32 @@ linked theorems differ from its statements by a transport step nobody had machin
 
 These are routine Lean (about 180 lines). What they add is a checked fact where there was an
 unchecked assertion. Neither says anything about whether either formal statement is what Erdős asked.
+
+## SL-003: a preregistered audit of 60 cited proofs
+
+Formal Conjectures cites 997 external Lean proofs as solving its statements. SL-003 drew a simple random
+sample of 60, with the protocol frozen before sampling and four disclosed amendments. For each link it
+asked whether the kernel confirms that the cited declaration proves the attached statement.
+[experiments/SL-003/REPORT.md](experiments/SL-003/REPORT.md) has every case.
+
+| Outcome (of 60) | Count | 95% interval |
+|---|---|---|
+| Certified: kernel-replayed and using the cited theorem | 18 | 19–43% |
+| … by `exact` / tactic cascade / AI bridge | 10 / 1 / 7 | |
+| Certified defect | 0 | 0–6% |
+| Undecided (needs a new equivalence proof) | 13 | |
+| Infrastructure blocked (12 of them: link names no identifiable declaration) | 29 | 35–62% |
+
+**Verdict under the frozen decision rule: INCONCLUSIVE.** Key findings:
+- Of the links that build and transport, 68% (21/31) cannot be closed by `exact`. Exact-statement
+  checking would miss them.
+- All 7 attempted AI bridges succeeded. 13 harder cases were not attempted.
+- Name-matched definitions in cited projects are often not kernel-equal to Formal Conjectures' own.
+- One link attaches a proof conditional on an unformalized bound for π to an unconditional statement.
+  Formal Conjectures discloses this in prose, not in the link.
+
+The rates are in-sample: the harness was fixed on this sample, so a confirmatory run on a fresh sample
+is needed.
 
 ## Reproducibility
 
