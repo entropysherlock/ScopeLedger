@@ -1,0 +1,383 @@
+{
+ "opus": {
+  "H-10": {
+   "certified": false,
+   "files": {
+    "Bridge.lean": false
+   },
+   "checks": {},
+   "run_info": "43112271748 e7802fbebf13c76cc38832fc5003b36ca6959ba7"
+  },
+  "H-15": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112271748 e7802fbebf13c76cc38832fc5003b36ca6959ba7"
+  },
+  "H-18": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": null,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112271748 e7802fbebf13c76cc38832fc5003b36ca6959ba7"
+  },
+  "H-20": {
+   "certified": false,
+   "files": {
+    "Bridge.lean": false
+   },
+   "checks": {},
+   "run_info": "43112271748 e7802fbebf13c76cc38832fc5003b36ca6959ba7"
+  },
+  "H-21": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112271748 e7802fbebf13c76cc38832fc5003b36ca6959ba7"
+  },
+  "H-27": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112271748 e7802fbebf13c76cc38832fc5003b36ca6959ba7"
+  },
+  "H-31": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112271748 e7802fbebf13c76cc38832fc5003b36ca6959ba7"
+  },
+  "H-41": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": null,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112271748 e7802fbebf13c76cc38832fc5003b36ca6959ba7"
+  },
+  "H-45": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112271748 e7802fbebf13c76cc38832fc5003b36ca6959ba7"
+  },
+  "H-56": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112271748 e7802fbebf13c76cc38832fc5003b36ca6959ba7"
+  },
+  "H-58": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": null,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112271748 e7802fbebf13c76cc38832fc5003b36ca6959ba7"
+  }
+ },
+ "sonnet": {
+  "H-10": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  },
+  "H-15": {
+   "certified": false,
+   "files": {
+    "Bridge.lean": false
+   },
+   "checks": {},
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  },
+  "H-18": {
+   "certified": false,
+   "files": {
+    "Bridge.lean": false
+   },
+   "checks": {},
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  },
+  "H-20": {
+   "certified": false,
+   "files": {
+    "Bridge.lean": false
+   },
+   "checks": {},
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  },
+  "H-21": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  },
+  "H-27": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  },
+  "H-31": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  },
+  "H-41": {
+   "certified": false,
+   "files": {
+    "Bridge.lean": false
+   },
+   "checks": {},
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  },
+  "H-45": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  },
+  "H-54": {
+   "certified": false,
+   "files": {
+    "A_Infra.lean": false,
+    "B_Bridge.lean": false
+   },
+   "checks": {},
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  },
+  "H-56": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": true,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  },
+  "H-58": {
+   "certified": true,
+   "files": {
+    "Bridge.lean": true
+   },
+   "checks": {
+    "SL004.bridge_main": {
+     "proves_target": true,
+     "standard_axioms": true,
+     "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+     ],
+     "leanchecker": null,
+     "uses_cited": true
+    }
+   },
+   "run_info": "43112469479 6c3c1e16c3ca01a70fca7d9f555b230756949166"
+  }
+ }
+}
