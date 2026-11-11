@@ -1,0 +1,1 @@
+X_B4_exact_q.lean:7:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions.

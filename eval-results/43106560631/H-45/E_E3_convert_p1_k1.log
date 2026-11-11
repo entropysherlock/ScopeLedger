@@ -1,0 +1,11 @@
+E_E3_convert_p1_k1.lean:6:12: error(lean.projNonPropFromProp): Invalid projection: Cannot project a value of non-propositional type
+  ℝ
+from the expression
+  Erdos49.erdos_49_quantitative
+which has propositional type
+  Erdos49.QuantitativeResolution
+E_E3_convert_p1_k1.lean:4:76: error: unsolved goals
+⊢ ∃ C,
+    0 ≤ C ∧
+      ∀ (N : ℕ),
+        10 ≤ N → ↑(SL003FC.Erdos49.g N) ≤ (1 + C * (Real.log (Real.log ↑N) ^ 5 / Real.log ↑N)) * ↑N.primeCounting

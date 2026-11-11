@@ -1,0 +1,76 @@
+ℹ [8718/8758] Replayed ErdosProblems.Erdos49.PNT.MediumPNT
+info: ErdosProblems/Erdos49/PNT/MediumPNT.lean:3553:0: 'MediumPNT' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8720/8758] Replayed ErdosProblems.Erdos49.Analytic
+info: ErdosProblems/Erdos49/Analytic.lean:229:0: 'Erdos49.Analytic.exists_mediumPsi_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/Analytic.lean:230:0: 'Mertens.sum_prime_div_eq_log_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8722/8758] Replayed ErdosProblems.Erdos49.Fibre
+info: ErdosProblems/Erdos49/Fibre.lean:319:0: 'Erdos49.primeFactors_eq_of_totient_div_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/Fibre.lean:320:0: 'Erdos49.sum_reciprocal_primeFactors_fibre_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/Fibre.lean:321:0: 'Erdos49.sum_totientRatio_fibre_reciprocal_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8733/8758] Replayed ErdosProblems.Erdos49.Arithmetic
+info: ErdosProblems/Erdos49/Arithmetic.lean:220:0: 'Erdos49.one_div_sq_le_totientRatio_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/Arithmetic.lean:221:0: 'Erdos49.totient_mul_prime_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/Arithmetic.lean:222:0: 'Erdos49.primary_totient_lt_of_ratio_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8734/8758] Replayed ErdosProblems.Erdos49.PrimaryPacking
+info: ErdosProblems/Erdos49/PrimaryPacking.lean:158:0: 'Erdos49.primary_packing_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8736/8758] Replayed ErdosProblems.Erdos49.PrimaryStructure
+info: ErdosProblems/Erdos49/PrimaryStructure.lean:575:0: 'Erdos49.primary_hulls_pairwiseDisjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/PrimaryStructure.lean:576:0: 'Erdos49.primary_packing_from_interval_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/PrimaryStructure.lean:577:0: 'Erdos49.primaryKeys_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/PrimaryStructure.lean:578:0: 'Erdos49.primary_primeInterval_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/PrimaryStructure.lean:579:0: 'Erdos49.primary_global_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8737/8758] Replayed ErdosProblems.Erdos49.SecondaryPacking
+info: ErdosProblems/Erdos49/SecondaryPacking.lean:482:0: 'Erdos49.secondary_band_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/SecondaryPacking.lean:483:0: 'Erdos49.secondary_band_bucket_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8738/8758] Replayed ErdosProblems.Erdos49.SecondaryArithmetic
+info: ErdosProblems/Erdos49/SecondaryArithmetic.lean:415:0: 'Erdos49.secondary_cofactor_totient_ratio_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/SecondaryArithmetic.lean:416:0: 'Erdos49.secondary_totient_ratio_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/SecondaryArithmetic.lean:417:0: 'Erdos49.secondary_cell_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/SecondaryArithmetic.lean:418:0: 'Erdos49.secondary_structured_band_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8739/8758] Replayed ErdosProblems.Erdos49.SecondaryGlobal
+info: ErdosProblems/Erdos49/SecondaryGlobal.lean:387:0: 'Erdos49.secondaryBand_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/SecondaryGlobal.lean:612:0: 'Erdos49.secondary_global_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8740/8758] Replayed ErdosProblems.Erdos49.Rankin
+info: ErdosProblems/Erdos49/Rankin.lean:160:0: 'Erdos49.smooth_rankin_sum_le_euler' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8741/8758] Replayed ErdosProblems.Erdos49.RankinBounds
+info: ErdosProblems/Erdos49/RankinBounds.lean:304:0: 'Erdos49.exists_rankinEulerProduct_log_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/RankinBounds.lean:305:0: 'Erdos49.smoothUpTo_card_real_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/RankinBounds.lean:306:0: 'Erdos49.smoothTail_reciprocal_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8742/8758] Replayed ErdosProblems.Erdos49.Anatomy
+info: ErdosProblems/Erdos49/Anatomy.lean:477:0: 'Erdos49.anatomy_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8743/8758] Replayed ErdosProblems.Erdos49.ExceptionalBasic
+info: ErdosProblems/Erdos49/ExceptionalBasic.lean:231:0: 'Erdos49.squareExceptional_card_real_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/ExceptionalBasic.lean:232:0: 'Erdos49.smoothTailExceptional_card_real_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8744/8758] Replayed ErdosProblems.Erdos49.PrimeSums
+info: ErdosProblems/Erdos49/PrimeSums.lean:190:0: 'Erdos49.primeReciprocalInterval_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/PrimeSums.lean:191:0: 'Erdos49.eventually_primeCounting_nat_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8745/8758] Replayed ErdosProblems.Erdos49.SmoothReciprocal
+info: ErdosProblems/Erdos49/SmoothReciprocal.lean:230:0: 'Erdos49.exists_smooth_reciprocal_log_sq_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8746/8758] Replayed ErdosProblems.Erdos49.TripleCluster
+info: ErdosProblems/Erdos49/TripleCluster.lean:294:0: 'Erdos49.tripleExceptional_card_real_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8747/8758] Replayed ErdosProblems.Erdos49.PairCluster
+info: ErdosProblems/Erdos49/PairCluster.lean:534:0: 'Erdos49.pairExceptional_card_real_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/PairCluster.lean:536:0: 'Erdos49.pairExceptional_subset_low_union_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/PairCluster.lean:537:0: 'Erdos49.pairUpper_le_split_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8748/8758] Replayed ErdosProblems.Erdos49.PrimaryApplication
+info: ErdosProblems/Erdos49/PrimaryApplication.lean:86:0: 'Erdos49.primary_global_bound_of_uniform_theta' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8749/8758] Replayed ErdosProblems.Erdos49.Assembly
+info: ErdosProblems/Erdos49/Assembly.lean:203:0: 'Erdos49.assembled_finite_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8750/8758] Replayed ErdosProblems.Erdos49.Scales
+info: ErdosProblems/Erdos49/Scales.lean:671:0: 'Erdos49.eventually_scaleFacts' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8751/8758] Replayed ErdosProblems.Erdos49.UniformTheta
+info: ErdosProblems/Erdos49/UniformTheta.lean:124:0: 'Erdos49.exists_eventually_uniform_theta' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8754/8758] Replayed ErdosProblems.Erdos49.ClusterScaleBounds
+info: ErdosProblems/Erdos49/ClusterScaleBounds.lean:321:0: 'Erdos49.eventually_pairExceptional_le_errorScale' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/ClusterScaleBounds.lean:322:0: 'Erdos49.eventually_tripleExceptional_le_errorScale' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8755/8758] Replayed ErdosProblems.Erdos49.BasicScaleBounds
+info: ErdosProblems/Erdos49/BasicScaleBounds.lean:333:0: 'Erdos49.eventually_basicExceptional_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8756/8758] Replayed ErdosProblems.Erdos49.MainTermBounds
+info: ErdosProblems/Erdos49/MainTermBounds.lean:383:0: 'Erdos49.eventually_assembled_main_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8757/8758] Replayed ErdosProblems.Erdos49.FinalEstimate
+info: ErdosProblems/Erdos49/FinalEstimate.lean:296:0: 'Erdos49.exists_eventually_relative_resolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49/FinalEstimate.lean:297:0: 'Erdos49.exists_uniform_relative_resolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [8758/8758] Replayed ErdosProblems.Erdos49
+info: ErdosProblems/Erdos49.lean:126:0: 'Erdos49.erdos_49_quantitative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosProblems/Erdos49.lean:354:0: 'Erdos49.erdos_49' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8758 jobs).
