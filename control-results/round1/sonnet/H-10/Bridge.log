@@ -1,0 +1,18 @@
+Bridge.lean:7:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:11:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Bridge.lean:7:6: warning: Unused tactic linter: `(
+  ext m
+  simp only [SL003FC.Erdos534.ahlswedeKhachatrian, Erdos534.candidate, Finset.mem_filter, SL003FC.Erdos534.primePrefix,
+    Erdos534.primePrefix, Erdos534.prefixProduct, Erdos534.interval])` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Bridge.lean:11:6: warning: Unused tactic linter: `(
+  ext m
+  simp [SL003FC.Erdos534.ahlswedeKhachatrian, Erdos534.candidate, SL003FC.Erdos534.primePrefix, Erdos534.primePrefix,
+    Erdos534.prefixProduct, Erdos534.interval])` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
