@@ -1,0 +1,11 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_1007 :",
+ "removed declaration: theorem erdos_1007.variants.dimension_four_extremal (n : ℕ) (G : Simpl",
+ "removed declaration: theorem erdos_1007.variants.dimension_five :",
+ "removed declaration: theorem erdos_1007.variants.dimension_five_extremal :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]
