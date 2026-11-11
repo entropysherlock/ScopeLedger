@@ -1,0 +1,11 @@
+[
+ "removed comments and module docs",
+ "removed: module",
+ "removed: public import FormalConjecturesUtil",
+ "public section -> section",
+ "removed declaration: theorem erdos_1050 : Irrational (∑' n : ℕ, (1 : ℝ) / ((2 : ℝ) ^ (n + 1",
+ "removed declaration: theorem erdos_1050.variants.two_pow_sub_one :",
+ "removed declaration: theorem erdos_1050.variants.borwein (q : ℤ) (hq : 2 ≤ q) (r : ℚ) (hr :",
+ "removed declaration: theorem erdos_1050.variants.transcendental :",
+ "Formal Conjectures text placed in namespace SL003FC (amendment 3)"
+]

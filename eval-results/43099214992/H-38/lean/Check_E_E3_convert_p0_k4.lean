@@ -1,0 +1,5 @@
+import E_E3_convert_p0_k4
+
+example : SL003FC.Erdos1050.SL003.targetProp := @SL004.bridge_E3_convert_p0_k4
+
+#print axioms SL004.bridge_E3_convert_p0_k4

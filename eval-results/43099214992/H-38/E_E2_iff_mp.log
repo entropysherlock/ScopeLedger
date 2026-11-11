@@ -1,0 +1,4 @@
+E_E2_iff_mp.lean:6:152: error(lean.invalidField): Invalid field `mp`: The environment does not contain `Function.mp`, so it is not possible to project the field `mp` from an expression
+  LeanGallery.NumberTheory.Erdos1050.erdos_1050
+of type
+  ∑' (n : ℕ), 1 / (2 ^ (n + 1) - 3) ∈ Set.range Rat.cast → False

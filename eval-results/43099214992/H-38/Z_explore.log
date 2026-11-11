@@ -1,0 +1,7 @@
+def SL003FC.Erdos1050.SL003.targetProp : Prop :=
+Irrational (∑' (n : ℕ), (1 : ℝ) / ((2 : ℝ) ^ (n + (1 : ℕ)) - (3 : ℝ)))
+LeanGallery.NumberTheory.Erdos1050.erdos_1050 : Irrational (∑' (n : ℕ), (1 : ℝ) / ((2 : ℝ) ^ (n + (1 : ℕ)) - (3 : ℝ)))
+Z_explore.lean:6:7: error(lean.unknownIdentifier): Unknown constant `LeanGallery.NumberTheory.Erdos1050.Irrational`
+def Irrational : ℝ → Prop :=
+fun x => x ∉ Set.range Rat.cast
+Z_explore.lean:8:7: error(lean.unknownIdentifier): Unknown constant `SL003FC.Erdos1050.Irrational`
